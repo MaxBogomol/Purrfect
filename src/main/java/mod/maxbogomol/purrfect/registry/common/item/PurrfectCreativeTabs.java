@@ -144,6 +144,24 @@ public class PurrfectCreativeTabs {
             event.accept(PurrfectItems.MAGENTA_GOLDEN_BELL_SPIKED_COLLAR);
             event.accept(PurrfectItems.PINK_GOLDEN_BELL_SPIKED_COLLAR);
             event.accept(PurrfectItems.RAINBOW_GOLDEN_BELL_SPIKED_COLLAR);
+
+            event.accept(PurrfectItems.WHITE_CLEW);
+            event.accept(PurrfectItems.LIGHT_GRAY_CLEW);
+            event.accept(PurrfectItems.GRAY_CLEW);
+            event.accept(PurrfectItems.BLACK_CLEW);
+            event.accept(PurrfectItems.BROWN_CLEW);
+            event.accept(PurrfectItems.RED_CLEW);
+            event.accept(PurrfectItems.ORANGE_CLEW);
+            event.accept(PurrfectItems.YELLOW_CLEW);
+            event.accept(PurrfectItems.LIME_CLEW);
+            event.accept(PurrfectItems.GREEN_CLEW);
+            event.accept(PurrfectItems.CYAN_CLEW);
+            event.accept(PurrfectItems.LIGHT_BLUE_CLEW);
+            event.accept(PurrfectItems.BLUE_CLEW);
+            event.accept(PurrfectItems.PURPLE_CLEW);
+            event.accept(PurrfectItems.MAGENTA_CLEW);
+            event.accept(PurrfectItems.PINK_CLEW);
+            event.accept(PurrfectItems.RAINBOW_CLEW);
         }
     }
 }

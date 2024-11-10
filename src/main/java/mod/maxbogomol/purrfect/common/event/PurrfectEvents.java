@@ -4,7 +4,7 @@ import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-public class Events {
+public class PurrfectEvents {
 
     @SubscribeEvent
     public void onEntityJump(LivingEvent.LivingJumpEvent event) {

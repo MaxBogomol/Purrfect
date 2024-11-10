@@ -1,0 +1,40 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="GPL-2.0"
+
+[[mods]]
+    modId="purrfect"
+    version="${file.jarVersion}"
+    updateJSONURL = "https://raw.githubusercontent.com/MaxBogomol/Purrfect/refs/heads/master/update.json"
+    displayName="Purrfect"
+    logoFile="purrfect.png"
+    authors="MaxBogomol"
+    description="Adds furry things"
+
+[[dependencies.purrfect]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.purrfect]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.purrfect]]
+    modId = "fluffy_fur"
+    mandatory = true
+    versionRange = "[1.20.1-0.1.4,)"
+    ordering = "AFTER"
+    side = "BOTH"
+
+[[dependencies.purrfect]]
+    modId = "curios"
+    mandatory = true
+    versionRange = "[5.2.0-beta.3+1.20.1,)"
+    ordering = "AFTER"
+    side = "BOTH"

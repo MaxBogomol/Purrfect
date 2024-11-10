@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    " X ",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_nugget"
+    },
+    "X": {
+      "item": "purrfect:black_collar"
+    }
+  },
+  "result": {
+    "item": "purrfect:black_spiked_collar"
+  }
+}

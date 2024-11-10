@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "purrfect:collar",
+    "purrfect:white_collar",
+    "purrfect:light_gray_collar",
+    "purrfect:gray_collar",
+    "purrfect:black_collar",
+    "purrfect:brown_collar",
+    "purrfect:red_collar",
+    "purrfect:orange_collar",
+    "purrfect:yellow_collar",
+    "purrfect:lime_collar",
+    "purrfect:green_collar",
+    "purrfect:cyan_collar",
+    "purrfect:light_blue_collar",
+    "purrfect:blue_collar",
+    "purrfect:purple_collar",
+    "purrfect:magenta_collar",
+    "purrfect:pink_collar",
+    "purrfect:rainbow_collar"
+  ]
+}

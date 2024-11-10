@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "purrfect:iron_bell_spiked_collars"
+    },
+    {
+      "item": "minecraft:light_gray_dye"
+    }
+  ],
+  "result": {
+    "item": "purrfect:light_gray_iron_bell_spiked_collar",
+    "count": 1
+  }
+}

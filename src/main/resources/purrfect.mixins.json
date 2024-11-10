@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "mod.maxbogomol.purrfect.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "purrfect.refmap.json",
+  "mixins": [
+
+  ],
+  "client": [
+
+  ],
+  "minVersion": "0.8",
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -5,7 +5,7 @@
       "tag": "purrfect:golden_bell_spiked_collars"
     },
     {
-      "item": "minecraft:gray_dye"
+      "tag": "forge:dyes/gray"
     }
   ],
   "result": {

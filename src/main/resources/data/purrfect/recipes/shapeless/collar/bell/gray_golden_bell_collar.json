@@ -5,7 +5,7 @@
       "item": "purrfect:gray_collar"
     },
     {
-      "item": "minecraft:gold_ingot"
+      "tag": "forge:ingots/gold"
     }
   ],
   "result": {

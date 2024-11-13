@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:iron_nugget"
+      "tag": "forge:nuggets/iron"
     },
     "X": {
       "item": "purrfect:brown_iron_bell_collar"

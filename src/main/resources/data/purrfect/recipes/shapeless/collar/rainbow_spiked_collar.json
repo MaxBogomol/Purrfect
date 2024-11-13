@@ -5,25 +5,25 @@
       "tag": "purrfect:spiked_collars"
     },
     {
-      "item": "minecraft:purple_dye"
+      "tag": "forge:dyes/purple"
     },
     {
-      "item": "minecraft:blue_dye"
+      "tag": "forge:dyes/blue"
     },
     {
-      "item": "minecraft:light_blue_dye"
+      "tag": "forge:dyes/light_blue"
     },
     {
-      "item": "minecraft:lime_dye"
+      "tag": "forge:dyes/lime"
     },
     {
-      "item": "minecraft:yellow_dye"
+      "tag": "forge:dyes/yellow"
     },
     {
-      "item": "minecraft:orange_dye"
+      "tag": "forge:dyes/orange"
     },
     {
-      "item": "minecraft:red_dye"
+      "tag": "forge:dyes/red"
     }
   ],
   "result": {

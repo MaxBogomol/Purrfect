@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:leather"
+      "tag": "forge:leather"
     },
     "X": {
-      "item": "minecraft:string"
+      "tag": "forge:string"
     }
   },
   "result": {

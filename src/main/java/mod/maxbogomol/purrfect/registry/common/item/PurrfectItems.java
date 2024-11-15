@@ -161,12 +161,14 @@ public class PurrfectItems {
             IForgeRegistry<Item> items = ForgeRegistries.ITEMS;
             for (Item item : items) {
                 String string = item.getDescriptionId();
-                int i = string.indexOf(".");
-                string = string.substring(i + 1);
-                i = string.indexOf(".");
-                String modId = string.substring(0, i);
-                if (modId.equals(Purrfect.MOD_ID) && item instanceof CollarItem) {
-                    CuriosRendererRegistry.register(item, CollarRenderer::new);
+                if (!string.isEmpty()) {
+                    int i = string.indexOf(".");
+                    string = string.substring(i + 1);
+                    i = string.indexOf(".");
+                    String modId = string.substring(0, i);
+                    if (modId.equals(Purrfect.MOD_ID) && item instanceof CollarItem) {
+                        CuriosRendererRegistry.register(item, CollarRenderer::new);
+                    }
                 }
             }
         }

@@ -1,6 +1,7 @@
 package mod.maxbogomol.purrfect;
 
 import mod.maxbogomol.fluffy_fur.FluffyFurClient;
+import mod.maxbogomol.fluffy_fur.client.event.SplashHandler;
 import mod.maxbogomol.fluffy_fur.client.gui.screen.FluffyFurMod;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectCreativeTabs;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectItems;
@@ -28,6 +29,7 @@ public class PurrfectClient {
 
     public static void clientSetup(final FMLClientSetupEvent event) {
         setupMenu();
+        setupSplashes();
     }
 
     public static FluffyFurMod MOD_INSTANCE;
@@ -42,5 +44,17 @@ public class PurrfectClient {
                 .addDiscordLink("https://discord.gg/cKf55qNugw");
 
         FluffyFurClient.registerMod(MOD_INSTANCE);
+    }
+
+    public static void setupSplashes() {
+        SplashHandler.addSplash("Meow Meow Meow :3");
+        SplashHandler.addSplash("Mrow");
+        SplashHandler.addSplash("Mew");
+        SplashHandler.addSplash("Mow");
+        SplashHandler.addSplash("Prrrr");
+        SplashHandler.addSplash("Furry");
+        SplashHandler.addSplash("UwU");
+        SplashHandler.addSplash(":3");
+        SplashHandler.addSplash("U CUTIE");
     }
 }

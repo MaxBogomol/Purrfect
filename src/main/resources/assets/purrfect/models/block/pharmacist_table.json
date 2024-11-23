@@ -1,0 +1,51 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"0": "purrfect:block/pharmacist_table_top",
+		"1": "purrfect:block/pharmacist_table_mid_2",
+		"2": "purrfect:block/pharmacist_table_bottom",
+		"3": "purrfect:block/pharmacist_table_mid_1",
+		"4": "purrfect:block/pharmacist_table_mid_3",
+		"particle": "purrfect:block/pharmacist_table_top"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 2, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, -8, 0]},
+			"faces": {
+				"north": {"uv": [0, 14, 16, 16], "texture": "#1"},
+				"east": {"uv": [0, 14, 16, 16], "texture": "#1"},
+				"south": {"uv": [0, 14, 16, 16], "texture": "#1"},
+				"west": {"uv": [0, 14, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"down": {"uv": [0, 16, 16, 0], "texture": "#2"}
+			}
+		},
+		{
+			"from": [3, 2, 3],
+			"to": [13, 10, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 2, 11]},
+			"faces": {
+				"north": {"uv": [3, 6, 13, 14], "texture": "#1"},
+				"east": {"uv": [3, 6, 13, 14], "texture": "#1"},
+				"south": {"uv": [3, 6, 13, 14], "texture": "#1"},
+				"west": {"uv": [3, 6, 13, 14], "texture": "#1"},
+				"up": {"uv": [3, 3, 13, 13], "texture": "#3"},
+				"down": {"uv": [3, 3, 13, 13], "texture": "#4"}
+			}
+		},
+		{
+			"from": [0, 10, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 6], "texture": "#1"},
+				"east": {"uv": [0, 0, 16, 6], "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 6], "texture": "#1"},
+				"west": {"uv": [0, 0, 16, 6], "texture": "#1"},
+				"up": {"uv": [0, 16, 16, 0], "texture": "#0"},
+				"down": {"uv": [0, 16, 16, 0], "texture": "#3"}
+			}
+		}
+	]
+}

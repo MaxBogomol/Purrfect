@@ -31,6 +31,8 @@ public class PurrfectCreativeTabs {
 
     public static void addCreativeTabContent(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == PurrfectCreativeTabs.PURRFECT.getKey()) {
+            event.accept(PurrfectItems.PHARMACIST_TABLE);
+
             event.accept(PurrfectItems.COLLAR);
             event.accept(PurrfectItems.WHITE_COLLAR);
             event.accept(PurrfectItems.LIGHT_GRAY_COLLAR);

@@ -3,6 +3,8 @@ package mod.maxbogomol.purrfect.registry.common.item;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.client.render.curio.CollarRenderer;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
+import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlocks;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +19,8 @@ import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 public class PurrfectItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Purrfect.MOD_ID);
+
+    public static final RegistryObject<Item> PHARMACIST_TABLE = ITEMS.register("pharmacist_table", () -> new BlockItem(PurrfectBlocks.PHARMACIST_TABLE.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> COLLAR = ITEMS.register("collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.COLLAR));
     public static final RegistryObject<Item> WHITE_COLLAR = ITEMS.register("white_collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.WHITE));

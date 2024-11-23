@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "purrfect:block/pharmacist_table",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "purrfect:block/pharmacist_table"
+    },
+    "facing=south": {
+      "model": "purrfect:block/pharmacist_table",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "purrfect:block/pharmacist_table",
+      "y": 270
+    }
+  }
+}

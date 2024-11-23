@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "purrfect:clews"
+      "tag": "purrfect:yarns"
     },
     {
       "tag": "forge:dyes/purple"
     }
   ],
   "result": {
-    "item": "purrfect:purple_clew",
+    "item": "purrfect:purple_yarn",
     "count": 1
   }
 }

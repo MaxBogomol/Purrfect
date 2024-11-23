@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "purrfect:item/yellow_clew"
+    "layer0": "purrfect:item/red_yarn"
   }
 }

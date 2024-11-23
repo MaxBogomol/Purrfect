@@ -1,8 +1,8 @@
 package mod.maxbogomol.purrfect;
 
 import mod.maxbogomol.fluffy_fur.FluffyFurClient;
-import mod.maxbogomol.fluffy_fur.client.event.SplashHandler;
 import mod.maxbogomol.fluffy_fur.client.gui.screen.FluffyFurMod;
+import mod.maxbogomol.fluffy_fur.client.splash.SplashHandler;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectCreativeTabs;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectItems;
 import net.minecraft.network.chat.Component;

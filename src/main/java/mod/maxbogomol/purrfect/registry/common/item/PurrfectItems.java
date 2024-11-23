@@ -132,23 +132,23 @@ public class PurrfectItems {
     public static final RegistryObject<Item> PINK_GOLDEN_BELL_SPIKED_COLLAR = ITEMS.register("pink_golden_bell_spiked_collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.PINK).setBell(CollarItem.GOLDEN_BELL).setSpikes(CollarItem.SPIKES));
     public static final RegistryObject<Item> RAINBOW_GOLDEN_BELL_SPIKED_COLLAR = ITEMS.register("rainbow_golden_bell_spiked_collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.RAINBOW).setBell(CollarItem.GOLDEN_BELL).setSpikes(CollarItem.SPIKES));
 
-    public static final RegistryObject<Item> WHITE_CLEW = ITEMS.register("white_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> LIGHT_GRAY_CLEW = ITEMS.register("light_gray_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> GRAY_CLEW = ITEMS.register("gray_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> BLACK_CLEW = ITEMS.register("black_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> BROWN_CLEW = ITEMS.register("brown_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> RED_CLEW = ITEMS.register("red_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> ORANGE_CLEW = ITEMS.register("orange_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> YELLOW_CLEW = ITEMS.register("yellow_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> LIME_CLEW = ITEMS.register("lime_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> GREEN_CLEW = ITEMS.register("green_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> CYAN_CLEW = ITEMS.register("cyan_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> LIGHT_BLUE_CLEW = ITEMS.register("light_blue_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> BLUE_CLEW = ITEMS.register("blue_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> PURPLE_CLEW = ITEMS.register("purple_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> MAGENTA_CLEW = ITEMS.register("magenta_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> PINK_CLEW = ITEMS.register("pink_clew", () -> new Item(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> RAINBOW_CLEW = ITEMS.register("rainbow_clew", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> WHITE_YARN = ITEMS.register("white_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> LIGHT_GRAY_YARN = ITEMS.register("light_gray_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> GRAY_YARN = ITEMS.register("gray_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BLACK_YARN = ITEMS.register("black_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BROWN_YARN = ITEMS.register("brown_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> RED_YARN = ITEMS.register("red_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ORANGE_YARN = ITEMS.register("orange_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> YELLOW_YARN = ITEMS.register("yellow_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> LIME_YARN = ITEMS.register("lime_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> GREEN_YARN = ITEMS.register("green_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CYAN_YARN = ITEMS.register("cyan_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> LIGHT_BLUE_YARN = ITEMS.register("light_blue_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BLUE_YARN = ITEMS.register("blue_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> PURPLE_YARN = ITEMS.register("purple_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> MAGENTA_YARN = ITEMS.register("magenta_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> PINK_YARN = ITEMS.register("pink_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> RAINBOW_YARN = ITEMS.register("rainbow_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

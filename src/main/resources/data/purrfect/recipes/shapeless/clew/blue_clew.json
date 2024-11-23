@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "purrfect:clews"
+      "tag": "purrfect:yarns"
     },
     {
       "tag": "forge:dyes/blue"
     }
   ],
   "result": {
-    "item": "purrfect:blue_clew",
+    "item": "purrfect:blue_yarn",
     "count": 1
   }
 }

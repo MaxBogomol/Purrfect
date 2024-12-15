@@ -4,6 +4,14 @@
   "_comment_1": "Items and Blocks",
   "block.purrfect.pharmacist_table": "Pharmacist Table",
 
+  "item.purrfect.pharmacy_vial": "Pharmacy Vial",
+  "item.purrfect.pharmacy_vial_ink": "Pharmacy Vial \"Ink\"",
+  "item.purrfect.pharmacy_vial_pink_fox": "Pharmacy Vial \"Pink Fox\"",
+  "item.purrfect.pharmacy_vial_goated": "Pharmacy Vial \"Goated\"",
+  "item.purrfect.pharmacy_vial_crystal_ringing": "Pharmacy Vial \"Crystal Ringing\"",
+  "item.purrfect.pharmacy_vial_rainbow_spark": "Pharmacy Vial \"Rainbow Spark\"",
+  "item.purrfect.pharmacy_vial_slimy_slug": "Pharmacy Vial \"Slimy Slug\"",
+
   "item.purrfect.collar": "Collar",
   "item.purrfect.white_collar": "White Collar",
   "item.purrfect.light_gray_collar": "Light Gray Collar",
@@ -137,5 +145,5 @@
   "item.purrfect.rainbow_yarn": "Rainbow Yarn",
 
   "_comment_2": "Menu",
-  "mod_description.purrfect": "Purrfect - a mod about furries, for furries, from furry."
+  "mod_description.purrfect": "Purrfect - a mod about furries, for furries, from furry. \n Adds Pharmacy and furry things."
 }

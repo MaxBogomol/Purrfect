@@ -33,6 +33,14 @@ public class PurrfectCreativeTabs {
         if (event.getTabKey() == PurrfectCreativeTabs.PURRFECT.getKey()) {
             event.accept(PurrfectItems.PHARMACIST_TABLE);
 
+            event.accept(PurrfectItems.PHARMACY_VIAL);
+            event.accept(PurrfectItems.PHARMACY_VIAL_INK);
+            event.accept(PurrfectItems.PHARMACY_VIAL_PINK_FOX);
+            event.accept(PurrfectItems.PHARMACY_VIAL_GOATED);
+            event.accept(PurrfectItems.PHARMACY_VIAL_CRYSTAL_RINGING);
+            event.accept(PurrfectItems.PHARMACY_VIAL_RAINBOW_SPARK);
+            event.accept(PurrfectItems.PHARMACY_VIAL_SLIMY_SLUG);
+
             event.accept(PurrfectItems.COLLAR);
             event.accept(PurrfectItems.WHITE_COLLAR);
             event.accept(PurrfectItems.LIGHT_GRAY_COLLAR);

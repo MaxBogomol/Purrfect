@@ -22,6 +22,14 @@ public class PurrfectItems {
 
     public static final RegistryObject<Item> PHARMACIST_TABLE = ITEMS.register("pharmacist_table", () -> new BlockItem(PurrfectBlocks.PHARMACIST_TABLE.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> PHARMACY_VIAL = ITEMS.register("pharmacy_vial", () -> new Item(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> PHARMACY_VIAL_INK = ITEMS.register("pharmacy_vial_ink", () -> new Item(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> PHARMACY_VIAL_PINK_FOX = ITEMS.register("pharmacy_vial_pink_fox", () -> new Item(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> PHARMACY_VIAL_GOATED = ITEMS.register("pharmacy_vial_goated", () -> new Item(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> PHARMACY_VIAL_CRYSTAL_RINGING = ITEMS.register("pharmacy_vial_crystal_ringing", () -> new Item(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> PHARMACY_VIAL_RAINBOW_SPARK = ITEMS.register("pharmacy_vial_rainbow_spark", () -> new Item(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> PHARMACY_VIAL_SLIMY_SLUG = ITEMS.register("pharmacy_vial_slimy_slug", () -> new Item(new Item.Properties().stacksTo(16)));
+
     public static final RegistryObject<Item> COLLAR = ITEMS.register("collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.COLLAR));
     public static final RegistryObject<Item> WHITE_COLLAR = ITEMS.register("white_collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.WHITE));
     public static final RegistryObject<Item> LIGHT_GRAY_COLLAR = ITEMS.register("light_gray_collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.LIGHT_GRAY));

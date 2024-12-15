@@ -4,6 +4,14 @@
   "_comment_1": "Items and Blocks",
   "block.purrfect.pharmacist_table": "Аптекарский стол",
 
+  "item.purrfect.pharmacy_vial": "Аптекарская склянка",
+  "item.purrfect.pharmacy_vial_ink": "Аптекарская склянка \"Чернила\"",
+  "item.purrfect.pharmacy_vial_pink_fox": "Аптекарская склянка \"Розовая Лиса\"",
+  "item.purrfect.pharmacy_vial_goated": "Аптекарская склянка \"Закозленный\"",
+  "item.purrfect.pharmacy_vial_crystal_ringing": "Аптекарская склянка \"Кристальный Звон\"",
+  "item.purrfect.pharmacy_vial_rainbow_spark": "Аптекарская склянка \"Радужная Искра\"",
+  "item.purrfect.pharmacy_vial_slimy_slug": "Аптекарская склянка \"Слизкий Слизень\"",
+
   "item.purrfect.collar": "Ошейник",
   "item.purrfect.white_collar": "Белый ошейник",
   "item.purrfect.light_gray_collar": "Светло-серый ошейник",
@@ -137,5 +145,5 @@
   "item.purrfect.rainbow_yarn": "Радужный клубок ниток",
 
   "_comment_2": "Menu",
-  "mod_description.purrfect": "Purrfect - мод про фурри, для фурри, от фурри."
+  "mod_description.purrfect": "Purrfect - мод про фурри, для фурри, от фурри. \n Добавляет фармацевтику и фурри штучки."
 }

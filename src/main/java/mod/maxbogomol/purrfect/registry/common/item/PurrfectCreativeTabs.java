@@ -172,6 +172,31 @@ public class PurrfectCreativeTabs {
             event.accept(PurrfectItems.MAGENTA_YARN);
             event.accept(PurrfectItems.PINK_YARN);
             event.accept(PurrfectItems.RAINBOW_YARN);
+
+            event.accept(PurrfectItems.FLAGPOLE);
+            event.accept(PurrfectItems.HETEROSEXUAL_FLAG);
+            event.accept(PurrfectItems.PRIDE_FLAG);
+            event.accept(PurrfectItems.LESBIAN_FLAG);
+            event.accept(PurrfectItems.GAY_FLAG);
+            event.accept(PurrfectItems.BI_FLAG);
+            event.accept(PurrfectItems.TRANS_FLAG);
+            event.accept(PurrfectItems.ENBY_FLAG);
+            event.accept(PurrfectItems.GENDERFLUID_FLAG);
+            event.accept(PurrfectItems.DEMIBOY_FLAG);
+            event.accept(PurrfectItems.DEMIGIRL_FLAG);
+            event.accept(PurrfectItems.DEMIGENDER_FLAG);
+            event.accept(PurrfectItems.AGENDER_FLAG);
+            event.accept(PurrfectItems.PAN_FLAG);
+            event.accept(PurrfectItems.OMNI_FLAG);
+            event.accept(PurrfectItems.POLY_FLAG);
+            event.accept(PurrfectItems.DEMISEXUAL_FLAG);
+            event.accept(PurrfectItems.ACE_FLAG);
+            event.accept(PurrfectItems.ARO_FLAG);
+            event.accept(PurrfectItems.AROACE_FLAG);
+            event.accept(PurrfectItems.KVASSSEXUAL_FLAG);
+            event.accept(PurrfectItems.BEERSEXUAL_FLAG);
+            event.accept(PurrfectItems.WIZARDS_REBORN_FLAG);
+            event.accept(PurrfectItems.FLUFFY_FUR_FLAG);
         }
     }
 }

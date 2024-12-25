@@ -1,12 +1,18 @@
 package mod.maxbogomol.purrfect.registry.common.item;
 
+import mod.maxbogomol.fluffy_fur.registry.client.FluffyFurModels;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.client.render.curio.CollarRenderer;
+import mod.maxbogomol.purrfect.common.item.PurrfectRenderStandingAndWallBlockItem;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
 import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlocks;
+import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.ModelEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -16,6 +22,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.RegistryObject;
 import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
+
+import java.util.Map;
 
 public class PurrfectItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Purrfect.MOD_ID);
@@ -162,6 +170,31 @@ public class PurrfectItems {
     public static final RegistryObject<Item> PINK_YARN = ITEMS.register("pink_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> RAINBOW_YARN = ITEMS.register("rainbow_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<Item> FLAGPOLE = ITEMS.register("flagpole", () -> new BlockItem(PurrfectBlocks.FLAGPOLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> HETEROSEXUAL_FLAG = ITEMS.register("heterosexual_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.HETEROSEXUAL_FLAG.get(), PurrfectBlocks.HETEROSEXUAL_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> PRIDE_FLAG = ITEMS.register("pride_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.PRIDE_FLAG.get(), PurrfectBlocks.PRIDE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> LESBIAN_FLAG = ITEMS.register("lesbian_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.LESBIAN_FLAG.get(), PurrfectBlocks.LESBIAN_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> GAY_FLAG = ITEMS.register("gay_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.GAY_FLAG.get(), PurrfectBlocks.GAY_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> BI_FLAG = ITEMS.register("bi_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.BI_FLAG.get(), PurrfectBlocks.BI_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> TRANS_FLAG = ITEMS.register("trans_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.TRANS_FLAG.get(), PurrfectBlocks.TRANS_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> ENBY_FLAG = ITEMS.register("enby_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.ENBY_FLAG.get(), PurrfectBlocks.ENBY_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> GENDERFLUID_FLAG = ITEMS.register("genderfluid_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.GENDERFLUID_FLAG.get(), PurrfectBlocks.GENDERFLUID_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> DEMIBOY_FLAG = ITEMS.register("demiboy_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.DEMIBOY_FLAG.get(), PurrfectBlocks.DEMIBOY_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> DEMIGIRL_FLAG = ITEMS.register("demigirl_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.DEMIGIRL_FLAG.get(), PurrfectBlocks.DEMIGIRL_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> DEMIGENDER_FLAG = ITEMS.register("demigender_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.DEMIGENDER_FLAG.get(), PurrfectBlocks.DEMIGENDER_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> AGENDER_FLAG = ITEMS.register("agender_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.AGENDER_FLAG.get(), PurrfectBlocks.AGENDER_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> PAN_FLAG = ITEMS.register("pan_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.PAN_FLAG.get(), PurrfectBlocks.PAN_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> OMNI_FLAG = ITEMS.register("omni_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.OMNI_FLAG.get(), PurrfectBlocks.OMNI_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> POLY_FLAG = ITEMS.register("poly_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.POLY_FLAG.get(), PurrfectBlocks.POLY_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> DEMISEXUAL_FLAG = ITEMS.register("demisexual_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.DEMISEXUAL_FLAG.get(), PurrfectBlocks.DEMISEXUAL_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> ACE_FLAG = ITEMS.register("ace_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.ACE_FLAG.get(), PurrfectBlocks.ACE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> ARO_FLAG = ITEMS.register("aro_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.ARO_FLAG.get(), PurrfectBlocks.ARO_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> AROACE_FLAG = ITEMS.register("aroace_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.AROACE_FLAG.get(), PurrfectBlocks.AROACE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> KVASSSEXUAL_FLAG = ITEMS.register("kvasssexual_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.KVASSSEXUAL_FLAG.get(), PurrfectBlocks.KVASSSEXUAL_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> BEERSEXUAL_FLAG = ITEMS.register("beersexual_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.BEERSEXUAL_FLAG.get(), PurrfectBlocks.BEERSEXUAL_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> WIZARDS_REBORN_FLAG = ITEMS.register("wizards_reborn_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.WIZARDS_REBORN_FLAG.get(), PurrfectBlocks.WIZARDS_REBORN_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> FLUFFY_FUR_FLAG = ITEMS.register("fluffy_fur_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.FLUFFY_FUR_FLAG.get(), PurrfectBlocks.FLUFFY_FUR_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
@@ -183,6 +216,35 @@ public class PurrfectItems {
                     }
                 }
             }
+        }
+
+        @SubscribeEvent
+        public static void modelBakeItems(ModelEvent.ModifyBakingResult event) {
+            Map<ResourceLocation, BakedModel> map = event.getModels();
+
+            FluffyFurModels.addCustomRenderItemModel(map, HETEROSEXUAL_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, PRIDE_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, LESBIAN_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, GAY_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, BI_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, TRANS_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, ENBY_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, GENDERFLUID_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, DEMIBOY_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, DEMIGIRL_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, DEMIGENDER_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, AGENDER_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, PAN_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, OMNI_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, POLY_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, DEMISEXUAL_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, ACE_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, ARO_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, AROACE_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, KVASSSEXUAL_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, BEERSEXUAL_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, WIZARDS_REBORN_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, FLUFFY_FUR_FLAG.getId());
         }
     }
 }

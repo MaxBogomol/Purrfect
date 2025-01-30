@@ -171,6 +171,23 @@ public class PurrfectItems {
     public static final RegistryObject<Item> RAINBOW_YARN = ITEMS.register("rainbow_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> FLAGPOLE = ITEMS.register("flagpole", () -> new BlockItem(PurrfectBlocks.FLAGPOLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WHITE_FLAG = ITEMS.register("white_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.WHITE_FLAG.get(), PurrfectBlocks.WHITE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> LIGHT_GRAY_FLAG = ITEMS.register("light_gray_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.LIGHT_GRAY_FLAG.get(), PurrfectBlocks.LIGHT_GRAY_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> GRAY_FLAG = ITEMS.register("gray_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.GRAY_FLAG.get(), PurrfectBlocks.GRAY_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> BLACK_FLAG = ITEMS.register("black_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.BLACK_FLAG.get(), PurrfectBlocks.BLACK_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> BROWN_FLAG = ITEMS.register("brown_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.BROWN_FLAG.get(), PurrfectBlocks.BROWN_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> RED_FLAG = ITEMS.register("red_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.RED_FLAG.get(), PurrfectBlocks.RED_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> ORANGE_FLAG = ITEMS.register("orange_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.ORANGE_FLAG.get(), PurrfectBlocks.ORANGE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> YELLOW_FLAG = ITEMS.register("yellow_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.YELLOW_FLAG.get(), PurrfectBlocks.YELLOW_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> LIME_FLAG = ITEMS.register("lime_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.LIME_FLAG.get(), PurrfectBlocks.LIME_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> GREEN_FLAG = ITEMS.register("green_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.GREEN_FLAG.get(), PurrfectBlocks.GREEN_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> CYAN_FLAG = ITEMS.register("cyan_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.CYAN_FLAG.get(), PurrfectBlocks.CYAN_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> LIGHT_BLUE_FLAG = ITEMS.register("light_blue_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.LIGHT_BLUE_FLAG.get(), PurrfectBlocks.LIGHT_BLUE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> BLUE_FLAG = ITEMS.register("blue_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.BLUE_FLAG.get(), PurrfectBlocks.BLUE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> PURPLE_FLAG = ITEMS.register("purple_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.PURPLE_FLAG.get(), PurrfectBlocks.PURPLE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> MAGENTA_FLAG = ITEMS.register("magenta_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.MAGENTA_FLAG.get(), PurrfectBlocks.MAGENTA_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> PINK_FLAG = ITEMS.register("pink_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.PINK_FLAG.get(), PurrfectBlocks.PINK_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> RAINBOW_FLAG = ITEMS.register("rainbow_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.RAINBOW_FLAG.get(), PurrfectBlocks.RAINBOW_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> HETEROSEXUAL_FLAG = ITEMS.register("heterosexual_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.HETEROSEXUAL_FLAG.get(), PurrfectBlocks.HETEROSEXUAL_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> PRIDE_FLAG = ITEMS.register("pride_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.PRIDE_FLAG.get(), PurrfectBlocks.PRIDE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> LESBIAN_FLAG = ITEMS.register("lesbian_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.LESBIAN_FLAG.get(), PurrfectBlocks.LESBIAN_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
@@ -222,6 +239,23 @@ public class PurrfectItems {
         public static void modelBakeItems(ModelEvent.ModifyBakingResult event) {
             Map<ResourceLocation, BakedModel> map = event.getModels();
 
+            FluffyFurModels.addCustomRenderItemModel(map, WHITE_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, LIGHT_GRAY_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, GRAY_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, BLACK_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, BROWN_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, RED_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, ORANGE_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, YELLOW_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, LIME_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, GREEN_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, CYAN_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, LIGHT_BLUE_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, BLUE_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, PURPLE_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, MAGENTA_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, PINK_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, RAINBOW_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, HETEROSEXUAL_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, PRIDE_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, LESBIAN_FLAG.getId());

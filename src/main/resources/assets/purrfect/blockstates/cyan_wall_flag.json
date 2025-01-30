@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=east":  { "model": "purrfect:block/flagpole_wall", "y": 90 },
+    "facing=west":  { "model": "purrfect:block/flagpole_wall", "y": 270 },
+    "facing=south": { "model": "purrfect:block/flagpole_wall", "y": 180 },
+    "facing=north": { "model": "purrfect:block/flagpole_wall" }
+  }
+}

@@ -51,6 +51,23 @@ public class FlagBlock extends Block implements EntityBlock, SimpleWaterloggedBl
 
     private static final VoxelShape SHAPE = Block.box(6.5, 0, 6.5, 9.5, 16, 9.5);
 
+    public static FlagColor WHITE = FlagColor.create(Purrfect.MOD_ID, "white");
+    public static FlagColor LIGHT_GRAY = FlagColor.create(Purrfect.MOD_ID, "light_gray");
+    public static FlagColor GRAY = FlagColor.create(Purrfect.MOD_ID, "gray");
+    public static FlagColor BLACK = FlagColor.create(Purrfect.MOD_ID, "black");
+    public static FlagColor BROWN = FlagColor.create(Purrfect.MOD_ID, "brown");
+    public static FlagColor RED = FlagColor.create(Purrfect.MOD_ID, "red");
+    public static FlagColor ORANGE = FlagColor.create(Purrfect.MOD_ID, "orange");
+    public static FlagColor YELLOW = FlagColor.create(Purrfect.MOD_ID, "yellow");
+    public static FlagColor LIME = FlagColor.create(Purrfect.MOD_ID, "lime");
+    public static FlagColor GREEN = FlagColor.create(Purrfect.MOD_ID, "green");
+    public static FlagColor CYAN = FlagColor.create(Purrfect.MOD_ID, "cyan");
+    public static FlagColor LIGHT_BLUE = FlagColor.create(Purrfect.MOD_ID, "light_blue");
+    public static FlagColor BLUE = FlagColor.create(Purrfect.MOD_ID, "blue");
+    public static FlagColor PURPLE = FlagColor.create(Purrfect.MOD_ID, "purple");
+    public static FlagColor MAGENTA = FlagColor.create(Purrfect.MOD_ID, "magenta");
+    public static FlagColor PINK = FlagColor.create(Purrfect.MOD_ID, "pink");
+    public static FlagColor RAINBOW = FlagColor.create(Purrfect.MOD_ID, "rainbow");
     public static FlagColor HETEROSEXUAL = FlagColor.create(Purrfect.MOD_ID, "heterosexual");
     public static FlagColor PRIDE = FlagColor.create(Purrfect.MOD_ID, "pride");
     public static FlagColor LESBIAN = FlagColor.create(Purrfect.MOD_ID, "lesbian");

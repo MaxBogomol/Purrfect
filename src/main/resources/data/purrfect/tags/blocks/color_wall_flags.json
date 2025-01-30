@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "purrfect:white_wall_flag",
+    "purrfect:light_gray_wall_flag",
+    "purrfect:gray_wall_flag",
+    "purrfect:black_wall_flag",
+    "purrfect:brown_wall_flag",
+    "purrfect:red_wall_flag",
+    "purrfect:orange_wall_flag",
+    "purrfect:yellow_wall_flag",
+    "purrfect:lime_wall_flag",
+    "purrfect:green_wall_flag",
+    "purrfect:cyan_wall_flag",
+    "purrfect:light_blue_wall_flag",
+    "purrfect:blue_wall_flag",
+    "purrfect:purple_wall_flag",
+    "purrfect:magenta_wall_flag",
+    "purrfect:pink_wall_flag",
+    "purrfect:rainbow_wall_flag"
+  ]
+}

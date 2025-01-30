@@ -174,6 +174,23 @@ public class PurrfectCreativeTabs {
             event.accept(PurrfectItems.RAINBOW_YARN);
 
             event.accept(PurrfectItems.FLAGPOLE);
+            event.accept(PurrfectItems.WHITE_FLAG);
+            event.accept(PurrfectItems.LIGHT_GRAY_FLAG);
+            event.accept(PurrfectItems.GRAY_FLAG);
+            event.accept(PurrfectItems.BLACK_FLAG);
+            event.accept(PurrfectItems.BROWN_FLAG);
+            event.accept(PurrfectItems.RED_FLAG);
+            event.accept(PurrfectItems.ORANGE_FLAG);
+            event.accept(PurrfectItems.YELLOW_FLAG);
+            event.accept(PurrfectItems.LIME_FLAG);
+            event.accept(PurrfectItems.GREEN_FLAG);
+            event.accept(PurrfectItems.CYAN_FLAG);
+            event.accept(PurrfectItems.LIGHT_BLUE_FLAG);
+            event.accept(PurrfectItems.BLUE_FLAG);
+            event.accept(PurrfectItems.PURPLE_FLAG);
+            event.accept(PurrfectItems.MAGENTA_FLAG);
+            event.accept(PurrfectItems.PINK_FLAG);
+            event.accept(PurrfectItems.RAINBOW_FLAG);
             event.accept(PurrfectItems.HETEROSEXUAL_FLAG);
             event.accept(PurrfectItems.PRIDE_FLAG);
             event.accept(PurrfectItems.LESBIAN_FLAG);

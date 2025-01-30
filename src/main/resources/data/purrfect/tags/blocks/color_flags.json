@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "purrfect:white_flag",
+    "purrfect:light_gray_flag",
+    "purrfect:gray_flag",
+    "purrfect:black_flag",
+    "purrfect:brown_flag",
+    "purrfect:red_flag",
+    "purrfect:orange_flag",
+    "purrfect:yellow_flag",
+    "purrfect:lime_flag",
+    "purrfect:green_flag",
+    "purrfect:cyan_flag",
+    "purrfect:light_blue_flag",
+    "purrfect:blue_flag",
+    "purrfect:purple_flag",
+    "purrfect:magenta_flag",
+    "purrfect:pink_flag",
+    "purrfect:rainbow_flag"
+  ]
+}

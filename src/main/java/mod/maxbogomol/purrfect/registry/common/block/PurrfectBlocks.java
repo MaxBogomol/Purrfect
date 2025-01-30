@@ -20,6 +20,23 @@ public class PurrfectBlocks {
 
     public static final RegistryObject<Block> FLAGPOLE = BLOCKS.register("flagpole", () -> new FlagpoleBlock(BlockBehaviour.Properties.copy(Blocks.CHAIN)));
 
+    public static final RegistryObject<Block> WHITE_FLAG = BLOCKS.register("white_flag", () -> new FlagBlock(FlagBlock.WHITE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> LIGHT_GRAY_FLAG = BLOCKS.register("light_gray_flag", () -> new FlagBlock(FlagBlock.LIGHT_GRAY, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> GRAY_FLAG = BLOCKS.register("gray_flag", () -> new FlagBlock(FlagBlock.GRAY, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> BLACK_FLAG = BLOCKS.register("black_flag", () -> new FlagBlock(FlagBlock.BLACK, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> BROWN_FLAG = BLOCKS.register("brown_flag", () -> new FlagBlock(FlagBlock.BROWN, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> RED_FLAG = BLOCKS.register("red_flag", () -> new FlagBlock(FlagBlock.RED, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> ORANGE_FLAG = BLOCKS.register("orange_flag", () -> new FlagBlock(FlagBlock.ORANGE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> YELLOW_FLAG = BLOCKS.register("yellow_flag", () -> new FlagBlock(FlagBlock.YELLOW, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> LIME_FLAG = BLOCKS.register("lime_flag", () -> new FlagBlock(FlagBlock.LIME, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> GREEN_FLAG = BLOCKS.register("green_flag", () -> new FlagBlock(FlagBlock.GREEN, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> CYAN_FLAG = BLOCKS.register("cyan_flag", () -> new FlagBlock(FlagBlock.CYAN, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> LIGHT_BLUE_FLAG = BLOCKS.register("light_blue_flag", () -> new FlagBlock(FlagBlock.LIGHT_BLUE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> BLUE_FLAG = BLOCKS.register("blue_flag", () -> new FlagBlock(FlagBlock.BLUE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> PURPLE_FLAG = BLOCKS.register("purple_flag", () -> new FlagBlock(FlagBlock.PURPLE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> MAGENTA_FLAG = BLOCKS.register("magenta_flag", () -> new FlagBlock(FlagBlock.MAGENTA, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> PINK_FLAG = BLOCKS.register("pink_flag", () -> new FlagBlock(FlagBlock.PINK, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> RAINBOW_FLAG = BLOCKS.register("rainbow_flag", () -> new FlagBlock(FlagBlock.RAINBOW, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> HETEROSEXUAL_FLAG = BLOCKS.register("heterosexual_flag", () -> new FlagBlock(FlagBlock.HETEROSEXUAL, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> PRIDE_FLAG = BLOCKS.register("pride_flag", () -> new FlagBlock(FlagBlock.PRIDE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> LESBIAN_FLAG = BLOCKS.register("lesbian_flag", () -> new FlagBlock(FlagBlock.LESBIAN, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
@@ -44,6 +61,23 @@ public class PurrfectBlocks {
     public static final RegistryObject<Block> WIZARDS_REBORN_FLAG = BLOCKS.register("wizards_reborn_flag", () -> new FlagBlock(FlagBlock.WIZARDS_REBORN, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> FLUFFY_FUR_FLAG = BLOCKS.register("fluffy_fur_flag", () -> new FlagBlock(FlagBlock.FLUFFY_FUR, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
 
+    public static final RegistryObject<Block> WHITE_WALL_FLAG = BLOCKS.register("white_wall_flag", () -> new FlagWallBlock(FlagBlock.WHITE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> LIGHT_GRAY_WALL_FLAG = BLOCKS.register("light_gray_wall_flag", () -> new FlagWallBlock(FlagBlock.LIGHT_GRAY, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> GRAY_WALL_FLAG = BLOCKS.register("gray_wall_flag", () -> new FlagWallBlock(FlagBlock.GRAY, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> BLACK_WALL_FLAG = BLOCKS.register("black_wall_flag", () -> new FlagWallBlock(FlagBlock.BLACK, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> BROWN_WALL_FLAG = BLOCKS.register("brown_wall_flag", () -> new FlagWallBlock(FlagBlock.BROWN, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> RED_WALL_FLAG = BLOCKS.register("red_wall_flag", () -> new FlagWallBlock(FlagBlock.RED, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> ORANGE_WALL_FLAG = BLOCKS.register("orange_wall_flag", () -> new FlagWallBlock(FlagBlock.ORANGE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> YELLOW_WALL_FLAG = BLOCKS.register("yellow_wall_flag", () -> new FlagWallBlock(FlagBlock.YELLOW, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> LIME_WALL_FLAG = BLOCKS.register("lime_wall_flag", () -> new FlagWallBlock(FlagBlock.LIME, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> GREEN_WALL_FLAG = BLOCKS.register("green_wall_flag", () -> new FlagWallBlock(FlagBlock.GREEN, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> CYAN_WALL_FLAG = BLOCKS.register("cyan_wall_flag", () -> new FlagWallBlock(FlagBlock.CYAN, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> LIGHT_BLUE_WALL_FLAG = BLOCKS.register("light_blue_wall_flag", () -> new FlagWallBlock(FlagBlock.LIGHT_BLUE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> BLUE_WALL_FLAG = BLOCKS.register("blue_wall_flag", () -> new FlagWallBlock(FlagBlock.BLUE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> PURPLE_WALL_FLAG = BLOCKS.register("purple_wall_flag", () -> new FlagWallBlock(FlagBlock.PURPLE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> MAGENTA_WALL_FLAG = BLOCKS.register("magenta_wall_flag", () -> new FlagWallBlock(FlagBlock.MAGENTA, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> PINK_WALL_FLAG = BLOCKS.register("pink_wall_flag", () -> new FlagWallBlock(FlagBlock.PINK, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> RAINBOW_WALL_FLAG = BLOCKS.register("rainbow_wall_flag", () -> new FlagWallBlock(FlagBlock.RAINBOW, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> HETEROSEXUAL_WALL_FLAG = BLOCKS.register("heterosexual_wall_flag", () -> new FlagWallBlock(FlagBlock.HETEROSEXUAL, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
     public static final RegistryObject<Block> PRIDE_WALL_FLAG = BLOCKS.register("pride_wall_flag", () -> new FlagWallBlock(FlagBlock.PRIDE, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
     public static final RegistryObject<Block> LESBIAN_WALL_FLAG = BLOCKS.register("lesbian_wall_flag", () -> new FlagWallBlock(FlagBlock.LESBIAN, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));

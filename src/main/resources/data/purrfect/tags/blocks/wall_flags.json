@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "#purrfect:color_wall_flags",
     "purrfect:heterosexual_wall_flag",
     "purrfect:pride_wall_flag",
     "purrfect:lesbian_wall_flag",

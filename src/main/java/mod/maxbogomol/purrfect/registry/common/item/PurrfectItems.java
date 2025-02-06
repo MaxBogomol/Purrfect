@@ -1,7 +1,7 @@
 package mod.maxbogomol.purrfect.registry.common.item;
 
+import mod.maxbogomol.fluffy_fur.common.item.PlushItem;
 import mod.maxbogomol.fluffy_fur.registry.client.FluffyFurModels;
-import mod.maxbogomol.fluffy_fur.registry.common.block.FluffyFurBlocks;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.client.render.curio.CollarRenderer;
 import mod.maxbogomol.purrfect.common.item.PurrfectRenderStandingAndWallBlockItem;
@@ -233,8 +233,7 @@ public class PurrfectItems {
     public static final RegistryObject<Item> WIZARDS_REBORN_FLAG = ITEMS.register("wizards_reborn_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.WIZARDS_REBORN_FLAG.get(), PurrfectBlocks.WIZARDS_REBORN_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> FLUFFY_FUR_FLAG = ITEMS.register("fluffy_fur_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.FLUFFY_FUR_FLAG.get(), PurrfectBlocks.FLUFFY_FUR_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
 
-    public static final RegistryObject<Item> BLAHAJ_PLUSH = ITEMS.register("blahaj_plush", () -> new BlockItem(PurrfectBlocks.BLAHAJ_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
-
+    public static final RegistryObject<Item> BLAHAJ_PLUSH = ITEMS.register("blahaj_plush", () -> new PlushItem(PurrfectBlocks.BLAHAJ_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

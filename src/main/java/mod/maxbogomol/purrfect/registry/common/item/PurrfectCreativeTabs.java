@@ -173,6 +173,25 @@ public class PurrfectCreativeTabs {
             event.accept(PurrfectItems.PINK_YARN);
             event.accept(PurrfectItems.RAINBOW_YARN);
 
+            event.accept(PurrfectItems.LEASH);
+            event.accept(PurrfectItems.WHITE_LEASH);
+            event.accept(PurrfectItems.LIGHT_GRAY_LEASH);
+            event.accept(PurrfectItems.GRAY_LEASH);
+            event.accept(PurrfectItems.BLACK_LEASH);
+            event.accept(PurrfectItems.BROWN_LEASH);
+            event.accept(PurrfectItems.RED_LEASH);
+            event.accept(PurrfectItems.ORANGE_LEASH);
+            event.accept(PurrfectItems.YELLOW_LEASH);
+            event.accept(PurrfectItems.LIME_LEASH);
+            event.accept(PurrfectItems.GREEN_LEASH);
+            event.accept(PurrfectItems.CYAN_LEASH);
+            event.accept(PurrfectItems.LIGHT_BLUE_LEASH);
+            event.accept(PurrfectItems.BLUE_LEASH);
+            event.accept(PurrfectItems.PURPLE_LEASH);
+            event.accept(PurrfectItems.MAGENTA_LEASH);
+            event.accept(PurrfectItems.PINK_LEASH);
+            event.accept(PurrfectItems.RAINBOW_LEASH);
+
             event.accept(PurrfectItems.FLAGPOLE);
             event.accept(PurrfectItems.WHITE_FLAG);
             event.accept(PurrfectItems.LIGHT_GRAY_FLAG);

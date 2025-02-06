@@ -170,6 +170,25 @@ public class PurrfectItems {
     public static final RegistryObject<Item> PINK_YARN = ITEMS.register("pink_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> RAINBOW_YARN = ITEMS.register("rainbow_yarn", () -> new Item(new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<Item> LEASH = ITEMS.register("leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WHITE_LEASH = ITEMS.register("white_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LIGHT_GRAY_LEASH = ITEMS.register("light_gray_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GRAY_LEASH = ITEMS.register("gray_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_LEASH = ITEMS.register("black_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BROWN_LEASH = ITEMS.register("brown_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RED_LEASH = ITEMS.register("red_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ORANGE_LEASH = ITEMS.register("orange_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> YELLOW_LEASH = ITEMS.register("yellow_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LIME_LEASH = ITEMS.register("lime_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GREEN_LEASH = ITEMS.register("green_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CYAN_LEASH = ITEMS.register("cyan_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LIGHT_BLUE_LEASH = ITEMS.register("light_blue_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BLUE_LEASH = ITEMS.register("blue_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PURPLE_LEASH = ITEMS.register("purple_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MAGENTA_LEASH = ITEMS.register("magenta_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PINK_LEASH = ITEMS.register("pink_leash", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAINBOW_LEASH = ITEMS.register("rainbow_leash", () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> FLAGPOLE = ITEMS.register("flagpole", () -> new BlockItem(PurrfectBlocks.FLAGPOLE.get(), new Item.Properties()));
     public static final RegistryObject<Item> WHITE_FLAG = ITEMS.register("white_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.WHITE_FLAG.get(), PurrfectBlocks.WHITE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> LIGHT_GRAY_FLAG = ITEMS.register("light_gray_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.LIGHT_GRAY_FLAG.get(), PurrfectBlocks.LIGHT_GRAY_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));

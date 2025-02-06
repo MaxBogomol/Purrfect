@@ -233,6 +233,8 @@ public class PurrfectCreativeTabs {
             event.accept(PurrfectItems.BEERSEXUAL_FLAG);
             event.accept(PurrfectItems.WIZARDS_REBORN_FLAG);
             event.accept(PurrfectItems.FLUFFY_FUR_FLAG);
+
+            event.accept(PurrfectItems.BLAHAJ_PLUSH);
         }
     }
 }

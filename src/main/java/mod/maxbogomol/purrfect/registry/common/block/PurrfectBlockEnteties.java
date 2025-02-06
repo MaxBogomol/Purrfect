@@ -1,7 +1,9 @@
 package mod.maxbogomol.purrfect.registry.common.block;
 
+import mod.maxbogomol.fluffy_fur.client.render.block.PlushRenderer;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.client.render.block.FlagRenderer;
+import mod.maxbogomol.purrfect.common.block.blahaj.BlahajBlockEntity;
 import mod.maxbogomol.purrfect.common.block.flag.FlagBlockEntity;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -34,6 +36,8 @@ public class PurrfectBlockEnteties {
                     PurrfectBlocks.WIZARDS_REBORN_WALL_FLAG.get(), PurrfectBlocks.FLUFFY_FUR_WALL_FLAG.get())
             .build(null));
 
+    public static final RegistryObject<BlockEntityType<BlahajBlockEntity>> BLAHAJ = BLOCK_ENTITIES.register("blahaj", () -> BlockEntityType.Builder.of(BlahajBlockEntity::new, PurrfectBlocks.BLAHAJ_PLUSH.get()).build(null));
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }
@@ -43,6 +47,7 @@ public class PurrfectBlockEnteties {
         @SubscribeEvent
         public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
             BlockEntityRenderers.register(FLAG.get(), (context) -> new FlagRenderer());
+            BlockEntityRenderers.register(BLAHAJ.get(), (context) -> new PlushRenderer());
         }
     }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "purrfect:plush/blahaj",
+  "textures": {
+    "particle": "minecraft:block/light_blue_wool"
+  }
+}

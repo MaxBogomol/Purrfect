@@ -5,6 +5,7 @@ import mod.maxbogomol.fluffy_fur.common.proxy.ClientProxy;
 import mod.maxbogomol.fluffy_fur.common.proxy.ISidedProxy;
 import mod.maxbogomol.fluffy_fur.common.proxy.ServerProxy;
 import mod.maxbogomol.purrfect.common.event.PurrfectEvents;
+import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
 import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlockEnteties;
 import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlocks;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectCreativeTabs;
@@ -54,6 +55,7 @@ public class Purrfect {
 
     private void setup(final FMLCommonSetupEvent event) {
         hi();
+        PurrfectPacketHandler.init();
     }
 
     public static void hi() {

@@ -4,6 +4,11 @@
       "type": "directory",
       "source": "flag",
       "prefix": "flag/"
+    },
+    {
+      "type": "directory",
+      "source": "yarn",
+      "prefix": "yarn/"
     }
   ]
 }

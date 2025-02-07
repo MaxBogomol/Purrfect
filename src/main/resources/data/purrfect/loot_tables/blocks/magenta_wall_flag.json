@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "purrfect:magenta_wall_flag"
+          "name": "purrfect:magenta_flag"
         }
       ],
       "conditions": [

@@ -8,6 +8,7 @@ import mod.maxbogomol.purrfect.common.event.PurrfectEvents;
 import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
 import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlockEnteties;
 import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlocks;
+import mod.maxbogomol.purrfect.registry.common.entity.PurrfectEntities;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectCreativeTabs;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectItems;
 import net.minecraftforge.api.distmarker.Dist;
@@ -38,6 +39,7 @@ public class Purrfect {
         PurrfectItems.register(eventBus);
         PurrfectBlocks.register(eventBus);
         PurrfectBlockEnteties.register(eventBus);
+        PurrfectEntities.register(eventBus);
 
         DistExecutor.unsafeCallWhenOn(Dist.CLIENT, () -> () -> {
             PurrfectClient.ClientOnly.clientInit();

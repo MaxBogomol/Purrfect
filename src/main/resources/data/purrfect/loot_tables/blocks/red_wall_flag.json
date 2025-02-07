@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "purrfect:red_wall_flag"
+          "name": "purrfect:red_flag"
         }
       ],
       "conditions": [

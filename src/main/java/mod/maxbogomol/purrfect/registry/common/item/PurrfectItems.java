@@ -248,10 +248,10 @@ public class PurrfectItems {
             for (Item item : items) {
                 String string = item.getDescriptionId();
                 if (!string.isEmpty()) {
-                    if (string.contains(".")) break;
+                    if (!string.contains(".")) break;
                     int i = string.indexOf(".");
                     string = string.substring(i + 1);
-                    if (string.contains(".")) break;
+                    if (!string.contains(".")) break;
                     i = string.indexOf(".");
                     String modId = string.substring(0, i);
                     if (modId.equals(Purrfect.MOD_ID) && item instanceof CollarItem) {

@@ -48,7 +48,7 @@ public class FurryPlayerHandler {
                         FurryPlayerHandler.setLeash(player, index, null);
                         if (target != null) level.playSound(null, target.position().x(), target.position().y(), target.position().z(), SoundEvents.LEASH_KNOT_BREAK, SoundSource.PLAYERS, 1f, 1f);
                     } else {
-                        if (Math.sqrt(target.distanceToSqr(player)) > 15) {
+                        if (Math.sqrt(target.distanceToSqr(player)) > 10) {
                             double dX = target.getX() - player.getX();
                             double dY = target.getY() - player.getY();
                             double dZ = target.getZ() - player.getZ();
@@ -62,6 +62,7 @@ public class FurryPlayerHandler {
                             double z = Math.sin(pitch) * Math.sin(yaw) * speed;
                             target.push(x, y, z);
                             target.hurtMarked = true;
+                            target.resetFallDistance();
                         }
                     }
                 }

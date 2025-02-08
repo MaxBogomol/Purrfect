@@ -92,11 +92,8 @@ public class LeashRenderHandler {
         float f1 = (float) (vec3.y - d4);
         float f2 = (float) (vec3.z - d5);
         BlockPos blockpos = BlockPos.containing(entityLiving.getEyePosition(partialTicks));
-        BlockPos blockpos1 = BlockPos.containing(leashHolder.getEyePosition(partialTicks));
         int i = getBlockLightLevel(entityLiving, blockpos);
-        int j = getBlockLightLevel(leashHolder, blockpos1);
         int k = entityLiving.level().getBrightness(LightLayer.SKY, blockpos);
-        int l = entityLiving.level().getBrightness(LightLayer.SKY, blockpos1);
 
         for (int i1 = 0; i1 <= 24; ++i1) {
             addTrailPoint(f, f1, f2, i1);
@@ -106,8 +103,7 @@ public class LeashRenderHandler {
                 .setUV(u0, v0, u1, v1)
                 .setRenderType(RenderType.cutout())
                 .setFormat(DefaultVertexFormat.BLOCK)
-                .setFirstLight(LightTexture.pack(i, k))
-                .setSecondLight(LightTexture.pack(j, l))
+                .setLight(LightTexture.pack(i, k))
                 .renderTrail(poseStack, trailPoints, (f3) -> RenderUtil.FULL_WIDTH_FUNCTION.apply(f3) * 0.05f);
         trailPoints.clear();
         poseStack.popPose();

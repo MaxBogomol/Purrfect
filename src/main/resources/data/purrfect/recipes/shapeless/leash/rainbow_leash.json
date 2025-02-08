@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "purrfect:leashes"
+    },
+    {
+      "tag": "forge:dyes/purple"
+    },
+    {
+      "tag": "forge:dyes/blue"
+    },
+    {
+      "tag": "forge:dyes/light_blue"
+    },
+    {
+      "tag": "forge:dyes/lime"
+    },
+    {
+      "tag": "forge:dyes/yellow"
+    },
+    {
+      "tag": "forge:dyes/orange"
+    },
+    {
+      "tag": "forge:dyes/red"
+    }
+  ],
+  "result": {
+    "item": "purrfect:rainbow_leash",
+    "count": 1
+  }
+}

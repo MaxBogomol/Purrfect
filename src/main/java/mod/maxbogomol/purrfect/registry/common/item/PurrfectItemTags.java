@@ -8,4 +8,5 @@ import net.minecraft.world.item.Item;
 
 public class PurrfectItemTags {
     public static final TagKey<Item> GLOW_FLAG_INGREDIENT = TagKey.create(Registries.ITEM, new ResourceLocation(Purrfect.MOD_ID, "glow_flag_ingredient"));
+    public static final TagKey<Item> LEASH_COLLARS = TagKey.create(Registries.ITEM, new ResourceLocation(Purrfect.MOD_ID, "leash_collars"));
 }

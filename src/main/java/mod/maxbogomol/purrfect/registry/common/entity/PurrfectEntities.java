@@ -2,6 +2,7 @@ package mod.maxbogomol.purrfect.registry.common.entity;
 
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.client.render.entity.YarnRenderer;
+import mod.maxbogomol.purrfect.common.capability.IFurryPlayer;
 import mod.maxbogomol.purrfect.common.entity.YarnEntity;
 import mod.maxbogomol.wizards_reborn.WizardsReborn;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -10,6 +11,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -31,6 +33,11 @@ public class PurrfectEntities {
         @SubscribeEvent
         public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
             EntityRenderers.register(YARN.get(), YarnRenderer::new);
+        }
+
+        @SubscribeEvent
+        public static void registerCaps(RegisterCapabilitiesEvent event) {
+            event.register(IFurryPlayer.class);
         }
     }
 }

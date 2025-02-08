@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#purrfect:all_collars",
+    {
+      "id": "wizards_reborn:leather_collar",
+      "required": false
+    }
+  ]
+}

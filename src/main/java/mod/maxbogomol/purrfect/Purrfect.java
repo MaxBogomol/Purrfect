@@ -13,9 +13,7 @@ import mod.maxbogomol.purrfect.registry.common.item.PurrfectCreativeTabs;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -63,13 +61,5 @@ public class Purrfect {
     public static void hi() {
         FluffyFur.LOGGER.info("Hi Purrfect! You are very cute :3");
         LOGGER.info("OMG! Fluffy Fur! Haiii I love you very much :3");
-    }
-
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents {
-        @SubscribeEvent
-        public static void registerCaps(RegisterCapabilitiesEvent event) {
-
-        }
     }
 }

@@ -65,7 +65,7 @@ public class YarnRenderer<T extends YarnEntity> extends EntityRenderer<T> {
             trail.set(i, new TrailPoint(new Vec3(x, y, z)));
         }
 
-        if (trail.size() > 1 && entity.tickCount >= entity.trailPointBuilder.trailLength.get() && entity.trailLength > 0.1f) {
+        if (trail.size() > 1 && entity.tickCount >= entity.trailPointBuilder.trailLength.get() && entity.isMoved) {
             TrailPoint position = trail.get(0);
             TrailPoint nextPosition = trail.get(1);
             float x = (float) Mth.lerp(partialTicks, position.getPosition().x, nextPosition.getPosition().x);

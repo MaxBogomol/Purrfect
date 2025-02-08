@@ -30,6 +30,7 @@ public class YarnEntity extends ThrowableItemProjectile {
     public double trailLength = 0;
     public double roll = 0;
     public double oldRoll = 0;
+    public boolean isMoved = false;
 
     public YarnEntity(EntityType<?> type, Level level) {
         super(PurrfectEntities.YARN.get(), level);
@@ -57,6 +58,7 @@ public class YarnEntity extends ThrowableItemProjectile {
         if (onGround()) {
             f = f * 0.75f;
         }
+        isMoved = false;
 
         Vec3 motion = getDeltaMovement();
         setDeltaMovement(motion.x * f, (motion.y > 0 ? motion.y * f : motion.y) - g, motion.z * f);
@@ -107,6 +109,7 @@ public class YarnEntity extends ThrowableItemProjectile {
                 addOldTrail(new Vec3(position().toVector3f()));
                 oldTrailPointBuilder.tickTrailPoints();
                 trailLength = 0;
+                isMoved = true;
             }
             oldTrailPointBuilder.trailPoints.clear();
             for (TrailPoint trailPoint : trailPointBuilder.trailPoints) {
@@ -117,7 +120,7 @@ public class YarnEntity extends ThrowableItemProjectile {
                 y = -0.1f;
                 z = 0;
                 AABB boundingBox = new AABB(trailPoint.getPosition(), trailPoint.getPosition());
-                if ((x != 0.0D || y != 0.0D || z != 0.0D) && x * x + y * y + z * z < MAXIMUM_COLLISION_VELOCITY_SQUARED) {
+                if (x * x + y * y + z * z < MAXIMUM_COLLISION_VELOCITY_SQUARED) {
                     Vec3 vec3 = Entity.collideBoundingBox(null, new Vec3(x, y, z), boundingBox, level(), List.of());
                     x = vec3.x;
                     y = vec3.y;

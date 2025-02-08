@@ -9,6 +9,11 @@
       "type": "directory",
       "source": "yarn",
       "prefix": "yarn/"
+    },
+    {
+      "type": "directory",
+      "source": "leash",
+      "prefix": "leash/"
     }
   ]
 }

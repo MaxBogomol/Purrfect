@@ -249,6 +249,9 @@
 
   "block.purrfect.blahaj_plush": "Blåhaj Plush",
 
-  "_comment_2": "Menu",
+  "_comment_2": "Entities",
+  "entity.purrfect.yarn": "Yarn",
+
+  "_comment_3": "Fluffy Fur Menu",
   "mod_description.purrfect": "Purrfect - a mod about furries, for furries, from furry. \n Adds Pharmacy and furry things."
 }

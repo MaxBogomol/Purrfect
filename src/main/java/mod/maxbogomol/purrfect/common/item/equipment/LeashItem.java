@@ -49,7 +49,7 @@ public class LeashItem extends Item {
         ItemStack stack = player.getItemInHand(hand);
 
         if (player.isShiftKeyDown()) {
-            int slot = player.getUsedItemHand() == InteractionHand.OFF_HAND ? player.getInventory().getContainerSize() - 1 : player.getInventory().selected;
+            int slot = hand == InteractionHand.OFF_HAND ? player.getInventory().getContainerSize() - 1 : player.getInventory().selected;
             Player t = FurryPlayerHandler.getLeashedPlayer(player, slot);
             if (t != null) {
                 if (!player.level().isClientSide()) {
@@ -66,7 +66,7 @@ public class LeashItem extends Item {
 
     @Override
     public InteractionResult interactLivingEntity(ItemStack stack, Player player, LivingEntity interactionTarget, InteractionHand usedHand) {
-        int slot = player.getUsedItemHand() == InteractionHand.OFF_HAND ? player.getInventory().getContainerSize() - 1 : player.getInventory().selected;
+        int slot = usedHand == InteractionHand.OFF_HAND ? player.getInventory().getContainerSize() - 1 : player.getInventory().selected;
         Player t = FurryPlayerHandler.getLeashedPlayer(player, slot);
         if (interactionTarget instanceof Player target) {
             if (t == null && FurryPlayerHandler.hasCollar(target)) {

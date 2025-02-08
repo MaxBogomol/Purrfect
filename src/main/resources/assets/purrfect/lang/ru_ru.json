@@ -1,7 +1,7 @@
 {
   "creative_tab.purrfect": "Purrfect :3",
 
-  "_comment_1": "Items and Blocks",
+  "_comment_1": "Предметы и блоки",
   "block.purrfect.pharmacist_table": "Аптекарский стол",
 
   "item.purrfect.pharmacy_vial": "Аптекарская склянка",
@@ -249,6 +249,9 @@
 
   "block.purrfect.blahaj_plush": "Плюшка Акулки",
 
-  "_comment_2": "Menu",
+  "_comment_2": "Существа",
+  "entity.purrfect.yarn": "Клубок",
+
+  "_comment_3": "Меню Пушистого Меха",
   "mod_description.purrfect": "Purrfect - мод про фурри, для фурри, от фурри. \n Добавляет фармацевтику и фурри штучки."
 }

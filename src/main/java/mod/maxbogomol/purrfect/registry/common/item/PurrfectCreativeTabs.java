@@ -41,6 +41,9 @@ public class PurrfectCreativeTabs {
             event.accept(PurrfectItems.PHARMACY_VIAL_RAINBOW_SPARK);
             event.accept(PurrfectItems.PHARMACY_VIAL_SLIMY_SLUG);
 
+            event.accept(PurrfectItems.BLAHAJ_PLUSH);
+            event.accept(PurrfectItems.BLAHAJ_PINK_PLUSH);
+
             event.accept(PurrfectItems.COLLAR);
             event.accept(PurrfectItems.WHITE_COLLAR);
             event.accept(PurrfectItems.LIGHT_GRAY_COLLAR);
@@ -155,24 +158,6 @@ public class PurrfectCreativeTabs {
             event.accept(PurrfectItems.PINK_GOLDEN_BELL_SPIKED_COLLAR);
             event.accept(PurrfectItems.RAINBOW_GOLDEN_BELL_SPIKED_COLLAR);
 
-            event.accept(PurrfectItems.WHITE_YARN);
-            event.accept(PurrfectItems.LIGHT_GRAY_YARN);
-            event.accept(PurrfectItems.GRAY_YARN);
-            event.accept(PurrfectItems.BLACK_YARN);
-            event.accept(PurrfectItems.BROWN_YARN);
-            event.accept(PurrfectItems.RED_YARN);
-            event.accept(PurrfectItems.ORANGE_YARN);
-            event.accept(PurrfectItems.YELLOW_YARN);
-            event.accept(PurrfectItems.LIME_YARN);
-            event.accept(PurrfectItems.GREEN_YARN);
-            event.accept(PurrfectItems.CYAN_YARN);
-            event.accept(PurrfectItems.LIGHT_BLUE_YARN);
-            event.accept(PurrfectItems.BLUE_YARN);
-            event.accept(PurrfectItems.PURPLE_YARN);
-            event.accept(PurrfectItems.MAGENTA_YARN);
-            event.accept(PurrfectItems.PINK_YARN);
-            event.accept(PurrfectItems.RAINBOW_YARN);
-
             event.accept(PurrfectItems.LEASH);
             event.accept(PurrfectItems.WHITE_LEASH);
             event.accept(PurrfectItems.LIGHT_GRAY_LEASH);
@@ -191,6 +176,24 @@ public class PurrfectCreativeTabs {
             event.accept(PurrfectItems.MAGENTA_LEASH);
             event.accept(PurrfectItems.PINK_LEASH);
             event.accept(PurrfectItems.RAINBOW_LEASH);
+
+            event.accept(PurrfectItems.WHITE_YARN);
+            event.accept(PurrfectItems.LIGHT_GRAY_YARN);
+            event.accept(PurrfectItems.GRAY_YARN);
+            event.accept(PurrfectItems.BLACK_YARN);
+            event.accept(PurrfectItems.BROWN_YARN);
+            event.accept(PurrfectItems.RED_YARN);
+            event.accept(PurrfectItems.ORANGE_YARN);
+            event.accept(PurrfectItems.YELLOW_YARN);
+            event.accept(PurrfectItems.LIME_YARN);
+            event.accept(PurrfectItems.GREEN_YARN);
+            event.accept(PurrfectItems.CYAN_YARN);
+            event.accept(PurrfectItems.LIGHT_BLUE_YARN);
+            event.accept(PurrfectItems.BLUE_YARN);
+            event.accept(PurrfectItems.PURPLE_YARN);
+            event.accept(PurrfectItems.MAGENTA_YARN);
+            event.accept(PurrfectItems.PINK_YARN);
+            event.accept(PurrfectItems.RAINBOW_YARN);
 
             event.accept(PurrfectItems.FLAGPOLE);
             event.accept(PurrfectItems.WHITE_FLAG);
@@ -233,8 +236,6 @@ public class PurrfectCreativeTabs {
             event.accept(PurrfectItems.BEERSEXUAL_FLAG);
             event.accept(PurrfectItems.WIZARDS_REBORN_FLAG);
             event.accept(PurrfectItems.FLUFFY_FUR_FLAG);
-
-            event.accept(PurrfectItems.BLAHAJ_PLUSH);
         }
     }
 }

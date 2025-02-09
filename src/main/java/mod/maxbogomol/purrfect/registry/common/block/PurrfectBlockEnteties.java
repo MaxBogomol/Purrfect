@@ -19,6 +19,10 @@ import net.minecraftforge.registries.RegistryObject;
 public class PurrfectBlockEnteties {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Purrfect.MOD_ID);
 
+    public static final RegistryObject<BlockEntityType<BlahajBlockEntity>> BLAHAJ = BLOCK_ENTITIES.register("blahaj", () -> BlockEntityType.Builder.of(BlahajBlockEntity::new,
+            PurrfectBlocks.BLAHAJ_PLUSH.get(), PurrfectBlocks.BLAHAJ_PINK_PLUSH.get()
+    ).build(null));
+
     public static final RegistryObject<BlockEntityType<FlagBlockEntity>> FLAG = BLOCK_ENTITIES.register("flag", () -> BlockEntityType.Builder.of(FlagBlockEntity::new,
                     PurrfectBlocks.WHITE_FLAG.get(), PurrfectBlocks.LIGHT_GRAY_FLAG.get(), PurrfectBlocks.GRAY_FLAG.get(), PurrfectBlocks.BLACK_FLAG.get(), PurrfectBlocks.BROWN_FLAG.get(), PurrfectBlocks.RED_FLAG.get(), PurrfectBlocks.ORANGE_FLAG.get(), PurrfectBlocks.YELLOW_FLAG.get(), PurrfectBlocks.LIME_FLAG.get(), PurrfectBlocks.GREEN_FLAG.get(), PurrfectBlocks.CYAN_FLAG.get(), PurrfectBlocks.LIGHT_BLUE_FLAG.get(), PurrfectBlocks.BLUE_FLAG.get(), PurrfectBlocks.PURPLE_FLAG.get(), PurrfectBlocks.MAGENTA_FLAG.get(), PurrfectBlocks.PINK_FLAG.get(), PurrfectBlocks.RAINBOW_FLAG.get(),
                     PurrfectBlocks.HETEROSEXUAL_FLAG.get(), PurrfectBlocks.PRIDE_FLAG.get(), PurrfectBlocks.LESBIAN_FLAG.get(), PurrfectBlocks.GAY_FLAG.get(), PurrfectBlocks.BI_FLAG.get(),
@@ -35,8 +39,6 @@ public class PurrfectBlockEnteties {
                     PurrfectBlocks.KVASSSEXUAL_WALL_FLAG.get(), PurrfectBlocks.BEERSEXUAL_WALL_FLAG.get(),
                     PurrfectBlocks.WIZARDS_REBORN_WALL_FLAG.get(), PurrfectBlocks.FLUFFY_FUR_WALL_FLAG.get())
             .build(null));
-
-    public static final RegistryObject<BlockEntityType<BlahajBlockEntity>> BLAHAJ = BLOCK_ENTITIES.register("blahaj", () -> BlockEntityType.Builder.of(BlahajBlockEntity::new, PurrfectBlocks.BLAHAJ_PLUSH.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

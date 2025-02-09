@@ -42,6 +42,9 @@ public class PurrfectItems {
     public static final RegistryObject<Item> PHARMACY_VIAL_RAINBOW_SPARK = ITEMS.register("pharmacy_vial_rainbow_spark", () -> new Item(new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> PHARMACY_VIAL_SLIMY_SLUG = ITEMS.register("pharmacy_vial_slimy_slug", () -> new Item(new Item.Properties().stacksTo(16)));
 
+    public static final RegistryObject<Item> BLAHAJ_PLUSH = ITEMS.register("blahaj_plush", () -> new PlushItem(PurrfectBlocks.BLAHAJ_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> BLAHAJ_PINK_PLUSH = ITEMS.register("blahaj_pink_plush", () -> new PlushItem(PurrfectBlocks.BLAHAJ_PINK_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+
     public static final RegistryObject<Item> COLLAR = ITEMS.register("collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.COLLAR));
     public static final RegistryObject<Item> WHITE_COLLAR = ITEMS.register("white_collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.WHITE));
     public static final RegistryObject<Item> LIGHT_GRAY_COLLAR = ITEMS.register("light_gray_collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.LIGHT_GRAY));
@@ -156,24 +159,6 @@ public class PurrfectItems {
     public static final RegistryObject<Item> PINK_GOLDEN_BELL_SPIKED_COLLAR = ITEMS.register("pink_golden_bell_spiked_collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.PINK).setBell(CollarItem.GOLDEN_BELL).setSpikes(CollarItem.SPIKES));
     public static final RegistryObject<Item> RAINBOW_GOLDEN_BELL_SPIKED_COLLAR = ITEMS.register("rainbow_golden_bell_spiked_collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.RAINBOW).setBell(CollarItem.GOLDEN_BELL).setSpikes(CollarItem.SPIKES));
 
-    public static final RegistryObject<Item> WHITE_YARN = ITEMS.register("white_yarn", () -> new YarnItem(YarnItem.WHITE, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> LIGHT_GRAY_YARN = ITEMS.register("light_gray_yarn", () -> new YarnItem(YarnItem.LIGHT_GRAY, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> GRAY_YARN = ITEMS.register("gray_yarn", () -> new YarnItem(YarnItem.GRAY, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> BLACK_YARN = ITEMS.register("black_yarn", () -> new YarnItem(YarnItem.BLACK, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> BROWN_YARN = ITEMS.register("brown_yarn", () -> new YarnItem(YarnItem.BROWN, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> RED_YARN = ITEMS.register("red_yarn", () -> new YarnItem(YarnItem.RED, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> ORANGE_YARN = ITEMS.register("orange_yarn", () -> new YarnItem(YarnItem.ORANGE, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> YELLOW_YARN = ITEMS.register("yellow_yarn", () -> new YarnItem(YarnItem.YELLOW, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> LIME_YARN = ITEMS.register("lime_yarn", () -> new YarnItem(YarnItem.LIME, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> GREEN_YARN = ITEMS.register("green_yarn", () -> new YarnItem(YarnItem.GREEN, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> CYAN_YARN = ITEMS.register("cyan_yarn", () -> new YarnItem(YarnItem.CYAN, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> LIGHT_BLUE_YARN = ITEMS.register("light_blue_yarn", () -> new YarnItem(YarnItem.LIGHT_BLUE, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> BLUE_YARN = ITEMS.register("blue_yarn", () -> new YarnItem(YarnItem.BLUE, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> PURPLE_YARN = ITEMS.register("purple_yarn", () -> new YarnItem(YarnItem.PURPLE, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> MAGENTA_YARN = ITEMS.register("magenta_yarn", () -> new YarnItem(YarnItem.MAGENTA, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> PINK_YARN = ITEMS.register("pink_yarn", () -> new YarnItem(YarnItem.PINK, new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> RAINBOW_YARN = ITEMS.register("rainbow_yarn", () -> new YarnItem(YarnItem.RAINBOW, new Item.Properties().stacksTo(16)));
-
     public static final RegistryObject<Item> LEASH = ITEMS.register("leash", () -> new LeashItem(LeashItem.LEASH, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> WHITE_LEASH = ITEMS.register("white_leash", () -> new LeashItem(LeashItem.WHITE, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> LIGHT_GRAY_LEASH = ITEMS.register("light_gray_leash", () -> new LeashItem(LeashItem.LIGHT_GRAY, new Item.Properties().stacksTo(1)));
@@ -192,6 +177,24 @@ public class PurrfectItems {
     public static final RegistryObject<Item> MAGENTA_LEASH = ITEMS.register("magenta_leash", () -> new LeashItem(LeashItem.MAGENTA, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> PINK_LEASH = ITEMS.register("pink_leash", () -> new LeashItem(LeashItem.PINK, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> RAINBOW_LEASH = ITEMS.register("rainbow_leash", () -> new LeashItem(LeashItem.RAINBOW, new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> WHITE_YARN = ITEMS.register("white_yarn", () -> new YarnItem(YarnItem.WHITE, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> LIGHT_GRAY_YARN = ITEMS.register("light_gray_yarn", () -> new YarnItem(YarnItem.LIGHT_GRAY, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> GRAY_YARN = ITEMS.register("gray_yarn", () -> new YarnItem(YarnItem.GRAY, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> BLACK_YARN = ITEMS.register("black_yarn", () -> new YarnItem(YarnItem.BLACK, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> BROWN_YARN = ITEMS.register("brown_yarn", () -> new YarnItem(YarnItem.BROWN, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> RED_YARN = ITEMS.register("red_yarn", () -> new YarnItem(YarnItem.RED, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> ORANGE_YARN = ITEMS.register("orange_yarn", () -> new YarnItem(YarnItem.ORANGE, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> YELLOW_YARN = ITEMS.register("yellow_yarn", () -> new YarnItem(YarnItem.YELLOW, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> LIME_YARN = ITEMS.register("lime_yarn", () -> new YarnItem(YarnItem.LIME, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> GREEN_YARN = ITEMS.register("green_yarn", () -> new YarnItem(YarnItem.GREEN, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> CYAN_YARN = ITEMS.register("cyan_yarn", () -> new YarnItem(YarnItem.CYAN, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> LIGHT_BLUE_YARN = ITEMS.register("light_blue_yarn", () -> new YarnItem(YarnItem.LIGHT_BLUE, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> BLUE_YARN = ITEMS.register("blue_yarn", () -> new YarnItem(YarnItem.BLUE, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> PURPLE_YARN = ITEMS.register("purple_yarn", () -> new YarnItem(YarnItem.PURPLE, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> MAGENTA_YARN = ITEMS.register("magenta_yarn", () -> new YarnItem(YarnItem.MAGENTA, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> PINK_YARN = ITEMS.register("pink_yarn", () -> new YarnItem(YarnItem.PINK, new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> RAINBOW_YARN = ITEMS.register("rainbow_yarn", () -> new YarnItem(YarnItem.RAINBOW, new Item.Properties().stacksTo(16)));
 
     public static final RegistryObject<Item> FLAGPOLE = ITEMS.register("flagpole", () -> new BlockItem(PurrfectBlocks.FLAGPOLE.get(), new Item.Properties()));
     public static final RegistryObject<Item> WHITE_FLAG = ITEMS.register("white_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.WHITE_FLAG.get(), PurrfectBlocks.WHITE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
@@ -234,8 +237,6 @@ public class PurrfectItems {
     public static final RegistryObject<Item> BEERSEXUAL_FLAG = ITEMS.register("beersexual_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.BEERSEXUAL_FLAG.get(), PurrfectBlocks.BEERSEXUAL_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> WIZARDS_REBORN_FLAG = ITEMS.register("wizards_reborn_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.WIZARDS_REBORN_FLAG.get(), PurrfectBlocks.WIZARDS_REBORN_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> FLUFFY_FUR_FLAG = ITEMS.register("fluffy_fur_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.FLUFFY_FUR_FLAG.get(), PurrfectBlocks.FLUFFY_FUR_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
-
-    public static final RegistryObject<Item> BLAHAJ_PLUSH = ITEMS.register("blahaj_plush", () -> new PlushItem(PurrfectBlocks.BLAHAJ_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

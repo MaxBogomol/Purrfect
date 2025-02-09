@@ -12,6 +12,9 @@
   "item.purrfect.pharmacy_vial_rainbow_spark": "Аптекарская склянка \"Радужная Искра\"",
   "item.purrfect.pharmacy_vial_slimy_slug": "Аптекарская склянка \"Слизкий Слизень\"",
 
+  "block.purrfect.blahaj_plush": "Плюшка Акулки",
+  "block.purrfect.blahaj_pink_plush": "Плюшка розовой Акулки",
+
   "item.purrfect.collar": "Ошейник",
   "item.purrfect.white_collar": "Белый ошейник",
   "item.purrfect.light_gray_collar": "Светло-серый ошейник",
@@ -126,24 +129,6 @@
   "item.purrfect.pink_golden_bell_spiked_collar": "Розовый шипованный ошейник с золотым колокольчиком",
   "item.purrfect.rainbow_golden_bell_spiked_collar": "Радужный шипованный ошейник с золотым колокольчиком",
 
-  "item.purrfect.white_yarn": "Белый клубок ниток",
-  "item.purrfect.light_gray_yarn": "Светло-серый клубок ниток",
-  "item.purrfect.gray_yarn": "Серый клубок ниток",
-  "item.purrfect.black_yarn": "Чёрный клубок ниток",
-  "item.purrfect.brown_yarn": "Коричневый клубок ниток",
-  "item.purrfect.red_yarn": "Красный клубок ниток",
-  "item.purrfect.orange_yarn": "Оранжевый клубок ниток",
-  "item.purrfect.yellow_yarn": "Жёлтый клубок ниток",
-  "item.purrfect.lime_yarn": "Лаймовый клубок ниток",
-  "item.purrfect.green_yarn": "Зелёный клубок ниток",
-  "item.purrfect.cyan_yarn": "Бирюзовый клубок ниток",
-  "item.purrfect.light_blue_yarn": "Голубой клубок ниток",
-  "item.purrfect.blue_yarn": "Синий клубок ниток",
-  "item.purrfect.purple_yarn": "Фиолетовый клубок ниток",
-  "item.purrfect.magenta_yarn": "Пурпурный клубок ниток",
-  "item.purrfect.pink_yarn": "Розовый клубок ниток",
-  "item.purrfect.rainbow_yarn": "Радужный клубок ниток",
-
   "item.purrfect.leash": "Поводок",
   "item.purrfect.white_leash": "Белый поводок",
   "item.purrfect.light_gray_leash": "Светло-серый поводок",
@@ -162,6 +147,24 @@
   "item.purrfect.magenta_leash": "Пурпурный поводок",
   "item.purrfect.pink_leash": "Розовый поводок",
   "item.purrfect.rainbow_leash": "Радужный поводок",
+
+  "item.purrfect.white_yarn": "Белый клубок ниток",
+  "item.purrfect.light_gray_yarn": "Светло-серый клубок ниток",
+  "item.purrfect.gray_yarn": "Серый клубок ниток",
+  "item.purrfect.black_yarn": "Чёрный клубок ниток",
+  "item.purrfect.brown_yarn": "Коричневый клубок ниток",
+  "item.purrfect.red_yarn": "Красный клубок ниток",
+  "item.purrfect.orange_yarn": "Оранжевый клубок ниток",
+  "item.purrfect.yellow_yarn": "Жёлтый клубок ниток",
+  "item.purrfect.lime_yarn": "Лаймовый клубок ниток",
+  "item.purrfect.green_yarn": "Зелёный клубок ниток",
+  "item.purrfect.cyan_yarn": "Бирюзовый клубок ниток",
+  "item.purrfect.light_blue_yarn": "Голубой клубок ниток",
+  "item.purrfect.blue_yarn": "Синий клубок ниток",
+  "item.purrfect.purple_yarn": "Фиолетовый клубок ниток",
+  "item.purrfect.magenta_yarn": "Пурпурный клубок ниток",
+  "item.purrfect.pink_yarn": "Розовый клубок ниток",
+  "item.purrfect.rainbow_yarn": "Радужный клубок ниток",
 
   "block.purrfect.flagpole": "Флагшток",
 
@@ -246,8 +249,6 @@
   "block.purrfect.beersexual_wall_flag": "Настенный флаг (Пивосексуал)",
   "block.purrfect.wizards_reborn_wall_flag": "Настенный флаг (Wizard's Reborn)",
   "block.purrfect.fluffy_fur_wall_flag": "Настенный флаг (Fluffy Fur)",
-
-  "block.purrfect.blahaj_plush": "Плюшка Акулки",
 
   "_comment_2": "Существа",
   "entity.purrfect.yarn": "Клубок",

@@ -12,6 +12,8 @@
   "item.purrfect.pharmacy_vial_rainbow_spark": "Зялёйны флакон \"Вясёлкавая іскра\"",
   "item.purrfect.pharmacy_vial_slimy_slug": "Зялёйны флакон \"Слізкі смоўж\"",
 
+  "block.purrfect.blahaj_plush": "Плюшавая акула",
+
   "item.purrfect.collar": "Нашыйнік",
   "item.purrfect.white_collar": "Белы нашыйнік",
   "item.purrfect.light_gray_collar": "Светла-шэры нашыйнік",
@@ -126,24 +128,6 @@
   "item.purrfect.pink_golden_bell_spiked_collar": "Ружовы шыпаваны нашыйнік з залатым званочкам",
   "item.purrfect.rainbow_golden_bell_spiked_collar": "Вясёлкавы шыпаваны нашыйнік з залатым званочкам",
 
-  "item.purrfect.white_yarn": "Белы клубок нітак",
-  "item.purrfect.light_gray_yarn": "Светла-шэры клубок нітак",
-  "item.purrfect.gray_yarn": "Шэры клубок нітак",
-  "item.purrfect.black_yarn": "Чорны клубок нітак",
-  "item.purrfect.brown_yarn": "Карычневы клубок нітак",
-  "item.purrfect.red_yarn": "Чырвоны клубок нітак",
-  "item.purrfect.orange_yarn": "Памаранчавы клубок нітак",
-  "item.purrfect.yellow_yarn": "Жоўты клубок нітак",
-  "item.purrfect.lime_yarn": "Лаймавы клубок нітак",
-  "item.purrfect.green_yarn": "Зялёны клубок нітак",
-  "item.purrfect.cyan_yarn": "Туркусавы клубок нітак",
-  "item.purrfect.light_blue_yarn": "Блакітны клубок нітак",
-  "item.purrfect.blue_yarn": "Сіні клубок нітак",
-  "item.purrfect.purple_yarn": "Фіялетавы клубок нітак",
-  "item.purrfect.magenta_yarn": "Пурпурны клубок нітак",
-  "item.purrfect.pink_yarn": "Ружовы клубок нітак",
-  "item.purrfect.rainbow_yarn": "Вясёлкавы клубок нітак",
-
   "item.purrfect.leash": "Павадок",
   "item.purrfect.white_leash": "Белы павадок",
   "item.purrfect.light_gray_leash": "Светла-шэры павадок",
@@ -162,6 +146,24 @@
   "item.purrfect.magenta_leash": "Пурпурны павадок",
   "item.purrfect.pink_leash": "Ружовы павадок",
   "item.purrfect.rainbow_leash": "Вясёлкавы павадок",
+
+  "item.purrfect.white_yarn": "Белы клубок нітак",
+  "item.purrfect.light_gray_yarn": "Светла-шэры клубок нітак",
+  "item.purrfect.gray_yarn": "Шэры клубок нітак",
+  "item.purrfect.black_yarn": "Чорны клубок нітак",
+  "item.purrfect.brown_yarn": "Карычневы клубок нітак",
+  "item.purrfect.red_yarn": "Чырвоны клубок нітак",
+  "item.purrfect.orange_yarn": "Памаранчавы клубок нітак",
+  "item.purrfect.yellow_yarn": "Жоўты клубок нітак",
+  "item.purrfect.lime_yarn": "Лаймавы клубок нітак",
+  "item.purrfect.green_yarn": "Зялёны клубок нітак",
+  "item.purrfect.cyan_yarn": "Туркусавы клубок нітак",
+  "item.purrfect.light_blue_yarn": "Блакітны клубок нітак",
+  "item.purrfect.blue_yarn": "Сіні клубок нітак",
+  "item.purrfect.purple_yarn": "Фіялетавы клубок нітак",
+  "item.purrfect.magenta_yarn": "Пурпурны клубок нітак",
+  "item.purrfect.pink_yarn": "Ружовы клубок нітак",
+  "item.purrfect.rainbow_yarn": "Вясёлкавы клубок нітак",
 
   "block.purrfect.flagpole": "Флагшток",
 
@@ -246,8 +248,6 @@
   "block.purrfect.beersexual_wall_flag": "Насценны сцяг (Півасэксуал)",
   "block.purrfect.wizards_reborn_wall_flag": "Насценны сцяг (Wizard's Reborn)",
   "block.purrfect.fluffy_fur_wall_flag": "Насценны сцяг (Fluffy Fur)",
-
-  "block.purrfect.blahaj_plush": "Плюшавая акула",
 
   "_comment_2": "Істоты",
   "entity.purrfect.yarn": "Клубок",

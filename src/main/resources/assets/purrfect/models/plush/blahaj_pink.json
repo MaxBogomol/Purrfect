@@ -1,0 +1,7 @@
+{
+	"parent": "purrfect:plush/blahaj",
+	"textures": {
+		"0": "purrfect:plush/blahaj_pink",
+		"particle": "purrfect:plush/blahaj_pink"
+	}
+}

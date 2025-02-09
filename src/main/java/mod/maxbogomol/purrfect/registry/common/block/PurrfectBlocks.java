@@ -20,6 +20,9 @@ public class PurrfectBlocks {
 
     public static final RegistryObject<Block> PHARMACIST_TABLE = BLOCKS.register("pharmacist_table", () -> new PharmacistTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)));
 
+    public static final RegistryObject<Block> BLAHAJ_PLUSH = BLOCKS.register("blahaj_plush", () -> new BlahajBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).noOcclusion()));
+    public static final RegistryObject<Block> BLAHAJ_PINK_PLUSH = BLOCKS.register("blahaj_pink_plush", () -> new BlahajBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_PINK).noOcclusion()));
+
     public static final RegistryObject<Block> FLAGPOLE = BLOCKS.register("flagpole", () -> new FlagpoleBlock(BlockBehaviour.Properties.copy(Blocks.CHAIN)));
 
     public static final RegistryObject<Block> WHITE_FLAG = BLOCKS.register("white_flag", () -> new FlagBlock(FlagBlock.WHITE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
@@ -103,8 +106,6 @@ public class PurrfectBlocks {
     public static final RegistryObject<Block> BEERSEXUAL_WALL_FLAG = BLOCKS.register("beersexual_wall_flag", () -> new FlagWallBlock(FlagBlock.BEERSEXUAL, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
     public static final RegistryObject<Block> WIZARDS_REBORN_WALL_FLAG = BLOCKS.register("wizards_reborn_wall_flag", () -> new FlagWallBlock(FlagBlock.WIZARDS_REBORN, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
     public static final RegistryObject<Block> FLUFFY_FUR_WALL_FLAG = BLOCKS.register("fluffy_fur_wall_flag", () -> new FlagWallBlock(FlagBlock.FLUFFY_FUR, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
-
-    public static final RegistryObject<Block> BLAHAJ_PLUSH = BLOCKS.register("blahaj_plush", () -> new BlahajBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).noOcclusion()));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

@@ -12,6 +12,9 @@
   "item.purrfect.pharmacy_vial_rainbow_spark": "Pharmacy Vial \"Rainbow Spark\"",
   "item.purrfect.pharmacy_vial_slimy_slug": "Pharmacy Vial \"Slimy Slug\"",
 
+  "block.purrfect.blahaj_plush": "Blåhaj Plush",
+  "block.purrfect.blahaj_pink_plush": "Blåhaj Pink Plush",
+
   "item.purrfect.collar": "Collar",
   "item.purrfect.white_collar": "White Collar",
   "item.purrfect.light_gray_collar": "Light Gray Collar",
@@ -126,24 +129,6 @@
   "item.purrfect.pink_golden_bell_spiked_collar": "Pink Golden Bell Spiked Collar",
   "item.purrfect.rainbow_golden_bell_spiked_collar": "Rainbow Golden Bell Spiked Collar",
 
-  "item.purrfect.white_yarn": "White Yarn",
-  "item.purrfect.light_gray_yarn": "Light Gray Yarn",
-  "item.purrfect.gray_yarn": "Gray Yarn",
-  "item.purrfect.black_yarn": "Black Yarn",
-  "item.purrfect.brown_yarn": "Brown Yarn",
-  "item.purrfect.red_yarn": "Red Yarn",
-  "item.purrfect.orange_yarn": "Orange Yarn",
-  "item.purrfect.yellow_yarn": "Yellow Yarn",
-  "item.purrfect.lime_yarn": "Lime Yarn",
-  "item.purrfect.green_yarn": "Green Yarn",
-  "item.purrfect.cyan_yarn": "Cyan Yarn",
-  "item.purrfect.light_blue_yarn": "Light Blue Yarn",
-  "item.purrfect.blue_yarn": "Blue Yarn",
-  "item.purrfect.purple_yarn": "Purple Yarn",
-  "item.purrfect.magenta_yarn": "Magenta Yarn",
-  "item.purrfect.pink_yarn": "Pink Yarn",
-  "item.purrfect.rainbow_yarn": "Rainbow Yarn",
-
   "item.purrfect.leash": "Leash",
   "item.purrfect.white_leash": "White Leash",
   "item.purrfect.light_gray_leash": "Light Gray Leash",
@@ -162,6 +147,24 @@
   "item.purrfect.magenta_leash": "Magenta Leash",
   "item.purrfect.pink_leash": "Pink Leash",
   "item.purrfect.rainbow_leash": "Rainbow Leash",
+
+  "item.purrfect.white_yarn": "White Yarn",
+  "item.purrfect.light_gray_yarn": "Light Gray Yarn",
+  "item.purrfect.gray_yarn": "Gray Yarn",
+  "item.purrfect.black_yarn": "Black Yarn",
+  "item.purrfect.brown_yarn": "Brown Yarn",
+  "item.purrfect.red_yarn": "Red Yarn",
+  "item.purrfect.orange_yarn": "Orange Yarn",
+  "item.purrfect.yellow_yarn": "Yellow Yarn",
+  "item.purrfect.lime_yarn": "Lime Yarn",
+  "item.purrfect.green_yarn": "Green Yarn",
+  "item.purrfect.cyan_yarn": "Cyan Yarn",
+  "item.purrfect.light_blue_yarn": "Light Blue Yarn",
+  "item.purrfect.blue_yarn": "Blue Yarn",
+  "item.purrfect.purple_yarn": "Purple Yarn",
+  "item.purrfect.magenta_yarn": "Magenta Yarn",
+  "item.purrfect.pink_yarn": "Pink Yarn",
+  "item.purrfect.rainbow_yarn": "Rainbow Yarn",
 
   "block.purrfect.flagpole": "Flagpole",
 
@@ -246,8 +249,6 @@
   "block.purrfect.beersexual_wall_flag": "Beersexual Wall Flag",
   "block.purrfect.wizards_reborn_wall_flag": "Wizard's Reborn Wall Flag",
   "block.purrfect.fluffy_fur_wall_flag": "Fluffy Fur Wall Flag",
-
-  "block.purrfect.blahaj_plush": "Blåhaj Plush",
 
   "_comment_2": "Entities",
   "entity.purrfect.yarn": "Yarn",

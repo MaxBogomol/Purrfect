@@ -19,8 +19,6 @@ import java.util.Random;
 public class PurrfectCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Purrfect.MOD_ID);
 
-    public static Random random = new Random();
-
     public static final RegistryObject<CreativeModeTab> PURRFECT = CREATIVE_MODE_TABS.register("tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(PurrfectItems.GOLDEN_BELL_COLLAR.get()))
                     .title(getSillyName())
@@ -34,7 +32,8 @@ public class PurrfectCreativeTabs {
     }
 
     public static Component getSillyName() {
-        int i = random.nextInt(0, 3);
+        Random random = new Random();
+        int i = random.nextInt(0, 6);
         Component silly = Component.translatable("creative_tab.purrfect.silly." + i);
         return Component.translatable("creative_tab.purrfect").append(" ").append(silly);
     }

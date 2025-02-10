@@ -61,5 +61,7 @@ public class PurrfectClient {
         SplashHandler.addSplash("UwU");
         SplashHandler.addSplash(":3");
         SplashHandler.addSplash("U CUTIE");
+        SplashHandler.addSplash(">w<");
+        SplashHandler.addSplash("<><");
     }
 }

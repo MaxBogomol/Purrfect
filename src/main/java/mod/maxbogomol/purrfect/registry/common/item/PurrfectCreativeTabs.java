@@ -13,13 +13,17 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Random;
+
 @Mod.EventBusSubscriber(modid = Purrfect.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PurrfectCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Purrfect.MOD_ID);
 
+    public static Random random = new Random();
+
     public static final RegistryObject<CreativeModeTab> PURRFECT = CREATIVE_MODE_TABS.register("tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(PurrfectItems.GOLDEN_BELL_COLLAR.get()))
-                    .title(Component.translatable("creative_tab.purrfect"))
+                    .title(getSillyName())
                     .withLabelColor(ColorUtil.packColor(255, 55, 48, 54))
                     .withBackgroundLocation(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_item_tab.png"))
                     .withTabsImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_tabs.png"))
@@ -27,6 +31,12 @@ public class PurrfectCreativeTabs {
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
+    }
+
+    public static Component getSillyName() {
+        int i = random.nextInt(0, 3);
+        Component silly = Component.translatable("creative_tab.purrfect.silly." + i);
+        return Component.translatable("creative_tab.purrfect").append(" ").append(silly);
     }
 
     public static void addCreativeTabContent(BuildCreativeModeTabContentsEvent event) {

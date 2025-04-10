@@ -2,6 +2,7 @@ package mod.maxbogomol.purrfect.common.item.equipment.curio;
 
 import mod.maxbogomol.fluffy_fur.integration.common.curios.BaseCurioItem;
 import mod.maxbogomol.purrfect.Purrfect;
+import mod.maxbogomol.purrfect.registry.common.PurrfectSounds;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -19,7 +20,6 @@ import top.theillusivec4.curios.api.type.capability.ICuriosItemHandler;
 
 import javax.annotation.Nonnull;
 import java.util.List;
-import java.util.Random;
 
 public class CollarItem extends BaseCurioItem {
 
@@ -51,8 +51,6 @@ public class CollarItem extends BaseCurioItem {
     public CollarColor bell;
     public CollarColor spikes;
 
-    public static Random random = new Random();
-
     public CollarItem(Properties properties) {
         super(properties);
     }
@@ -80,7 +78,7 @@ public class CollarItem extends BaseCurioItem {
 
     public static void playerJump(LivingEvent.LivingJumpEvent event) {
         LivingEntity entity = event.getEntity();
-        if (!entity.level().isClientSide() && random.nextFloat() < 0.5f) {
+        if (!entity.level().isClientSide()) {
             LazyOptional<ICuriosItemHandler> curiosItemHandler = CuriosApi.getCuriosInventory(entity);
             if (curiosItemHandler.isPresent() && curiosItemHandler.resolve().isPresent()) {
                 List<SlotResult> curioSlots = curiosItemHandler.resolve().get().findCurios((i) -> {
@@ -90,7 +88,7 @@ public class CollarItem extends BaseCurioItem {
                     return false;
                 });
                 if (!curioSlots.isEmpty()) {
-                    entity.level().playSound(null, entity.getX(), entity.getY() + (entity.getBbHeight() / 2f), entity.getZ(), SoundEvents.NOTE_BLOCK_CHIME.get(), SoundSource.PLAYERS, 0.3f, 1.9f + (random.nextFloat() * 0.2f - 0.1f));
+                    entity.level().playSound(null, entity.getX(), entity.getY() + (entity.getBbHeight() / 2f), entity.getZ(), PurrfectSounds.COLLAR_BELL.get(), SoundSource.PLAYERS, 0.5f, 1.0f);
                 }
             }
         }

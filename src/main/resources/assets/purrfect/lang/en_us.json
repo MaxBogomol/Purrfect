@@ -256,9 +256,12 @@
   "block.purrfect.wizards_reborn_wall_flag": "Wizard's Reborn Wall Flag",
   "block.purrfect.fluffy_fur_wall_flag": "Fluffy Fur Wall Flag",
 
-  "_comment_2": "Entities",
+  "_comment_2": "Sounds",
+  "sounds.purrfect.collar_bell": "Collar bell ringing",
+
+  "_comment_3": "Entities",
   "entity.purrfect.yarn": "Yarn",
 
-  "_comment_3": "Fluffy Fur Menu",
+  "_comment_4": "Fluffy Fur Menu",
   "mod_description.purrfect": "Purrfect - a mod about furries, for furries, from furry. \n Adds Pharmacy and furry things."
 }

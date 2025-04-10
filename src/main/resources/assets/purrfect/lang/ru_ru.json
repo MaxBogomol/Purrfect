@@ -256,9 +256,12 @@
   "block.purrfect.wizards_reborn_wall_flag": "Настенный флаг (Wizard's Reborn)",
   "block.purrfect.fluffy_fur_wall_flag": "Настенный флаг (Fluffy Fur)",
 
-  "_comment_2": "Существа",
+  "_comment_2": "Звуки",
+  "sounds.purrfect.collar_bell": "Колокольчик ошейника звенит",
+
+  "_comment_3": "Существа",
   "entity.purrfect.yarn": "Клубок",
 
-  "_comment_3": "Меню Пушистого Меха",
+  "_comment_4": "Меню Пушистого Меха",
   "mod_description.purrfect": "Purrfect - мод про фурри, для фурри, от фурри. \n Добавляет фармацевтику и фурри штучки."
 }

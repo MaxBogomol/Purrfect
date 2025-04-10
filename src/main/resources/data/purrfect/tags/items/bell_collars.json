@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#purrfect:all_bell_collars",
+    "#purrfect:all_bell_spiked_collars",
+    {
+      "id": "wizards_reborn:leather_collar",
+      "required": false
+    }
+  ]
+}

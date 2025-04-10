@@ -3,6 +3,7 @@ package mod.maxbogomol.purrfect.common.item.equipment.curio;
 import mod.maxbogomol.fluffy_fur.integration.common.curios.BaseCurioItem;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.registry.common.PurrfectSounds;
+import mod.maxbogomol.purrfect.registry.common.item.PurrfectItemTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -81,12 +82,7 @@ public class CollarItem extends BaseCurioItem {
         if (!entity.level().isClientSide()) {
             LazyOptional<ICuriosItemHandler> curiosItemHandler = CuriosApi.getCuriosInventory(entity);
             if (curiosItemHandler.isPresent() && curiosItemHandler.resolve().isPresent()) {
-                List<SlotResult> curioSlots = curiosItemHandler.resolve().get().findCurios((i) -> {
-                    if (i.getItem() instanceof CollarItem collarItem) {
-                        return collarItem.bell != null;
-                    }
-                    return false;
-                });
+                List<SlotResult> curioSlots = curiosItemHandler.resolve().get().findCurios((i) -> i.is(PurrfectItemTags.BELL_COLLARS));
                 if (!curioSlots.isEmpty()) {
                     entity.level().playSound(null, entity.getX(), entity.getY() + (entity.getBbHeight() / 2f), entity.getZ(), PurrfectSounds.COLLAR_BELL.get(), SoundSource.PLAYERS, 0.5f, 1.0f);
                 }

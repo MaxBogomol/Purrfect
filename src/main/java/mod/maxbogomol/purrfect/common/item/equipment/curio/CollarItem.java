@@ -12,6 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import top.theillusivec4.curios.api.CuriosApi;
 import top.theillusivec4.curios.api.SlotContext;
@@ -78,7 +79,14 @@ public class CollarItem extends BaseCurioItem {
     }
 
     public static void playerJump(LivingEvent.LivingJumpEvent event) {
-        LivingEntity entity = event.getEntity();
+        bellSound(event.getEntity());
+    }
+
+    public static void playerDamage(LivingDamageEvent event) {
+        bellSound(event.getEntity());
+    }
+
+    public static void bellSound(LivingEntity entity) {
         if (!entity.level().isClientSide()) {
             LazyOptional<ICuriosItemHandler> curiosItemHandler = CuriosApi.getCuriosInventory(entity);
             if (curiosItemHandler.isPresent() && curiosItemHandler.resolve().isPresent()) {

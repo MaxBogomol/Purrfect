@@ -39,7 +39,7 @@ public class BlahajBlock extends PlushBlock {
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (!level.isClientSide()) {
-            if (state.getBlock().equals(PurrfectBlocks.BLAHAJ_PLUSH.get()) || state.getBlock().equals(PurrfectBlocks.BLAHAJ_PINK_PLUSH.get())) {
+            if (state.getBlock().equals(PurrfectBlocks.BLAHAJ_PLUSH.get()) || state.getBlock().equals(PurrfectBlocks.PINK_BLAHAJ_PLUSH.get())) {
                 level.playSound(null, pos, SoundEvents.FOX_AMBIENT, SoundSource.BLOCKS, 1.0f, 1.0f);
             }
             PurrfectPacketHandler.sendToTracking(level, pos, new BlahajHeartsPacket(pos));

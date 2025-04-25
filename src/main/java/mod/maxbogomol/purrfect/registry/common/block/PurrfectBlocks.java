@@ -21,7 +21,7 @@ public class PurrfectBlocks {
     public static final RegistryObject<Block> PHARMACIST_TABLE = BLOCKS.register("pharmacist_table", () -> new PharmacistTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)));
 
     public static final RegistryObject<Block> BLAHAJ_PLUSH = BLOCKS.register("blahaj_plush", () -> new BlahajBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).noOcclusion()));
-    public static final RegistryObject<Block> BLAHAJ_PINK_PLUSH = BLOCKS.register("blahaj_pink_plush", () -> new BlahajBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_PINK).noOcclusion()));
+    public static final RegistryObject<Block> PINK_BLAHAJ_PLUSH = BLOCKS.register("pink_blahaj_plush", () -> new BlahajBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_PINK).noOcclusion()));
 
     public static final RegistryObject<Block> FLAGPOLE = BLOCKS.register("flagpole", () -> new FlagpoleBlock(BlockBehaviour.Properties.copy(Blocks.CHAIN)));
 

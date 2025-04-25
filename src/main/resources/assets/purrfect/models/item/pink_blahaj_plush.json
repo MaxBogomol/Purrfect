@@ -1,5 +1,5 @@
 {
-  "parent": "purrfect:plush/blahaj_pink",
+  "parent": "purrfect:plush/pink_blahaj",
   "textures": {
     "particle": "minecraft:block/pink_wool"
   }

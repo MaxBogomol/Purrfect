@@ -20,7 +20,7 @@ public class PurrfectBlockEnteties {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Purrfect.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<BlahajBlockEntity>> BLAHAJ = BLOCK_ENTITIES.register("blahaj", () -> BlockEntityType.Builder.of(BlahajBlockEntity::new,
-            PurrfectBlocks.BLAHAJ_PLUSH.get(), PurrfectBlocks.BLAHAJ_PINK_PLUSH.get()
+            PurrfectBlocks.BLAHAJ_PLUSH.get(), PurrfectBlocks.PINK_BLAHAJ_PLUSH.get()
     ).build(null));
 
     public static final RegistryObject<BlockEntityType<FlagBlockEntity>> FLAG = BLOCK_ENTITIES.register("flag", () -> BlockEntityType.Builder.of(FlagBlockEntity::new,

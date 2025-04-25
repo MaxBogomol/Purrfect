@@ -45,7 +45,7 @@ public class PurrfectItems {
     public static final RegistryObject<Item> PHARMACY_VIAL_SLIMY_SLUG = ITEMS.register("pharmacy_vial_slimy_slug", () -> new Item(new Item.Properties().stacksTo(16)));
 
     public static final RegistryObject<Item> BLAHAJ_PLUSH = ITEMS.register("blahaj_plush", () -> new PlushItem(PurrfectBlocks.BLAHAJ_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> BLAHAJ_PINK_PLUSH = ITEMS.register("blahaj_pink_plush", () -> new PlushItem(PurrfectBlocks.BLAHAJ_PINK_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> PINK_BLAHAJ_PLUSH = ITEMS.register("pink_blahaj_plush", () -> new PlushItem(PurrfectBlocks.PINK_BLAHAJ_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
 
     public static final RegistryObject<Item> DANDELION_FLOWER_WREATH = ITEMS.register("dandelion_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.DANDELION));
     public static final RegistryObject<Item> POPPY_FLOWER_WREATH = ITEMS.register("poppy_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.POPPY));

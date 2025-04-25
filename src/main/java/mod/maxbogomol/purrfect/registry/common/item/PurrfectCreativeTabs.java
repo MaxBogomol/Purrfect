@@ -52,7 +52,7 @@ public class PurrfectCreativeTabs {
             event.accept(PurrfectItems.PHARMACY_VIAL_SLIMY_SLUG);
 
             event.accept(PurrfectItems.BLAHAJ_PLUSH);
-            event.accept(PurrfectItems.BLAHAJ_PINK_PLUSH);
+            event.accept(PurrfectItems.PINK_BLAHAJ_PLUSH);
 
             event.accept(PurrfectItems.DANDELION_FLOWER_WREATH);
             event.accept(PurrfectItems.POPPY_FLOWER_WREATH);

@@ -4,6 +4,7 @@ import mod.maxbogomol.fluffy_fur.registry.client.FluffyFurModels;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.client.model.block.YarnModel;
 import mod.maxbogomol.purrfect.client.model.curio.CollarModel;
+import mod.maxbogomol.purrfect.client.model.curio.FlowerWreathModel;
 import mod.maxbogomol.purrfect.client.render.item.PurrfectItemRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -14,6 +15,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 public class PurrfectModels {
+    public static ModelLayerLocation FLOWER_WREATH_LAYER = addLayer("flower_wreath");
     public static ModelLayerLocation COLLAR_LAYER = addLayer("collar");
 
     public static final ModelLayerLocation YARN_LAYER = addLayer("yarn");
@@ -32,6 +34,7 @@ public class PurrfectModels {
 
         @SubscribeEvent
         public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+            event.registerLayerDefinition(FLOWER_WREATH_LAYER, FlowerWreathModel::createBodyLayer);
             event.registerLayerDefinition(COLLAR_LAYER, CollarModel::createBodyLayer);
 
             event.registerLayerDefinition(YARN_LAYER, YarnModel::createBodyLayer);

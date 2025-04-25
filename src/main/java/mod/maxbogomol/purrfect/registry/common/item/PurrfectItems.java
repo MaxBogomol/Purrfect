@@ -4,10 +4,12 @@ import mod.maxbogomol.fluffy_fur.common.item.PlushItem;
 import mod.maxbogomol.fluffy_fur.registry.client.FluffyFurModels;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.client.render.curio.CollarRenderer;
+import mod.maxbogomol.purrfect.client.render.curio.FlowerWreathRenderer;
 import mod.maxbogomol.purrfect.common.item.PurrfectRenderStandingAndWallBlockItem;
 import mod.maxbogomol.purrfect.common.item.YarnItem;
 import mod.maxbogomol.purrfect.common.item.equipment.LeashItem;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
+import mod.maxbogomol.purrfect.common.item.equipment.curio.FlowerWreathItem;
 import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlocks;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.core.Direction;
@@ -44,6 +46,29 @@ public class PurrfectItems {
 
     public static final RegistryObject<Item> BLAHAJ_PLUSH = ITEMS.register("blahaj_plush", () -> new PlushItem(PurrfectBlocks.BLAHAJ_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> BLAHAJ_PINK_PLUSH = ITEMS.register("blahaj_pink_plush", () -> new PlushItem(PurrfectBlocks.BLAHAJ_PINK_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+
+    public static final RegistryObject<Item> DANDELION_FLOWER_WREATH = ITEMS.register("dandelion_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.DANDELION));
+    public static final RegistryObject<Item> POPPY_FLOWER_WREATH = ITEMS.register("poppy_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.POPPY));
+    public static final RegistryObject<Item> BLUE_ORCHID_FLOWER_WREATH = ITEMS.register("blue_orchid_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.BLUE_ORCHID));
+    public static final RegistryObject<Item> ALLIUM_FLOWER_WREATH = ITEMS.register("allium_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.ALLIUM));
+    public static final RegistryObject<Item> AZURE_BLUET_FLOWER_WREATH = ITEMS.register("azure_bluet_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.AZURE_BLUET));
+    public static final RegistryObject<Item> RED_TULIP_FLOWER_WREATH = ITEMS.register("red_tulip_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.RED_TULIP));
+    public static final RegistryObject<Item> ORANGE_TULIP_FLOWER_WREATH = ITEMS.register("orange_tulip_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.ORANGE_TULIP));
+    public static final RegistryObject<Item> WHITE_TULIP_FLOWER_WREATH = ITEMS.register("white_tulip_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.WHITE_TULIP));
+    public static final RegistryObject<Item> PINK_TULIP_FLOWER_WREATH = ITEMS.register("pink_tulip_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.PINK_TULIP));
+    public static final RegistryObject<Item> OXEYE_DAISY_FLOWER_WREATH = ITEMS.register("oxeye_daisy_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.OXEYE_DAISY));
+    public static final RegistryObject<Item> CORNFLOWER_FLOWER_WREATH = ITEMS.register("cornflower_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.CORNFLOWER));
+    public static final RegistryObject<Item> LILY_OF_THE_VALLEY_FLOWER_WREATH = ITEMS.register("lily_of_the_valley_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.LILY_OF_THE_VALLEY));
+    public static final RegistryObject<Item> PINK_PETALS_FLOWER_WREATH = ITEMS.register("pink_petals_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.PINK_PETALS));
+    public static final RegistryObject<Item> SUNFLOWER_FLOWER_WREATH = ITEMS.register("sunflower_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.SUNFLOWER));
+    public static final RegistryObject<Item> LILAC_FLOWER_WREATH = ITEMS.register("lilac_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.LILAC));
+    public static final RegistryObject<Item> ROSE_BUSH_FLOWER_WREATH = ITEMS.register("rose_bush_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.ROSE_BUSH));
+    public static final RegistryObject<Item> PEONY_FLOWER_WREATH = ITEMS.register("peony_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.PEONY));
+    public static final RegistryObject<Item> DEAD_BUSH_FLOWER_WREATH = ITEMS.register("dead_bush_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.DEAD_BUSH));
+    public static final RegistryObject<Item> WITHER_ROSE_FLOWER_WREATH = ITEMS.register("wither_rose_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.WITHER_ROSE));
+    public static final RegistryObject<Item> TORCHFLOWER_FLOWER_WREATH = ITEMS.register("torchflower_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.TORCHFLOWER));
+    public static final RegistryObject<Item> PITCHER_PLANT_FLOWER_WREATH = ITEMS.register("pitcher_plant_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.PITCHER_PLANT));
+    public static final RegistryObject<Item> CUTIE_FLOWER_WREATH = ITEMS.register("cutie_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.CUTIE));
 
     public static final RegistryObject<Item> COLLAR = ITEMS.register("collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.COLLAR));
     public static final RegistryObject<Item> WHITE_COLLAR = ITEMS.register("white_collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.WHITE));
@@ -258,6 +283,9 @@ public class PurrfectItems {
                     String modId = string.substring(0, i);
                     if (modId.equals(Purrfect.MOD_ID) && item instanceof CollarItem) {
                         CuriosRendererRegistry.register(item, CollarRenderer::new);
+                    }
+                    if (modId.equals(Purrfect.MOD_ID) && item instanceof FlowerWreathItem) {
+                        CuriosRendererRegistry.register(item, FlowerWreathRenderer::new);
                     }
                 }
             }

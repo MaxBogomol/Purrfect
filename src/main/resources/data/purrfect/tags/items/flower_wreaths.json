@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "purrfect:dandelion_flower_wreath",
+    "purrfect:poppy_flower_wreath",
+    "purrfect:blue_orchid_flower_wreath",
+    "purrfect:allium_flower_wreath",
+    "purrfect:azure_bluet_flower_wreath",
+    "purrfect:red_tulip_flower_wreath",
+    "purrfect:orange_tulip_flower_wreath",
+    "purrfect:white_tulip_flower_wreath",
+    "purrfect:pink_tulip_flower_wreath",
+    "purrfect:oxeye_daisy_flower_wreath",
+    "purrfect:cornflower_flower_wreath",
+    "purrfect:lily_of_the_valley_flower_wreath",
+    "purrfect:pink_petals_flower_wreath",
+    "purrfect:sunflower_flower_wreath",
+    "purrfect:lilac_flower_wreath",
+    "purrfect:rose_bush_flower_wreath",
+    "purrfect:peony_flower_wreath",
+    "purrfect:dead_bush_flower_wreath",
+    "purrfect:wither_rose_flower_wreath",
+    "purrfect:torchflower_flower_wreath",
+    "purrfect:pitcher_plant_flower_wreath",
+    "purrfect:cutie_flower_wreath",
+    {
+      "id": "purrfect:petals_of_innocence_flower_wreath",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "purrfect:item/petals_of_innocence_flower_wreath"
+  }
+}

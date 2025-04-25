@@ -5,6 +5,7 @@ import mod.maxbogomol.purrfect.common.capability.FurryPlayerProvider;
 import mod.maxbogomol.purrfect.common.capability.IFurryPlayer;
 import mod.maxbogomol.purrfect.common.furry.FurryPlayerHandler;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
+import mod.maxbogomol.purrfect.common.item.equipment.curio.FlowerWreathItem;
 import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
 import mod.maxbogomol.purrfect.common.network.furry.FurryPlayerUpdatePacket;
 import net.minecraft.nbt.CompoundTag;
@@ -67,12 +68,13 @@ public class PurrfectEvents {
 
     @SubscribeEvent
     public void onEntityJump(LivingEvent.LivingJumpEvent event) {
-        CollarItem.playerJump(event);
+        CollarItem.onEntityJump(event);
     }
 
     @SubscribeEvent
     public void onLivingDamage(LivingDamageEvent event) {
-        CollarItem.playerDamage(event);
+        CollarItem.onLivingDamage(event);
+        FlowerWreathItem.onLivingDamage(event);
     }
 
     @SubscribeEvent

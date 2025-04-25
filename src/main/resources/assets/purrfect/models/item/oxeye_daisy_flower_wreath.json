@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "purrfect:item/oxeye_daisy_flower_wreath"
+  }
+}

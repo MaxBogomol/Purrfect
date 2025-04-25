@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "purrfect:item/wither_rose_flower_wreath"
+  }
+}

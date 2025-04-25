@@ -78,11 +78,11 @@ public class CollarItem extends BaseCurioItem {
         return new ICurio.SoundInfo(SoundEvents.ARMOR_EQUIP_LEATHER, 1.0f, 1.0f);
     }
 
-    public static void playerJump(LivingEvent.LivingJumpEvent event) {
+    public static void onEntityJump(LivingEvent.LivingJumpEvent event) {
         bellSound(event.getEntity());
     }
 
-    public static void playerDamage(LivingDamageEvent event) {
+    public static void onLivingDamage(LivingDamageEvent event) {
         bellSound(event.getEntity());
     }
 

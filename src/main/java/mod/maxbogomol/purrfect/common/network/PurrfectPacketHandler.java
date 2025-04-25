@@ -4,6 +4,9 @@ import mod.maxbogomol.fluffy_fur.common.network.PacketHandler;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.common.network.block.BlahajHeartsPacket;
 import mod.maxbogomol.purrfect.common.network.furry.FurryPlayerUpdatePacket;
+import mod.maxbogomol.purrfect.common.network.item.PinkPetalsFlowerWreathPacket;
+import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
+import mod.maxbogomol.purrfect.integration.common.wizards_reborn.network.item.PetalsOfInnocenceFlowerWreathPacket;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
@@ -20,6 +23,11 @@ public class PurrfectPacketHandler extends PacketHandler {
         int id = 0;
         BlahajHeartsPacket.register(HANDLER, id++);
         FurryPlayerUpdatePacket.register(HANDLER, id++);
+        PinkPetalsFlowerWreathPacket.register(HANDLER, id++);
+
+        if (PurrfectWizardsReborn.isLoaded()) {
+            PetalsOfInnocenceFlowerWreathPacket.register(HANDLER, id++);
+        }
     }
 
     public static SimpleChannel getHandler() {

@@ -2,6 +2,7 @@ package mod.maxbogomol.purrfect.registry.common.item;
 
 import mod.maxbogomol.fluffy_fur.util.ColorUtil;
 import mod.maxbogomol.purrfect.Purrfect;
+import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -52,6 +53,32 @@ public class PurrfectCreativeTabs {
 
             event.accept(PurrfectItems.BLAHAJ_PLUSH);
             event.accept(PurrfectItems.BLAHAJ_PINK_PLUSH);
+
+            event.accept(PurrfectItems.DANDELION_FLOWER_WREATH);
+            event.accept(PurrfectItems.POPPY_FLOWER_WREATH);
+            event.accept(PurrfectItems.BLUE_ORCHID_FLOWER_WREATH);
+            event.accept(PurrfectItems.ALLIUM_FLOWER_WREATH);
+            event.accept(PurrfectItems.AZURE_BLUET_FLOWER_WREATH);
+            event.accept(PurrfectItems.RED_TULIP_FLOWER_WREATH);
+            event.accept(PurrfectItems.ORANGE_TULIP_FLOWER_WREATH);
+            event.accept(PurrfectItems.WHITE_TULIP_FLOWER_WREATH);
+            event.accept(PurrfectItems.PINK_TULIP_FLOWER_WREATH);
+            event.accept(PurrfectItems.OXEYE_DAISY_FLOWER_WREATH);
+            event.accept(PurrfectItems.CORNFLOWER_FLOWER_WREATH);
+            event.accept(PurrfectItems.LILY_OF_THE_VALLEY_FLOWER_WREATH);
+            event.accept(PurrfectItems.PINK_PETALS_FLOWER_WREATH);
+            event.accept(PurrfectItems.SUNFLOWER_FLOWER_WREATH);
+            event.accept(PurrfectItems.LILAC_FLOWER_WREATH);
+            event.accept(PurrfectItems.ROSE_BUSH_FLOWER_WREATH);
+            event.accept(PurrfectItems.PEONY_FLOWER_WREATH);
+            event.accept(PurrfectItems.DEAD_BUSH_FLOWER_WREATH);
+            event.accept(PurrfectItems.WITHER_ROSE_FLOWER_WREATH);
+            event.accept(PurrfectItems.TORCHFLOWER_FLOWER_WREATH);
+            event.accept(PurrfectItems.PITCHER_PLANT_FLOWER_WREATH);
+
+            if (PurrfectWizardsReborn.isLoaded()) {
+                event.accept(PurrfectWizardsReborn.ItemsLoadedOnly.PETALS_OF_INNOCENCE_FLOWER_WREATH);
+            }
 
             event.accept(PurrfectItems.COLLAR);
             event.accept(PurrfectItems.WHITE_COLLAR);

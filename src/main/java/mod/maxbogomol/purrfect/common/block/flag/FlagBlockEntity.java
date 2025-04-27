@@ -4,7 +4,7 @@ import mod.maxbogomol.fluffy_fur.client.event.ClientTickHandler;
 import mod.maxbogomol.fluffy_fur.common.block.entity.BlockEntityBase;
 import mod.maxbogomol.fluffy_fur.common.block.entity.TickableBlockEntity;
 import mod.maxbogomol.fluffy_fur.common.easing.Easing;
-import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlockEnteties;
+import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlockEntities;
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
@@ -31,7 +31,7 @@ public class FlagBlockEntity extends BlockEntityBase implements TickableBlockEnt
     }
 
     public FlagBlockEntity(BlockPos pos, BlockState state) {
-        this(PurrfectBlockEnteties.FLAG.get(), pos, state);
+        this(PurrfectBlockEntities.FLAG.get(), pos, state);
     }
 
     @Override

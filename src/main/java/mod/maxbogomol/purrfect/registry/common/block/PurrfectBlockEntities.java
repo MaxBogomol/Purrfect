@@ -16,7 +16,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class PurrfectBlockEnteties {
+public class PurrfectBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Purrfect.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<BlahajBlockEntity>> BLAHAJ = BLOCK_ENTITIES.register("blahaj", () -> BlockEntityType.Builder.of(BlahajBlockEntity::new,

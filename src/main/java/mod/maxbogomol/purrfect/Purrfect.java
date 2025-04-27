@@ -8,7 +8,7 @@ import mod.maxbogomol.purrfect.common.event.PurrfectEvents;
 import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
 import mod.maxbogomol.purrfect.registry.common.PurrfectSounds;
-import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlockEnteties;
+import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlockEntities;
 import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlocks;
 import mod.maxbogomol.purrfect.registry.common.entity.PurrfectEntities;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectCreativeTabs;
@@ -38,7 +38,7 @@ public class Purrfect {
 
         PurrfectItems.register(eventBus);
         PurrfectBlocks.register(eventBus);
-        PurrfectBlockEnteties.register(eventBus);
+        PurrfectBlockEntities.register(eventBus);
         PurrfectEntities.register(eventBus);
         PurrfectSounds.register(eventBus);
 

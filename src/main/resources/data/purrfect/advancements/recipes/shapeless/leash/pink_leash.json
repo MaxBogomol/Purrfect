@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_leashes": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "purrfect:leashes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_leashes"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "purrfect:shapeless/leash/pink_leash"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,5 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "group": "leash",
   "ingredients": [
     {
       "tag": "purrfect:leashes"

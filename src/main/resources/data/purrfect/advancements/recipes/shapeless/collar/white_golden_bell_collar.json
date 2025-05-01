@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_golden_bell_collars": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "purrfect:golden_bell_collars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_golden_bell_collars"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "purrfect:shapeless/collar/white_golden_bell_collar"
+    ]
+  },
+  "sends_telemetry_event": false
+}

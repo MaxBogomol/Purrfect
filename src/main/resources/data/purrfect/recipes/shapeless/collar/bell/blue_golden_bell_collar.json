@@ -1,5 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "group": "golden_bell_collar",
   "ingredients": [
     {
       "item": "purrfect:blue_collar"

@@ -1,5 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "group": "dye_collar",
   "ingredients": [
     {
       "tag": "purrfect:spiked_collars"

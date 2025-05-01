@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_yarns": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "purrfect:yarns"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_yarns"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "purrfect:shapeless/yarn/purple_yarn"
+    ]
+  },
+  "sends_telemetry_event": false
+}

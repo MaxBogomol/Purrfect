@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_spiked_collars": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "purrfect:spiked_collars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_spiked_collars"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "purrfect:shapeless/collar/bell/pink_iron_bell_spiked_collar"
+    ]
+  },
+  "sends_telemetry_event": false
+}

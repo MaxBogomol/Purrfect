@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
-  "group": "spiked_collar",
+  "group": "golden_bell_spiked_collar",
   "pattern": [
     "# #",
     " X ",

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "equipment",
-  "group": "dye_collar",
+  "group": "dye_iron_bell_collar",
   "ingredients": [
     {
       "tag": "purrfect:iron_bell_collars"

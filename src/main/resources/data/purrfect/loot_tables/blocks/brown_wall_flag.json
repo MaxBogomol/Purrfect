@@ -1,11 +1,12 @@
 {
+  "type": "minecraft:block",
   "pools": [
     {
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "purrfect:brown_flag"
+          "name": "purrfect:brown_wall_flag"
         }
       ],
       "conditions": [

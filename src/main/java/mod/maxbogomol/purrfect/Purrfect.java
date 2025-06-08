@@ -61,6 +61,7 @@ public class Purrfect {
     private void setup(final FMLCommonSetupEvent event) {
         hi();
         PurrfectPacketHandler.init();
+        PurrfectCreativeTabs.init();
     }
 
     public static void hi() {

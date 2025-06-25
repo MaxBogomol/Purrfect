@@ -1,0 +1,6 @@
+{
+  "parent": "purrfect:plush/shrimp",
+  "textures": {
+    "particle": "minecraft:block/red_wool"
+  }
+}

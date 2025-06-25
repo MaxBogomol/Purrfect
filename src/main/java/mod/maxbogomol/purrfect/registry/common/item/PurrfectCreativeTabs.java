@@ -101,6 +101,8 @@ public class PurrfectCreativeTabs {
             //PLUSHIES
             addInSub(event, PLUSHIES, PurrfectItems.BLAHAJ_PLUSH);
             addInSub(event, PLUSHIES, PurrfectItems.PINK_BLAHAJ_PLUSH);
+            addInSub(event, PLUSHIES, PurrfectItems.SHRIMP_PLUSH);
+            addInSub(event, PLUSHIES, PurrfectItems.FISH_PLUSH);
 
             event.accept(PurrfectItems.DANDELION_FLOWER_WREATH);
             event.accept(PurrfectItems.POPPY_FLOWER_WREATH);

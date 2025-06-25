@@ -1,11 +1,13 @@
 package mod.maxbogomol.purrfect.registry.common.block;
 
 import mod.maxbogomol.purrfect.Purrfect;
-import mod.maxbogomol.purrfect.common.block.blahaj.BlahajBlock;
 import mod.maxbogomol.purrfect.common.block.flag.FlagBlock;
 import mod.maxbogomol.purrfect.common.block.flag.FlagWallBlock;
 import mod.maxbogomol.purrfect.common.block.flag.FlagpoleBlock;
 import mod.maxbogomol.purrfect.common.block.pharmacist_table.PharmacistTableBlock;
+import mod.maxbogomol.purrfect.common.block.plush.BlahajBlock;
+import mod.maxbogomol.purrfect.common.block.plush.FishBlock;
+import mod.maxbogomol.purrfect.common.block.plush.ShrimpBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -22,6 +24,8 @@ public class PurrfectBlocks {
 
     public static final RegistryObject<Block> BLAHAJ_PLUSH = BLOCKS.register("blahaj_plush", () -> new BlahajBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).noOcclusion()));
     public static final RegistryObject<Block> PINK_BLAHAJ_PLUSH = BLOCKS.register("pink_blahaj_plush", () -> new BlahajBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_PINK).noOcclusion()));
+    public static final RegistryObject<Block> SHRIMP_PLUSH = BLOCKS.register("shrimp_plush", () -> new ShrimpBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_RED).noOcclusion()));
+    public static final RegistryObject<Block> FISH_PLUSH = BLOCKS.register("fish_plush", () -> new FishBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_BLUE).noOcclusion()));
 
     public static final RegistryObject<Block> FLAGPOLE = BLOCKS.register("flagpole", () -> new FlagpoleBlock(BlockBehaviour.Properties.copy(Blocks.CHAIN)));
 

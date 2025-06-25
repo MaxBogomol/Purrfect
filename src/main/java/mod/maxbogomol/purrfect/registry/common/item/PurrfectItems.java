@@ -1,6 +1,7 @@
 package mod.maxbogomol.purrfect.registry.common.item;
 
 import mod.maxbogomol.fluffy_fur.common.item.PlushItem;
+import mod.maxbogomol.fluffy_fur.integration.common.curios.PlushHeadRenderer;
 import mod.maxbogomol.fluffy_fur.registry.client.FluffyFurModels;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.client.render.curio.CollarRenderer;
@@ -46,6 +47,8 @@ public class PurrfectItems {
 
     public static final RegistryObject<Item> BLAHAJ_PLUSH = ITEMS.register("blahaj_plush", () -> new PlushItem(PurrfectBlocks.BLAHAJ_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> PINK_BLAHAJ_PLUSH = ITEMS.register("pink_blahaj_plush", () -> new PlushItem(PurrfectBlocks.PINK_BLAHAJ_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> SHRIMP_PLUSH = ITEMS.register("shrimp_plush", () -> new PlushItem(PurrfectBlocks.SHRIMP_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> FISH_PLUSH = ITEMS.register("fish_plush", () -> new PlushItem(PurrfectBlocks.FISH_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
 
     public static final RegistryObject<Item> DANDELION_FLOWER_WREATH = ITEMS.register("dandelion_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.DANDELION));
     public static final RegistryObject<Item> POPPY_FLOWER_WREATH = ITEMS.register("poppy_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.POPPY));
@@ -289,6 +292,11 @@ public class PurrfectItems {
                     }
                 }
             }
+
+            CuriosRendererRegistry.register(BLAHAJ_PLUSH.get(), PlushHeadRenderer::new);
+            CuriosRendererRegistry.register(PINK_BLAHAJ_PLUSH.get(), PlushHeadRenderer::new);
+            CuriosRendererRegistry.register(SHRIMP_PLUSH.get(), PlushHeadRenderer::new);
+            CuriosRendererRegistry.register(FISH_PLUSH.get(), PlushHeadRenderer::new);
         }
 
         @SubscribeEvent

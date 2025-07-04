@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "purrfect:lime_wall_flag"
+          "name": "purrfect:lime_flag"
         }
       ],
       "conditions": [

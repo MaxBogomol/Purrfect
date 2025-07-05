@@ -21,9 +21,7 @@
     "purrfect:ace_flag",
     "purrfect:aro_flag",
     "purrfect:aroace_flag",
-    "purrfect:kvasssexual_flag",
-    "purrfect:beersexual_flag",
-    "purrfect:wizards_reborn_flag",
-    "purrfect:fluffy_fur_flag"
+    "#purrfect:joke_flags",
+    "#purrfect:mod_flags"
   ]
 }

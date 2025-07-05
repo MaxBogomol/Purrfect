@@ -203,6 +203,7 @@
   "item.purrfect.rainbow_yarn": "Радужный клубокъ нитокъ",
 
   "block.purrfect.flagpole": "Флагштокъ",
+
   "block.purrfect.white_flag": "Бѣлый флагъ",
   "block.purrfect.light_gray_flag": "Свѣтлосѣрый флагъ",
   "block.purrfect.gray_flag": "Сѣрый флагъ",
@@ -220,7 +221,6 @@
   "block.purrfect.magenta_flag": "Пурпурный флагъ",
   "block.purrfect.pink_flag": "Розовый флагъ",
   "block.purrfect.rainbow_flag": "Радужный флагъ",
-
   "block.purrfect.heterosexual_flag": "Флагъ (Гетеросексуалъ)",
   "block.purrfect.pride_flag": "Флагъ гордости",
   "block.purrfect.lesbian_flag": "Флагъ (Лесбіянка)",
@@ -244,6 +244,8 @@
   "block.purrfect.beersexual_flag": "Флагъ (Пивосексуалъ)",
   "block.purrfect.wizards_reborn_flag": "Флагъ (Wizard's Reborn)",
   "block.purrfect.fluffy_fur_flag": "Флагъ (Fluffy Fur)",
+  "block.purrfect.silly_oddities_flag": "Флаг (Silly Oddities)",
+
   "block.purrfect.white_wall_flag": "Бѣлый настѣнный флагъ",
   "block.purrfect.light_gray_wall_flag": "Свѣтлосѣрый настѣнный флагъ",
   "block.purrfect.gray_wall_flag": "Сѣрый настѣнный флагъ",
@@ -261,7 +263,6 @@
   "block.purrfect.magenta_wall_flag": "Пурпурный настѣнный флагъ",
   "block.purrfect.pink_wall_flag": "Розовый настѣнный флагъ",
   "block.purrfect.rainbow_wall_flag": "Радужный настѣнный флагъ",
-
   "block.purrfect.heterosexual_wall_flag": "Настѣнный флагъ (Гетеросексуалъ)",
   "block.purrfect.pride_wall_flag": "Настѣнный флагъ гордости",
   "block.purrfect.lesbian_wall_flag": "Настѣнный флагъ (Лесбіянка)",
@@ -285,6 +286,7 @@
   "block.purrfect.beersexual_wall_flag": "Настѣнный флагъ (Пивосексуалъ)",
   "block.purrfect.wizards_reborn_wall_flag": "Настѣнный флагъ (Wizard's Reborn)",
   "block.purrfect.fluffy_fur_wall_flag": "Настѣнный флагъ (Fluffy Fur)",
+  "block.purrfect.silly_oddities_wall_flag": "Настѣнный флагъ (Silly Oddities)",
 
   "_comment_2": "Звуки",
   "sounds.purrfect.collar_bell": "Колокольчикъ ошейника звенитъ",

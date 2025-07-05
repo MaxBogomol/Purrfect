@@ -265,6 +265,7 @@ public class PurrfectItems {
     public static final RegistryObject<Item> BEERSEXUAL_FLAG = ITEMS.register("beersexual_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.BEERSEXUAL_FLAG.get(), PurrfectBlocks.BEERSEXUAL_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> WIZARDS_REBORN_FLAG = ITEMS.register("wizards_reborn_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.WIZARDS_REBORN_FLAG.get(), PurrfectBlocks.WIZARDS_REBORN_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> FLUFFY_FUR_FLAG = ITEMS.register("fluffy_fur_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.FLUFFY_FUR_FLAG.get(), PurrfectBlocks.FLUFFY_FUR_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> SILLY_ODDITIES_FLAG = ITEMS.register("silly_oddities_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.SILLY_ODDITIES_FLAG.get(), PurrfectBlocks.SILLY_ODDITIES_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
@@ -343,6 +344,7 @@ public class PurrfectItems {
             FluffyFurModels.addCustomRenderItemModel(map, BEERSEXUAL_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, WIZARDS_REBORN_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, FLUFFY_FUR_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, SILLY_ODDITIES_FLAG.getId());
         }
     }
 }

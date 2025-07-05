@@ -244,6 +244,7 @@
   "block.purrfect.beersexual_flag": "Beersexual Flag",
   "block.purrfect.wizards_reborn_flag": "Wizard's Reborn Flag",
   "block.purrfect.fluffy_fur_flag": "Fluffy Fur Flag",
+  "block.purrfect.silly_oddities_flag": "Silly Oddities Flag",
 
   "block.purrfect.white_wall_flag": "White Wall Flag",
   "block.purrfect.light_gray_wall_flag": "Light Gray Wall Flag",
@@ -285,6 +286,7 @@
   "block.purrfect.beersexual_wall_flag": "Beersexual Wall Flag",
   "block.purrfect.wizards_reborn_wall_flag": "Wizard's Reborn Wall Flag",
   "block.purrfect.fluffy_fur_wall_flag": "Fluffy Fur Wall Flag",
+  "block.purrfect.silly_oddities_wall_flag": "Silly Oddities Wall Flag",
 
   "_comment_2": "Sounds",
   "sounds.purrfect.collar_bell": "Collar bell ringing",

@@ -21,9 +21,7 @@
     "purrfect:ace_wall_flag",
     "purrfect:aro_wall_flag",
     "purrfect:aroace_wall_flag",
-    "purrfect:kvasssexual_wall_flag",
-    "purrfect:beersexual_wall_flag",
-    "purrfect:wizards_reborn_wall_flag",
-    "purrfect:fluffy_fur_wall_flag"
+    "#purrfect:joke_wal_flags",
+    "#purrfect:mod_wall_flags"
   ]
 }

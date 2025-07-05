@@ -244,6 +244,7 @@
   "block.purrfect.beersexual_flag": "Флаг (Пивосексуал)",
   "block.purrfect.wizards_reborn_flag": "Флаг (Wizard's Reborn)",
   "block.purrfect.fluffy_fur_flag": "Флаг (Fluffy Fur)",
+  "block.purrfect.silly_oddities_flag": "Флаг (Silly Oddities)",
 
   "block.purrfect.white_wall_flag": "Белый настенный флаг",
   "block.purrfect.light_gray_wall_flag": "Светло-серый настенный флаг",
@@ -285,6 +286,7 @@
   "block.purrfect.beersexual_wall_flag": "Настенный флаг (Пивосексуал)",
   "block.purrfect.wizards_reborn_wall_flag": "Настенный флаг (Wizard's Reborn)",
   "block.purrfect.fluffy_fur_wall_flag": "Настенный флаг (Fluffy Fur)",
+  "block.purrfect.silly_oddities_wall_flag": "Настенный флаг (Silly Oddities)",
 
   "_comment_2": "Звуки",
   "sounds.purrfect.collar_bell": "Колокольчик ошейника звенит",

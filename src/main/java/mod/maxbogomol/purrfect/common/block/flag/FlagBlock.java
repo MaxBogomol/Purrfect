@@ -91,6 +91,7 @@ public class FlagBlock extends Block implements EntityBlock, SimpleWaterloggedBl
     public static FlagColor BEERSEXUAL = FlagColor.create(Purrfect.MOD_ID, "beersexual");
     public static FlagColor WIZARDS_REBORN = FlagColor.create(Purrfect.MOD_ID, "wizards_reborn");
     public static FlagColor FLUFFY_FUR = FlagColor.create(Purrfect.MOD_ID, "fluffy_fur");
+    public static FlagColor SILLY_ODDITIES = FlagColor.create(Purrfect.MOD_ID, "silly_oddities");
 
     public FlagColor color;
 

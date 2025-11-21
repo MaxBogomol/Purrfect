@@ -5,6 +5,7 @@ import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.registry.common.PurrfectSounds;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectItemTags;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
@@ -91,8 +92,9 @@ public class CollarItem extends BaseCurioItem {
             LazyOptional<ICuriosItemHandler> curiosItemHandler = CuriosApi.getCuriosInventory(entity);
             if (curiosItemHandler.isPresent() && curiosItemHandler.resolve().isPresent()) {
                 List<SlotResult> curioSlots = curiosItemHandler.resolve().get().findCurios((i) -> i.is(PurrfectItemTags.BELL_COLLARS));
-                if (!curioSlots.isEmpty()) {
-                    entity.level().playSound(null, entity.getX(), entity.getY() + (entity.getBbHeight() / 2f), entity.getZ(), PurrfectSounds.COLLAR_BELL.get(), SoundSource.PLAYERS, 0.5f, 1.0f);
+                for (SlotResult slot : curioSlots) {
+                    SoundEvent soundEvent = PurrfectSounds.COLLAR_BELL.get();
+                    entity.level().playSound(null, entity.getX(), entity.getY() + (entity.getBbHeight() / 2f), entity.getZ(), soundEvent, SoundSource.PLAYERS, 0.5f, 1.0f);
                 }
             }
         }

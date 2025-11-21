@@ -1,6 +1,7 @@
 package mod.maxbogomol.purrfect.integration.common.wizards_reborn;
 
 import mod.maxbogomol.purrfect.Purrfect;
+import mod.maxbogomol.purrfect.client.render.curio.CollarRenderer;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.FlowerWreathItem;
 import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.network.item.PetalsOfInnocenceFlowerWreathPacket;
@@ -9,9 +10,11 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 public class PurrfectWizardsReborn {
     public static boolean LOADED;
@@ -48,6 +51,12 @@ public class PurrfectWizardsReborn {
                     PurrfectPacketHandler.sendToTracking(entity.level(), entity.blockPosition(), new PetalsOfInnocenceFlowerWreathPacket(entity.getEyePosition()));
                 }
             }
+        }
+    }
+
+    public static class ClientLoadedOnly {
+        public static void registerItems(FMLClientSetupEvent event) {
+            CuriosRendererRegistry.register(ItemsLoadedOnly.PETALS_OF_INNOCENCE_FLOWER_WREATH.get(), CollarRenderer::new);
         }
     }
 

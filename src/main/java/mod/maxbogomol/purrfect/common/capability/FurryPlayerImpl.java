@@ -16,6 +16,7 @@ import java.util.UUID;
 
 public class FurryPlayerImpl implements IFurryPlayer, INBTSerializable<CompoundTag> {
     public Map<Integer, Player> leashedPlayers = new HashMap<>();
+    public Map<Integer, UUID> leashedPlayersUUID = new HashMap<>();
     public Map<Integer, ItemStack> leashes = new HashMap<>();
 
     @Override
@@ -36,6 +37,26 @@ public class FurryPlayerImpl implements IFurryPlayer, INBTSerializable<CompoundT
     @Override
     public Map<Integer, Player> getLeashedPlayers() {
         return leashedPlayers;
+    }
+
+    @Override
+    public void setLeashedPlayerUUID(int i, UUID uuid) {
+        leashedPlayersUUID.put(i, uuid);
+    }
+
+    @Override
+    public UUID getLeashedPlayerUUID(int i) {
+        return leashedPlayersUUID.get(i);
+    }
+
+    @Override
+    public void clearLeashedPlayersUUID() {
+        leashedPlayersUUID.clear();
+    }
+
+    @Override
+    public Map<Integer, UUID> getLeashedPlayersUUID() {
+        return leashedPlayersUUID;
     }
 
     @Override
@@ -60,7 +81,6 @@ public class FurryPlayerImpl implements IFurryPlayer, INBTSerializable<CompoundT
 
     @Override
     public CompoundTag serializeNBT() {
-
         CompoundTag players = new CompoundTag();
         CompoundTag items = new CompoundTag();
         ListTag playersList = new ListTag();
@@ -100,6 +120,7 @@ public class FurryPlayerImpl implements IFurryPlayer, INBTSerializable<CompoundT
                 UUID uuid = players.getUUID(playersList.getString(i));
                 Level level = Purrfect.proxy.getLevel();
                 if (level != null) setLeashedPlayer(index, level.getPlayerByUUID(uuid));
+                setLeashedPlayerUUID(index, uuid);
                 ItemStack item = ItemStack.of(items.getCompound(playersList.getString(i)));
                 setLeash(index, item);
             }

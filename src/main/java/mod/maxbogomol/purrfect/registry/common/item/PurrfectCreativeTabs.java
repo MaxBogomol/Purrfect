@@ -27,7 +27,7 @@ public class PurrfectCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Purrfect.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> PURRFECT = CREATIVE_MODE_TABS.register("tab",
-            () -> MultiCreativeTab.builder().icon(() -> new ItemStack(PurrfectItems.GOLDEN_BELL_COLLAR.get()))
+            () -> MultiCreativeTab.builder().icon(() -> new ItemStack(PurrfectItems.COLLAR.get()))
                     .title(getSillyName())
                     .withLabelColor(ColorUtil.packColor(255, 55, 48, 54))
                     .withBackgroundLocation(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_item_tab.png"))
@@ -53,7 +53,7 @@ public class PurrfectCreativeTabs {
                     .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
 
     public static final SubCreativeTab COLLARS =
-            SubCreativeTab.create().subIcon(() -> new ItemStack(PurrfectItems.PINK_GOLDEN_BELL_COLLAR.get()))
+            SubCreativeTab.create().subIcon(() -> new ItemStack(PurrfectItems.COLLAR.get()))
                     .title(Component.empty().append(getSillyName()).append(": ").append(Component.translatable("creative_tab.purrfect.sub.collars")))
                     .subTitle(Component.translatable("creative_tab.purrfect.sub.collars"))
                     .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
@@ -103,6 +103,7 @@ public class PurrfectCreativeTabs {
             addInSub(event, PLUSHIES, PurrfectItems.PINK_BLAHAJ_PLUSH);
             addInSub(event, PLUSHIES, PurrfectItems.SHRIMP_PLUSH);
             addInSub(event, PLUSHIES, PurrfectItems.FISH_PLUSH);
+            addInSub(event, PLUSHIES, PurrfectItems.CARROT_PLUSH);
 
             event.accept(PurrfectItems.DANDELION_FLOWER_WREATH);
             event.accept(PurrfectItems.POPPY_FLOWER_WREATH);
@@ -132,118 +133,6 @@ public class PurrfectCreativeTabs {
 
             //COLLARS
             addInSub(event, COLLARS, PurrfectItems.COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.WHITE_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIGHT_GRAY_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.GRAY_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BLACK_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BROWN_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.RED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.ORANGE_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.YELLOW_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIME_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.GREEN_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.CYAN_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIGHT_BLUE_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BLUE_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.PURPLE_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.MAGENTA_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.PINK_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.RAINBOW_COLLAR);
-
-            addInSub(event, COLLARS, PurrfectItems.IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.WHITE_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIGHT_GRAY_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.GRAY_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BLACK_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BROWN_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.RED_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.ORANGE_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.YELLOW_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIME_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.GREEN_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.CYAN_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIGHT_BLUE_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BLUE_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.PURPLE_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.MAGENTA_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.PINK_IRON_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.RAINBOW_IRON_BELL_COLLAR);
-
-            addInSub(event, COLLARS, PurrfectItems.GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.WHITE_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIGHT_GRAY_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.GRAY_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BLACK_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BROWN_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.RED_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.ORANGE_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.YELLOW_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIME_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.GREEN_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.CYAN_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIGHT_BLUE_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BLUE_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.PURPLE_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.MAGENTA_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.PINK_GOLDEN_BELL_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.RAINBOW_GOLDEN_BELL_COLLAR);
-
-            addInSub(event, COLLARS, PurrfectItems.SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.WHITE_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIGHT_GRAY_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.GRAY_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BLACK_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BROWN_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.RED_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.ORANGE_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.YELLOW_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIME_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.GREEN_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.CYAN_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIGHT_BLUE_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BLUE_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.PURPLE_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.MAGENTA_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.PINK_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.RAINBOW_SPIKED_COLLAR);
-
-            addInSub(event, COLLARS, PurrfectItems.IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.WHITE_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIGHT_GRAY_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.GRAY_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BLACK_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BROWN_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.RED_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.ORANGE_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.YELLOW_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIME_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.GREEN_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.CYAN_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIGHT_BLUE_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BLUE_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.PURPLE_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.MAGENTA_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.PINK_IRON_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.RAINBOW_IRON_BELL_SPIKED_COLLAR);
-
-            addInSub(event, COLLARS, PurrfectItems.GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.WHITE_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIGHT_GRAY_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.GRAY_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BLACK_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BROWN_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.RED_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.ORANGE_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.YELLOW_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIME_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.GREEN_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.CYAN_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.LIGHT_BLUE_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.BLUE_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.PURPLE_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.MAGENTA_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.PINK_GOLDEN_BELL_SPIKED_COLLAR);
-            addInSub(event, COLLARS, PurrfectItems.RAINBOW_GOLDEN_BELL_SPIKED_COLLAR);
 
             event.accept(PurrfectItems.LEASH);
             event.accept(PurrfectItems.WHITE_LEASH);
@@ -263,6 +152,7 @@ public class PurrfectCreativeTabs {
             event.accept(PurrfectItems.MAGENTA_LEASH);
             event.accept(PurrfectItems.PINK_LEASH);
             event.accept(PurrfectItems.RAINBOW_LEASH);
+            event.accept(PurrfectItems.CHAIN_LEASH);
 
             event.accept(PurrfectItems.WHITE_YARN);
             event.accept(PurrfectItems.LIGHT_GRAY_YARN);
@@ -325,6 +215,7 @@ public class PurrfectCreativeTabs {
             addInSub(event, FLAGS, PurrfectItems.WIZARDS_REBORN_FLAG);
             addInSub(event, FLAGS, PurrfectItems.FLUFFY_FUR_FLAG);
             addInSub(event, FLAGS, PurrfectItems.SILLY_ODDITIES_FLAG);
+            addInSub(event, FLAGS, PurrfectItems.OPTIFINE_FLAG);
         }
     }
 

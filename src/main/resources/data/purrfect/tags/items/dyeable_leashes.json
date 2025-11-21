@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "purrfect:leash",
+    "purrfect:white_leash",
+    "purrfect:light_gray_leash",
+    "purrfect:gray_leash",
+    "purrfect:black_leash",
+    "purrfect:brown_leash",
+    "purrfect:red_leash",
+    "purrfect:orange_leash",
+    "purrfect:yellow_leash",
+    "purrfect:lime_leash",
+    "purrfect:green_leash",
+    "purrfect:cyan_leash",
+    "purrfect:light_blue_leash",
+    "purrfect:blue_leash",
+    "purrfect:purple_leash",
+    "purrfect:magenta_leash",
+    "purrfect:pink_leash",
+    "purrfect:rainbow_leash",
+    "purrfect:chain_leash"
+  ]
+}

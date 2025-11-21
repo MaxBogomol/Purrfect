@@ -26,6 +26,7 @@
   "block.purrfect.pink_blahaj_plush": "Pink Blåhaj Plush",
   "block.purrfect.shrimp_plush": "Shrimp Plush",
   "block.purrfect.fish_plush": "Fish Plush",
+  "block.purrfect.carrot_plush": "Carrot Plush",
 
   "item.purrfect.dandelion_flower_wreath": "Dandelion Flower Wreath",
   "item.purrfect.poppy_flower_wreath": "Poppy Flower Wreath",
@@ -183,6 +184,7 @@
   "item.purrfect.magenta_leash": "Magenta Leash",
   "item.purrfect.pink_leash": "Pink Leash",
   "item.purrfect.rainbow_leash": "Rainbow Leash",
+  "item.purrfect.chain_leash": "Chain Leash",
 
   "item.purrfect.white_yarn": "White Yarn",
   "item.purrfect.light_gray_yarn": "Light Gray Yarn",
@@ -245,6 +247,7 @@
   "block.purrfect.wizards_reborn_flag": "Wizard's Reborn Flag",
   "block.purrfect.fluffy_fur_flag": "Fluffy Fur Flag",
   "block.purrfect.silly_oddities_flag": "Silly Oddities Flag",
+  "block.purrfect.optifine_flag": "Optifine Flag",
 
   "block.purrfect.white_wall_flag": "White Wall Flag",
   "block.purrfect.light_gray_wall_flag": "Light Gray Wall Flag",
@@ -287,6 +290,7 @@
   "block.purrfect.wizards_reborn_wall_flag": "Wizard's Reborn Wall Flag",
   "block.purrfect.fluffy_fur_wall_flag": "Fluffy Fur Wall Flag",
   "block.purrfect.silly_oddities_wall_flag": "Silly Oddities Wall Flag",
+  "block.purrfect.optifine_wall_flag": "Optifine Wall Flag",
 
   "_comment_2": "Sounds",
   "sounds.purrfect.collar_bell": "Collar bell ringing",

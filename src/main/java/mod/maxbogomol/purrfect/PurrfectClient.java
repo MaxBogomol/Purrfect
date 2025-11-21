@@ -40,7 +40,7 @@ public class PurrfectClient {
     public static FluffyFurMod MOD_INSTANCE;
 
     public static void setupMenu() {
-        MOD_INSTANCE = new FluffyFurMod(Purrfect.MOD_ID, Purrfect.NAME, Purrfect.VERSION).setDev("MaxBogomol").setItem(new ItemStack(PurrfectItems.GOLDEN_BELL_COLLAR.get()))
+        MOD_INSTANCE = new FluffyFurMod(Purrfect.MOD_ID, Purrfect.NAME, Purrfect.VERSION).setDev("MaxBogomol").setItem(new ItemStack(PurrfectItems.COLLAR.get()))
                 .setEdition(Purrfect.VERSION_NUMBER).setNameColor(new Color(205, 237, 254)).setVersionColor(new Color(255, 243, 177))
                 .setDescription(Component.translatable("mod_description.purrfect"))
                 .addGithubLink("https://github.com/MaxBogomol/Purrfect")

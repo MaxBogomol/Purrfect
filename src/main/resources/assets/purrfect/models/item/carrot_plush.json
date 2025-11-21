@@ -1,0 +1,6 @@
+{
+  "parent": "purrfect:plush/carrot",
+  "textures": {
+    "particle": "minecraft:block/orange_wool"
+  }
+}

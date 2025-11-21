@@ -55,14 +55,20 @@ public class LeashRenderHandler {
                         ItemStack itemStack = leashes.get(index);
 
                         TextureAtlasSprite sprite = spriteStandard;
+                        float textureWidth = 0.0625f;
+                        float textureHeight = 0.75f;
+                        float leashWidth = 0.05f;
                         if (itemStack != null && itemStack.getItem() instanceof LeashItem leashItem) {
                             sprite = RenderUtil.getSprite(leashItem.getLeashTexture());
+                            textureWidth = leashItem.getLeashTextureWidth();
+                            textureHeight = leashItem.getLeashTextureHeight();
+                            leashWidth = leashItem.getLeashWidth();
                         }
 
                         poseStack.pushPose();
                         poseStack.translate(-camera.x(), -camera.y(), -camera.z());
                         poseStack.translate(pos.x(), pos.y(), pos.z());
-                        renderLeash(sprite, target, partialTicks, poseStack, Minecraft.getInstance().renderBuffers().bufferSource(), player);
+                        renderLeash(sprite, target, partialTicks, poseStack, Minecraft.getInstance().renderBuffers().bufferSource(), player, textureWidth, textureHeight, leashWidth);
                         poseStack.popPose();
                     }
                 }
@@ -70,11 +76,11 @@ public class LeashRenderHandler {
         }
     }
 
-    public static void renderLeash(TextureAtlasSprite sprite, LivingEntity entityLiving, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, Entity leashHolder) {
+    public static void renderLeash(TextureAtlasSprite sprite, LivingEntity entityLiving, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, Entity leashHolder, float textureWidth, float textureHeight, float leashWidth) {
         float u0 = sprite.getU0();
-        float u1 = sprite.getU0() + ((sprite.getU1() - sprite.getU0()) * 0.0625f);
+        float u1 = sprite.getU0() + ((sprite.getU1() - sprite.getU0()) * textureWidth);
         float v0 = sprite.getV0();
-        float v1 = sprite.getV0() + ((sprite.getV1() - sprite.getV0()) * 0.75f);
+        float v1 = sprite.getV0() + ((sprite.getV1() - sprite.getV0()) * textureHeight);
 
         poseStack.pushPose();
         Vec3 vec3 = leashHolder.getRopeHoldPosition(partialTicks);
@@ -104,7 +110,7 @@ public class LeashRenderHandler {
                 .setRenderType(RenderType.cutout())
                 .setFormat(DefaultVertexFormat.BLOCK)
                 .setLight(LightTexture.pack(i, k))
-                .renderTrail(poseStack, trailPoints, (f3) -> RenderUtil.FULL_WIDTH_FUNCTION.apply(f3) * 0.05f);
+                .renderTrail(poseStack, trailPoints, (f3) -> RenderUtil.FULL_WIDTH_FUNCTION.apply(f3) * leashWidth);
         trailPoints.clear();
         poseStack.popPose();
     }

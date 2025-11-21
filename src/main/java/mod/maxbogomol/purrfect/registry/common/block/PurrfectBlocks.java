@@ -6,6 +6,7 @@ import mod.maxbogomol.purrfect.common.block.flag.FlagWallBlock;
 import mod.maxbogomol.purrfect.common.block.flag.FlagpoleBlock;
 import mod.maxbogomol.purrfect.common.block.pharmacist_table.PharmacistTableBlock;
 import mod.maxbogomol.purrfect.common.block.plush.BlahajBlock;
+import mod.maxbogomol.purrfect.common.block.plush.CarrotBlock;
 import mod.maxbogomol.purrfect.common.block.plush.FishBlock;
 import mod.maxbogomol.purrfect.common.block.plush.ShrimpBlock;
 import net.minecraft.world.level.block.Block;
@@ -26,6 +27,7 @@ public class PurrfectBlocks {
     public static final RegistryObject<Block> PINK_BLAHAJ_PLUSH = BLOCKS.register("pink_blahaj_plush", () -> new BlahajBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_PINK).noOcclusion()));
     public static final RegistryObject<Block> SHRIMP_PLUSH = BLOCKS.register("shrimp_plush", () -> new ShrimpBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_RED).noOcclusion()));
     public static final RegistryObject<Block> FISH_PLUSH = BLOCKS.register("fish_plush", () -> new FishBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_BLUE).noOcclusion()));
+    public static final RegistryObject<Block> CARROT_PLUSH = BLOCKS.register("carrot_plush", () -> new CarrotBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_ORANGE).noOcclusion()));
 
     public static final RegistryObject<Block> FLAGPOLE = BLOCKS.register("flagpole", () -> new FlagpoleBlock(BlockBehaviour.Properties.copy(Blocks.CHAIN)));
 
@@ -70,6 +72,7 @@ public class PurrfectBlocks {
     public static final RegistryObject<Block> WIZARDS_REBORN_FLAG = BLOCKS.register("wizards_reborn_flag", () -> new FlagBlock(FlagBlock.WIZARDS_REBORN, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> FLUFFY_FUR_FLAG = BLOCKS.register("fluffy_fur_flag", () -> new FlagBlock(FlagBlock.FLUFFY_FUR, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> SILLY_ODDITIES_FLAG = BLOCKS.register("silly_oddities_flag", () -> new FlagBlock(FlagBlock.SILLY_ODDITIES, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> OPTIFINE_FLAG = BLOCKS.register("optifine_flag", () -> new FlagBlock(FlagBlock.OPTIFINE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
 
     public static final RegistryObject<Block> WHITE_WALL_FLAG = BLOCKS.register("white_wall_flag", () -> new FlagWallBlock(FlagBlock.WHITE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> LIGHT_GRAY_WALL_FLAG = BLOCKS.register("light_gray_wall_flag", () -> new FlagWallBlock(FlagBlock.LIGHT_GRAY, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
@@ -112,6 +115,7 @@ public class PurrfectBlocks {
     public static final RegistryObject<Block> WIZARDS_REBORN_WALL_FLAG = BLOCKS.register("wizards_reborn_wall_flag", () -> new FlagWallBlock(FlagBlock.WIZARDS_REBORN, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
     public static final RegistryObject<Block> FLUFFY_FUR_WALL_FLAG = BLOCKS.register("fluffy_fur_wall_flag", () -> new FlagWallBlock(FlagBlock.FLUFFY_FUR, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
     public static final RegistryObject<Block> SILLY_ODDITIES_WALL_FLAG = BLOCKS.register("silly_oddities_wall_flag", () -> new FlagWallBlock(FlagBlock.SILLY_ODDITIES, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
+    public static final RegistryObject<Block> OPTIFINE_WALL_FLAG = BLOCKS.register("optifine_wall_flag", () -> new FlagWallBlock(FlagBlock.OPTIFINE, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

@@ -1,5 +1,6 @@
 package mod.maxbogomol.purrfect.common.furry;
 
+import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.common.capability.IFurryPlayer;
 import mod.maxbogomol.purrfect.common.item.equipment.LeashItem;
 import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
@@ -64,6 +65,17 @@ public class FurryPlayerHandler {
                             target.hurtMarked = true;
                             target.resetFallDistance();
                         }
+                    }
+                }
+            }
+        } else {
+            Player player = Purrfect.proxy.getPlayer();
+            if (player != null) {
+                Map<Integer, Player> leashedPlayers = FurryPlayerHandler.getLeashedPlayers(player);
+                for (int index : leashedPlayers.keySet()) {
+                    if (!level.players().contains(leashedPlayers.get(index))) {
+                        setupClientPlayers(player);
+                        break;
                     }
                 }
             }
@@ -166,5 +178,17 @@ public class FurryPlayerHandler {
             set.set(s.getLeashes());
         });
         return set.get();
+    }
+
+    public static void setupClientPlayers(Player player) {
+        player.getCapability(IFurryPlayer.INSTANCE, null).ifPresent((s) -> {
+            Level level = Purrfect.proxy.getLevel();
+            if (level != null) {
+                s.clearLeashedPlayers();
+                for (int index : s.getLeashedPlayersUUID().keySet()) {
+                    s.setLeashedPlayer(index, level.getPlayerByUUID(s.getLeashedPlayersUUID().get(index)));
+                }
+            }
+        });
     }
 }

@@ -36,6 +36,7 @@ public class LeashItem extends Item {
     public static LeashColor MAGENTA = LeashColor.create(Purrfect.MOD_ID, "magenta");
     public static LeashColor PINK = LeashColor.create(Purrfect.MOD_ID, "pink");
     public static LeashColor RAINBOW = LeashColor.create(Purrfect.MOD_ID, "rainbow");
+    public static LeashColor CHAIN = LeashColor.create(Purrfect.MOD_ID, "chain", 0.0625f * 3f, 1f, 0.15f);
 
     public LeashColor color;
 
@@ -86,11 +87,36 @@ public class LeashItem extends Item {
         return color.getTexture();
     }
 
+    @OnlyIn(Dist.CLIENT)
+    public float getLeashTextureWidth() {
+        return color.getTextureWidth();
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public float getLeashTextureHeight() {
+        return color.getTextureHeight();
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public float getLeashWidth() {
+        return color.getWidth();
+    }
+
     public static class LeashColor {
         public ResourceLocation texture;
+        public float textureWidth = 0.0625f;
+        public float textureHeight = 0.75f;
+        public float width = 0.05f;
 
         public LeashColor(ResourceLocation texture) {
             this.texture = texture;
+        }
+
+        public LeashColor(ResourceLocation texture, float textureWidth, float textureHeight, float width) {
+            this.texture = texture;
+            this.textureWidth = textureWidth;
+            this.textureHeight = textureHeight;
+            this.width = width;
         }
 
         @OnlyIn(Dist.CLIENT)
@@ -98,8 +124,27 @@ public class LeashItem extends Item {
             return texture;
         }
 
+        @OnlyIn(Dist.CLIENT)
+        public float getTextureWidth() {
+            return textureWidth;
+        }
+
+        @OnlyIn(Dist.CLIENT)
+        public float getTextureHeight() {
+            return textureHeight;
+        }
+
+        @OnlyIn(Dist.CLIENT)
+        public float getWidth() {
+            return width;
+        }
+
         public static LeashColor create(String modId, String yarn) {
             return new LeashColor(new ResourceLocation(modId, "leash/" + yarn));
+        }
+
+        public static LeashColor create(String modId, String yarn, float textureWidth, float textureHeight, float width) {
+            return new LeashColor(new ResourceLocation(modId, "leash/" + yarn), textureWidth, textureHeight, width);
         }
     }
 }

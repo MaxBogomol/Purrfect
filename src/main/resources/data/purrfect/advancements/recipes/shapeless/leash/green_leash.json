@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_leashes": {
+    "has_dyeable_leashes": {
       "conditions": {
         "items": [
           {
-            "tag": "purrfect:leashes"
+            "tag": "purrfect:dyeable_leashes"
           }
         ]
       },
@@ -14,7 +14,7 @@
   },
   "requirements": [
     [
-      "has_leashes"
+      "has_dyeable_leashes"
     ]
   ],
   "rewards": {

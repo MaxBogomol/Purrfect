@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#purrfect:all_collars",
+    "purrfect:collar",
     {
       "id": "wizards_reborn:leather_collar",
       "required": false

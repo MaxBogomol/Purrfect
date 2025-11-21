@@ -7,6 +7,7 @@ import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.CapabilityToken;
 
 import java.util.Map;
+import java.util.UUID;
 
 public interface IFurryPlayer {
     Capability<IFurryPlayer> INSTANCE = CapabilityManager.get(new CapabilityToken<>() {});
@@ -16,6 +17,12 @@ public interface IFurryPlayer {
 
     void clearLeashedPlayers();
     Map<Integer, Player> getLeashedPlayers();
+
+    void setLeashedPlayerUUID(int i, UUID uuid);
+    UUID getLeashedPlayerUUID(int i);
+
+    void clearLeashedPlayersUUID();
+    Map<Integer, UUID> getLeashedPlayersUUID();
 
     void setLeash(int i, ItemStack itemStack);
     ItemStack getLeash(int i);

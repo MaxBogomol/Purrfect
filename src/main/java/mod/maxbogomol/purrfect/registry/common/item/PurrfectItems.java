@@ -156,6 +156,15 @@ public class PurrfectItems {
     public static final RegistryObject<Item> FLUFFY_FUR_FLAG = ITEMS.register("fluffy_fur_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.FLUFFY_FUR_FLAG.get(), PurrfectBlocks.FLUFFY_FUR_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> SILLY_ODDITIES_FLAG = ITEMS.register("silly_oddities_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.SILLY_ODDITIES_FLAG.get(), PurrfectBlocks.SILLY_ODDITIES_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> OPTIFINE_FLAG = ITEMS.register("optifine_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.OPTIFINE_FLAG.get(), PurrfectBlocks.OPTIFINE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> SODIUM_FLAG = ITEMS.register("sodium_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.SODIUM_FLAG.get(), PurrfectBlocks.SODIUM_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> OPTIFINE_BLOCK = ITEMS.register("optifine_block", () -> new BlockItem(PurrfectBlocks.OPTIFINE_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> OPTIFINE_STAIRS = ITEMS.register("optifine_stairs", () -> new BlockItem(PurrfectBlocks.OPTIFINE_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> OPTIFINE_SLAB = ITEMS.register("optifine_slab", () -> new BlockItem(PurrfectBlocks.OPTIFINE_SLAB.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> SODIUM_BLOCK = ITEMS.register("sodium_block", () -> new BlockItem(PurrfectBlocks.SODIUM_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SODIUM_STAIRS = ITEMS.register("sodium_stairs", () -> new BlockItem(PurrfectBlocks.SODIUM_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SODIUM_SLAB = ITEMS.register("sodium_slab", () -> new BlockItem(PurrfectBlocks.SODIUM_SLAB.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
@@ -246,6 +255,7 @@ public class PurrfectItems {
             FluffyFurModels.addCustomRenderItemModel(map, FLUFFY_FUR_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, SILLY_ODDITIES_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, OPTIFINE_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, SODIUM_FLAG.getId());
         }
     }
 }

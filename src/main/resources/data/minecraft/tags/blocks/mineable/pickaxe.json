@@ -42,6 +42,8 @@
     "purrfect:beersexual_flag",
     "purrfect:wizards_reborn_flag",
     "purrfect:fluffy_fur_flag",
+    "purrfect:optifine_flag",
+    "purrfect:sodium_flag",
     "purrfect:white_wall_flag",
     "purrfect:light_gray_wall_flag",
     "purrfect:gray_wall_flag",
@@ -81,6 +83,14 @@
     "purrfect:kvasssexual_wall_flag",
     "purrfect:beersexual_wall_flag",
     "purrfect:wizards_reborn_wall_flag",
-    "purrfect:fluffy_fur_wall_flag"
+    "purrfect:fluffy_fur_wall_flag",
+    "purrfect:optifine_wall_flag",
+    "purrfect:sodium_wall_flag",
+    "purrfect:optifine_block",
+    "purrfect:optifine_stairs",
+    "purrfect:optifine_slab",
+    "purrfect:sodium_block",
+    "purrfect:sodium_stairs",
+    "purrfect:sodium_slab"
   ]
 }

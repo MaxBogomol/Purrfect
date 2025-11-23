@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "purrfect:block/optifine_block",
+    "top": "purrfect:block/optifine_block",
+    "side": "purrfect:block/optifine_block"
+  }
+}

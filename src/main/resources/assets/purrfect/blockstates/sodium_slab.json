@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "purrfect:block/sodium_slab"
+    },
+    "type=double": {
+      "model": "purrfect:block/sodium_block"
+    },
+    "type=top": {
+      "model": "purrfect:block/sodium_slab_top"
+    }
+  }
+}

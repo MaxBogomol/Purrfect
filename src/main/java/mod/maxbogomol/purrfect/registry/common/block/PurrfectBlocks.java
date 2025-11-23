@@ -11,6 +11,8 @@ import mod.maxbogomol.purrfect.common.block.plush.FishBlock;
 import mod.maxbogomol.purrfect.common.block.plush.ShrimpBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -73,6 +75,7 @@ public class PurrfectBlocks {
     public static final RegistryObject<Block> FLUFFY_FUR_FLAG = BLOCKS.register("fluffy_fur_flag", () -> new FlagBlock(FlagBlock.FLUFFY_FUR, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> SILLY_ODDITIES_FLAG = BLOCKS.register("silly_oddities_flag", () -> new FlagBlock(FlagBlock.SILLY_ODDITIES, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> OPTIFINE_FLAG = BLOCKS.register("optifine_flag", () -> new FlagBlock(FlagBlock.OPTIFINE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> SODIUM_FLAG = BLOCKS.register("sodium_flag", () -> new FlagBlock(FlagBlock.SODIUM, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
 
     public static final RegistryObject<Block> WHITE_WALL_FLAG = BLOCKS.register("white_wall_flag", () -> new FlagWallBlock(FlagBlock.WHITE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> LIGHT_GRAY_WALL_FLAG = BLOCKS.register("light_gray_wall_flag", () -> new FlagWallBlock(FlagBlock.LIGHT_GRAY, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
@@ -116,6 +119,15 @@ public class PurrfectBlocks {
     public static final RegistryObject<Block> FLUFFY_FUR_WALL_FLAG = BLOCKS.register("fluffy_fur_wall_flag", () -> new FlagWallBlock(FlagBlock.FLUFFY_FUR, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
     public static final RegistryObject<Block> SILLY_ODDITIES_WALL_FLAG = BLOCKS.register("silly_oddities_wall_flag", () -> new FlagWallBlock(FlagBlock.SILLY_ODDITIES, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
     public static final RegistryObject<Block> OPTIFINE_WALL_FLAG = BLOCKS.register("optifine_wall_flag", () -> new FlagWallBlock(FlagBlock.OPTIFINE, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
+    public static final RegistryObject<Block> SODIUM_WALL_FLAG = BLOCKS.register("sodium_wall_flag", () -> new FlagWallBlock(FlagBlock.SODIUM, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
+
+    public static final RegistryObject<Block> OPTIFINE_BLOCK = BLOCKS.register("optifine_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).mapColor(MapColor.COLOR_PURPLE)));
+    public static final RegistryObject<Block> OPTIFINE_STAIRS = BLOCKS.register("optifine_stairs", () -> new StairBlock(() -> OPTIFINE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(OPTIFINE_BLOCK.get())));
+    public static final RegistryObject<Block> OPTIFINE_SLAB = BLOCKS.register("optifine_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(OPTIFINE_BLOCK.get())));
+
+    public static final RegistryObject<Block> SODIUM_BLOCK = BLOCKS.register("sodium_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).mapColor(MapColor.COLOR_LIGHT_GREEN)));
+    public static final RegistryObject<Block> SODIUM_STAIRS = BLOCKS.register("sodium_stairs", () -> new StairBlock(() -> SODIUM_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(SODIUM_BLOCK.get())));
+    public static final RegistryObject<Block> SODIUM_SLAB = BLOCKS.register("sodium_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(SODIUM_BLOCK.get())));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

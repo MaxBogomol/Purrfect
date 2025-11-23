@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "purrfect:block/optifine_slab"
+    },
+    "type=double": {
+      "model": "purrfect:block/optifine_block"
+    },
+    "type=top": {
+      "model": "purrfect:block/optifine_slab_top"
+    }
+  }
+}

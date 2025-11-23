@@ -248,6 +248,7 @@
   "block.purrfect.fluffy_fur_flag": "Флаг (Fluffy Fur)",
   "block.purrfect.silly_oddities_flag": "Флаг (Silly Oddities)",
   "block.purrfect.optifine_flag": "Флаг (Optifine)",
+  "block.purrfect.sodium_flag": "Флаг (Sodium)",
 
   "block.purrfect.white_wall_flag": "Белый настенный флаг",
   "block.purrfect.light_gray_wall_flag": "Светло-серый настенный флаг",
@@ -291,6 +292,14 @@
   "block.purrfect.fluffy_fur_wall_flag": "Настенный флаг (Fluffy Fur)",
   "block.purrfect.silly_oddities_wall_flag": "Настенный флаг (Silly Oddities)",
   "block.purrfect.optifine_wall_flag": "Настенный флаг (Optifine)",
+  "block.purrfect.sodium_wall_flag": "Настенный флаг (Sodium)",
+
+  "block.purrfect.optifine_block": "Оптифайн блок",
+  "block.purrfect.optifine_stairs": "Оптифайн ступеньки",
+  "block.purrfect.optifine_slab": "Оптифай плита",
+  "block.purrfect.sodium_block": "Содиум блок",
+  "block.purrfect.sodium_stairs": "Содиум ступеньки",
+  "block.purrfect.sodium_slab": "Содиум плита",
 
   "_comment_2": "Звуки",
   "sounds.purrfect.collar_bell": "Колокольчик ошейника звенит",

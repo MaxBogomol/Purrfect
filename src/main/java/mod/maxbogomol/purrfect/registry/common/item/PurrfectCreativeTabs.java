@@ -216,6 +216,15 @@ public class PurrfectCreativeTabs {
             addInSub(event, FLAGS, PurrfectItems.FLUFFY_FUR_FLAG);
             addInSub(event, FLAGS, PurrfectItems.SILLY_ODDITIES_FLAG);
             addInSub(event, FLAGS, PurrfectItems.OPTIFINE_FLAG);
+            addInSub(event, FLAGS, PurrfectItems.SODIUM_FLAG);
+
+            addInSub(event, FLAGS, PurrfectItems.OPTIFINE_BLOCK);
+            addInSub(event, FLAGS, PurrfectItems.OPTIFINE_STAIRS);
+            addInSub(event, FLAGS, PurrfectItems.OPTIFINE_SLAB);
+
+            addInSub(event, FLAGS, PurrfectItems.SODIUM_BLOCK);
+            addInSub(event, FLAGS, PurrfectItems.SODIUM_STAIRS);
+            addInSub(event, FLAGS, PurrfectItems.SODIUM_SLAB);
         }
     }
 

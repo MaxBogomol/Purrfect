@@ -248,6 +248,7 @@
   "block.purrfect.fluffy_fur_flag": "Fluffy Fur Flag",
   "block.purrfect.silly_oddities_flag": "Silly Oddities Flag",
   "block.purrfect.optifine_flag": "Optifine Flag",
+  "block.purrfect.sodium_flag": "Sodium Flag",
 
   "block.purrfect.white_wall_flag": "White Wall Flag",
   "block.purrfect.light_gray_wall_flag": "Light Gray Wall Flag",
@@ -291,6 +292,14 @@
   "block.purrfect.fluffy_fur_wall_flag": "Fluffy Fur Wall Flag",
   "block.purrfect.silly_oddities_wall_flag": "Silly Oddities Wall Flag",
   "block.purrfect.optifine_wall_flag": "Optifine Wall Flag",
+  "block.purrfect.sodium_wall_flag": "Sodium Wall Flag",
+
+  "block.purrfect.optifine_block": "Optifine Block",
+  "block.purrfect.optifine_stairs": "Optifine Stairs",
+  "block.purrfect.optifine_slab": "Optifine Slab",
+  "block.purrfect.sodium_block": "Sodium Block",
+  "block.purrfect.sodium_stairs": "Sodium Stairs",
+  "block.purrfect.sodium_slab": "Sodium Slab",
 
   "_comment_2": "Sounds",
   "sounds.purrfect.collar_bell": "Collar bell ringing",

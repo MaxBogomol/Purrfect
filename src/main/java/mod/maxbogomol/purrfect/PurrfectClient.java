@@ -43,6 +43,7 @@ public class PurrfectClient {
         MOD_INSTANCE = new FluffyFurMod(Purrfect.MOD_ID, Purrfect.NAME, Purrfect.VERSION).setDev("MaxBogomol").setItem(new ItemStack(PurrfectItems.COLLAR.get()))
                 .setEdition(Purrfect.VERSION_NUMBER).setNameColor(new Color(205, 237, 254)).setVersionColor(new Color(255, 243, 177))
                 .setDescription(Component.translatable("mod_description.purrfect"))
+                .addFluffyVillageLink("https://fluffy-village.dev/pages/eng/creations/purrfect.html")
                 .addGithubLink("https://github.com/MaxBogomol/Purrfect")
                 .addCurseForgeLink("https://www.curseforge.com/minecraft/mc-mods/purrfect")
                 .addModrinthLink("https://modrinth.com/mod/purrfect")

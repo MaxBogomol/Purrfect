@@ -7,6 +7,7 @@ import mod.maxbogomol.fluffy_fur.util.ColorUtil;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
+import mod.maxbogomol.purrfect.registry.common.PurrfectCollarParts;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -28,7 +29,11 @@ public class PurrfectCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Purrfect.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> PURRFECT = CREATIVE_MODE_TABS.register("tab",
-            () -> MultiCreativeTab.builder().icon(() -> new ItemStack(PurrfectItems.COLLAR.get()))
+            () -> MultiCreativeTab.builder().icon(() -> {
+                        ItemStack collar = new ItemStack(PurrfectItems.COLLAR.get());
+                        CollarItem.setAccessory(collar, PurrfectCollarParts.GOLDEN_BELL);
+                        return collar;
+                    })
                     .title(getSillyName())
                     .withLabelColor(ColorUtil.packColor(255, 55, 48, 54))
                     .withBackgroundLocation(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_item_tab.png"))
@@ -54,7 +59,12 @@ public class PurrfectCreativeTabs {
                     .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
 
     public static final SubCreativeTab COLLARS =
-            SubCreativeTab.create().subIcon(() -> new ItemStack(PurrfectItems.COLLAR.get()))
+            SubCreativeTab.create().subIcon(() -> {
+                        ItemStack collar = new ItemStack(PurrfectItems.COLLAR.get());
+                        CollarItem.setColor(collar, PurrfectCollarParts.PINK);
+                        CollarItem.setAccessory(collar, PurrfectCollarParts.GOLDEN_BELL);
+                        return collar;
+                    })
                     .title(Component.empty().append(getSillyName()).append(": ").append(Component.translatable("creative_tab.purrfect.sub.collars")))
                     .subTitle(Component.translatable("creative_tab.purrfect.sub.collars"))
                     .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));

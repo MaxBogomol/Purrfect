@@ -5,6 +5,8 @@ import mod.maxbogomol.fluffy_fur.client.gui.screen.FluffyFurMod;
 import mod.maxbogomol.fluffy_fur.client.splash.SplashHandler;
 import mod.maxbogomol.purrfect.client.event.PurrfectClientEvents;
 import mod.maxbogomol.purrfect.client.render.LeashRenderHandler;
+import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
+import mod.maxbogomol.purrfect.registry.common.PurrfectCollarParts;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectCreativeTabs;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectItems;
 import net.minecraft.network.chat.Component;
@@ -40,7 +42,9 @@ public class PurrfectClient {
     public static FluffyFurMod MOD_INSTANCE;
 
     public static void setupMenu() {
-        MOD_INSTANCE = new FluffyFurMod(Purrfect.MOD_ID, Purrfect.NAME, Purrfect.VERSION).setDev("MaxBogomol").setItem(new ItemStack(PurrfectItems.COLLAR.get()))
+        ItemStack collar = new ItemStack(PurrfectItems.COLLAR.get());
+        CollarItem.setAccessory(collar, PurrfectCollarParts.GOLDEN_BELL);
+        MOD_INSTANCE = new FluffyFurMod(Purrfect.MOD_ID, Purrfect.NAME, Purrfect.VERSION).setDev("MaxBogomol").setItem(collar)
                 .setEdition(Purrfect.VERSION_NUMBER).setNameColor(new Color(205, 237, 254)).setVersionColor(new Color(255, 243, 177))
                 .setDescription(Component.translatable("mod_description.purrfect"))
                 .addFluffyVillageLink("https://fluffy-village.dev/pages/eng/creations/purrfect.html")

@@ -2,10 +2,13 @@ package mod.maxbogomol.purrfect.client.render.curio;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import mod.maxbogomol.purrfect.Purrfect;
+import mod.maxbogomol.purrfect.api.furry.CollarPart;
 import mod.maxbogomol.purrfect.client.model.curio.CollarModel;
+import mod.maxbogomol.purrfect.common.collar.AccessoryCollarPart;
+import mod.maxbogomol.purrfect.common.collar.ColorCollarPart;
+import mod.maxbogomol.purrfect.common.collar.DecorationCollarPart;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
 import mod.maxbogomol.purrfect.registry.client.PurrfectModels;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -20,33 +23,42 @@ import top.theillusivec4.curios.api.client.ICurioRenderer;
 public class CollarRenderer implements ICurioRenderer {
     public static ResourceLocation BASE_TEXTURE = new ResourceLocation(Purrfect.MOD_ID, "textures/entity/curio/collar/collar.png");
 
-    CollarModel model = null;
-
     @Override
     public <T extends LivingEntity, M extends EntityModel<T>> void render(ItemStack stack, SlotContext slotContext, PoseStack poseStack, RenderLayerParent<T, M> renderLayerParent, MultiBufferSource bufferSource, int light, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
-        if (model == null) model = new CollarModel(Minecraft.getInstance().getEntityModels().bakeLayer(PurrfectModels.COLLAR_LAYER));
+        CollarModel model = PurrfectModels.COLLAR;
+        CollarModel accessoryModel = PurrfectModels.COLLAR;
+        CollarModel decorationModel = PurrfectModels.COLLAR;
 
         ResourceLocation baseTexture = BASE_TEXTURE;
-        ResourceLocation bellTexture = null;
-        ResourceLocation spikesTexture = null;
+        ResourceLocation accessoryTexture = null;
+        ResourceLocation decorationTexture = null;
         LivingEntity entity = slotContext.entity();
 
-        if (stack.getItem() instanceof CollarItem collarItem) {
-            ResourceLocation texture = collarItem.getCollarBaseTexture(stack, entity);
-            if (texture != null) baseTexture = texture;
-            bellTexture = collarItem.getCollarBellTexture(stack, entity);
-            spikesTexture = collarItem.getCollarSpikesTexture(stack, entity);
+        CollarPart colorPart = CollarItem.getColor(stack);
+        CollarPart accessoryPart = CollarItem.getAccessory(stack);
+        CollarPart decorationPart = CollarItem.getDecoration(stack);
+
+        if (colorPart instanceof ColorCollarPart colorCollarPart) {
+            baseTexture = colorCollarPart.getTexture();
+        }
+        if (accessoryPart instanceof AccessoryCollarPart accessoryCollarPart) {
+            accessoryTexture = accessoryCollarPart.getTexture();
+            accessoryModel = accessoryCollarPart.getCollarModel();
+        }
+        if (decorationPart instanceof DecorationCollarPart decorationCollarPart) {
+            decorationTexture = decorationCollarPart.getTexture();
+            decorationModel = decorationCollarPart.getCollarModel();
         }
 
         ICurioRenderer.followBodyRotations(entity, model);
 
         model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
         model.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityCutoutNoCull(baseTexture)), light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
-        if (bellTexture != null) {
-            model.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityCutoutNoCull(bellTexture)), light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
+        if (decorationTexture != null) {
+            decorationModel.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityCutoutNoCull(decorationTexture)), light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
         }
-        if (spikesTexture != null) {
-            model.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityCutoutNoCull(spikesTexture)), light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
+        if (accessoryTexture != null) {
+            accessoryModel.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityCutoutNoCull(accessoryTexture)), light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
         }
     }
 }

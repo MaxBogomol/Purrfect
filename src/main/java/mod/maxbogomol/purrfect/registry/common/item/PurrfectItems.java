@@ -4,15 +4,22 @@ import mod.maxbogomol.fluffy_fur.common.item.PlushItem;
 import mod.maxbogomol.fluffy_fur.integration.common.curios.PlushHeadRenderer;
 import mod.maxbogomol.fluffy_fur.registry.client.FluffyFurModels;
 import mod.maxbogomol.purrfect.Purrfect;
+import mod.maxbogomol.purrfect.api.furry.CollarPart;
+import mod.maxbogomol.purrfect.api.furry.CollarPartHandler;
 import mod.maxbogomol.purrfect.client.render.curio.CollarRenderer;
+import mod.maxbogomol.purrfect.common.collar.AccessoryCollarPart;
+import mod.maxbogomol.purrfect.common.collar.ColorCollarPart;
+import mod.maxbogomol.purrfect.common.collar.DecorationCollarPart;
 import mod.maxbogomol.purrfect.common.item.PurrfectRenderStandingAndWallBlockItem;
 import mod.maxbogomol.purrfect.common.item.YarnItem;
 import mod.maxbogomol.purrfect.common.item.equipment.LeashItem;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.FlowerWreathItem;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
+import mod.maxbogomol.purrfect.registry.client.PurrfectModels;
 import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlocks;
 import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
@@ -73,7 +80,7 @@ public class PurrfectItems {
     public static final RegistryObject<Item> PITCHER_PLANT_FLOWER_WREATH = ITEMS.register("pitcher_plant_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.PITCHER_PLANT));
     public static final RegistryObject<Item> CUTIE_FLOWER_WREATH = ITEMS.register("cutie_flower_wreath", () -> new FlowerWreathItem(new Item.Properties().stacksTo(1)).setColor(FlowerWreathItem.CUTIE));
 
-    public static final RegistryObject<Item> COLLAR = ITEMS.register("collar", () -> new CollarItem(new Item.Properties().stacksTo(1)).setColor(CollarItem.COLLAR));
+    public static final RegistryObject<Item> COLLAR = ITEMS.register("collar", () -> new CollarItem(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> LEASH = ITEMS.register("leash", () -> new LeashItem(LeashItem.LEASH, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> WHITE_LEASH = ITEMS.register("white_leash", () -> new LeashItem(LeashItem.WHITE, new Item.Properties().stacksTo(1)));
@@ -210,8 +217,68 @@ public class PurrfectItems {
         }
 
         @SubscribeEvent
+        public static void modelRegistryItems(ModelEvent.RegisterAdditional event) {
+            for (CollarPart part : CollarPartHandler.COLOR.getCollarParts()) {
+                String id = part.getId();
+                int i = id.indexOf(":");
+                String modId = id.substring(0, i);
+                String partId = id.substring(i + 1);
+                event.register(new ModelResourceLocation(new ResourceLocation(modId, "collar/color/" + partId), "inventory"));
+                event.register(new ModelResourceLocation(new ResourceLocation(modId, "collar/color/" + partId + "_bell"), "inventory"));
+            }
+            for (CollarPart part : CollarPartHandler.ACCESSORY.getCollarParts()) {
+                String id = part.getId();
+                int i = id.indexOf(":");
+                String modId = id.substring(0, i);
+                String partId = id.substring(i + 1);
+                event.register(new ModelResourceLocation(new ResourceLocation(modId, "collar/accessory/" + partId), "inventory"));
+            }
+            for (CollarPart part : CollarPartHandler.DECORATION.getCollarParts()) {
+                String id = part.getId();
+                int i = id.indexOf(":");
+                String modId = id.substring(0, i);
+                String partId = id.substring(i + 1);
+                event.register(new ModelResourceLocation(new ResourceLocation(modId, "collar/decoration/" + partId), "inventory"));
+            }
+        }
+
+        @SubscribeEvent
         public static void modelBakeItems(ModelEvent.ModifyBakingResult event) {
             Map<ResourceLocation, BakedModel> map = event.getModels();
+
+            PurrfectModels.addCollarModel(map, COLLAR.getId());
+            for (CollarPart part : CollarPartHandler.COLOR.getCollarParts()) {
+                if (part instanceof ColorCollarPart colorCollarPart) {
+                    String id = part.getId();
+                    int i = id.indexOf(":");
+                    String modId = id.substring(0, i);
+                    String partId = id.substring(i + 1);
+                    BakedModel model = map.get(new ModelResourceLocation(new ResourceLocation(modId, "collar/color/" + partId), "inventory"));
+                    colorCollarPart.setModel(model);
+                    BakedModel bellModel = map.get(new ModelResourceLocation(new ResourceLocation(modId, "collar/color/" + partId + "_bell"), "inventory"));
+                    colorCollarPart.setBellModel(bellModel);
+                }
+            }
+            for (CollarPart part : CollarPartHandler.ACCESSORY.getCollarParts()) {
+                if (part instanceof AccessoryCollarPart accessoryCollarPart) {
+                    String id = part.getId();
+                    int i = id.indexOf(":");
+                    String modId = id.substring(0, i);
+                    String partId = id.substring(i + 1);
+                    BakedModel model = map.get(new ModelResourceLocation(new ResourceLocation(modId, "collar/accessory/" + partId), "inventory"));
+                    accessoryCollarPart.setModel(model);
+                }
+            }
+            for (CollarPart part : CollarPartHandler.DECORATION.getCollarParts()) {
+                if (part instanceof DecorationCollarPart decorationCollarPart) {
+                    String id = part.getId();
+                    int i = id.indexOf(":");
+                    String modId = id.substring(0, i);
+                    String partId = id.substring(i + 1);
+                    BakedModel model = map.get(new ModelResourceLocation(new ResourceLocation(modId, "collar/decoration/" + partId), "inventory"));
+                    decorationCollarPart.setModel(model);
+                }
+            }
 
             FluffyFurModels.addCustomRenderItemModel(map, WHITE_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, LIGHT_GRAY_FLAG.getId());

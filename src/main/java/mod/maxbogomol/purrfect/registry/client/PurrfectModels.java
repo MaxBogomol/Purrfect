@@ -1,24 +1,34 @@
 package mod.maxbogomol.purrfect.registry.client;
 
+import mod.maxbogomol.fluffy_fur.client.model.item.CustomItemOverrides;
+import mod.maxbogomol.fluffy_fur.client.model.item.CustomModel;
 import mod.maxbogomol.fluffy_fur.registry.client.FluffyFurModels;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.client.model.block.YarnModel;
 import mod.maxbogomol.purrfect.client.model.curio.CollarModel;
 import mod.maxbogomol.purrfect.client.model.curio.FlowerWreathModel;
+import mod.maxbogomol.purrfect.client.model.item.CollarModularModel;
 import mod.maxbogomol.purrfect.client.render.item.PurrfectItemRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
+import java.util.Map;
+
 public class PurrfectModels {
     public static ModelLayerLocation FLOWER_WREATH_LAYER = addLayer("flower_wreath");
     public static ModelLayerLocation COLLAR_LAYER = addLayer("collar");
 
     public static final ModelLayerLocation YARN_LAYER = addLayer("yarn");
+
+    public static CollarModel COLLAR = null;
 
     public static YarnModel YARN = null;
 
@@ -42,11 +52,24 @@ public class PurrfectModels {
 
         @SubscribeEvent
         public static void addLayers(EntityRenderersEvent.AddLayers event) {
+            COLLAR = new CollarModel(event.getEntityModels().bakeLayer(COLLAR_LAYER));
+
             YARN = new YarnModel(event.getEntityModels().bakeLayer(YARN_LAYER));
         }
     }
 
     public static ModelLayerLocation addLayer(String layer) {
         return FluffyFurModels.addLayer(Purrfect.MOD_ID, layer);
+    }
+
+    public static void addCollarModel(Map<ResourceLocation, BakedModel> map, ResourceLocation item) {
+        addCollarModel(map, item, new CustomItemOverrides());
+    }
+
+    public static void addCollarModel(Map<ResourceLocation, BakedModel> map, ResourceLocation item, CustomItemOverrides itemOverrides) {
+        BakedModel model = map.get(new ModelResourceLocation(item, "inventory"));
+        CustomModel customModel = new CollarModularModel(model, itemOverrides);
+
+        map.replace(new ModelResourceLocation(item, "inventory"), customModel);
     }
 }

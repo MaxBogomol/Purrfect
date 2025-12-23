@@ -7,6 +7,7 @@ import mod.maxbogomol.fluffy_fur.common.proxy.ServerProxy;
 import mod.maxbogomol.purrfect.common.event.PurrfectEvents;
 import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
+import mod.maxbogomol.purrfect.registry.common.PurrfectCollarParts;
 import mod.maxbogomol.purrfect.registry.common.PurrfectSounds;
 import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlockEntities;
 import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlocks;
@@ -43,6 +44,8 @@ public class Purrfect {
         PurrfectSounds.register(eventBus);
 
         PurrfectWizardsReborn.init(eventBus);
+
+        PurrfectCollarParts.register();
 
         DistExecutor.unsafeCallWhenOn(Dist.CLIENT, () -> () -> {
             PurrfectClient.ClientOnly.clientInit();

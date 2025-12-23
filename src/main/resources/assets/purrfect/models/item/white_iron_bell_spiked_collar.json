@@ -1,8 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "purrfect:item/white_bell_collar",
-    "layer1": "purrfect:item/collar_iron_bell",
-    "layer2": "purrfect:item/collar_spikes"
-  }
-}

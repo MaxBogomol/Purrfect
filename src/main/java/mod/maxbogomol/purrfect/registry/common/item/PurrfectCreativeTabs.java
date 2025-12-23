@@ -5,6 +5,7 @@ import mod.maxbogomol.fluffy_fur.common.creativetab.SubCreativeTab;
 import mod.maxbogomol.fluffy_fur.common.creativetab.SubCreativeTabStack;
 import mod.maxbogomol.fluffy_fur.util.ColorUtil;
 import mod.maxbogomol.purrfect.Purrfect;
+import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -132,7 +133,9 @@ public class PurrfectCreativeTabs {
             }
 
             //COLLARS
-            addInSub(event, COLLARS, PurrfectItems.COLLAR);
+            event.accept(PurrfectItems.COLLAR);
+
+            addInSub(COLLARS, CollarItem.getAllItems(PurrfectItems.COLLAR.get()));
 
             event.accept(PurrfectItems.LEASH);
             event.accept(PurrfectItems.WHITE_LEASH);

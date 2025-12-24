@@ -78,6 +78,13 @@ public class FurryPlayerHandler {
                         break;
                     }
                 }
+
+                LeashItem.activeLeashes.clear();
+                for (Player player1 : level.players()) {
+                    for (int index : leashedPlayers.keySet()) {
+                        LeashItem.activeLeashes.add(player1.getInventory().getItem(index));
+                    }
+                }
             }
         }
     }

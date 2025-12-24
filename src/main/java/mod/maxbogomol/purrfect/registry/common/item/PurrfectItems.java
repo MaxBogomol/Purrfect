@@ -227,6 +227,26 @@ public class PurrfectItems {
                 PurrfectWizardsReborn.ClientLoadedOnly.registerItems(event);
             }
 
+            ItemProperties.register(LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(WHITE_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(LIGHT_GRAY_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(GRAY_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(BLACK_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(BROWN_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(RED_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(ORANGE_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(YELLOW_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(LIME_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(GREEN_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(CYAN_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(LIGHT_BLUE_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(BLUE_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(PURPLE_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(MAGENTA_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(PINK_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(RAINBOW_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+            ItemProperties.register(CHAIN_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
+
             ItemProperties.register(SILLY_TAG.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> SillyTagItem.hasTag(stack) ? 1 : 0);
 
             SillyTagItem.addTag(Purrfect.MOD_ID+":heterosexual");

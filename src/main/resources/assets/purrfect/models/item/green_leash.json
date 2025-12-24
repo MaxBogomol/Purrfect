@@ -2,5 +2,13 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "purrfect:item/green_leash"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "active": 1
+      },
+      "model": "purrfect:item/green_leash_active"
+    }
+  ]
 }

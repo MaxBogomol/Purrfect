@@ -16,6 +16,8 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import java.util.ArrayList;
+
 public class LeashItem extends Item {
 
     public static LeashColor LEASH = LeashColor.create(Purrfect.MOD_ID, "leash");
@@ -39,6 +41,8 @@ public class LeashItem extends Item {
     public static LeashColor CHAIN = LeashColor.create(Purrfect.MOD_ID, "chain", 0.0625f * 3f, 1f, 0.15f);
 
     public LeashColor color;
+
+    public static ArrayList<ItemStack> activeLeashes = new ArrayList<>();
 
     public LeashItem(LeashColor color, Properties properties) {
         super(properties);
@@ -80,6 +84,11 @@ public class LeashItem extends Item {
             }
         }
         return InteractionResult.PASS;
+    }
+
+    public static boolean isActive(ItemStack stack) {
+        System.out.println(activeLeashes);
+        return activeLeashes.contains(stack);
     }
 
     @OnlyIn(Dist.CLIENT)

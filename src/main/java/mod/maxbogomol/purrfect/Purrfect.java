@@ -65,6 +65,8 @@ public class Purrfect {
         hi();
         PurrfectPacketHandler.init();
         PurrfectCreativeTabs.init();
+
+        PurrfectItems.setupItems();
     }
 
     public static void hi() {

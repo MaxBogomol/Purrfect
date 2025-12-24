@@ -130,7 +130,7 @@ public class PurrfectItems {
     public static final RegistryObject<Item> DIAMOND_SHIPKEY = ITEMS.register("diamond_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> NETHERITE_SHIPKEY = ITEMS.register("netherite_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1)));
 
-    public static final RegistryObject<Item> SILLY_TAG = ITEMS.register("silly_tag", () -> new SillyTagItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SILLY_TAG = ITEMS.register("silly_tag", () -> new SillyTagItem(new Item.Properties()));
 
     public static final RegistryObject<Item> FLAGPOLE = ITEMS.register("flagpole", () -> new BlockItem(PurrfectBlocks.FLAGPOLE.get(), new Item.Properties()));
     public static final RegistryObject<Item> WHITE_FLAG = ITEMS.register("white_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.WHITE_FLAG.get(), PurrfectBlocks.WHITE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
@@ -248,25 +248,6 @@ public class PurrfectItems {
             ItemProperties.register(CHAIN_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack) ? 1 : 0);
 
             ItemProperties.register(SILLY_TAG.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> SillyTagItem.hasTag(stack) ? 1 : 0);
-
-            SillyTagItem.addTag(Purrfect.MOD_ID+":heterosexual");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":lesbian");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":gay");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":bi");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":trans");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":enby");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":genderfluid");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":demiboy");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":demigirl");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":demigender");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":agender");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":pan");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":omni");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":poly");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":demisexual");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":ace");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":aro");
-            SillyTagItem.addTag(Purrfect.MOD_ID+":aroace");
         }
 
         @SubscribeEvent
@@ -380,5 +361,26 @@ public class PurrfectItems {
             FluffyFurModels.addCustomRenderItemModel(map, OPTIFINE_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, SODIUM_FLAG.getId());
         }
+    }
+
+    public static void setupItems() {
+        SillyTagItem.addTag(Purrfect.MOD_ID+":heterosexual");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":lesbian");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":gay");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":bi");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":trans");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":enby");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":genderfluid");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":demiboy");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":demigirl");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":demigender");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":agender");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":pan");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":omni");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":poly");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":demisexual");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":ace");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":aro");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":aroace");
     }
 }

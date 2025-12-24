@@ -52,6 +52,12 @@ public class PurrfectCreativeTabs {
                     .subTitle(Component.translatable("creative_tab.purrfect.sub.pharmacy"))
                     .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
 
+    public static final SubCreativeTabStack THINGS =
+            SubCreativeTabStack.create().subIcon(() -> new ItemStack(PurrfectItems.PHARMACIST_TABLE.get()))
+                    .title(Component.empty().append(getSillyName()).append(": ").append(Component.translatable("creative_tab.purrfect.sub.things")))
+                    .subTitle(Component.translatable("creative_tab.purrfect.sub.things"))
+                    .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
+
     public static final SubCreativeTab PLUSHIES =
             SubCreativeTab.create().subIcon(() -> new ItemStack(PurrfectItems.BLAHAJ_PLUSH.get()))
                     .title(Component.empty().append(getSillyName()).append(": ").append(Component.translatable("creative_tab.purrfect.sub.plushies")))
@@ -63,6 +69,8 @@ public class PurrfectCreativeTabs {
                     .title(Component.empty().append(getSillyName()).append(": ").append(Component.translatable("creative_tab.purrfect.sub.flower_wreaths")))
                     .subTitle(Component.translatable("creative_tab.purrfect.sub.flower_wreaths"))
                     .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
+
+    public static final SubCreativeTab COLLAR = SubCreativeTab.create();
 
     public static final SubCreativeTab COLLARS =
             SubCreativeTab.create().subIcon(() -> {
@@ -87,6 +95,12 @@ public class PurrfectCreativeTabs {
                     .subTitle(Component.translatable("creative_tab.purrfect.sub.flags"))
                     .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
 
+    public static final SubCreativeTab GRAPHICS =
+            SubCreativeTab.create().subIcon(() -> new ItemStack(PurrfectItems.OPTIFINE_BLOCK.get()))
+                    .title(Component.empty().append(getSillyName()).append(": ").append(Component.translatable("creative_tab.purrfect.sub.graphics")))
+                    .subTitle(Component.translatable("creative_tab.purrfect.sub.graphics"))
+                    .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
+
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
     }
@@ -95,11 +109,15 @@ public class PurrfectCreativeTabs {
         if (PurrfectCreativeTabs.PURRFECT.get() instanceof MultiCreativeTab multiCreativeTab) {
             multiCreativeTab.addSubTab(ALL);
             multiCreativeTab.addSubTab(PHARMACY);
+            multiCreativeTab.addSubTab(THINGS);
             multiCreativeTab.addSubTab(PLUSHIES);
             multiCreativeTab.addSubTab(FLOWER_WREATHS);
             multiCreativeTab.addSubTab(COLLARS);
             multiCreativeTab.addSubTab(FURRY_THINGS);
             multiCreativeTab.addSubTab(FLAGS);
+            multiCreativeTab.addSubTab(GRAPHICS);
+
+            THINGS.addSubTab(PLUSHIES).addSubTab(FLOWER_WREATHS).addSubTab(COLLAR).addSubTab(FURRY_THINGS).addSubTab(FLAGS).addSubTab(GRAPHICS);
         }
     }
 
@@ -158,8 +176,7 @@ public class PurrfectCreativeTabs {
             }
 
             //COLLARS
-            event.accept(PurrfectItems.COLLAR);
-
+            addInSub(event, COLLAR, PurrfectItems.COLLAR);
             addInSub(COLLARS, CollarItem.getAllItems(PurrfectItems.COLLAR.get()));
 
             //FURRY_THINGS
@@ -247,13 +264,14 @@ public class PurrfectCreativeTabs {
             addInSub(event, FLAGS, PurrfectItems.OPTIFINE_FLAG);
             addInSub(event, FLAGS, PurrfectItems.SODIUM_FLAG);
 
-            addInSub(event, FLAGS, PurrfectItems.OPTIFINE_BLOCK);
-            addInSub(event, FLAGS, PurrfectItems.OPTIFINE_STAIRS);
-            addInSub(event, FLAGS, PurrfectItems.OPTIFINE_SLAB);
+            //GRAPHICS
+            addInSub(event, GRAPHICS, PurrfectItems.OPTIFINE_BLOCK);
+            addInSub(event, GRAPHICS, PurrfectItems.OPTIFINE_STAIRS);
+            addInSub(event, GRAPHICS, PurrfectItems.OPTIFINE_SLAB);
 
-            addInSub(event, FLAGS, PurrfectItems.SODIUM_BLOCK);
-            addInSub(event, FLAGS, PurrfectItems.SODIUM_STAIRS);
-            addInSub(event, FLAGS, PurrfectItems.SODIUM_SLAB);
+            addInSub(event, GRAPHICS, PurrfectItems.SODIUM_BLOCK);
+            addInSub(event, GRAPHICS, PurrfectItems.SODIUM_STAIRS);
+            addInSub(event, GRAPHICS, PurrfectItems.SODIUM_SLAB);
         }
     }
 

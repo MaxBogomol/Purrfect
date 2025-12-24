@@ -55,6 +55,10 @@ public class AccessoryCollarPart extends CollarPart {
         return false;
     }
 
+    public boolean isLock() {
+        return false;
+    }
+
     public boolean isBellSound() {
         return false;
     }

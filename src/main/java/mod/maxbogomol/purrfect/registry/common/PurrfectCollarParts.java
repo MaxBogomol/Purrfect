@@ -5,6 +5,7 @@ import mod.maxbogomol.purrfect.api.furry.CollarPartHandler;
 import mod.maxbogomol.purrfect.common.collar.BellCollarPart;
 import mod.maxbogomol.purrfect.common.collar.ColorCollarPart;
 import mod.maxbogomol.purrfect.common.collar.DecorationCollarPart;
+import mod.maxbogomol.purrfect.common.collar.LockCollarPart;
 
 public class PurrfectCollarParts {
     public static ColorCollarPart COLLAR = new ColorCollarPart(Purrfect.MOD_ID+":collar");
@@ -31,6 +32,11 @@ public class PurrfectCollarParts {
     public static BellCollarPart GOLDEN_BELL = new BellCollarPart(Purrfect.MOD_ID+":golden_bell");
     public static BellCollarPart DIAMOND_BELL = new BellCollarPart(Purrfect.MOD_ID+":diamond_bell");
     public static BellCollarPart NETHERITE_BELL = new BellCollarPart(Purrfect.MOD_ID+":netherite_bell");
+    public static LockCollarPart COPPER_LOCK = new LockCollarPart(Purrfect.MOD_ID+":copper_lock");
+    public static LockCollarPart IRON_LOCK = new LockCollarPart(Purrfect.MOD_ID+":iron_lock");
+    public static LockCollarPart GOLDEN_LOCK = new LockCollarPart(Purrfect.MOD_ID+":golden_lock");
+    public static LockCollarPart DIAMOND_LOCK = new LockCollarPart(Purrfect.MOD_ID+":diamond_lock");
+    public static LockCollarPart NETHERITE_LOCK = new LockCollarPart(Purrfect.MOD_ID+":netherite_lock");
 
     public static DecorationCollarPart SPIKES = new DecorationCollarPart(Purrfect.MOD_ID+":spikes");
 
@@ -59,6 +65,11 @@ public class PurrfectCollarParts {
         CollarPartHandler.ACCESSORY.register(GOLDEN_BELL);
         CollarPartHandler.ACCESSORY.register(DIAMOND_BELL);
         CollarPartHandler.ACCESSORY.register(NETHERITE_BELL);
+        CollarPartHandler.ACCESSORY.register(COPPER_LOCK);
+        CollarPartHandler.ACCESSORY.register(IRON_LOCK);
+        CollarPartHandler.ACCESSORY.register(GOLDEN_LOCK);
+        CollarPartHandler.ACCESSORY.register(DIAMOND_LOCK);
+        CollarPartHandler.ACCESSORY.register(NETHERITE_LOCK);
 
         CollarPartHandler.DECORATION.register(SPIKES);
     }

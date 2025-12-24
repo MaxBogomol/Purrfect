@@ -2,7 +2,9 @@
   "creative_tab.purrfect": "Purrfect",
   "creative_tab.purrfect.sub.pharmacy": "Pharmacy",
   "creative_tab.purrfect.sub.plushies": "Plushies",
+  "creative_tab.purrfect.sub.flower_wreaths": "Flower Wreaths",
   "creative_tab.purrfect.sub.collars": "Collars",
+  "creative_tab.purrfect.sub.furry_things": "Furry Things",
   "creative_tab.purrfect.sub.flags": "Flags",
   "creative_tab.purrfect.silly.0": ":3",
   "creative_tab.purrfect.silly.1": ">w<",
@@ -219,6 +221,11 @@
   "collar_part.accessory.purrfect.golden_bell": "Golden Bell",
   "collar_part.accessory.purrfect.diamond_bell": "Diamond Bell",
   "collar_part.accessory.purrfect.netherite_bell": "Netherite Bell",
+  "collar_part.accessory.purrfect.copper_lock": "Copper Lock",
+  "collar_part.accessory.purrfect.iron_lock": "Iron Lock",
+  "collar_part.accessory.purrfect.golden_lock": "Golden Lock",
+  "collar_part.accessory.purrfect.diamond_lock": "Diamond Lock",
+  "collar_part.accessory.purrfect.netherite_lock": "Netherite Lock",
 
   "collar_part.decoration.purrfect.spikes": "Spikes",
 

@@ -58,6 +58,12 @@ public class PurrfectCreativeTabs {
                     .subTitle(Component.translatable("creative_tab.purrfect.sub.plushies"))
                     .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
 
+    public static final SubCreativeTab FLOWER_WREATHS =
+            SubCreativeTab.create().subIcon(() -> new ItemStack(PurrfectItems.DANDELION_FLOWER_WREATH.get()))
+                    .title(Component.empty().append(getSillyName()).append(": ").append(Component.translatable("creative_tab.purrfect.sub.flower_wreaths")))
+                    .subTitle(Component.translatable("creative_tab.purrfect.sub.flower_wreaths"))
+                    .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
+
     public static final SubCreativeTab COLLARS =
             SubCreativeTab.create().subIcon(() -> {
                         ItemStack collar = new ItemStack(PurrfectItems.COLLAR.get());
@@ -67,6 +73,12 @@ public class PurrfectCreativeTabs {
                     })
                     .title(Component.empty().append(getSillyName()).append(": ").append(Component.translatable("creative_tab.purrfect.sub.collars")))
                     .subTitle(Component.translatable("creative_tab.purrfect.sub.collars"))
+                    .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
+
+    public static final SubCreativeTab FURRY_THINGS =
+            SubCreativeTab.create().subIcon(() -> new ItemStack(PurrfectItems.PINK_LEASH.get()))
+                    .title(Component.empty().append(getSillyName()).append(": ").append(Component.translatable("creative_tab.purrfect.sub.furry_things")))
+                    .subTitle(Component.translatable("creative_tab.purrfect.sub.furry_things"))
                     .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
 
     public static final SubCreativeTab FLAGS =
@@ -84,7 +96,9 @@ public class PurrfectCreativeTabs {
             multiCreativeTab.addSubTab(ALL);
             multiCreativeTab.addSubTab(PHARMACY);
             multiCreativeTab.addSubTab(PLUSHIES);
+            multiCreativeTab.addSubTab(FLOWER_WREATHS);
             multiCreativeTab.addSubTab(COLLARS);
+            multiCreativeTab.addSubTab(FURRY_THINGS);
             multiCreativeTab.addSubTab(FLAGS);
         }
     }
@@ -116,30 +130,31 @@ public class PurrfectCreativeTabs {
             addInSub(event, PLUSHIES, PurrfectItems.FISH_PLUSH);
             addInSub(event, PLUSHIES, PurrfectItems.CARROT_PLUSH);
 
-            event.accept(PurrfectItems.DANDELION_FLOWER_WREATH);
-            event.accept(PurrfectItems.POPPY_FLOWER_WREATH);
-            event.accept(PurrfectItems.BLUE_ORCHID_FLOWER_WREATH);
-            event.accept(PurrfectItems.ALLIUM_FLOWER_WREATH);
-            event.accept(PurrfectItems.AZURE_BLUET_FLOWER_WREATH);
-            event.accept(PurrfectItems.RED_TULIP_FLOWER_WREATH);
-            event.accept(PurrfectItems.ORANGE_TULIP_FLOWER_WREATH);
-            event.accept(PurrfectItems.WHITE_TULIP_FLOWER_WREATH);
-            event.accept(PurrfectItems.PINK_TULIP_FLOWER_WREATH);
-            event.accept(PurrfectItems.OXEYE_DAISY_FLOWER_WREATH);
-            event.accept(PurrfectItems.CORNFLOWER_FLOWER_WREATH);
-            event.accept(PurrfectItems.LILY_OF_THE_VALLEY_FLOWER_WREATH);
-            event.accept(PurrfectItems.PINK_PETALS_FLOWER_WREATH);
-            event.accept(PurrfectItems.SUNFLOWER_FLOWER_WREATH);
-            event.accept(PurrfectItems.LILAC_FLOWER_WREATH);
-            event.accept(PurrfectItems.ROSE_BUSH_FLOWER_WREATH);
-            event.accept(PurrfectItems.PEONY_FLOWER_WREATH);
-            event.accept(PurrfectItems.DEAD_BUSH_FLOWER_WREATH);
-            event.accept(PurrfectItems.WITHER_ROSE_FLOWER_WREATH);
-            event.accept(PurrfectItems.TORCHFLOWER_FLOWER_WREATH);
-            event.accept(PurrfectItems.PITCHER_PLANT_FLOWER_WREATH);
+            //FLOWER_WREATHS
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.DANDELION_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.POPPY_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.BLUE_ORCHID_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.ALLIUM_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.AZURE_BLUET_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.RED_TULIP_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.ORANGE_TULIP_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.WHITE_TULIP_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.PINK_TULIP_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.OXEYE_DAISY_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.CORNFLOWER_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.LILY_OF_THE_VALLEY_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.PINK_PETALS_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.SUNFLOWER_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.LILAC_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.ROSE_BUSH_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.PEONY_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.DEAD_BUSH_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.WITHER_ROSE_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.TORCHFLOWER_FLOWER_WREATH);
+            addInSub(event, FLOWER_WREATHS, PurrfectItems.PITCHER_PLANT_FLOWER_WREATH);
 
             if (PurrfectWizardsReborn.isLoaded()) {
-                event.accept(PurrfectWizardsReborn.ItemsLoadedOnly.PETALS_OF_INNOCENCE_FLOWER_WREATH);
+                addInSub(event, FLOWER_WREATHS, PurrfectWizardsReborn.ItemsLoadedOnly.PETALS_OF_INNOCENCE_FLOWER_WREATH);
             }
 
             //COLLARS
@@ -147,43 +162,44 @@ public class PurrfectCreativeTabs {
 
             addInSub(COLLARS, CollarItem.getAllItems(PurrfectItems.COLLAR.get()));
 
-            event.accept(PurrfectItems.LEASH);
-            event.accept(PurrfectItems.WHITE_LEASH);
-            event.accept(PurrfectItems.LIGHT_GRAY_LEASH);
-            event.accept(PurrfectItems.GRAY_LEASH);
-            event.accept(PurrfectItems.BLACK_LEASH);
-            event.accept(PurrfectItems.BROWN_LEASH);
-            event.accept(PurrfectItems.RED_LEASH);
-            event.accept(PurrfectItems.ORANGE_LEASH);
-            event.accept(PurrfectItems.YELLOW_LEASH);
-            event.accept(PurrfectItems.LIME_LEASH);
-            event.accept(PurrfectItems.GREEN_LEASH);
-            event.accept(PurrfectItems.CYAN_LEASH);
-            event.accept(PurrfectItems.LIGHT_BLUE_LEASH);
-            event.accept(PurrfectItems.BLUE_LEASH);
-            event.accept(PurrfectItems.PURPLE_LEASH);
-            event.accept(PurrfectItems.MAGENTA_LEASH);
-            event.accept(PurrfectItems.PINK_LEASH);
-            event.accept(PurrfectItems.RAINBOW_LEASH);
-            event.accept(PurrfectItems.CHAIN_LEASH);
+            //FURRY_THINGS
+            addInSub(event, FURRY_THINGS, PurrfectItems.LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.WHITE_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.LIGHT_GRAY_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.GRAY_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.BLACK_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.BROWN_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.RED_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.ORANGE_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.YELLOW_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.LIME_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.GREEN_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.CYAN_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.LIGHT_BLUE_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.BLUE_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.PURPLE_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.MAGENTA_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.PINK_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.RAINBOW_LEASH);
+            addInSub(event, FURRY_THINGS, PurrfectItems.CHAIN_LEASH);
 
-            event.accept(PurrfectItems.WHITE_YARN);
-            event.accept(PurrfectItems.LIGHT_GRAY_YARN);
-            event.accept(PurrfectItems.GRAY_YARN);
-            event.accept(PurrfectItems.BLACK_YARN);
-            event.accept(PurrfectItems.BROWN_YARN);
-            event.accept(PurrfectItems.RED_YARN);
-            event.accept(PurrfectItems.ORANGE_YARN);
-            event.accept(PurrfectItems.YELLOW_YARN);
-            event.accept(PurrfectItems.LIME_YARN);
-            event.accept(PurrfectItems.GREEN_YARN);
-            event.accept(PurrfectItems.CYAN_YARN);
-            event.accept(PurrfectItems.LIGHT_BLUE_YARN);
-            event.accept(PurrfectItems.BLUE_YARN);
-            event.accept(PurrfectItems.PURPLE_YARN);
-            event.accept(PurrfectItems.MAGENTA_YARN);
-            event.accept(PurrfectItems.PINK_YARN);
-            event.accept(PurrfectItems.RAINBOW_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.WHITE_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.LIGHT_GRAY_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.GRAY_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.BLACK_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.BROWN_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.RED_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.ORANGE_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.YELLOW_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.LIME_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.GREEN_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.CYAN_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.LIGHT_BLUE_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.BLUE_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.PURPLE_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.MAGENTA_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.PINK_YARN);
+            addInSub(event, FURRY_THINGS, PurrfectItems.RAINBOW_YARN);
 
             //FLAGS
             addInSub(event, FLAGS, PurrfectItems.FLAGPOLE);

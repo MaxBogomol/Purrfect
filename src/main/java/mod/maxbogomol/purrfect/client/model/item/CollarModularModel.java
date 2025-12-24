@@ -32,6 +32,9 @@ public class CollarModularModel extends CustomModel {
                 if (accessoryCollarPart.isBell()) {
                     colorModel = colorCollarPart.getBellModel();
                 }
+                if (accessoryCollarPart.isLock()) {
+                    colorModel = colorCollarPart.getLockModel();
+                }
             }
             list.add(colorModel);
         }

@@ -11,6 +11,8 @@ public class ColorCollarPart extends CollarPart {
     public BakedModel model;
     @OnlyIn(Dist.CLIENT)
     public BakedModel bellModel;
+    @OnlyIn(Dist.CLIENT)
+    public BakedModel lockModel;
 
     public ColorCollarPart(String id) {
         super(id);
@@ -27,6 +29,11 @@ public class ColorCollarPart extends CollarPart {
     }
 
     @OnlyIn(Dist.CLIENT)
+    public void setLockModel(BakedModel model) {
+        this.lockModel = model;
+    }
+
+    @OnlyIn(Dist.CLIENT)
     public BakedModel getModel() {
         return model;
     }
@@ -34,6 +41,11 @@ public class ColorCollarPart extends CollarPart {
     @OnlyIn(Dist.CLIENT)
     public BakedModel getBellModel() {
         return bellModel;
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public BakedModel getLockModel() {
+        return lockModel;
     }
 
     @OnlyIn(Dist.CLIENT)

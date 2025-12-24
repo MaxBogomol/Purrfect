@@ -225,6 +225,7 @@ public class PurrfectItems {
                 String partId = id.substring(i + 1);
                 event.register(new ModelResourceLocation(new ResourceLocation(modId, "collar/color/" + partId), "inventory"));
                 event.register(new ModelResourceLocation(new ResourceLocation(modId, "collar/color/" + partId + "_bell"), "inventory"));
+                event.register(new ModelResourceLocation(new ResourceLocation(modId, "collar/color/" + partId + "_lock"), "inventory"));
             }
             for (CollarPart part : CollarPartHandler.ACCESSORY.getCollarParts()) {
                 String id = part.getId();
@@ -257,6 +258,8 @@ public class PurrfectItems {
                     colorCollarPart.setModel(model);
                     BakedModel bellModel = map.get(new ModelResourceLocation(new ResourceLocation(modId, "collar/color/" + partId + "_bell"), "inventory"));
                     colorCollarPart.setBellModel(bellModel);
+                    BakedModel lockModel = map.get(new ModelResourceLocation(new ResourceLocation(modId, "collar/color/" + partId + "_lock"), "inventory"));
+                    colorCollarPart.setLockModel(lockModel);
                 }
             }
             for (CollarPart part : CollarPartHandler.ACCESSORY.getCollarParts()) {

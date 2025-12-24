@@ -2,7 +2,9 @@
   "creative_tab.purrfect": "Purrfect",
   "creative_tab.purrfect.sub.pharmacy": "Фармацевтика",
   "creative_tab.purrfect.sub.plushies": "Плюшки",
+  "creative_tab.purrfect.sub.flower_wreaths": "Венки",
   "creative_tab.purrfect.sub.collars": "Ошейники",
+  "creative_tab.purrfect.sub.furry_things": "Фурри штучки",
   "creative_tab.purrfect.sub.flags": "Флаги",
   "creative_tab.purrfect.silly.0": ":3",
   "creative_tab.purrfect.silly.1": ">w<",
@@ -219,6 +221,11 @@
   "collar_part.accessory.purrfect.golden_bell": "Золотой колокольчик",
   "collar_part.accessory.purrfect.diamond_bell": "Алмазный колокольчик",
   "collar_part.accessory.purrfect.netherite_bell": "Незеритовый колокольчик",
+  "collar_part.accessory.purrfect.copper_lock": "Медный замочек",
+  "collar_part.accessory.purrfect.iron_lock": "Железный замочек",
+  "collar_part.accessory.purrfect.golden_lock": "Золотой замочек",
+  "collar_part.accessory.purrfect.diamond_lock": "Алмазный замочек",
+  "collar_part.accessory.purrfect.netherite_lock": "Незеритовый замочек",
 
   "collar_part.decoration.purrfect.spikes": "Шипы",
 

@@ -14,11 +14,14 @@ import mod.maxbogomol.purrfect.common.collar.DecorationCollarPart;
 import mod.maxbogomol.purrfect.common.item.PurrfectRenderStandingAndWallBlockItem;
 import mod.maxbogomol.purrfect.common.item.YarnItem;
 import mod.maxbogomol.purrfect.common.item.equipment.LeashItem;
+import mod.maxbogomol.purrfect.common.item.equipment.ShipkeyItem;
+import mod.maxbogomol.purrfect.common.item.equipment.SillyTagItem;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.FlowerWreathItem;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
 import mod.maxbogomol.purrfect.registry.client.PurrfectModels;
 import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlocks;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.core.Direction;
@@ -121,6 +124,14 @@ public class PurrfectItems {
     public static final RegistryObject<Item> PINK_YARN = ITEMS.register("pink_yarn", () -> new YarnItem(YarnItem.PINK, new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> RAINBOW_YARN = ITEMS.register("rainbow_yarn", () -> new YarnItem(YarnItem.RAINBOW, new Item.Properties().stacksTo(16)));
 
+    public static final RegistryObject<Item> COPPER_SHIPKEY = ITEMS.register("copper_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> IRON_SHIPKEY = ITEMS.register("iron_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> GOLDEN_SHIPKEY = ITEMS.register("golden_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> DIAMOND_SHIPKEY = ITEMS.register("diamond_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> NETHERITE_SHIPKEY = ITEMS.register("netherite_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> SILLY_TAG = ITEMS.register("silly_tag", () -> new SillyTagItem(new Item.Properties().stacksTo(1)));
+
     public static final RegistryObject<Item> FLAGPOLE = ITEMS.register("flagpole", () -> new BlockItem(PurrfectBlocks.FLAGPOLE.get(), new Item.Properties()));
     public static final RegistryObject<Item> WHITE_FLAG = ITEMS.register("white_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.WHITE_FLAG.get(), PurrfectBlocks.WHITE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> LIGHT_GRAY_FLAG = ITEMS.register("light_gray_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.LIGHT_GRAY_FLAG.get(), PurrfectBlocks.LIGHT_GRAY_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
@@ -215,6 +226,27 @@ public class PurrfectItems {
             if (PurrfectWizardsReborn.isLoaded()) {
                 PurrfectWizardsReborn.ClientLoadedOnly.registerItems(event);
             }
+
+            ItemProperties.register(SILLY_TAG.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> SillyTagItem.hasTag(stack) ? 1 : 0);
+
+            SillyTagItem.addTag(Purrfect.MOD_ID+":heterosexual");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":lesbian");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":gay");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":bi");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":trans");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":enby");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":genderfluid");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":demiboy");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":demigirl");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":demigender");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":agender");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":pan");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":omni");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":poly");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":demisexual");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":ace");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":aro");
+            SillyTagItem.addTag(Purrfect.MOD_ID+":aroace");
         }
 
         @SubscribeEvent

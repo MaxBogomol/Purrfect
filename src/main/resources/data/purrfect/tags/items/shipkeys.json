@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "purrfect:copper_shipkey",
+    "purrfect:iron_shipkey",
+    "purrfect:golden_shipkey",
+    "purrfect:diamond_shipkey",
+    "purrfect:netherite_shipkey"
+  ]
+}

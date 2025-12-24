@@ -5,6 +5,7 @@ import mod.maxbogomol.fluffy_fur.common.creativetab.SubCreativeTab;
 import mod.maxbogomol.fluffy_fur.common.creativetab.SubCreativeTabStack;
 import mod.maxbogomol.fluffy_fur.util.ColorUtil;
 import mod.maxbogomol.purrfect.Purrfect;
+import mod.maxbogomol.purrfect.common.item.equipment.SillyTagItem;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
 import mod.maxbogomol.purrfect.registry.common.PurrfectCollarParts;
@@ -89,6 +90,12 @@ public class PurrfectCreativeTabs {
                     .subTitle(Component.translatable("creative_tab.purrfect.sub.furry_things"))
                     .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
 
+    public static final SubCreativeTab TAGS =
+            SubCreativeTab.create().subIcon(() -> new ItemStack(PurrfectItems.SILLY_TAG.get()))
+                    .title(Component.empty().append(getSillyName()).append(": ").append(Component.translatable("creative_tab.purrfect.sub.tags")))
+                    .subTitle(Component.translatable("creative_tab.purrfect.sub.tags"))
+                    .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
+
     public static final SubCreativeTab FLAGS =
             SubCreativeTab.create().subIcon(() -> new ItemStack(PurrfectItems.PRIDE_FLAG.get()))
                     .title(Component.empty().append(getSillyName()).append(": ").append(Component.translatable("creative_tab.purrfect.sub.flags")))
@@ -114,6 +121,7 @@ public class PurrfectCreativeTabs {
             multiCreativeTab.addSubTab(FLOWER_WREATHS);
             multiCreativeTab.addSubTab(COLLARS);
             multiCreativeTab.addSubTab(FURRY_THINGS);
+            multiCreativeTab.addSubTab(TAGS);
             multiCreativeTab.addSubTab(FLAGS);
             multiCreativeTab.addSubTab(GRAPHICS);
 
@@ -217,6 +225,16 @@ public class PurrfectCreativeTabs {
             addInSub(event, FURRY_THINGS, PurrfectItems.MAGENTA_YARN);
             addInSub(event, FURRY_THINGS, PurrfectItems.PINK_YARN);
             addInSub(event, FURRY_THINGS, PurrfectItems.RAINBOW_YARN);
+
+            addInSub(event, FURRY_THINGS, PurrfectItems.COPPER_SHIPKEY);
+            addInSub(event, FURRY_THINGS, PurrfectItems.IRON_SHIPKEY);
+            addInSub(event, FURRY_THINGS, PurrfectItems.GOLDEN_SHIPKEY);
+            addInSub(event, FURRY_THINGS, PurrfectItems.DIAMOND_SHIPKEY);
+            addInSub(event, FURRY_THINGS, PurrfectItems.NETHERITE_SHIPKEY);
+
+            //TAGS
+            addInSub(event, TAGS, PurrfectItems.SILLY_TAG);
+            addInSub(event, TAGS, SillyTagItem.getAllItems(PurrfectItems.SILLY_TAG.get()));
 
             //FLAGS
             addInSub(event, FLAGS, PurrfectItems.FLAGPOLE);

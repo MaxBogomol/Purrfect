@@ -47,7 +47,7 @@ public class DecorationCollarPart extends CollarPart {
     public static String getTranslatedName(String id) {
         int i = id.indexOf(":");
         String modId = id.substring(0, i);
-        String alchemyPotionId = id.substring(i + 1);
-        return "collar_part.decoration." + modId + "." + alchemyPotionId;
+        String partId = id.substring(i + 1);
+        return "collar_part.decoration." + modId + "." + partId;
     }
 }

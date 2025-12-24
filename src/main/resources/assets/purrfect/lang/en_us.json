@@ -6,6 +6,7 @@
   "creative_tab.purrfect.sub.flower_wreaths": "Flower Wreaths",
   "creative_tab.purrfect.sub.collars": "Collars",
   "creative_tab.purrfect.sub.furry_things": "Furry Things",
+  "creative_tab.purrfect.sub.tags": "Tags",
   "creative_tab.purrfect.sub.flags": "Flags",
   "creative_tab.purrfect.sub.graphics": "Graphics",
   "creative_tab.purrfect.silly.0": ":3",
@@ -95,6 +96,14 @@
   "item.purrfect.magenta_yarn": "Magenta Yarn",
   "item.purrfect.pink_yarn": "Pink Yarn",
   "item.purrfect.rainbow_yarn": "Rainbow Yarn",
+
+  "item.purrfect.copper_shipkey": "Copper Shipkey",
+  "item.purrfect.iron_shipkey": "Iron Shipkey",
+  "item.purrfect.golden_shipkey": "Golden Shipkey",
+  "item.purrfect.diamond_shipkey": "Diamond Shipkey",
+  "item.purrfect.netherite_shipkey": "Netherite Shipkey",
+
+  "item.purrfect.silly_tag": "Silly Tag",
 
   "block.purrfect.flagpole": "Flagpole",
 
@@ -231,12 +240,36 @@
 
   "collar_part.decoration.purrfect.spikes": "Spikes",
 
-  "_comment_3": "Sounds",
+  "_comment_3": "Silly Tags",
+  "silly_tag.purrfect.heterosexual": "Heterosexual",
+  "silly_tag.purrfect.lesbian": "Lesbian",
+  "silly_tag.purrfect.gay": "Gay",
+  "silly_tag.purrfect.bi": "Bi",
+  "silly_tag.purrfect.trans": "Trans",
+  "silly_tag.purrfect.enby": "Enby",
+  "silly_tag.purrfect.genderfluid": "Genderfluid",
+  "silly_tag.purrfect.demiboy": "Demiboy",
+  "silly_tag.purrfect.demigirl": "Demigirl",
+  "silly_tag.purrfect.demigender": "Demigender",
+  "silly_tag.purrfect.agender": "Agender",
+  "silly_tag.purrfect.pan": "Pan",
+  "silly_tag.purrfect.omni": "Omni",
+  "silly_tag.purrfect.poly": "Poly",
+  "silly_tag.purrfect.demisexual": "Demisexual",
+  "silly_tag.purrfect.ace": "Ace",
+  "silly_tag.purrfect.aro": "Aro",
+  "silly_tag.purrfect.aroace": "Aroace",
+
+  "_comment_4": "Items lore",
+  "lore.purrfect.silly_tag.tag": "Tag:",
+  "lore.purrfect.silly_tag.gender": "Choose your Gender!",
+
+  "_comment_5": "Sounds",
   "sounds.purrfect.collar_bell": "Collar bell ringing",
 
-  "_comment_4": "Entities",
+  "_comment_6": "Entities",
   "entity.purrfect.yarn": "Yarn",
 
-  "_comment_5": "Fluffy Fur Menu",
+  "_comment_7": "Fluffy Fur Menu",
   "mod_description.purrfect": "Purrfect - a mod about furries, for furries, from furry. \n Adds Pharmacy and furry things."
 }

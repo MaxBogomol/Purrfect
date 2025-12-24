@@ -6,6 +6,7 @@
   "creative_tab.purrfect.sub.flower_wreaths": "Венки",
   "creative_tab.purrfect.sub.collars": "Ошейники",
   "creative_tab.purrfect.sub.furry_things": "Фурри штучки",
+  "creative_tab.purrfect.sub.tags": "Тэги",
   "creative_tab.purrfect.sub.flags": "Флаги",
   "creative_tab.purrfect.sub.graphics": "Графика",
   "creative_tab.purrfect.silly.0": ":3",
@@ -95,6 +96,14 @@
   "item.purrfect.magenta_yarn": "Пурпурный клубок ниток",
   "item.purrfect.pink_yarn": "Розовый клубок ниток",
   "item.purrfect.rainbow_yarn": "Радужный клубок ниток",
+
+  "item.purrfect.copper_shipkey": "Медный ключик",
+  "item.purrfect.iron_shipkey": "Железный ключик",
+  "item.purrfect.golden_shipkey": "Золотой ключик",
+  "item.purrfect.diamond_shipkey": "Алмазный ключик",
+  "item.purrfect.netherite_shipkey": "Незеритовый ключик",
+
+  "item.purrfect.silly_tag": "Глупый тэг",
 
   "block.purrfect.flagpole": "Флагшток",
 
@@ -231,12 +240,36 @@
 
   "collar_part.decoration.purrfect.spikes": "Шипы",
 
-  "_comment_3": "Звуки",
+  "_comment_3": "Глупые тэги",
+  "silly_tag.purrfect.heterosexual": "Гетеросексуал",
+  "silly_tag.purrfect.lesbian": "Лесбиянка",
+  "silly_tag.purrfect.gay": "Гей",
+  "silly_tag.purrfect.bi": "Бисексуал",
+  "silly_tag.purrfect.trans": "Транс",
+  "silly_tag.purrfect.enby": "Небинарные",
+  "silly_tag.purrfect.genderfluid": "Гендерфлюид",
+  "silly_tag.purrfect.demiboy": "Демибой",
+  "silly_tag.purrfect.demigirl": "Демигёрл",
+  "silly_tag.purrfect.demigender": "Демигендер",
+  "silly_tag.purrfect.agender": "Агендер",
+  "silly_tag.purrfect.pan": "Пансексуал",
+  "silly_tag.purrfect.omni": "Омнисексуал",
+  "silly_tag.purrfect.poly": "Полисексуал",
+  "silly_tag.purrfect.demisexual": "Демисексуал",
+  "silly_tag.purrfect.ace": "Асексуал",
+  "silly_tag.purrfect.aro": "Аромантик",
+  "silly_tag.purrfect.aroace": "Аромантик Асексуал",
+
+  "_comment_4": "Лор предметов",
+  "lore.purrfect.silly_tag.tag": "Тэг:",
+  "lore.purrfect.silly_tag.gender": "Выбери свой Гендер!",
+
+  "_comment_5": "Звуки",
   "sounds.purrfect.collar_bell": "Колокольчик ошейника звенит",
 
-  "_comment_4": "Существа",
+  "_comment_6": "Существа",
   "entity.purrfect.yarn": "Клубок",
 
-  "_comment_5": "Меню Пушистого Меха",
+  "_comment_7": "Меню Пушистого Меха",
   "mod_description.purrfect": "Purrfect - мод про фурри, для фурри, от фурри. \n Добавляет фармацевтику и фурри штучки."
 }

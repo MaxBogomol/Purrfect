@@ -17,6 +17,7 @@ import java.util.List;
 public class SillyTagItem extends Item {
 
     public static ArrayList<String> tagList = new ArrayList<>();
+    public static ArrayList<String> specialTagList = new ArrayList<>();
 
     public SillyTagItem(Properties properties) {
         super(properties);
@@ -24,6 +25,10 @@ public class SillyTagItem extends Item {
 
     public static void addTag(String tag) {
         tagList.add(tag);
+    }
+
+    public static void addSpecialTag(String tag) {
+        specialTagList.add(tag);
     }
 
     public static void setTag(ItemStack stack, String tag) {
@@ -52,6 +57,20 @@ public class SillyTagItem extends Item {
     }
 
     public static List<ItemStack> getAllItems(Item item) {
+        List<ItemStack> list = new ArrayList<>();
+        ArrayList<String> tags = new ArrayList<>(tagList);
+        tags.removeAll(specialTagList);
+
+        for (String tag : tags) {
+            ItemStack stack = new ItemStack(item);
+            setTag(stack, tag);
+            list.add(stack);
+        }
+
+        return list;
+    }
+
+    public static List<ItemStack> getAllItemsWithSpecial(Item item) {
         List<ItemStack> list = new ArrayList<>();
 
         for (String tag : tagList) {

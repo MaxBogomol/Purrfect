@@ -382,5 +382,9 @@ public class PurrfectItems {
         SillyTagItem.addTag(Purrfect.MOD_ID+":ace");
         SillyTagItem.addTag(Purrfect.MOD_ID+":aro");
         SillyTagItem.addTag(Purrfect.MOD_ID+":aroace");
+
+        SillyTagItem.addTag(Purrfect.MOD_ID+":dev");
+
+        SillyTagItem.addSpecialTag(Purrfect.MOD_ID+":dev");
     }
 }

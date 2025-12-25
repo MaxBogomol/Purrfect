@@ -91,7 +91,11 @@ public class PurrfectCreativeTabs {
                     .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
 
     public static final SubCreativeTab TAGS =
-            SubCreativeTab.create().subIcon(() -> new ItemStack(PurrfectItems.SILLY_TAG.get()))
+            SubCreativeTab.create().subIcon(() -> {
+                        ItemStack tag = new ItemStack(PurrfectItems.SILLY_TAG.get());
+                        SillyTagItem.setTag(tag, Purrfect.MOD_ID+":colon_three");
+                        return tag;
+                    })
                     .title(Component.empty().append(getSillyName()).append(": ").append(Component.translatable("creative_tab.purrfect.sub.tags")))
                     .subTitle(Component.translatable("creative_tab.purrfect.sub.tags"))
                     .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));

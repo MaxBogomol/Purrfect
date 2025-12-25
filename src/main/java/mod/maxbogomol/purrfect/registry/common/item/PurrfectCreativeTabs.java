@@ -125,7 +125,7 @@ public class PurrfectCreativeTabs {
             multiCreativeTab.addSubTab(FLAGS);
             multiCreativeTab.addSubTab(GRAPHICS);
 
-            THINGS.addSubTab(PLUSHIES).addSubTab(FLOWER_WREATHS).addSubTab(COLLAR).addSubTab(FURRY_THINGS).addSubTab(FLAGS).addSubTab(GRAPHICS);
+            THINGS.addSubTab(PLUSHIES).addSubTab(FLOWER_WREATHS).addSubTab(COLLAR).addSubTab(FURRY_THINGS).addSubTab(TAGS).addSubTab(FLAGS).addSubTab(GRAPHICS);
         }
     }
 

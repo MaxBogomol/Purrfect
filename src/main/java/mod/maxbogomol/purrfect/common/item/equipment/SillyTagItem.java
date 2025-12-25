@@ -28,6 +28,7 @@ public class SillyTagItem extends Item {
     }
 
     public static void addSpecialTag(String tag) {
+        addTag(tag);
         specialTagList.add(tag);
     }
 

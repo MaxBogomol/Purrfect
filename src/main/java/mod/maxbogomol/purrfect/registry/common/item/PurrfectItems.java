@@ -383,7 +383,47 @@ public class PurrfectItems {
         SillyTagItem.addTag(Purrfect.MOD_ID+":aro");
         SillyTagItem.addTag(Purrfect.MOD_ID+":aroace");
 
-        SillyTagItem.addTag(Purrfect.MOD_ID+":dev");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":boy");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":girl");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":thing");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":good_boy");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":good_girl");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":good_thing");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":bad_boy");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":bad_girl");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":bad_thing");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":top");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":bottom");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":smol");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":big");
+
+        SillyTagItem.addTag(Purrfect.MOD_ID+":creature");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":puppy");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":kitten");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":fish");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":fop");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":the");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":furry");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":scalie");
+
+        SillyTagItem.addTag(Purrfect.MOD_ID+":colon_three");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":fish_left");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":fish_right");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":owo");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":uwu");
+
+        SillyTagItem.addTag(Purrfect.MOD_ID+":yapper");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":goober");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":silly");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":fluffy");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":gender");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":zampanio");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":implosive");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":tetramixin");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":greg");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":yes");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":no");
+        SillyTagItem.addTag(Purrfect.MOD_ID+":puppy_brained");
 
         SillyTagItem.addSpecialTag(Purrfect.MOD_ID+":dev");
     }

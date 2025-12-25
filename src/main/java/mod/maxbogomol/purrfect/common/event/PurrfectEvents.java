@@ -4,6 +4,7 @@ import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.common.capability.FurryPlayerProvider;
 import mod.maxbogomol.purrfect.common.capability.IFurryPlayer;
 import mod.maxbogomol.purrfect.common.furry.FurryPlayerHandler;
+import mod.maxbogomol.purrfect.common.item.equipment.ShipkeyItem;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.FlowerWreathItem;
 import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
@@ -13,9 +14,13 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.ClickAction;
+import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.INBTSerializable;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
+import net.minecraftforge.event.ItemStackedOnOtherEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.EntityLeaveLevelEvent;
@@ -80,5 +85,18 @@ public class PurrfectEvents {
     @SubscribeEvent
     public void levelTick(TickEvent.LevelTickEvent event) {
         FurryPlayerHandler.leashedTick(event);
+    }
+
+    @SubscribeEvent
+    public void onItemStackedOnOther(ItemStackedOnOtherEvent event) {
+        ItemStack carried = event.getStackedOnItem();
+        ItemStack stacked = event .getCarriedItem();
+        Slot slot = event.getSlot();
+        ClickAction action = event.getClickAction();
+        Player player = event.getPlayer();
+
+        if (stacked.getItem() instanceof CollarItem && carried.getItem() instanceof ShipkeyItem) {
+            event.setCanceled(ShipkeyItem.inventoryInteraction(carried, stacked, slot, action, player));
+        }
     }
 }

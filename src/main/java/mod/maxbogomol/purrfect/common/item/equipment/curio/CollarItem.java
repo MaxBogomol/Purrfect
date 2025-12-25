@@ -6,6 +6,7 @@ import mod.maxbogomol.purrfect.api.furry.CollarPartHandler;
 import mod.maxbogomol.purrfect.common.collar.AccessoryCollarPart;
 import mod.maxbogomol.purrfect.common.collar.ColorCollarPart;
 import mod.maxbogomol.purrfect.common.collar.DecorationCollarPart;
+import mod.maxbogomol.purrfect.common.item.equipment.ShipkeyItem;
 import mod.maxbogomol.purrfect.registry.common.PurrfectCollarParts;
 import mod.maxbogomol.purrfect.registry.common.PurrfectSounds;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectItemTags;
@@ -17,6 +18,8 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -35,6 +38,7 @@ import top.theillusivec4.curios.api.type.capability.ICuriosItemHandler;
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class CollarItem extends BaseCurioItem {
 
@@ -159,6 +163,16 @@ public class CollarItem extends BaseCurioItem {
         list.add(Component.translatable("collar_part.color.purrfect").withStyle(ChatFormatting.GOLD).append(CommonComponents.SPACE).append(Component.translatable(color).withStyle(ChatFormatting.YELLOW)));
         list.add(Component.translatable("collar_part.accessory.purrfect").withStyle(ChatFormatting.GOLD).append(CommonComponents.SPACE).append(Component.translatable(accessory).withStyle(ChatFormatting.YELLOW)));
         list.add(Component.translatable("collar_part.decoration.purrfect").withStyle(ChatFormatting.GOLD).append(CommonComponents.SPACE).append(Component.translatable(decoration).withStyle(ChatFormatting.YELLOW)));
+
+        if (ShipkeyItem.hasUUID(stack)) {
+            list.add(Component.translatable("lore.purrfect.collar.locked").withStyle(ChatFormatting.GOLD));
+            if (flags.isAdvanced()) {
+                UUID uuid = ShipkeyItem.getUUID(stack);
+                if (uuid != null) {
+                    list.add(Component.literal("UUID").withStyle(ChatFormatting.GOLD).append(CommonComponents.SPACE).append(Component.literal(uuid.toString()).withStyle(ChatFormatting.YELLOW)));
+                }
+            }
+        }
     }
 
     public static void onEntityJump(LivingEvent.LivingJumpEvent event) {
@@ -180,5 +194,21 @@ public class CollarItem extends BaseCurioItem {
                 }
             }
         }
+    }
+
+    public static void dropItem(Player player, ItemStack stack) {
+        Level level = player.level();
+        level.addFreshEntity(new ItemEntity(level, player.getX(), player.getY() + (player.getBbHeight() / 2f), player.getZ(), stack.copy()));
+        stack.shrink(1);
+    }
+
+    @Override
+    public boolean canUnequip(SlotContext slotContext, ItemStack stack) {
+        if (ShipkeyItem.hasUUID(stack)) {
+            if (slotContext.entity() instanceof Player player) {
+                return ShipkeyItem.hasKey(player, ShipkeyItem.getUUID(stack));
+            }
+        }
+        return true;
     }
 }

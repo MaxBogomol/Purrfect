@@ -164,7 +164,7 @@ public class CollarItem extends BaseCurioItem {
         list.add(Component.translatable("collar_part.accessory.purrfect").withStyle(ChatFormatting.GOLD).append(CommonComponents.SPACE).append(Component.translatable(accessory).withStyle(ChatFormatting.YELLOW)));
         list.add(Component.translatable("collar_part.decoration.purrfect").withStyle(ChatFormatting.GOLD).append(CommonComponents.SPACE).append(Component.translatable(decoration).withStyle(ChatFormatting.YELLOW)));
 
-        if (ShipkeyItem.hasUUID(stack)) {
+        if (CollarItem.hasLock(stack) && ShipkeyItem.hasUUID(stack)) {
             list.add(Component.translatable("lore.purrfect.collar.locked").withStyle(ChatFormatting.GOLD));
             if (flags.isAdvanced()) {
                 UUID uuid = ShipkeyItem.getUUID(stack);
@@ -196,6 +196,14 @@ public class CollarItem extends BaseCurioItem {
         }
     }
 
+    public static boolean hasLock(ItemStack stack) {
+        CollarPart accessoryPart = CollarItem.getAccessory(stack);
+        if (accessoryPart instanceof AccessoryCollarPart accessoryCollarPart) {
+            return accessoryCollarPart.isLock();
+        }
+        return false;
+    }
+
     public static void dropItem(Player player, ItemStack stack) {
         Level level = player.level();
         level.addFreshEntity(new ItemEntity(level, player.getX(), player.getY() + (player.getBbHeight() / 2f), player.getZ(), stack.copy()));
@@ -204,7 +212,7 @@ public class CollarItem extends BaseCurioItem {
 
     @Override
     public boolean canUnequip(SlotContext slotContext, ItemStack stack) {
-        if (ShipkeyItem.hasUUID(stack)) {
+        if (CollarItem.hasLock(stack) && ShipkeyItem.hasUUID(stack)) {
             if (slotContext.entity() instanceof Player player) {
                 return ShipkeyItem.hasKey(player, ShipkeyItem.getUUID(stack));
             }

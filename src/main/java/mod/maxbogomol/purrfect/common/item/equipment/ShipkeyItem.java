@@ -67,7 +67,7 @@ public class ShipkeyItem extends Item {
 
     public static boolean inventoryInteraction(ItemStack carried, ItemStack stacked, Slot slot, ClickAction action, Player player) {
         if (slot.allowModification(player)) {
-            if (!ShipkeyItem.hasUUID(stacked) && !ShipkeyItem.hasUUID(carried)) {
+            if (CollarItem.hasLock(stacked) && !ShipkeyItem.hasUUID(stacked) && !ShipkeyItem.hasUUID(carried)) {
                 ShipkeyItem.generateUUID(stacked, carried);
                 player.level().playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.CHEST_LOCKED, SoundSource.PLAYERS, 0.75f, 1.5f);
                 return true;
@@ -82,22 +82,24 @@ public class ShipkeyItem extends Item {
             List<SlotResult> curioSlots = curiosItemHandler.resolve().get().findCurios((i) -> true);
             for (SlotResult slot : curioSlots) {
                 if (slot.stack().getItem() instanceof CollarItem) {
-                    if (ShipkeyItem.hasUUID(slot.stack()) && ShipkeyItem.hasUUID(key)) {
-                        UUID uuid = ShipkeyItem.getUUID(slot.stack());
-                        UUID keyUUID = ShipkeyItem.getUUID(key);
-                        if (uuid != null && keyUUID != null) {
-                            if (keyUUID.equals(uuid)) {
-                                CollarItem.dropItem(target, slot.stack());
-                                target.level().playSound(null, target.getX(), target.getY() + (target.getBbHeight() / 2f), target.getZ(), SoundEvents.ARMOR_EQUIP_LEATHER, SoundSource.PLAYERS, 1.0f, 1.5f);
-                                return true;
+                    if (CollarItem.hasLock(slot.stack())) {
+                        if (ShipkeyItem.hasUUID(slot.stack()) && ShipkeyItem.hasUUID(key)) {
+                            UUID uuid = ShipkeyItem.getUUID(slot.stack());
+                            UUID keyUUID = ShipkeyItem.getUUID(key);
+                            if (uuid != null && keyUUID != null) {
+                                if (keyUUID.equals(uuid)) {
+                                    CollarItem.dropItem(target, slot.stack());
+                                    target.level().playSound(null, target.getX(), target.getY() + (target.getBbHeight() / 2f), target.getZ(), SoundEvents.ARMOR_EQUIP_LEATHER, SoundSource.PLAYERS, 1.0f, 1.5f);
+                                    return true;
+                                }
                             }
                         }
-                    }
-                    if (!ShipkeyItem.hasUUID(slot.stack()) && !ShipkeyItem.hasUUID(key)) {
-                        ShipkeyItem.generateUUID(slot.stack(), key);
-                        player.level().playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.CHEST_LOCKED, SoundSource.PLAYERS, 0.75f, 1.5f);
-                        player.setItemInHand(hand, key);
-                        return true;
+                        if (!ShipkeyItem.hasUUID(slot.stack()) && !ShipkeyItem.hasUUID(key)) {
+                            ShipkeyItem.generateUUID(slot.stack(), key);
+                            player.level().playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.CHEST_LOCKED, SoundSource.PLAYERS, 0.75f, 1.5f);
+                            player.setItemInHand(hand, key);
+                            return true;
+                        }
                     }
                 }
             }

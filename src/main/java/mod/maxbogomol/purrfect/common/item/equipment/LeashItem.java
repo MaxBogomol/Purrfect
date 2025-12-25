@@ -2,6 +2,8 @@ package mod.maxbogomol.purrfect.common.item.equipment;
 
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.common.furry.FurryPlayerHandler;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -16,7 +18,8 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import java.util.ArrayList;
+import java.util.Map;
+import java.util.UUID;
 
 public class LeashItem extends Item {
 
@@ -41,8 +44,6 @@ public class LeashItem extends Item {
     public static LeashColor CHAIN = LeashColor.create(Purrfect.MOD_ID, "chain", 0.0625f * 3f, 1f, 0.15f);
 
     public LeashColor color;
-
-    public static ArrayList<ItemStack> activeLeashes = new ArrayList<>();
 
     public LeashItem(LeashColor color, Properties properties) {
         super(properties);
@@ -76,6 +77,10 @@ public class LeashItem extends Item {
         if (interactionTarget instanceof Player target) {
             if (t == null && FurryPlayerHandler.hasCollar(target)) {
                 if (!player.level().isClientSide()) {
+                    if (hasUUID(stack)) {
+                        generateUUID(stack);
+                        player.setItemInHand(usedHand, stack);
+                    }
                     FurryPlayerHandler.setLeashedPlayer(player, slot, target);
                     FurryPlayerHandler.setLeash(player, slot, stack);
                     player.level().playSound(null, target.position().x(), target.position().y(), target.position().z(), SoundEvents.LEASH_KNOT_PLACE, SoundSource.PLAYERS, 1f, 1f);
@@ -86,9 +91,37 @@ public class LeashItem extends Item {
         return InteractionResult.PASS;
     }
 
-    public static boolean isActive(ItemStack stack) {
-        System.out.println(activeLeashes);
-        return activeLeashes.contains(stack);
+    @OnlyIn(Dist.CLIENT)
+    public static boolean isActive(ItemStack stack, ClientLevel level) {
+        if (level != null && hasUUID(stack)) {
+            for (Player player : level.players()) {
+                Map<Integer, ItemStack> leashes = FurryPlayerHandler.getLeashes(player);
+                for (ItemStack leash : leashes.values()) {
+                    UUID uuid = getUUID(leash);
+                    if (uuid != null && uuid.equals(getUUID(stack))) return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static void generateUUID(ItemStack item) {
+        CompoundTag nbt = item.getOrCreateTag();
+        UUID uuid = UUID.randomUUID();
+        nbt.putUUID("UUID", uuid);
+    }
+
+    public static UUID getUUID(ItemStack item) {
+        CompoundTag nbt = item.getOrCreateTag();
+        if (nbt.contains("UUID")) {
+            return nbt.getUUID("UUID");
+        }
+        return null;
+    }
+
+    public static boolean hasUUID(ItemStack item) {
+        CompoundTag nbt = item.getOrCreateTag();
+        return nbt.contains("UUID");
     }
 
     @OnlyIn(Dist.CLIENT)

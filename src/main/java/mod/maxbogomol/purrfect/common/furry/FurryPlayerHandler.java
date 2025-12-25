@@ -78,13 +78,6 @@ public class FurryPlayerHandler {
                         break;
                     }
                 }
-
-                LeashItem.activeLeashes.clear();
-                for (Player player1 : level.players()) {
-                    for (int index : leashedPlayers.keySet()) {
-                        LeashItem.activeLeashes.add(player1.getInventory().getItem(index));
-                    }
-                }
             }
         }
     }
@@ -172,10 +165,6 @@ public class FurryPlayerHandler {
     }
 
     public static void clearLeashes(Player player) {
-        player.getCapability(IFurryPlayer.INSTANCE, null).ifPresent(IFurryPlayer::clearLeashes);
-    }
-
-    public static void clearLeashesLeave(Player player) {
         player.getCapability(IFurryPlayer.INSTANCE, null).ifPresent(IFurryPlayer::clearLeashes);
     }
 

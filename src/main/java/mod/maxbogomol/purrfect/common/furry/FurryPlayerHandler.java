@@ -70,7 +70,7 @@ public class FurryPlayerHandler {
             }
         } else {
             Player player = Purrfect.proxy.getPlayer();
-            if (player != null) {
+            if (player != null && player.isAlive()) {
                 Map<Integer, Player> leashedPlayers = FurryPlayerHandler.getLeashedPlayers(player);
                 for (int index : leashedPlayers.keySet()) {
                     if (!level.players().contains(leashedPlayers.get(index))) {

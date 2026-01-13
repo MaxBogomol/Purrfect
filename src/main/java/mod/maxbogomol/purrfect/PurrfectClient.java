@@ -2,6 +2,7 @@ package mod.maxbogomol.purrfect;
 
 import mod.maxbogomol.fluffy_fur.FluffyFurClient;
 import mod.maxbogomol.fluffy_fur.client.gui.screen.FluffyFurMod;
+import mod.maxbogomol.fluffy_fur.client.language.LanguageHandler;
 import mod.maxbogomol.fluffy_fur.client.splash.SplashHandler;
 import mod.maxbogomol.purrfect.client.event.PurrfectClientEvents;
 import mod.maxbogomol.purrfect.client.render.LeashRenderHandler;
@@ -10,6 +11,7 @@ import mod.maxbogomol.purrfect.registry.common.PurrfectCollarParts;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectCreativeTabs;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectItems;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +19,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import java.awt.*;
+import java.util.List;
 import java.util.Random;
 
 public class PurrfectClient {
@@ -57,16 +60,9 @@ public class PurrfectClient {
     }
 
     public static void setupSplashes() {
-        SplashHandler.addSplash("Meow Meow Meow :3");
-        SplashHandler.addSplash("Mrow");
-        SplashHandler.addSplash("Mew");
-        SplashHandler.addSplash("Mow");
-        SplashHandler.addSplash("Prrrr");
-        SplashHandler.addSplash("Furry");
-        SplashHandler.addSplash("UwU");
-        SplashHandler.addSplash(":3");
-        SplashHandler.addSplash("U CUTIE");
-        SplashHandler.addSplash(">w<");
-        SplashHandler.addSplash("<><");
+        List<String> strings = LanguageHandler.getStringsFromFile(new ResourceLocation(Purrfect.MOD_ID, "texts/splashes.txt"));
+        for (String string : strings) {
+            SplashHandler.addSplash(string);
+        }
     }
 }

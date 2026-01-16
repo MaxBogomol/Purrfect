@@ -59,7 +59,7 @@ public class ShipkeyItem extends Item {
         for (ItemStack stack : items) {
             if (ShipkeyItem.hasUUID(stack)) {
                 UUID keyUUID = ShipkeyItem.getUUID(stack);
-                if (keyUUID != null) return keyUUID.equals(uuid);
+                if (keyUUID != null && keyUUID.equals(uuid)) return true;
             }
         }
         return false;

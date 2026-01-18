@@ -233,6 +233,9 @@ public class PurrfectCreativeTabs {
             addInSub(event, FURRY_THINGS, PurrfectItems.PINK_YARN);
             addInSub(event, FURRY_THINGS, PurrfectItems.RAINBOW_YARN);
 
+            addInSub(event, FURRY_THINGS, PurrfectItems.COPPER_BOWL);
+            addInSub(event, FURRY_THINGS, PurrfectItems.IRON_BOWL);
+
             addInSub(event, FURRY_THINGS, PurrfectItems.COPPER_SHIPKEY);
             addInSub(event, FURRY_THINGS, PurrfectItems.IRON_SHIPKEY);
             addInSub(event, FURRY_THINGS, PurrfectItems.GOLDEN_SHIPKEY);

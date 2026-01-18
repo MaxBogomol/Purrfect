@@ -2,9 +2,11 @@ package mod.maxbogomol.purrfect.registry.common.block;
 
 import mod.maxbogomol.fluffy_fur.client.render.block.PlushRenderer;
 import mod.maxbogomol.purrfect.Purrfect;
+import mod.maxbogomol.purrfect.client.render.block.BowlRenderer;
 import mod.maxbogomol.purrfect.client.render.block.FlagRenderer;
-import mod.maxbogomol.purrfect.common.block.plush.PurrfectPlushBlockEntity;
+import mod.maxbogomol.purrfect.common.block.bowl.BowlBlockEntity;
 import mod.maxbogomol.purrfect.common.block.flag.FlagBlockEntity;
+import mod.maxbogomol.purrfect.common.block.plush.PurrfectPlushBlockEntity;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -23,6 +25,10 @@ public class PurrfectBlockEntities {
             PurrfectBlocks.BLAHAJ_PLUSH.get(), PurrfectBlocks.PINK_BLAHAJ_PLUSH.get(),
             PurrfectBlocks.SHRIMP_PLUSH.get(), PurrfectBlocks.FISH_PLUSH.get(),
             PurrfectBlocks.CARROT_PLUSH.get()
+    ).build(null));
+
+    public static final RegistryObject<BlockEntityType<BowlBlockEntity>> BOWL = BLOCK_ENTITIES.register("bowl", () -> BlockEntityType.Builder.of(BowlBlockEntity::new,
+            PurrfectBlocks.COPPER_BOWL.get(), PurrfectBlocks.IRON_BOWL.get()
     ).build(null));
 
     public static final RegistryObject<BlockEntityType<FlagBlockEntity>> FLAG = BLOCK_ENTITIES.register("flag", () -> BlockEntityType.Builder.of(FlagBlockEntity::new,
@@ -51,6 +57,7 @@ public class PurrfectBlockEntities {
         @SubscribeEvent
         public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
             BlockEntityRenderers.register(PLUSH.get(), (context) -> new PlushRenderer());
+            BlockEntityRenderers.register(BOWL.get(), (context) -> new BowlRenderer());
             BlockEntityRenderers.register(FLAG.get(), (context) -> new FlagRenderer());
         }
     }

@@ -126,6 +126,9 @@ public class PurrfectItems {
     public static final RegistryObject<Item> PINK_YARN = ITEMS.register("pink_yarn", () -> new YarnItem(YarnItem.PINK, new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> RAINBOW_YARN = ITEMS.register("rainbow_yarn", () -> new YarnItem(YarnItem.RAINBOW, new Item.Properties().stacksTo(16)));
 
+    public static final RegistryObject<Item> COPPER_BOWL = ITEMS.register("copper_bowl", () -> new BlockItem(PurrfectBlocks.COPPER_BOWL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> IRON_BOWL = ITEMS.register("iron_bowl", () -> new BlockItem(PurrfectBlocks.IRON_BOWL.get(), new Item.Properties()));
+
     public static final RegistryObject<Item> COPPER_SHIPKEY = ITEMS.register("copper_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> IRON_SHIPKEY = ITEMS.register("iron_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> GOLDEN_SHIPKEY = ITEMS.register("golden_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1)));

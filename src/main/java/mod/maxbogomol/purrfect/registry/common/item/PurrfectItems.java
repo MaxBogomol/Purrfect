@@ -55,6 +55,8 @@ public class PurrfectItems {
     public static final RegistryObject<Item> PHARMACY_VIAL_RAINBOW_SPARK = ITEMS.register("pharmacy_vial_rainbow_spark", () -> new Item(new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> PHARMACY_VIAL_SLIMY_SLUG = ITEMS.register("pharmacy_vial_slimy_slug", () -> new Item(new Item.Properties().stacksTo(16)));
 
+    public static final RegistryObject<Item> HANDCRAFTING_TABLE = ITEMS.register("handcrafting_table", () -> new BlockItem(PurrfectBlocks.HANDCRAFTING_TABLE.get(), new Item.Properties()));
+
     public static final RegistryObject<Item> BLAHAJ_PLUSH = ITEMS.register("blahaj_plush", () -> new PlushItem(PurrfectBlocks.BLAHAJ_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> PINK_BLAHAJ_PLUSH = ITEMS.register("pink_blahaj_plush", () -> new PlushItem(PurrfectBlocks.PINK_BLAHAJ_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> SHRIMP_PLUSH = ITEMS.register("shrimp_plush", () -> new PlushItem(PurrfectBlocks.SHRIMP_PLUSH.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));

@@ -4,6 +4,7 @@ import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.common.block.flag.FlagBlock;
 import mod.maxbogomol.purrfect.common.block.flag.FlagWallBlock;
 import mod.maxbogomol.purrfect.common.block.flag.FlagpoleBlock;
+import mod.maxbogomol.purrfect.common.block.handcrafting_table.HandcraftingTableBlock;
 import mod.maxbogomol.purrfect.common.block.pharmacist_table.PharmacistTableBlock;
 import mod.maxbogomol.purrfect.common.block.plush.BlahajBlock;
 import mod.maxbogomol.purrfect.common.block.plush.CarrotBlock;
@@ -30,6 +31,8 @@ public class PurrfectBlocks {
     public static final RegistryObject<Block> SHRIMP_PLUSH = BLOCKS.register("shrimp_plush", () -> new ShrimpBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_RED).noOcclusion()));
     public static final RegistryObject<Block> FISH_PLUSH = BLOCKS.register("fish_plush", () -> new FishBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_BLUE).noOcclusion()));
     public static final RegistryObject<Block> CARROT_PLUSH = BLOCKS.register("carrot_plush", () -> new CarrotBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.TERRACOTTA_ORANGE).noOcclusion()));
+
+    public static final RegistryObject<Block> HANDCRAFTING_TABLE = BLOCKS.register("handcrafting_table", () -> new HandcraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)));
 
     public static final RegistryObject<Block> FLAGPOLE = BLOCKS.register("flagpole", () -> new FlagpoleBlock(BlockBehaviour.Properties.copy(Blocks.CHAIN)));
 

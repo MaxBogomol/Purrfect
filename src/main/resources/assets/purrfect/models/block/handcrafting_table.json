@@ -1,12 +1,12 @@
 {
-	"format_version": "1.9.0",
+	"parent": "block/block",
 	"textures": {
-		"0": "purrfect:block/top",
-		"1": "purrfect:block/mid_1",
-		"2": "purrfect:block/mid_2",
-		"3": "purrfect:block/mid_3",
-		"4": "purrfect:block/bottom",
-		"particle": "purrfect:block/top"
+		"0": "purrfect:block/handcrafting_table_top",
+		"1": "purrfect:block/handcrafting_table_mid_1",
+		"2": "purrfect:block/handcrafting_table_mid_2",
+		"3": "purrfect:block/handcrafting_table_mid_3",
+		"4": "purrfect:block/handcrafting_table_bottom",
+		"particle": "purrfect:block/handcrafting_table_top"
 	},
 	"elements": [
 		{

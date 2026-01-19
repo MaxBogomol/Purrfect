@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "purrfect:block/copper_bowl",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "purrfect:block/copper_bowl"
+    },
+    "facing=south": {
+      "model": "purrfect:block/copper_bowl",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "purrfect:block/copper_bowl",
+      "y": 270
+    }
+  }
+}

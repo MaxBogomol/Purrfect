@@ -1,0 +1,8 @@
+{
+	"parent": "purrfect:block/bowl",
+	"textures": {
+		"top": "purrfect:block/copper_bowl_top",
+		"bottom": "purrfect:block/copper_bowl_bottom",
+		"particle": "purrfect:block/copper_bowl_top"
+	}
+}

@@ -54,7 +54,7 @@ public class PurrfectCreativeTabs {
                     .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
 
     public static final SubCreativeTabStack THINGS =
-            SubCreativeTabStack.create().subIcon(() -> new ItemStack(PurrfectItems.PHARMACIST_TABLE.get()))
+            SubCreativeTabStack.create().subIcon(() -> new ItemStack(PurrfectItems.HANDCRAFTING_TABLE.get()))
                     .title(Component.empty().append(getSillyName()).append(": ").append(Component.translatable("creative_tab.purrfect.sub.things")))
                     .subTitle(Component.translatable("creative_tab.purrfect.sub.things"))
                     .withSubTabImage(new ResourceLocation(Purrfect.MOD_ID, "textures/gui/purrfect_sub_tab.png"));
@@ -153,6 +153,9 @@ public class PurrfectCreativeTabs {
             addInSub(event, PHARMACY, PurrfectItems.PHARMACY_VIAL_RAINBOW_SPARK);
             addInSub(event, PHARMACY, PurrfectItems.PHARMACY_VIAL_SLIMY_SLUG);
 
+            //THINGS
+            addInSub(event, THINGS, PurrfectItems.HANDCRAFTING_TABLE);
+
             //PLUSHIES
             addInSub(event, PLUSHIES, PurrfectItems.BLAHAJ_PLUSH);
             addInSub(event, PLUSHIES, PurrfectItems.PINK_BLAHAJ_PLUSH);
@@ -229,6 +232,9 @@ public class PurrfectCreativeTabs {
             addInSub(event, FURRY_THINGS, PurrfectItems.MAGENTA_YARN);
             addInSub(event, FURRY_THINGS, PurrfectItems.PINK_YARN);
             addInSub(event, FURRY_THINGS, PurrfectItems.RAINBOW_YARN);
+
+            addInSub(event, FURRY_THINGS, PurrfectItems.COPPER_BOWL);
+            addInSub(event, FURRY_THINGS, PurrfectItems.IRON_BOWL);
 
             addInSub(event, FURRY_THINGS, PurrfectItems.COPPER_SHIPKEY);
             addInSub(event, FURRY_THINGS, PurrfectItems.IRON_SHIPKEY);

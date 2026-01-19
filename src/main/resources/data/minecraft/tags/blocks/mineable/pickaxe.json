@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "purrfect:copper_bowl",
+    "purrfect:iron_bowl",
     "purrfect:flagpole",
     "purrfect:white_flag",
     "purrfect:light_gray_flag",

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "purrfect:handcrafting_table",
     "purrfect:pharmacist_table"
   ]
 }

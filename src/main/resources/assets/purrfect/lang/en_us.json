@@ -27,6 +27,8 @@
   "item.purrfect.pharmacy_vial_rainbow_spark": "Pharmacy Vial \"Rainbow Spark\"",
   "item.purrfect.pharmacy_vial_slimy_slug": "Pharmacy Vial \"Slimy Slug\"",
 
+  "block.purrfect.handcrafting_table": "Handcrafting Table",
+
   "block.purrfect.blahaj_plush": "Blåhaj Plush",
   "block.purrfect.pink_blahaj_plush": "Pink Blåhaj Plush",
   "block.purrfect.shrimp_plush": "Shrimp Plush",
@@ -96,6 +98,9 @@
   "item.purrfect.magenta_yarn": "Magenta Yarn",
   "item.purrfect.pink_yarn": "Pink Yarn",
   "item.purrfect.rainbow_yarn": "Rainbow Yarn",
+
+  "block.purrfect.copper_bowl": "Copper Bowl",
+  "block.purrfect.iron_bowl": "Iron Bowl",
 
   "item.purrfect.copper_shipkey": "Copper Shipkey",
   "item.purrfect.iron_shipkey": "Iron Shipkey",

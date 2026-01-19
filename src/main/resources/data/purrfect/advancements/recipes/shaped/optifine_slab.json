@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_optifine_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "purrfect:optifine_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_optifine_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "purrfect:shaped/optifine_slab"
+    ]
+  },
+  "sends_telemetry_event": false
+}

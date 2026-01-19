@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "graphic_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "purrfect:sodium_block"
+    }
+  },
+  "result": {
+    "item": "purrfect:sodium_slab",
+    "count": 6
+  }
+}

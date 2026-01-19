@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "graphic_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "purrfect:optifine_block"
+    }
+  },
+  "result": {
+    "item": "purrfect:optifine_stairs",
+    "count": 4
+  }
+}

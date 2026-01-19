@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sodium_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "purrfect:sodium_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_sodium_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "purrfect:shaped/sodium_slab"
+    ]
+  },
+  "sends_telemetry_event": false
+}

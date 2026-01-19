@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "graphic_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "purrfect:sodium_block"
+    }
+  },
+  "result": {
+    "item": "purrfect:sodium_stairs",
+    "count": 4
+  }
+}

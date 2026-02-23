@@ -1,7 +1,7 @@
 package mod.maxbogomol.purrfect.integration.common.wizards_reborn;
 
 import mod.maxbogomol.purrfect.Purrfect;
-import mod.maxbogomol.purrfect.client.render.curio.CollarRenderer;
+import mod.maxbogomol.purrfect.client.render.curio.FlowerWreathRenderer;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.FlowerWreathItem;
 import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.network.item.PetalsOfInnocenceFlowerWreathPacket;
@@ -56,7 +56,7 @@ public class PurrfectWizardsReborn {
 
     public static class ClientLoadedOnly {
         public static void registerItems(FMLClientSetupEvent event) {
-            CuriosRendererRegistry.register(ItemsLoadedOnly.PETALS_OF_INNOCENCE_FLOWER_WREATH.get(), CollarRenderer::new);
+            CuriosRendererRegistry.register(ItemsLoadedOnly.PETALS_OF_INNOCENCE_FLOWER_WREATH.get(), FlowerWreathRenderer::new);
         }
     }
 

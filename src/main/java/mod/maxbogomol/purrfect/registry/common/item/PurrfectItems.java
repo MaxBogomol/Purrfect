@@ -220,6 +220,7 @@ public class PurrfectItems {
             CuriosRendererRegistry.register(SUNFLOWER_FLOWER_WREATH.get(), FlowerWreathRenderer::new);
             CuriosRendererRegistry.register(LILAC_FLOWER_WREATH.get(), FlowerWreathRenderer::new);
             CuriosRendererRegistry.register(ROSE_BUSH_FLOWER_WREATH.get(), FlowerWreathRenderer::new);
+            CuriosRendererRegistry.register(PEONY_FLOWER_WREATH.get(), FlowerWreathRenderer::new);
             CuriosRendererRegistry.register(DEAD_BUSH_FLOWER_WREATH.get(), FlowerWreathRenderer::new);
             CuriosRendererRegistry.register(WITHER_ROSE_FLOWER_WREATH.get(), FlowerWreathRenderer::new);
             CuriosRendererRegistry.register(TORCHFLOWER_FLOWER_WREATH.get(), FlowerWreathRenderer::new);

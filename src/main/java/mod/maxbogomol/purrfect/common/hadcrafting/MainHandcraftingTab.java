@@ -1,13 +1,227 @@
 package mod.maxbogomol.purrfect.common.hadcrafting;
 
+import com.mojang.blaze3d.systems.RenderSystem;
+import mod.maxbogomol.fluffy_fur.common.block.entity.BlockSimpleInventory;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTab;
+import mod.maxbogomol.purrfect.client.gui.menu.HandcraftingTableMenu;
+import mod.maxbogomol.purrfect.client.gui.screen.HandcraftingTableScreen;
+import mod.maxbogomol.purrfect.client.gui.tooltip.HandcraftingRecipeTooltipComponent;
+import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
+import mod.maxbogomol.purrfect.common.network.block.HandcraftingRecipeCraftPacket;
+import mod.maxbogomol.purrfect.common.recipe.HandcraftingIngredient;
+import mod.maxbogomol.purrfect.common.recipe.HandcraftingRecipe;
+import mod.maxbogomol.purrfect.registry.common.PurrfectRecipes;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import java.util.function.Supplier;
 
 public class MainHandcraftingTab extends HandcraftingTab {
 
+    List<HandcraftingRecipe> allRecipes = new ArrayList<>();
+    List<HandcraftingRecipe> matchedRecipes = new ArrayList<>();
+    HandcraftingRecipe selectedRecipe = null;
+    boolean isMatched = false;
+
     public MainHandcraftingTab(String id, Supplier<ItemStack> iconItemStack) {
         super(id, iconItemStack);
+    }
+
+    @Override
+    @OnlyIn(Dist.CLIENT)
+    public void init(HandcraftingTableScreen screen) {
+        selectedRecipe = null;
+    }
+
+    @Override
+    @OnlyIn(Dist.CLIENT)
+    public void tick(HandcraftingTableScreen screen) {
+        Minecraft minecraft = Minecraft.getInstance();
+        Level level = minecraft.level;
+        Player player = minecraft.player;
+
+        if (level != null && player != null) {
+            allRecipes = level.getRecipeManager().getAllRecipesFor(PurrfectRecipes.HANDCRAFTING.get());
+            matchedRecipes.clear();
+
+            for (HandcraftingRecipe recipe : allRecipes) {
+                if (recipe.matches(minecraft.player.getInventory(), level)) {
+                    matchedRecipes.add(recipe);
+                }
+            }
+        }
+    }
+
+    @Override
+    @OnlyIn(Dist.CLIENT)
+    public void render(HandcraftingTableScreen screen, GuiGraphics gui, int mouseX, int mouseY, float partialTicks) {
+        int i = screen.getGuiLeft();
+        int j = screen.getGuiTop();
+
+        Minecraft minecraft = Minecraft.getInstance();
+        List<HandcraftingRecipe> recipes = allRecipes;
+        if (isMatched) recipes = matchedRecipes;
+        HandcraftingRecipe hoveredRecipe = null;
+
+        RenderSystem.enableBlend();
+
+        for (int si = 0; si < 6; si++) {
+            for (int sj = 0; sj < 8; sj++) {
+                gui.blit(GUI, i + 7 + (sj * 18), j + 17 + (si * 18), 176, 60, 18, 18, 256, 256);
+            }
+        }
+
+        int ii = 0;
+        for (int si = 0; si < 6; si++) {
+            for (int sj = 0; sj < 8; sj++) {
+                if (recipes.size() <= ii) break;
+                HandcraftingRecipe recipe = recipes.get(ii);
+                if (!matchedRecipes.contains(recipe)) {
+                    RenderSystem.setShaderColor(1f, 1f, 1f, 0.5f);
+                    gui.blit(GUI, i + 7 + (sj * 18), j + 17 + (si * 18), 176, 78, 18, 18, 256, 256);
+                    RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
+                }
+                gui.renderItem(recipe.getResultItem(RegistryAccess.EMPTY), i + 7 + (sj * 18) + 1, j + 17 + (si * 18) + 1);
+                gui.renderItemDecorations(Minecraft.getInstance().font, recipe.getResultItem(RegistryAccess.EMPTY), i + 7 + (sj * 18) + 1, j + 17 + (si * 18) + 1);
+                boolean hovered = (mouseX >= i + 7 + (sj * 18) && mouseY >= j + 17 + (si * 18) && mouseX <= i + 7 + (sj * 18) + 18 && mouseY <= j + 17 + (si * 18) + 18);
+                if (hovered) hoveredRecipe = recipe;
+                ii++;
+                if (ii >= recipes.size()) break;
+            }
+            if (ii >= recipes.size()) break;
+        }
+
+        boolean hovered = (mouseX >= i + 7 && mouseY >= j + 125 && mouseX <= i + 7 + 18 && mouseY <= j + 125 + 18);
+        gui.blit(GUI, i + 7, j + 125, 176, 60, 18, 18, 256, 256);
+        if (selectedRecipe != null) {
+            if (!matchedRecipes.contains(selectedRecipe)) {
+                RenderSystem.setShaderColor(1f, 1f, 1f, 0.5f);
+                gui.blit(GUI, i + 7, j + 125, 176, 78, 18, 18, 256, 256);
+                RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
+            }
+            gui.renderItem(selectedRecipe.getResultItem(RegistryAccess.EMPTY), i + 7 + 1, j + 125 + 1);
+            gui.renderItemDecorations(Minecraft.getInstance().font, selectedRecipe.getResultItem(RegistryAccess.EMPTY), i + 7 + 1, j + 125 + 1);
+            if (hovered) hoveredRecipe = selectedRecipe;
+        }
+
+        hovered = (mouseX >= i + 25 && mouseY >= j + 125 && mouseX <= i + 25 + 18 && mouseY <= j + 125 + 18);
+        gui.blit(GUI, i + 25, j + 125, hovered ? 212 : 194, 60, 18, 18, 256, 256);
+
+        hovered = (mouseX >= i + 119 && mouseY >= j + 125 && mouseX <= i + 119 + 28 && mouseY <= j + 125 + 18);
+        gui.blit(GUI, i + 119, j + 125, hovered ? 222 : 194, isMatched ? 96 : 78, 28, 18, 256, 256);
+
+        gui.blit(GUI, i + 152, j + 17, 216, 0, 16, 18, 256, 256);
+        gui.blit(GUI, i + 152, j + 35, 16, 90, 216, 18, 16, 18, 256, 256);
+        gui.blit(GUI, i + 152, j + 125, 216, 36, 16, 18, 256, 256);
+
+        gui.blit(GUI, i + 154, j + 19, 232, 0, 12, 15, 256, 256);
+
+        if (hoveredRecipe != null) {
+            HandcraftingRecipeTooltipComponent tooltipComponent = new HandcraftingRecipeTooltipComponent(hoveredRecipe.getHandcraftingIngredients());
+            gui.renderTooltip(Minecraft.getInstance().font, Screen.getTooltipFromItem(minecraft, hoveredRecipe.getResultItem(RegistryAccess.EMPTY)), Optional.of(tooltipComponent), mouseX, mouseY);
+        }
+    }
+
+    @Override
+    @OnlyIn(Dist.CLIENT)
+    public boolean mouseClicked(HandcraftingTableScreen screen, double mouseX, double mouseY, int button) {
+        int i = screen.getGuiLeft();
+        int j = screen.getGuiTop();
+
+        List<HandcraftingRecipe> recipes = allRecipes;
+        if (isMatched) recipes = matchedRecipes;
+
+        int ii = 0;
+        for (int si = 0; si < 6; si++) {
+            for (int sj = 0; sj < 8; sj++) {
+                if (recipes.size() <= ii) break;
+                HandcraftingRecipe recipe = recipes.get(ii);
+                boolean hovered = (mouseX >= i + 7 + (sj * 18) && mouseY >= j + 17 + (si * 18) && mouseX <= i + 7 + (sj * 18) + 18 && mouseY <= j + 17 + (si * 18) + 18);
+                if (hovered) {
+                    selectedRecipe = recipe;
+                    Minecraft.getInstance().player.playNotifySound(SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.NEUTRAL, 0.5f, 1.0f);
+                    return true;
+                }
+                ii++;
+                if (ii >= recipes.size()) break;
+            }
+            if (ii >= recipes.size()) break;
+        }
+
+        if (mouseX >= i + 7 && mouseY >= j + 125 && mouseX <= i + 7 + 18 && mouseY <= j + 125 + 18) {
+            selectedRecipe = null;
+            Minecraft.getInstance().player.playNotifySound(SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.NEUTRAL, 0.5f, 1.0f);
+            return true;
+        }
+
+        if (selectedRecipe != null) {
+            if (mouseX >= i + 25 && mouseY >= j + 125 && mouseX <= i + 25 + 18 && mouseY <= j + 125 + 18) {
+                PurrfectPacketHandler.sendToServer(new HandcraftingRecipeCraftPacket(selectedRecipe));
+                Minecraft.getInstance().player.playNotifySound(SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.NEUTRAL, 0.5f, 1.0f);
+                return true;
+            }
+        }
+
+        if (mouseX >= i + 119 && mouseY >= j + 125 && mouseX <= i + 119 + 28 && mouseY <= j + 125 + 18) {
+            isMatched = !isMatched;
+            Minecraft.getInstance().player.playNotifySound(SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.NEUTRAL, 0.5f, 1.0f);
+            return true;
+        }
+
+        return false;
+    }
+
+    public static boolean canCraftRecipe(Player player) {
+        if (player != null) {
+            AbstractContainerMenu containerMenu = player.containerMenu;
+            if (containerMenu instanceof HandcraftingTableMenu handcraftingTableMenu) {
+                return handcraftingTableMenu.stillValid(player);
+            }
+        }
+        return false;
+    }
+
+    public static void craftRecipe(HandcraftingRecipe recipe) {
+        Minecraft minecraft = Minecraft.getInstance();
+        Level level = minecraft.level;
+        Player player = minecraft.player;
+        if (level != null && player != null) {
+            Container container = player.getInventory();
+            if (recipe.matches(container, level)) {
+                List<HandcraftingIngredient> ingredientsMissing = new ArrayList<>();
+                for (HandcraftingIngredient ingredient : recipe.getHandcraftingIngredients()) {
+                    ingredientsMissing.add(new HandcraftingIngredient(ingredient.getIngredient(), ingredient.getCount()));
+                }
+
+                for (HandcraftingIngredient ingredient : ingredientsMissing) {
+                    for (int i = 0; i < container.getContainerSize(); i++) {
+                        ItemStack stack = container.getItem(i);
+                        if (ingredient.getIngredient().test(stack)) {
+                            int count = ingredient.getCount();
+                            if (count > stack.getCount()) count = stack.getCount();
+                            ingredient.remove(count);
+                            stack.shrink(count);
+                            if (ingredient.isEmpty()) break;
+                        }
+                    }
+                }
+
+                BlockSimpleInventory.addPlayerItem(level, player, recipe.getResultItem(RegistryAccess.EMPTY).copy());
+            }
+        }
     }
 }

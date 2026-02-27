@@ -5,7 +5,7 @@ import mod.maxbogomol.fluffy_fur.util.ColorUtil;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingHandler;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTab;
-import mod.maxbogomol.purrfect.client.gui.container.HandcraftingTableContainer;
+import mod.maxbogomol.purrfect.client.gui.menu.HandcraftingTableMenu;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -15,19 +15,37 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Inventory;
 
-public class HandcraftingTableScreen extends AbstractContainerScreen<HandcraftingTableContainer> {
+public class HandcraftingTableScreen extends AbstractContainerScreen<HandcraftingTableMenu> {
     private final ResourceLocation GUI = new ResourceLocation(Purrfect.MOD_ID, "textures/gui/handcrafting_table.png");
 
-    public HandcraftingTableScreen(HandcraftingTableContainer screenContainer, Inventory inv, Component titleIn) {
+    public HandcraftingTableScreen(HandcraftingTableMenu screenContainer, Inventory inv, Component titleIn) {
         super(screenContainer, inv, titleIn);
         this.imageHeight = 248;
         this.inventoryLabelY = this.inventoryLabelY + 82;
     }
 
     @Override
+    public void init() {
+        super.init();
+        if (HandcraftingHandler.getTabs().size() > 0) {
+            HandcraftingHandler.getTab(HandcraftingHandler.selected).init(this);
+        }
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+        if (HandcraftingHandler.getTabs().size() > 0) {
+            HandcraftingHandler.getTab(HandcraftingHandler.selected).tick(this);
+        }
+    }
+
+    @Override
     public void render(GuiGraphics gui, int mouseX, int mouseY, float partialTicks) {
         this.renderBackground(gui);
         super.render(gui, mouseX, mouseY, partialTicks);
+        renderTabs(gui, mouseX, mouseY, partialTicks);
+        renderSelectedTab(gui, mouseX, mouseY, partialTicks);
         this.renderTooltip(gui, mouseX, mouseY);
     }
 
@@ -70,21 +88,31 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
                 gui.blit(GUI, i - 22, j + 142, hovered ? 196 : 176, 40, 20, 20, 256, 256);
             }
         }
+    }
 
-        for (int si = 0; si < 6; si++) {
-            for (int sj = 0; sj < 8; sj++) {
-                gui.blit(GUI, i + 7 + (sj * 18), j + 17 + (si * 18), 176, 60, 18, 18, 256, 256);
+    public void renderTabs(GuiGraphics gui, int mouseX, int mouseY, float partialTicks) {
+        int i = this.leftPos;
+        int j = this.topPos;
+
+        int ii = 0;
+        for (HandcraftingTab tab : HandcraftingHandler.getTabs()) {
+            int scroll = ii - HandcraftingHandler.scroll;
+            boolean selected = ii == HandcraftingHandler.selected;
+            boolean hovered = (mouseX >= i - (selected ? 26 : 22) && mouseY >= j + 10 + (scroll * 22) && mouseX <= i - (selected ? 26 : 22) + 20 && mouseY <= j + 10 + (scroll * 22) + 20);
+            if (HandcraftingHandler.getTabs().size() <= 6 || (scroll >= 0 && scroll < 6)) {
+                gui.blit(GUI, i - (selected ? 26 : 22), j + 10 + (scroll * 22), hovered ? 196 : 176, 0, 20, 20, 256, 256);
+                if (tab.getIconItem() != null) {
+                    gui.renderItem(tab.getIconItem(), i - (selected ? 26 : 22) + 2, j + 10 + (scroll * 22) + 2);
+                }
             }
+            ii++;
         }
-        gui.blit(GUI, i + 7, j + 125, 176, 60, 18, 18, 256, 256);
-        gui.blit(GUI, i + 25, j + 125, 194, 60, 18, 18, 256, 256);
+    }
 
-        gui.blit(GUI, i + 119, j + 125, 194, 78, 28, 18, 256, 256);
-
-        gui.blit(GUI, i + 152, j + 17, 216, 0, 16, 18, 256, 256);
-        gui.blit(GUI, i + 152, j + 35, 16, 90, 216, 18, 16, 18, 256, 256);
-        gui.blit(GUI, i + 152, j + 125, 216, 36, 16, 18, 256, 256);
-        gui.blit(GUI, i + 154, j + 19, 232, 0, 12, 15, 256, 256);
+    public void renderSelectedTab(GuiGraphics gui, int mouseX, int mouseY, float partialTicks) {
+        if (HandcraftingHandler.getTabs().size() > 0) {
+            HandcraftingHandler.getTab(HandcraftingHandler.selected).render(this, gui, mouseX, mouseY, partialTicks);
+        }
     }
 
     @Override
@@ -121,6 +149,9 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
                 }
             }
         }
+        if (HandcraftingHandler.getTabs().size() > 0) {
+            if (HandcraftingHandler.getTab(HandcraftingHandler.selected).mouseClicked(this, mouseX, mouseY, button)) return true;
+        }
         return false;
     }
 
@@ -141,6 +172,9 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
                 }
             }
             return true;
+        }
+        if (HandcraftingHandler.getTabs().size() > 0) {
+            if (HandcraftingHandler.getTab(HandcraftingHandler.selected).mouseScrolled(this, mouseX, mouseY, delta)) return true;
         }
         return false;
     }

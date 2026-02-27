@@ -44,7 +44,6 @@ public class BlahajHeartsPacket extends PositionClientPacket {
                 .addVelocity(0, 0.01f, 0)
                 .flatRandomOffset(0.3f, 0.115f, 0.3f)
                 .repeat(level, x, y - 0.35f, z, 5);
-        System.out.println(123);
     }
 
     public static void register(SimpleChannel instance, int index) {

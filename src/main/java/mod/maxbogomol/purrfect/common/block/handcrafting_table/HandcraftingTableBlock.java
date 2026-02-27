@@ -1,6 +1,6 @@
 package mod.maxbogomol.purrfect.common.block.handcrafting_table;
 
-import mod.maxbogomol.purrfect.client.gui.container.HandcraftingTableContainer;
+import mod.maxbogomol.purrfect.client.gui.menu.HandcraftingTableMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -93,7 +93,7 @@ public class HandcraftingTableBlock extends HorizontalDirectionalBlock implement
     @Override
     public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
         return new SimpleMenuProvider((containerId, playerInventory, player) -> {
-            return new HandcraftingTableContainer(containerId, level, pos, playerInventory, player);
+            return new HandcraftingTableMenu(containerId, level, pos, playerInventory, player);
         }, CONTAINER_TITLE);
     }
 }

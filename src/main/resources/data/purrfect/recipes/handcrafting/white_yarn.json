@@ -1,0 +1,15 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:white_yarn",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:string"
+      },
+      "count": 10
+    }
+  ]
+}

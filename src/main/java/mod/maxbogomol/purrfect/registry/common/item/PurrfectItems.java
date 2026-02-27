@@ -6,6 +6,8 @@ import mod.maxbogomol.fluffy_fur.registry.client.FluffyFurModels;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.api.furry.CollarPart;
 import mod.maxbogomol.purrfect.api.furry.CollarPartHandler;
+import mod.maxbogomol.purrfect.client.gui.tooltip.HandcraftingRecipeClientTooltipComponent;
+import mod.maxbogomol.purrfect.client.gui.tooltip.HandcraftingRecipeTooltipComponent;
 import mod.maxbogomol.purrfect.client.render.curio.CollarRenderer;
 import mod.maxbogomol.purrfect.client.render.curio.FlowerWreathRenderer;
 import mod.maxbogomol.purrfect.common.collar.AccessoryCollarPart;
@@ -21,6 +23,7 @@ import mod.maxbogomol.purrfect.common.item.equipment.curio.FlowerWreathItem;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
 import mod.maxbogomol.purrfect.registry.client.PurrfectModels;
 import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlocks;
+import mod.maxbogomol.wizards_reborn.client.gui.tooltip.ValueFrameClientTooltipComponent;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -31,6 +34,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ModelEvent;
+import net.minecraftforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -366,6 +370,11 @@ public class PurrfectItems {
             FluffyFurModels.addCustomRenderItemModel(map, SILLY_ODDITIES_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, OPTIFINE_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, SODIUM_FLAG.getId());
+        }
+
+        @SubscribeEvent
+        public static void registerTooltipComponents(RegisterClientTooltipComponentFactoriesEvent event) {
+            event.register(HandcraftingRecipeTooltipComponent.class, HandcraftingRecipeClientTooltipComponent::new);
         }
     }
 

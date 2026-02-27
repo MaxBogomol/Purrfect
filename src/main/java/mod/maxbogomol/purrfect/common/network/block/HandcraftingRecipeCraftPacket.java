@@ -36,7 +36,7 @@ public class HandcraftingRecipeCraftPacket extends ServerPacket {
         Optional<? extends Recipe<?>> recipe = level.getRecipeManager().byKey(new ResourceLocation(id));
         if (recipe.isPresent() && recipe.get() instanceof HandcraftingRecipe handcraftingRecipe) {
             if (MainHandcraftingTab.canCraftRecipe(player)) {
-                MainHandcraftingTab.craftRecipe(handcraftingRecipe);
+                MainHandcraftingTab.craftRecipe(player, level, handcraftingRecipe);
             }
         }
     }

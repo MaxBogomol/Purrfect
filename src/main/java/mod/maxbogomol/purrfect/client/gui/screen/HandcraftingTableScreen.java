@@ -43,6 +43,7 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
     @Override
     public void render(GuiGraphics gui, int mouseX, int mouseY, float partialTicks) {
         this.renderBackground(gui);
+        renderSelectedTabBackground(gui, mouseX, mouseY, partialTicks);
         super.render(gui, mouseX, mouseY, partialTicks);
         renderTabs(gui, mouseX, mouseY, partialTicks);
         renderSelectedTab(gui, mouseX, mouseY, partialTicks);
@@ -63,6 +64,11 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
         int i = this.leftPos;
         int j = this.topPos;
         gui.blit(GUI, i, j, 0, 0, this.imageWidth, this.imageHeight);
+    }
+
+    public void renderTabs(GuiGraphics gui, int mouseX, int mouseY, float partialTicks) {
+        int i = this.leftPos;
+        int j = this.topPos;
 
         int ii = 0;
         for (HandcraftingTab tab : HandcraftingHandler.getTabs()) {
@@ -90,22 +96,9 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
         }
     }
 
-    public void renderTabs(GuiGraphics gui, int mouseX, int mouseY, float partialTicks) {
-        int i = this.leftPos;
-        int j = this.topPos;
-
-        int ii = 0;
-        for (HandcraftingTab tab : HandcraftingHandler.getTabs()) {
-            int scroll = ii - HandcraftingHandler.scroll;
-            boolean selected = ii == HandcraftingHandler.selected;
-            boolean hovered = (mouseX >= i - (selected ? 26 : 22) && mouseY >= j + 10 + (scroll * 22) && mouseX <= i - (selected ? 26 : 22) + 20 && mouseY <= j + 10 + (scroll * 22) + 20);
-            if (HandcraftingHandler.getTabs().size() <= 6 || (scroll >= 0 && scroll < 6)) {
-                gui.blit(GUI, i - (selected ? 26 : 22), j + 10 + (scroll * 22), hovered ? 196 : 176, 0, 20, 20, 256, 256);
-                if (tab.getIconItem() != null) {
-                    gui.renderItem(tab.getIconItem(), i - (selected ? 26 : 22) + 2, j + 10 + (scroll * 22) + 2);
-                }
-            }
-            ii++;
+    public void renderSelectedTabBackground(GuiGraphics gui, int mouseX, int mouseY, float partialTicks) {
+        if (HandcraftingHandler.getTabs().size() > 0) {
+            HandcraftingHandler.getTab(HandcraftingHandler.selected).renderBackground(this, gui, mouseX, mouseY, partialTicks);
         }
     }
 
@@ -117,6 +110,7 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
 
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
+        super.mouseClicked(mouseX, mouseY, button);
         int i = this.leftPos;
         int j = this.topPos;
         int ii = 0;
@@ -157,6 +151,7 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
 
     @Override
     public boolean mouseScrolled(double mouseX, double mouseY, double delta) {
+        super.mouseScrolled(mouseX, mouseY, delta);
         int i = this.getGuiLeft();
         int j = this.getGuiTop();
         if (mouseX >= i - 26 && mouseY >= j - 12 && mouseX <= i && mouseY < j + 140) {

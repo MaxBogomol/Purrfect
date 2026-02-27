@@ -52,6 +52,11 @@ public class HandcraftingTab {
     }
 
     @OnlyIn(Dist.CLIENT)
+    public void renderBackground(HandcraftingTableScreen screen, GuiGraphics gui, int mouseX, int mouseY, float partialTicks) {
+
+    }
+
+    @OnlyIn(Dist.CLIENT)
     public void render(HandcraftingTableScreen screen, GuiGraphics gui, int mouseX, int mouseY, float partialTicks) {
 
     }

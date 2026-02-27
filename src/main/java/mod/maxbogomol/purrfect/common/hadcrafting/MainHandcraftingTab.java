@@ -44,26 +44,14 @@ public class MainHandcraftingTab extends HandcraftingTab {
     @Override
     @OnlyIn(Dist.CLIENT)
     public void init(HandcraftingTableScreen screen) {
+        recipesUpdate();
         selectedRecipe = null;
     }
 
     @Override
     @OnlyIn(Dist.CLIENT)
     public void tick(HandcraftingTableScreen screen) {
-        Minecraft minecraft = Minecraft.getInstance();
-        Level level = minecraft.level;
-        Player player = minecraft.player;
-
-        if (level != null && player != null) {
-            allRecipes = level.getRecipeManager().getAllRecipesFor(PurrfectRecipes.HANDCRAFTING.get());
-            matchedRecipes.clear();
-
-            for (HandcraftingRecipe recipe : allRecipes) {
-                if (recipe.matches(minecraft.player.getInventory(), level)) {
-                    matchedRecipes.add(recipe);
-                }
-            }
-        }
+        recipesUpdate();
     }
 
     @Override
@@ -185,6 +173,23 @@ public class MainHandcraftingTab extends HandcraftingTab {
         return false;
     }
 
+    public void recipesUpdate() {
+        Minecraft minecraft = Minecraft.getInstance();
+        Level level = minecraft.level;
+        Player player = minecraft.player;
+
+        if (level != null && player != null) {
+            allRecipes = level.getRecipeManager().getAllRecipesFor(PurrfectRecipes.HANDCRAFTING.get());
+            matchedRecipes.clear();
+
+            for (HandcraftingRecipe recipe : allRecipes) {
+                if (recipe.matches(minecraft.player.getInventory(), level)) {
+                    matchedRecipes.add(recipe);
+                }
+            }
+        }
+    }
+
     public static boolean canCraftRecipe(Player player) {
         if (player != null) {
             AbstractContainerMenu containerMenu = player.containerMenu;
@@ -195,10 +200,7 @@ public class MainHandcraftingTab extends HandcraftingTab {
         return false;
     }
 
-    public static void craftRecipe(HandcraftingRecipe recipe) {
-        Minecraft minecraft = Minecraft.getInstance();
-        Level level = minecraft.level;
-        Player player = minecraft.player;
+    public static void craftRecipe(Player player, Level level, HandcraftingRecipe recipe) {
         if (level != null && player != null) {
             Container container = player.getInventory();
             if (recipe.matches(container, level)) {

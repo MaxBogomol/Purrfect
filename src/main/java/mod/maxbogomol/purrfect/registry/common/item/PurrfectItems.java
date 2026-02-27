@@ -370,6 +370,8 @@ public class PurrfectItems {
     }
 
     public static void setupItems() {
+        SillyTagItem.addTag(Purrfect.MOD_ID+":nameless");
+
         SillyTagItem.addTag(Purrfect.MOD_ID+":heterosexual");
         SillyTagItem.addTag(Purrfect.MOD_ID+":lesbian");
         SillyTagItem.addTag(Purrfect.MOD_ID+":gay");

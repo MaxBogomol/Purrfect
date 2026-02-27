@@ -207,7 +207,10 @@
   "block.purrfect.sodium_stairs": "Sodium Stairs",
   "block.purrfect.sodium_slab": "Sodium Slab",
 
-  "_comment_2": "Collar Parts",
+  "_comment_2": "Handcrafting Tabs",
+  "handcrafting_tab.purrfect.handcrafting": "Handcrafting",
+
+  "_comment_3": "Collar Parts",
   "collar_part.purrfect.none": "None",
   "collar_part.color.purrfect": "Color:",
   "collar_part.accessory.purrfect": "Accessory:",
@@ -245,7 +248,9 @@
 
   "collar_part.decoration.purrfect.spikes": "Spikes",
 
-  "_comment_3": "Silly Tags",
+  "_comment_4": "Silly Tags",
+  "silly_tag.purrfect.nameless": "Nameless",
+
   "silly_tag.purrfect.heterosexual": "Heterosexual",
   "silly_tag.purrfect.lesbian": "Lesbian",
   "silly_tag.purrfect.gay": "Gay",
@@ -309,18 +314,18 @@
 
   "silly_tag.purrfect.dev": "Dev",
 
-  "_comment_4": "Items lore",
+  "_comment_5": "Items lore",
   "lore.purrfect.collar.locked": "Locked",
 
   "lore.purrfect.silly_tag.tag": "Tag:",
   "lore.purrfect.silly_tag.gender": "Choose your Gender!",
 
-  "_comment_5": "Sounds",
+  "_comment_6": "Sounds",
   "sounds.purrfect.collar_bell": "Collar bell ringing",
 
-  "_comment_6": "Entities",
+  "_comment_7": "Entities",
   "entity.purrfect.yarn": "Yarn",
 
-  "_comment_7": "Fluffy Fur Menu",
+  "_comment_8": "Fluffy Fur Menu",
   "mod_description.purrfect": "Purrfect - a mod about furries, for furries, from furry. \n Adds Pharmacy and furry things."
 }

@@ -207,7 +207,10 @@
   "block.purrfect.sodium_stairs": "Содиум ступеньки",
   "block.purrfect.sodium_slab": "Содиум плита",
 
-  "_comment_2": "Части ошейника",
+  "_comment_2": "Табы рукоделия",
+  "handcrafting_tab.purrfect.handcrafting": "Рукоделие",
+
+  "_comment_3": "Части ошейника",
   "collar_part.purrfect.none": "Нету",
   "collar_part.color.purrfect": "Цвет:",
   "collar_part.accessory.purrfect": "Аксессуар:",
@@ -245,7 +248,9 @@
 
   "collar_part.decoration.purrfect.spikes": "Шипы",
 
-  "_comment_3": "Глупые тэги",
+  "_comment_4": "Глупые тэги",
+  "silly_tag.purrfect.nameless": "Безымянный",
+
   "silly_tag.purrfect.heterosexual": "Гетеросексуал",
   "silly_tag.purrfect.lesbian": "Лесбиянка",
   "silly_tag.purrfect.gay": "Гей",
@@ -309,18 +314,18 @@
 
   "silly_tag.purrfect.dev": "Dev",
 
-  "_comment_4": "Лор предметов",
+  "_comment_5": "Лор предметов",
   "lore.purrfect.collar.locked": "Заперто",
 
   "lore.purrfect.silly_tag.tag": "Тэг:",
   "lore.purrfect.silly_tag.gender": "Выбери свой Гендер!",
 
-  "_comment_5": "Звуки",
+  "_comment_6": "Звуки",
   "sounds.purrfect.collar_bell": "Колокольчик ошейника звенит",
 
-  "_comment_6": "Существа",
+  "_comment_7": "Существа",
   "entity.purrfect.yarn": "Клубок",
 
-  "_comment_7": "Меню Пушистого Меха",
+  "_comment_8": "Меню Пушистого Меха",
   "mod_description.purrfect": "Purrfect - мод про фурри, для фурри, от фурри. \n Добавляет фармацевтику и фурри штучки."
 }

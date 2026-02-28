@@ -33,12 +33,13 @@ import java.util.function.Supplier;
 
 public class MainHandcraftingTab extends HandcraftingTab {
 
-    List<HandcraftingRecipe> allRecipes = new ArrayList<>();
-    List<HandcraftingRecipe> matchedRecipes = new ArrayList<>();
-    HandcraftingRecipe selectedRecipe = null;
-    HandcraftingRecipe hoveredRecipe = null;
+    public List<HandcraftingRecipe> allRecipes = new ArrayList<>();
+    public List<HandcraftingRecipe> matchedRecipes = new ArrayList<>();
+    public HandcraftingRecipe selectedRecipe = null;
+    public HandcraftingRecipe hoveredRecipe = null;
     public int scroll = 0;
-    boolean isMatched = false;
+    public boolean isMatched = false;
+    public int multiplier = 1;
 
     public MainHandcraftingTab(String id, Supplier<ItemStack> iconItemStack) {
         super(id, iconItemStack);
@@ -126,7 +127,10 @@ public class MainHandcraftingTab extends HandcraftingTab {
                 if (recipes.size() <= ii) break;
                 HandcraftingRecipe recipe = recipes.get(ii);
                 gui.renderItem(recipe.getResultItem(RegistryAccess.EMPTY), i + 7 + (sj * 18) + 1, j + 17 + (si * 18) + 1);
-                gui.renderItemDecorations(minecraft.font, recipe.getResultItem(RegistryAccess.EMPTY), i + 7 + (sj * 18) + 1, j + 17 + (si * 18) + 1);
+                int itemCount = recipe.getResultItem(RegistryAccess.EMPTY).getCount() * multiplier;
+                String s = null;
+                if (itemCount > 1) s = String.valueOf(itemCount);
+                gui.renderItemDecorations(minecraft.font, recipe.getResultItem(RegistryAccess.EMPTY), i + 7 + (sj * 18) + 1, j + 17 + (si * 18) + 1, s);
                 boolean hovered = (mouseX >= i + 7 + (sj * 18) && mouseY >= j + 17 + (si * 18) && mouseX <= i + 7 + (sj * 18) + 18 && mouseY <= j + 17 + (si * 18) + 18);
                 if (hovered) hoveredRecipe = recipe;
                 ii++;
@@ -138,12 +142,19 @@ public class MainHandcraftingTab extends HandcraftingTab {
         boolean hovered = (mouseX >= i + 7 && mouseY >= j + 125 && mouseX <= i + 7 + 18 && mouseY <= j + 125 + 18);
         if (selectedRecipe != null) {
             gui.renderItem(selectedRecipe.getResultItem(RegistryAccess.EMPTY), i + 7 + 1, j + 125 + 1);
-            gui.renderItemDecorations(minecraft.font, selectedRecipe.getResultItem(RegistryAccess.EMPTY), i + 7 + 1, j + 125 + 1);
+            int itemCount = selectedRecipe.getResultItem(RegistryAccess.EMPTY).getCount() * multiplier;
+            String s = null;
+            if (itemCount > 1) s = String.valueOf(itemCount);
+            gui.renderItemDecorations(minecraft.font, selectedRecipe.getResultItem(RegistryAccess.EMPTY), i + 7 + 1, j + 125 + 1, s);
             if (hovered) hoveredRecipe = selectedRecipe;
         }
 
         if (hoveredRecipe != null) {
-            HandcraftingRecipeTooltipComponent tooltipComponent = new HandcraftingRecipeTooltipComponent(hoveredRecipe.getHandcraftingIngredients());
+            List<HandcraftingIngredient> ingredients = new ArrayList<>();
+            for (HandcraftingIngredient ingredient : hoveredRecipe.getHandcraftingIngredients()) {
+                ingredients.add(new HandcraftingIngredient(ingredient.getIngredient(), ingredient.getCount() * multiplier));
+            }
+            HandcraftingRecipeTooltipComponent tooltipComponent = new HandcraftingRecipeTooltipComponent(ingredients);
             gui.renderTooltip(minecraft.font, Screen.getTooltipFromItem(minecraft, hoveredRecipe.getResultItem(RegistryAccess.EMPTY)), Optional.of(tooltipComponent), mouseX, mouseY);
         }
     }
@@ -236,7 +247,7 @@ public class MainHandcraftingTab extends HandcraftingTab {
             matchedRecipes.clear();
 
             for (HandcraftingRecipe recipe : allRecipes) {
-                if (recipe.matches(minecraft.player.getInventory(), level)) {
+                if (recipe.matches(minecraft.player.getInventory(), level, multiplier)) {
                     matchedRecipes.add(recipe);
                 }
             }

@@ -34,13 +34,17 @@ public class HandcraftingRecipe implements Recipe<Container> {
 
     @Override
     public boolean matches(Container container, Level level) {
-        return matches(inputs, container);
+        return matches(inputs, container, 1);
     }
 
-    public static boolean matches(List<HandcraftingIngredient> inputs, Container container) {
+    public boolean matches(Container container, Level level, int multiplier) {
+        return matches(inputs, container, multiplier);
+    }
+
+    public static boolean matches(List<HandcraftingIngredient> inputs, Container container, int multiplier) {
         List<HandcraftingIngredient> ingredientsMissing = new ArrayList<>();
         for (HandcraftingIngredient ingredient : inputs) {
-            ingredientsMissing.add(new HandcraftingIngredient(ingredient.getIngredient(), ingredient.getCount()));
+            ingredientsMissing.add(new HandcraftingIngredient(ingredient.getIngredient(), ingredient.getCount() * multiplier));
         }
         boolean empty = true;
 

@@ -1,0 +1,15 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:pitcher_plant_flower_wreath",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "minecraft:pitcher_plant"
+      },
+      "count": 6
+    }
+  ]
+}

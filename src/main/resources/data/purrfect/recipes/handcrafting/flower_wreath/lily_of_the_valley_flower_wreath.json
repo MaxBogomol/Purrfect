@@ -1,0 +1,15 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:lily_of_the_valley_flower_wreath",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "minecraft:lily_of_the_valley"
+      },
+      "count": 6
+    }
+  ]
+}

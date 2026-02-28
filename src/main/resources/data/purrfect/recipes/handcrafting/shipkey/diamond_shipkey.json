@@ -1,0 +1,15 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:diamond_shipkey",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:gems/diamond"
+      },
+      "count": 1
+    }
+  ]
+}

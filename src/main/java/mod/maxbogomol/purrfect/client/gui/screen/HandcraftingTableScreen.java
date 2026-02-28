@@ -43,9 +43,7 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
     @Override
     public void render(GuiGraphics gui, int mouseX, int mouseY, float partialTicks) {
         this.renderBackground(gui);
-        renderSelectedTabBackground(gui, mouseX, mouseY, partialTicks);
         super.render(gui, mouseX, mouseY, partialTicks);
-        renderTabs(gui, mouseX, mouseY, partialTicks);
         renderSelectedTab(gui, mouseX, mouseY, partialTicks);
         this.renderTooltip(gui, mouseX, mouseY);
     }
@@ -64,6 +62,9 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
         int i = this.leftPos;
         int j = this.topPos;
         gui.blit(GUI, i, j, 0, 0, this.imageWidth, this.imageHeight);
+
+        renderTabs(gui, mouseX, mouseY, partialTicks);
+        renderSelectedTabBackground(gui, mouseX, mouseY, partialTicks);
     }
 
     public void renderTabs(GuiGraphics gui, int mouseX, int mouseY, float partialTicks) {
@@ -160,7 +161,7 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
                 HandcraftingHandler.scroll = HandcraftingHandler.scroll + add;
                 if (HandcraftingHandler.scroll < 0) {
                     HandcraftingHandler.scroll = 0;
-                } else if (HandcraftingHandler.scroll > HandcraftingHandler.getTabs().size() - 6 && HandcraftingHandler.getTabs().size() > 6) {
+                } else if (HandcraftingHandler.scroll > HandcraftingHandler.getTabs().size() - 6) {
                     HandcraftingHandler.scroll = HandcraftingHandler.getTabs().size() - 6;
                 } else {
                     Minecraft.getInstance().player.playNotifySound(SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.NEUTRAL, 0.1f, 2.0f);

@@ -1,0 +1,57 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:rainbow_flag",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "purrfect:flagpole"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:purple_wool"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:blue_wool"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:light_blue_wool"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:lime_wool"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:yellow_wool"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:orange_wool"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:red_wool"
+      },
+      "count": 1
+    }
+  ]
+}

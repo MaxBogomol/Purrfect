@@ -1,0 +1,21 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:brown_flag",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "purrfect:flagpole"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:brown_wool"
+      },
+      "count": 6
+    }
+  ]
+}

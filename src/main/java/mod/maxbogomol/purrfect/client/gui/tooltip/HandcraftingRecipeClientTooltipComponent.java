@@ -38,7 +38,10 @@ public class HandcraftingRecipeClientTooltipComponent implements ClientTooltipCo
             guiGraphics.renderItem(itemStack, x + i * 18 + 2, y + j * 18 + 1);
             guiGraphics.renderItemDecorations(Minecraft.getInstance().font, itemStack, x + i * 18 + 2, y + j * 18 + 1, String.valueOf(input.getCount()));
             i++;
-            if (i >= 6) j++;
+            if (i >= 6) {
+                j++;
+                i = 0;
+            }
         }
     }
 }

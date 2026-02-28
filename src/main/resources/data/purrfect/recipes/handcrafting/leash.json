@@ -1,0 +1,21 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:leash",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:leather"
+      },
+      "count": 5
+    },
+    {
+      "ingredient": {
+        "tag": "forge:ingots/iron"
+      },
+      "count": 1
+    }
+  ]
+}

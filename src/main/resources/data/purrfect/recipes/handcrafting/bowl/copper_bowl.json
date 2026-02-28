@@ -1,0 +1,15 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:copper_bowl",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:ingots/copper"
+      },
+      "count": 7
+    }
+  ]
+}

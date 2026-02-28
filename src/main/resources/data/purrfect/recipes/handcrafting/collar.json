@@ -1,0 +1,21 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:collar",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:leather"
+      },
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "tag": "forge:string"
+      },
+      "count": 1
+    }
+  ]
+}

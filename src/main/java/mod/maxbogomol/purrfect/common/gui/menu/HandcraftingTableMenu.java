@@ -1,4 +1,4 @@
-package mod.maxbogomol.purrfect.client.gui.menu;
+package mod.maxbogomol.purrfect.common.gui.menu;
 
 import mod.maxbogomol.fluffy_fur.common.gui.menu.ContainerMenuBase;
 import mod.maxbogomol.purrfect.registry.common.PurrfectMenuTypes;

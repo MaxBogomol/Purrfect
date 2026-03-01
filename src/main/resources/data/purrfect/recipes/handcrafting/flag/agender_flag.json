@@ -1,0 +1,39 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:agender_flag",
+    "count": 3
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "purrfect:flagpole"
+      },
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:black_wool"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:light_gray_wool"
+      },
+      "count": 2
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:white_wool"
+      },
+      "count": 2
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:lime_wool"
+      },
+      "count": 1
+    }
+  ]
+}

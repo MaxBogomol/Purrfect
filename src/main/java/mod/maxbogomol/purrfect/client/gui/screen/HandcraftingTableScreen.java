@@ -5,7 +5,7 @@ import mod.maxbogomol.fluffy_fur.util.ColorUtil;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingHandler;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTab;
-import mod.maxbogomol.purrfect.client.gui.menu.HandcraftingTableMenu;
+import mod.maxbogomol.purrfect.common.gui.menu.HandcraftingTableMenu;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;

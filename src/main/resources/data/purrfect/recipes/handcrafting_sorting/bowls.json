@@ -1,0 +1,8 @@
+{
+  "type": "purrfect:handcrafting_sorting",
+  "weight": 9400,
+  "recipes": [
+    "purrfect:handcrafting/bowl/copper_bowl",
+    "purrfect:handcrafting/bowl/iron_bowl"
+  ]
+}

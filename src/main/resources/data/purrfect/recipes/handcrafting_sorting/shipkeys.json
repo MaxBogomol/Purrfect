@@ -1,0 +1,10 @@
+{
+  "type": "purrfect:handcrafting_sorting",
+  "weight": 9300,
+  "recipes": [
+    "purrfect:handcrafting/shipkey/copper_shipkey",
+    "purrfect:handcrafting/shipkey/iron_shipkey",
+    "purrfect:handcrafting/shipkey/golden_shipkey",
+    "purrfect:handcrafting/shipkey/diamond_shipkey"
+  ]
+}

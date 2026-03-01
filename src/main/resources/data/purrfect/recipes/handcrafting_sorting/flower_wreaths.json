@@ -1,0 +1,27 @@
+{
+  "type": "purrfect:handcrafting_sorting",
+  "weight": 9900,
+  "recipes": [
+    "purrfect:handcrafting/flower_wreath/dandelion_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/poppy_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/blue_orchid_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/allium_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/azure_bluet_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/red_tulip_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/orange_tulip_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/white_tulip_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/pink_tulip_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/oxeye_daisy_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/cornflower_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/lily_of_the_valley_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/pink_petals_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/sunflower_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/lilac_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/rose_bush_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/peony_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/dead_bush_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/wither_rose_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/torchflower_flower_wreath",
+    "purrfect:handcrafting/flower_wreath/pitcher_plant_flower_wreath"
+  ]
+}

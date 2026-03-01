@@ -1,0 +1,45 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:genderfluid_flag",
+    "count": 3
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "purrfect:flagpole"
+      },
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:pink_wool"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:white_wool"
+      },
+      "count": 2
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:magenta_wool"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:gray_wool"
+      },
+      "count": 2
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:blue_wool"
+      },
+      "count": 1
+    }
+  ]
+}

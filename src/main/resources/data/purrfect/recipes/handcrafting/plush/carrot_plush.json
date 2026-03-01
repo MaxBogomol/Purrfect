@@ -1,0 +1,21 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:carrot_plush",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "minecraft:orange_wool"
+      },
+      "count": 8
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:lime_wool"
+      },
+      "count": 2
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "type": "purrfect:handcrafting_sorting",
+  "weight": 9500,
+  "recipes": [
+    "purrfect:handcrafting/silly_tag"
+  ]
+}

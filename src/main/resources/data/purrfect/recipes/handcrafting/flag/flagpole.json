@@ -1,0 +1,15 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:flagpole",
+    "count": 3
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:ingots/iron"
+      },
+      "count": 3
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 package mod.maxbogomol.purrfect.common.block.handcrafting_table;
 
-import mod.maxbogomol.purrfect.client.gui.menu.HandcraftingTableMenu;
+import mod.maxbogomol.purrfect.common.gui.menu.HandcraftingTableMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;

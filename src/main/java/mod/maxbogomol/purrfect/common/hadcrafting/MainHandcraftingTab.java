@@ -3,24 +3,27 @@ package mod.maxbogomol.purrfect.common.hadcrafting;
 import com.mojang.blaze3d.systems.RenderSystem;
 import mod.maxbogomol.fluffy_fur.common.block.entity.BlockSimpleInventory;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTab;
-import mod.maxbogomol.purrfect.client.gui.menu.HandcraftingTableMenu;
+import mod.maxbogomol.purrfect.common.gui.menu.HandcraftingTableMenu;
 import mod.maxbogomol.purrfect.client.gui.screen.HandcraftingTableScreen;
-import mod.maxbogomol.purrfect.client.gui.tooltip.HandcraftingRecipeTooltipComponent;
+import mod.maxbogomol.purrfect.common.gui.tooltip.HandcraftingRecipeTooltipComponent;
 import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
 import mod.maxbogomol.purrfect.common.network.block.HandcraftingRecipeCraftPacket;
 import mod.maxbogomol.purrfect.common.recipe.HandcraftingIngredient;
 import mod.maxbogomol.purrfect.common.recipe.HandcraftingRecipe;
+import mod.maxbogomol.purrfect.common.recipe.HandcraftingSortingRecipe;
 import mod.maxbogomol.purrfect.registry.common.PurrfectRecipes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.RegistryAccess;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -32,7 +35,8 @@ import java.util.function.Supplier;
 
 public class MainHandcraftingTab extends HandcraftingTab {
 
-    public List<HandcraftingRecipe> allRecipes = new ArrayList<>();
+    public static List<HandcraftingRecipe> allRecipes = new ArrayList<>();
+    public static List<HandcraftingRecipe> sortedRecipes = new ArrayList<>();
     public List<HandcraftingRecipe> matchedRecipes = new ArrayList<>();
     public HandcraftingRecipe selectedRecipe = null;
     public HandcraftingRecipe hoveredRecipe = null;
@@ -47,7 +51,7 @@ public class MainHandcraftingTab extends HandcraftingTab {
     @Override
     @OnlyIn(Dist.CLIENT)
     public void init(HandcraftingTableScreen screen) {
-        recipesUpdate();
+        matchedRecipesUpdate();
         selectedRecipe = null;
         scroll = 0;
     }
@@ -55,7 +59,7 @@ public class MainHandcraftingTab extends HandcraftingTab {
     @Override
     @OnlyIn(Dist.CLIENT)
     public void tick(HandcraftingTableScreen screen) {
-        recipesUpdate();
+        matchedRecipesUpdate();
     }
 
     @Override
@@ -65,7 +69,7 @@ public class MainHandcraftingTab extends HandcraftingTab {
         int j = screen.getGuiTop();
 
         Minecraft minecraft = Minecraft.getInstance();
-        List<HandcraftingRecipe> recipes = allRecipes;
+        List<HandcraftingRecipe> recipes = sortedRecipes;
         if (isMatched) recipes = matchedRecipes;
 
         RenderSystem.enableBlend();
@@ -114,7 +118,8 @@ public class MainHandcraftingTab extends HandcraftingTab {
         gui.blit(GUI, i + 152, j + 35, 16, 90, 216, 18, 16, 18, 256, 256);
         gui.blit(GUI, i + 152, j + 125, 216, 36, 16, 18, 256, 256);
 
-        int offset = (scroll / (int) (Math.ceil(recipes.size() / 8f) - 6) * 107);
+        int size = (int) (Math.ceil(recipes.size() / 8f) - 6);
+        int offset = size > 0 ? ((scroll / size) * 107) : 0;
         gui.blit(GUI, i + 154, j + 19 + offset, 232, 0, 12, 15, 256, 256);
     }
 
@@ -125,7 +130,7 @@ public class MainHandcraftingTab extends HandcraftingTab {
         int j = screen.getGuiTop();
 
         Minecraft minecraft = Minecraft.getInstance();
-        List<HandcraftingRecipe> recipes = allRecipes;
+        List<HandcraftingRecipe> recipes = sortedRecipes;
         if (isMatched) recipes = matchedRecipes;
         hoveredRecipe = null;
 
@@ -173,7 +178,7 @@ public class MainHandcraftingTab extends HandcraftingTab {
         int i = screen.getGuiLeft();
         int j = screen.getGuiTop();
 
-        List<HandcraftingRecipe> recipes = allRecipes;
+        List<HandcraftingRecipe> recipes = sortedRecipes;
         if (isMatched) recipes = matchedRecipes;
 
         int ii = scroll * 8;
@@ -241,7 +246,7 @@ public class MainHandcraftingTab extends HandcraftingTab {
         int i = screen.getGuiLeft();
         int j = screen.getGuiTop();
 
-        List<HandcraftingRecipe> recipes = allRecipes;
+        List<HandcraftingRecipe> recipes = sortedRecipes;
         if (isMatched) recipes = matchedRecipes;
 
         if (recipes.size() > 48) {
@@ -261,16 +266,44 @@ public class MainHandcraftingTab extends HandcraftingTab {
         return false;
     }
 
-    public void recipesUpdate() {
+    public static void recipesUpdate() {
         Minecraft minecraft = Minecraft.getInstance();
         Level level = minecraft.level;
         Player player = minecraft.player;
 
         if (level != null && player != null) {
+            sortedRecipes.clear();
             allRecipes = level.getRecipeManager().getAllRecipesFor(PurrfectRecipes.HANDCRAFTING.get());
+            List<HandcraftingRecipe> remainingRecipes = new ArrayList<>(allRecipes);
+
+            List<HandcraftingSortingRecipe> recipesSorting = new ArrayList<>(level.getRecipeManager().getAllRecipesFor(PurrfectRecipes.HANDCRAFTING_SORTING.get()));
+            recipesSorting.sort((i1, i2) -> Integer.compare(i2.getWeight(), i1.getWeight()));
+
+            for (HandcraftingSortingRecipe recipeSorting : recipesSorting) {
+                for (String recipeId : recipeSorting.getRecipes()) {
+                    Optional<? extends Recipe<?>> recipe = level.getRecipeManager().byKey(new ResourceLocation(recipeId));
+                    if (recipe.isPresent() && recipe.get() instanceof HandcraftingRecipe handcraftingRecipe) {
+                        if (!sortedRecipes.contains(handcraftingRecipe)) {
+                            sortedRecipes.add(handcraftingRecipe);
+                            remainingRecipes.remove(handcraftingRecipe);
+                        }
+                    }
+                }
+            }
+
+            sortedRecipes.addAll(remainingRecipes);
+        }
+    }
+
+    public void matchedRecipesUpdate() {
+        Minecraft minecraft = Minecraft.getInstance();
+        Level level = minecraft.level;
+        Player player = minecraft.player;
+
+        if (level != null && player != null) {
             matchedRecipes.clear();
 
-            for (HandcraftingRecipe recipe : allRecipes) {
+            for (HandcraftingRecipe recipe : sortedRecipes) {
                 if (recipe.matches(minecraft.player.getInventory(), level, multiplier)) {
                     matchedRecipes.add(recipe);
                 }

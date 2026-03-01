@@ -132,7 +132,7 @@ public class HandcraftingRecipe implements Recipe<Container> {
 
         @Override
         public void toNetwork(FriendlyByteBuf buffer, HandcraftingRecipe recipe) {
-            buffer.writeInt(recipe.getIngredients().size());
+            buffer.writeInt(recipe.getHandcraftingIngredients().size());
             for (HandcraftingIngredient input : recipe.getHandcraftingIngredients()) {
                 input.getIngredient().toNetwork(buffer);
                 buffer.writeInt(input.getCount());

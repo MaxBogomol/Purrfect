@@ -1,0 +1,11 @@
+{
+  "type": "purrfect:handcrafting_sorting",
+  "weight": 10000,
+  "recipes": [
+    "purrfect:handcrafting/plush/blahaj_plush",
+    "purrfect:handcrafting/plush/pink_blahaj_plush",
+    "purrfect:handcrafting/plush/shrimp_plush",
+    "purrfect:handcrafting/plush/fish_plush",
+    "purrfect:handcrafting/plush/carrot_plush"
+  ]
+}

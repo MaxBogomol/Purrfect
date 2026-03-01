@@ -1,0 +1,21 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:silly_tag",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "minecraft:paper"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "tag": "forge:nuggets"
+      },
+      "count": 1
+    }
+  ]
+}

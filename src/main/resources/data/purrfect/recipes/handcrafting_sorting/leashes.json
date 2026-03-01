@@ -1,0 +1,8 @@
+{
+  "type": "purrfect:handcrafting_sorting",
+  "weight": 9700,
+  "recipes": [
+    "purrfect:handcrafting/leash/leash",
+    "purrfect:handcrafting/leash/chain_leash"
+  ]
+}

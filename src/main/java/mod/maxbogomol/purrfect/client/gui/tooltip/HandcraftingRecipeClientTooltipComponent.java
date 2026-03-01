@@ -1,6 +1,7 @@
 package mod.maxbogomol.purrfect.client.gui.tooltip;
 
 import mod.maxbogomol.fluffy_fur.client.event.ClientTickHandler;
+import mod.maxbogomol.purrfect.common.gui.tooltip.HandcraftingRecipeTooltipComponent;
 import mod.maxbogomol.purrfect.common.recipe.HandcraftingIngredient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;

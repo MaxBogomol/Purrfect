@@ -1,0 +1,7 @@
+{
+  "type": "purrfect:handcrafting_sorting",
+  "weight": 9600,
+  "recipes": [
+    "purrfect:handcrafting/white_yarn"
+  ]
+}

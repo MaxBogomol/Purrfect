@@ -1,0 +1,27 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:sodium_flag",
+    "count": 3
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "purrfect:flagpole"
+      },
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:lime_wool"
+      },
+      "count": 4
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:white_wool"
+      },
+      "count": 2
+    }
+  ]
+}

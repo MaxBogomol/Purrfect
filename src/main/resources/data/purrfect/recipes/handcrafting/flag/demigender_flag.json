@@ -1,0 +1,33 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:demigender_flag",
+    "count": 3
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "purrfect:flagpole"
+      },
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:light_gray_wool"
+      },
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:yellow_wool"
+      },
+      "count": 2
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:white_wool"
+      },
+      "count": 1
+    }
+  ]
+}

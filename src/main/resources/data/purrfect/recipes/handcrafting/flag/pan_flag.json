@@ -1,0 +1,33 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:pan_flag",
+    "count": 3
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "purrfect:flagpole"
+      },
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:magenta_wool"
+      },
+      "count": 2
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:yellow_wool"
+      },
+      "count": 2
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:light_blue_wool"
+      },
+      "count": 2
+    }
+  ]
+}

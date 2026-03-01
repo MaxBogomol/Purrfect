@@ -1,4 +1,4 @@
-package mod.maxbogomol.purrfect.client.gui.tooltip;
+package mod.maxbogomol.purrfect.common.gui.tooltip;
 
 import mod.maxbogomol.purrfect.common.recipe.HandcraftingIngredient;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;

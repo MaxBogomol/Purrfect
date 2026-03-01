@@ -1,7 +1,7 @@
 package mod.maxbogomol.purrfect.registry.common;
 
 import mod.maxbogomol.purrfect.Purrfect;
-import mod.maxbogomol.purrfect.client.gui.menu.HandcraftingTableMenu;
+import mod.maxbogomol.purrfect.common.gui.menu.HandcraftingTableMenu;
 import mod.maxbogomol.purrfect.client.gui.screen.HandcraftingTableScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.core.BlockPos;

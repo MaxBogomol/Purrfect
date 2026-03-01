@@ -1,5 +1,6 @@
 package mod.maxbogomol.purrfect.api.handcrafting;
 
+import mod.maxbogomol.fluffy_fur.util.ColorUtil;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.client.gui.screen.HandcraftingTableScreen;
 import net.minecraft.client.gui.GuiGraphics;
@@ -12,6 +13,7 @@ import java.util.function.Supplier;
 
 public class HandcraftingTab {
     public final ResourceLocation GUI = new ResourceLocation(Purrfect.MOD_ID, "textures/gui/handcrafting_table.png");
+    public final int TITLE_COLOR = ColorUtil.packColor(255, 115, 32, 33);
 
     public String id;
 

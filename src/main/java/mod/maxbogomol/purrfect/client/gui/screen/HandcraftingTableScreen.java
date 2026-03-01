@@ -17,6 +17,7 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class HandcraftingTableScreen extends AbstractContainerScreen<HandcraftingTableMenu> {
     private final ResourceLocation GUI = new ResourceLocation(Purrfect.MOD_ID, "textures/gui/handcrafting_table.png");
+    private final int TITLE_COLOR = ColorUtil.packColor(255, 115, 32, 33);
 
     public HandcraftingTableScreen(HandcraftingTableMenu screenContainer, Inventory inv, Component titleIn) {
         super(screenContainer, inv, titleIn);
@@ -52,7 +53,7 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
     protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
         Component title = this.title;
         if (HandcraftingHandler.getTabs().size() > 0) title = Component.translatable(HandcraftingHandler.getTab(HandcraftingHandler.selected).getTranslatedName());
-        guiGraphics.drawString(this.font, title, this.titleLabelX, this.titleLabelY, ColorUtil.packColor(255, 115, 32, 33), false);
+        guiGraphics.drawString(this.font, title, this.titleLabelX, this.titleLabelY, TITLE_COLOR, false);
         guiGraphics.drawString(this.font, this.playerInventoryTitle, this.inventoryLabelX, this.inventoryLabelY, 4210752, false);
     }
 
@@ -75,7 +76,7 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
         for (HandcraftingTab tab : HandcraftingHandler.getTabs()) {
             int scroll = ii - HandcraftingHandler.scroll;
             boolean selected = ii == HandcraftingHandler.selected;
-            boolean hovered = (mouseX >= i - (selected ? 26 : 22) && mouseY >= j + 10 + (scroll * 22) && mouseX <= i - (selected ? 26 : 22) + 20 && mouseY <= j + 10 + (scroll * 22) + 20);
+            boolean hovered = (mouseX >= i - (selected ? 26 : 22) && mouseY >= j + 10 + (scroll * 22) && mouseX < i - (selected ? 26 : 22) + 20 && mouseY < j + 10 + (scroll * 22) + 20);
             if (HandcraftingHandler.getTabs().size() <= 6 || (scroll >= 0 && scroll < 6)) {
                 gui.blit(GUI, i - (selected ? 26 : 22), j + 10 + (scroll * 22), hovered ? 196 : 176, 0, 20, 20, 256, 256);
                 if (tab.getIconItem() != null) {
@@ -87,11 +88,11 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
 
         if (HandcraftingHandler.getTabs().size() > 6) {
             if (HandcraftingHandler.scroll > 0) {
-                boolean hovered = (mouseX >= i - 22 && mouseY >= j - 12 && mouseX <= i - 22 + 20 && mouseY <= j - 12 + 20);
+                boolean hovered = (mouseX >= i - 22 && mouseY >= j - 12 && mouseX < i - 22 + 20 && mouseY < j - 12 + 20);
                 gui.blit(GUI, i - 22, j - 12, hovered ? 196 : 176, 20, 20, 20, 256, 256);
             }
             if (HandcraftingHandler.scroll < HandcraftingHandler.getTabs().size() - 6) {
-                boolean hovered = (mouseX >= i - 22 && mouseY >= j + 142 && mouseX <= i - 22 + 20 && mouseY <= j + 142 + 20);
+                boolean hovered = (mouseX >= i - 22 && mouseY >= j + 142 && mouseX < i - 22 + 20 && mouseY < j + 142 + 20);
                 gui.blit(GUI, i - 22, j + 142, hovered ? 196 : 176, 40, 20, 20, 256, 256);
             }
         }
@@ -118,7 +119,7 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
         for (HandcraftingTab tab : HandcraftingHandler.getTabs()) {
             int scroll = ii - HandcraftingHandler.scroll;
             boolean selected = ii == HandcraftingHandler.selected;
-            boolean hovered = (mouseX >= i - (selected ? 26 : 22) && mouseY >= j + 10 + (scroll * 22) && mouseX <= i - (selected ? 26 : 22) + 20 && mouseY <= j + 10 + (scroll * 22) + 20);
+            boolean hovered = (mouseX >= i - (selected ? 26 : 22) && mouseY >= j + 10 + (scroll * 22) && mouseX < i - (selected ? 26 : 22) + 20 && mouseY < j + 10 + (scroll * 22) + 20);
             if (hovered && (HandcraftingHandler.getTabs().size() <= 6 || (scroll >= 0 && scroll < 6))) {
                 HandcraftingHandler.selected = ii;
                 Minecraft.getInstance().player.playNotifySound(SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.NEUTRAL, 0.5f, 1.0f);
@@ -128,7 +129,7 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
         }
         if (HandcraftingHandler.getTabs().size() > 6) {
             if (HandcraftingHandler.scroll > 0) {
-                boolean hovered = (mouseX >= i - 22 && mouseY >= j - 12 && mouseX <= i - 22 + 20 && mouseY <= j - 12 + 20);
+                boolean hovered = (mouseX >= i - 22 && mouseY >= j - 12 && mouseX < i - 22 + 20 && mouseY < j - 12 + 20);
                 if (hovered) {
                     HandcraftingHandler.scroll--;
                     Minecraft.getInstance().player.playNotifySound(SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.NEUTRAL, 0.5f, 1.0f);
@@ -136,7 +137,7 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
                 }
             }
             if (HandcraftingHandler.scroll < HandcraftingHandler.getTabs().size() - 6) {
-                boolean hovered = (mouseX >= i - 22 && mouseY >= j + 142 && mouseX <= i - 22 + 20 && mouseY <= j + 142 + 20);
+                boolean hovered = (mouseX >= i - 22 && mouseY >= j + 142 && mouseX < i - 22 + 20 && mouseY < j + 142 + 20);
                 if (hovered) {
                     HandcraftingHandler.scroll++;
                     Minecraft.getInstance().player.playNotifySound(SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.NEUTRAL, 0.5f, 1.0f);

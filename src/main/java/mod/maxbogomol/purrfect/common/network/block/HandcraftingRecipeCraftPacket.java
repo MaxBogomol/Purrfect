@@ -18,13 +18,26 @@ import java.util.function.Supplier;
 
 public class HandcraftingRecipeCraftPacket extends ServerPacket {
     protected final String id;
+    protected final int multiplier;
 
-    public HandcraftingRecipeCraftPacket(HandcraftingRecipe recipe) {
-        this.id = recipe.getId().toString();
+    public HandcraftingRecipeCraftPacket(String id, int multiplier) {
+        this.id = id;
+        this.multiplier = multiplier;
     }
 
     public HandcraftingRecipeCraftPacket(String id) {
         this.id = id;
+        this.multiplier = 1;
+    }
+
+    public HandcraftingRecipeCraftPacket(HandcraftingRecipe recipe, int multiplier) {
+        this.id = recipe.getId().toString();
+        this.multiplier = multiplier;
+    }
+
+    public HandcraftingRecipeCraftPacket(HandcraftingRecipe recipe) {
+        this.id = recipe.getId().toString();
+        this.multiplier = 1;
     }
 
     @Override
@@ -36,7 +49,7 @@ public class HandcraftingRecipeCraftPacket extends ServerPacket {
         Optional<? extends Recipe<?>> recipe = level.getRecipeManager().byKey(new ResourceLocation(id));
         if (recipe.isPresent() && recipe.get() instanceof HandcraftingRecipe handcraftingRecipe) {
             if (MainHandcraftingTab.canCraftRecipe(player)) {
-                MainHandcraftingTab.craftRecipe(player, level, handcraftingRecipe);
+                MainHandcraftingTab.craftRecipe(player, level, handcraftingRecipe, multiplier);
             }
         }
     }
@@ -47,9 +60,10 @@ public class HandcraftingRecipeCraftPacket extends ServerPacket {
 
     public void encode(FriendlyByteBuf buf) {
         buf.writeUtf(id);
+        buf.writeInt(multiplier);
     }
 
     public static HandcraftingRecipeCraftPacket decode(FriendlyByteBuf buf) {
-        return new HandcraftingRecipeCraftPacket(buf.readUtf());
+        return new HandcraftingRecipeCraftPacket(buf.readUtf(), buf.readInt());
     }
 }

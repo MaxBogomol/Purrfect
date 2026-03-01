@@ -1,3 +1,15 @@
 {
+  "optifine_break": {"sounds": ["purrfect:blocks/optifine/break1", "purrfect:blocks/optifine/break2", "purrfect:blocks/optifine/break3"], "subtitle": "subtitles.block.generic.break"},
+  "optifine_step": {"sounds": ["purrfect:blocks/optifine/step1", "purrfect:blocks/optifine/step2", "purrfect:blocks/optifine/step3"], "subtitle": "subtitles.block.generic.footsteps"},
+  "optifine_place": {"sounds": ["purrfect:blocks/optifine/break1", "purrfect:blocks/optifine/break2", "purrfect:blocks/optifine/break3"], "subtitle": "subtitles.block.generic.place"},
+  "optifine_hit": {"sounds": ["purrfect:blocks/optifine/step1", "purrfect:blocks/optifine/step2", "purrfect:blocks/optifine/step3"], "subtitle": "subtitles.block.generic.hit"},
+  "optifine_fall": {"sounds": ["purrfect:blocks/optifine/step1", "purrfect:blocks/optifine/step2", "purrfect:blocks/optifine/step3"], "subtitle": "subtitles.block.generic.fall"},
+
+  "sodium_break": {"sounds": ["purrfect:blocks/sodium/break1", "purrfect:blocks/sodium/break2", "purrfect:blocks/sodium/break3"], "subtitle": "subtitles.block.generic.break"},
+  "sodium_step": {"sounds": ["purrfect:blocks/sodium/step1", "purrfect:blocks/sodium/step2", "purrfect:blocks/sodium/step3"], "subtitle": "subtitles.block.generic.footsteps"},
+  "sodium_place": {"sounds": ["purrfect:blocks/sodium/break1", "purrfect:blocks/sodium/break2", "purrfect:blocks/sodium/break3"], "subtitle": "subtitles.block.generic.place"},
+  "sodium_hit": {"sounds": ["purrfect:blocks/sodium/step1", "purrfect:blocks/sodium/step2", "purrfect:blocks/sodium/step3"], "subtitle": "subtitles.block.generic.hit"},
+  "sodium_fall": {"sounds": ["purrfect:blocks/sodium/step1", "purrfect:blocks/sodium/step2", "purrfect:blocks/sodium/step3"], "subtitle": "subtitles.block.generic.fall"},
+
   "collar_bell": {"sounds": ["purrfect:collar/bell1", "purrfect:collar/bell2", "purrfect:collar/bell3", "purrfect:collar/bell4", "purrfect:collar/bell5", "purrfect:collar/bell6"], "subtitle": "sounds.purrfect.collar_bell"}
 }

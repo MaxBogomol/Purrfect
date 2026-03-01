@@ -1,0 +1,8 @@
+{
+  "type": "purrfect:handcrafting_sorting",
+  "weight": 9100,
+  "recipes": [
+    "purrfect:handcrafting/optifine_block",
+    "purrfect:handcrafting/sodium_block"
+  ]
+}

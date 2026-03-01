@@ -1,0 +1,21 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:optifine_block",
+    "count": 16
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "minecraft:echo_shard"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "tag": "forge:glass"
+      },
+      "count": 16
+    }
+  ]
+}

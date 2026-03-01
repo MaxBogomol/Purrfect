@@ -118,8 +118,8 @@ public class MainHandcraftingTab extends HandcraftingTab {
         gui.blit(GUI, i + 152, j + 35, 16, 90, 216, 18, 16, 18, 256, 256);
         gui.blit(GUI, i + 152, j + 125, 216, 36, 16, 18, 256, 256);
 
-        int size = (int) (Math.ceil(recipes.size() / 8f) - 6);
-        int offset = size > 0 ? ((scroll / size) * 107) : 0;
+        double size = (Math.ceil(recipes.size() / 8f) - 6);
+        int offset = size > 0 ? (int) ((scroll / size) * 107) : 0;
         gui.blit(GUI, i + 154, j + 19 + offset, 232, 0, 12, 15, 256, 256);
     }
 

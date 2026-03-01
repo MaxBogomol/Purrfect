@@ -11,6 +11,7 @@ import mod.maxbogomol.purrfect.common.block.plush.BlahajBlock;
 import mod.maxbogomol.purrfect.common.block.plush.CarrotBlock;
 import mod.maxbogomol.purrfect.common.block.plush.FishBlock;
 import mod.maxbogomol.purrfect.common.block.plush.ShrimpBlock;
+import mod.maxbogomol.purrfect.registry.common.PurrfectSounds;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
@@ -128,11 +129,11 @@ public class PurrfectBlocks {
     public static final RegistryObject<Block> OPTIFINE_WALL_FLAG = BLOCKS.register("optifine_wall_flag", () -> new FlagWallBlock(FlagBlock.OPTIFINE, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
     public static final RegistryObject<Block> SODIUM_WALL_FLAG = BLOCKS.register("sodium_wall_flag", () -> new FlagWallBlock(FlagBlock.SODIUM, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
 
-    public static final RegistryObject<Block> OPTIFINE_BLOCK = BLOCKS.register("optifine_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).mapColor(MapColor.COLOR_PURPLE)));
+    public static final RegistryObject<Block> OPTIFINE_BLOCK = BLOCKS.register("optifine_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).sound(PurrfectSounds.OPTIFINE).mapColor(MapColor.COLOR_PURPLE)));
     public static final RegistryObject<Block> OPTIFINE_STAIRS = BLOCKS.register("optifine_stairs", () -> new StairBlock(() -> OPTIFINE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(OPTIFINE_BLOCK.get())));
     public static final RegistryObject<Block> OPTIFINE_SLAB = BLOCKS.register("optifine_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(OPTIFINE_BLOCK.get())));
 
-    public static final RegistryObject<Block> SODIUM_BLOCK = BLOCKS.register("sodium_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).mapColor(MapColor.COLOR_LIGHT_GREEN)));
+    public static final RegistryObject<Block> SODIUM_BLOCK = BLOCKS.register("sodium_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).sound(PurrfectSounds.SODIUM).mapColor(MapColor.COLOR_LIGHT_GREEN)));
     public static final RegistryObject<Block> SODIUM_STAIRS = BLOCKS.register("sodium_stairs", () -> new StairBlock(() -> SODIUM_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(SODIUM_BLOCK.get())));
     public static final RegistryObject<Block> SODIUM_SLAB = BLOCKS.register("sodium_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(SODIUM_BLOCK.get())));
 

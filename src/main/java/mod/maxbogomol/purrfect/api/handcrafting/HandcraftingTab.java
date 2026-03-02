@@ -3,8 +3,11 @@ package mod.maxbogomol.purrfect.api.handcrafting;
 import mod.maxbogomol.fluffy_fur.util.ColorUtil;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.client.gui.screen.HandcraftingTableScreen;
+import mod.maxbogomol.purrfect.common.gui.menu.HandcraftingTableMenu;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -41,6 +44,30 @@ public class HandcraftingTab {
         String modId = id.substring(0, i);
         String tabId = id.substring(i + 1);
         return "handcrafting_tab." + modId + "." + tabId;
+    }
+
+    public HandcraftingTabComponent getComponent() {
+        return new HandcraftingTabComponent();
+    }
+
+    public HandcraftingTabComponent getComponent(HandcraftingTableMenu menu) {
+        return menu.tabComponent;
+    }
+
+    public void createMenu(HandcraftingTableMenu menu) {
+
+    }
+
+    public void removedMenu(HandcraftingTableMenu menu, Player player) {
+
+    }
+
+    public void slotsChanged(HandcraftingTableMenu menu, Container inventory) {
+
+    }
+
+    public int getInventorySize(HandcraftingTableMenu menu) {
+        return 0;
     }
 
     @OnlyIn(Dist.CLIENT)

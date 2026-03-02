@@ -1,6 +1,12 @@
 package mod.maxbogomol.purrfect.common.block.handcrafting_table;
 
+import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingHandler;
+import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTab;
 import mod.maxbogomol.purrfect.common.gui.menu.HandcraftingTableMenu;
+import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
+import mod.maxbogomol.purrfect.common.network.block.HandcraftingOpenMenuPacket;
+import mod.maxbogomol.purrfect.common.network.block.HandcraftingRecipeCraftPacket;
+import mod.maxbogomol.purrfect.registry.common.PurrfectHandcraftingTabs;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -34,7 +40,6 @@ import javax.annotation.Nullable;
 import java.util.stream.Stream;
 
 public class HandcraftingTableBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock  {
-    private static final Component CONTAINER_TITLE = Component.translatable("block.purrfect.handcrafting_table");
 
     private static final VoxelShape SHAPE = Stream.of(
             Block.box(0, 0, 0, 16, 3, 16),
@@ -82,18 +87,12 @@ public class HandcraftingTableBlock extends HorizontalDirectionalBlock implement
 
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (level.isClientSide) {
-            return InteractionResult.SUCCESS;
-        } else {
-            NetworkHooks.openScreen(((ServerPlayer) player), state.getMenuProvider(level, pos), pos);
-            return InteractionResult.CONSUME;
+        if (level.isClientSide()) {
+            HandcraftingTab tab = HandcraftingHandler.getTab(HandcraftingHandler.selected);
+            if (tab == null) tab = PurrfectHandcraftingTabs.HANDCRAFTING;
+            PurrfectPacketHandler.sendToServer(new HandcraftingOpenMenuPacket(pos, tab));
         }
-    }
 
-    @Override
-    public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
-        return new SimpleMenuProvider((containerId, playerInventory, player) -> {
-            return new HandcraftingTableMenu(containerId, level, pos, playerInventory, player);
-        }, CONTAINER_TITLE);
+        return InteractionResult.SUCCESS;
     }
 }

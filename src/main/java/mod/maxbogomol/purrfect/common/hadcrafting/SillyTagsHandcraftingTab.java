@@ -1,5 +1,6 @@
 package mod.maxbogomol.purrfect.common.hadcrafting;
 
+import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTab;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTabComponent;
 import mod.maxbogomol.purrfect.client.gui.screen.HandcraftingTableScreen;
@@ -13,7 +14,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -29,6 +29,12 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class SillyTagsHandcraftingTab extends HandcraftingTab {
+
+    public static Supplier<ItemStack> ICON = () -> {
+        ItemStack tag = new ItemStack(PurrfectItems.SILLY_TAG.get());
+        SillyTagItem.setTag(tag, Purrfect.MOD_ID+":colon_three");
+        return tag;
+    };
 
     public static List<String> tags = new ArrayList<>();
     public String selectedTag = null;

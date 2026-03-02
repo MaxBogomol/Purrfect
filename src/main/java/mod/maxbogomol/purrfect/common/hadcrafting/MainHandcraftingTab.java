@@ -3,8 +3,8 @@ package mod.maxbogomol.purrfect.common.hadcrafting;
 import com.mojang.blaze3d.systems.RenderSystem;
 import mod.maxbogomol.fluffy_fur.common.block.entity.BlockSimpleInventory;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTab;
-import mod.maxbogomol.purrfect.common.gui.menu.HandcraftingTableMenu;
 import mod.maxbogomol.purrfect.client.gui.screen.HandcraftingTableScreen;
+import mod.maxbogomol.purrfect.common.gui.menu.HandcraftingTableMenu;
 import mod.maxbogomol.purrfect.common.gui.tooltip.HandcraftingRecipeTooltipComponent;
 import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
 import mod.maxbogomol.purrfect.common.network.block.HandcraftingRecipeCraftPacket;
@@ -12,6 +12,7 @@ import mod.maxbogomol.purrfect.common.recipe.HandcraftingIngredient;
 import mod.maxbogomol.purrfect.common.recipe.HandcraftingRecipe;
 import mod.maxbogomol.purrfect.common.recipe.HandcraftingSortingRecipe;
 import mod.maxbogomol.purrfect.registry.common.PurrfectRecipes;
+import mod.maxbogomol.purrfect.registry.common.item.PurrfectItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
@@ -34,6 +35,8 @@ import java.util.Optional;
 import java.util.function.Supplier;
 
 public class MainHandcraftingTab extends HandcraftingTab {
+
+    public static Supplier<ItemStack> ICON = () -> new ItemStack(PurrfectItems.HANDCRAFTING_TABLE.get());
 
     public static List<HandcraftingRecipe> allRecipes = new ArrayList<>();
     public static List<HandcraftingRecipe> sortedRecipes = new ArrayList<>();

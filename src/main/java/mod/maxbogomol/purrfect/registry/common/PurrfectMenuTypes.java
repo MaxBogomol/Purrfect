@@ -1,6 +1,8 @@
 package mod.maxbogomol.purrfect.registry.common;
 
 import mod.maxbogomol.purrfect.Purrfect;
+import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingHandler;
+import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTab;
 import mod.maxbogomol.purrfect.common.gui.menu.HandcraftingTableMenu;
 import mod.maxbogomol.purrfect.client.gui.screen.HandcraftingTableScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -23,8 +25,10 @@ public class PurrfectMenuTypes {
     public static final RegistryObject<MenuType<HandcraftingTableMenu>> HANDCRAFTING_TABLE_CONTAINER = MENU_TYPES.register("handcrafting_table",
             () -> IForgeMenuType.create(((containerId, inv, data) -> {
                 BlockPos pos = data.readBlockPos();
+                HandcraftingTab tab = HandcraftingHandler.getTab(data.readUtf());
+                if (tab == null) tab = PurrfectHandcraftingTabs.HANDCRAFTING;
                 Level level = inv.player.getCommandSenderWorld();
-                return new HandcraftingTableMenu(containerId, level, pos, inv, inv.player);})));
+                return new HandcraftingTableMenu(containerId, level, pos, inv, inv.player, tab);})));
 
     public static void register(IEventBus eventBus) {
         MENU_TYPES.register(eventBus);

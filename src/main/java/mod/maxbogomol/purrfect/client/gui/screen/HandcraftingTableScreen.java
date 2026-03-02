@@ -6,6 +6,8 @@ import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingHandler;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTab;
 import mod.maxbogomol.purrfect.common.gui.menu.HandcraftingTableMenu;
+import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
+import mod.maxbogomol.purrfect.common.network.block.HandcraftingOpenMenuPacket;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -28,17 +30,13 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
     @Override
     public void init() {
         super.init();
-        if (HandcraftingHandler.getTabs().size() > 0) {
-            HandcraftingHandler.getTab(HandcraftingHandler.selected).init(this);
-        }
+        getMenu().tab.init(this);
     }
 
     @Override
     public void tick() {
         super.tick();
-        if (HandcraftingHandler.getTabs().size() > 0) {
-            HandcraftingHandler.getTab(HandcraftingHandler.selected).tick(this);
-        }
+        getMenu().tab.tick(this);
     }
 
     @Override
@@ -51,8 +49,7 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
 
     @Override
     protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-        Component title = this.title;
-        if (HandcraftingHandler.getTabs().size() > 0) title = Component.translatable(HandcraftingHandler.getTab(HandcraftingHandler.selected).getTranslatedName());
+        Component title = Component.translatable(getMenu().tab.getTranslatedName());
         guiGraphics.drawString(this.font, title, this.titleLabelX, this.titleLabelY, TITLE_COLOR, false);
         guiGraphics.drawString(this.font, this.playerInventoryTitle, this.inventoryLabelX, this.inventoryLabelY, 4210752, false);
     }
@@ -99,15 +96,11 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
     }
 
     public void renderSelectedTabBackground(GuiGraphics gui, int mouseX, int mouseY, float partialTicks) {
-        if (HandcraftingHandler.getTabs().size() > 0) {
-            HandcraftingHandler.getTab(HandcraftingHandler.selected).renderBackground(this, gui, mouseX, mouseY, partialTicks);
-        }
+        getMenu().tab.renderBackground(this, gui, mouseX, mouseY, partialTicks);
     }
 
     public void renderSelectedTab(GuiGraphics gui, int mouseX, int mouseY, float partialTicks) {
-        if (HandcraftingHandler.getTabs().size() > 0) {
-            HandcraftingHandler.getTab(HandcraftingHandler.selected).render(this, gui, mouseX, mouseY, partialTicks);
-        }
+        getMenu().tab.render(this, gui, mouseX, mouseY, partialTicks);
     }
 
     @Override
@@ -122,6 +115,7 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
             boolean hovered = (mouseX >= i - (selected ? 26 : 22) && mouseY >= j + 10 + (scroll * 22) && mouseX < i - (selected ? 26 : 22) + 20 && mouseY < j + 10 + (scroll * 22) + 20);
             if (hovered && (HandcraftingHandler.getTabs().size() <= 6 || (scroll >= 0 && scroll < 6))) {
                 HandcraftingHandler.selected = ii;
+                PurrfectPacketHandler.sendToServer(new HandcraftingOpenMenuPacket(getMenu().blockPos, tab));
                 Minecraft.getInstance().player.playNotifySound(SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.NEUTRAL, 0.5f, 1.0f);
                 return true;
             }
@@ -145,9 +139,7 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
                 }
             }
         }
-        if (HandcraftingHandler.getTabs().size() > 0) {
-            if (HandcraftingHandler.getTab(HandcraftingHandler.selected).mouseClicked(this, mouseX, mouseY, button)) return true;
-        }
+        if (getMenu().tab.mouseClicked(this, mouseX, mouseY, button)) return true;
         return false;
     }
 
@@ -170,9 +162,7 @@ public class HandcraftingTableScreen extends AbstractContainerScreen<Handcraftin
             }
             return true;
         }
-        if (HandcraftingHandler.getTabs().size() > 0) {
-            if (HandcraftingHandler.getTab(HandcraftingHandler.selected).mouseScrolled(this, mouseX, mouseY, delta)) return true;
-        }
+        if (getMenu().tab.mouseScrolled(this, mouseX, mouseY, delta)) return true;
         return false;
     }
 }

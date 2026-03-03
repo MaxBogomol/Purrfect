@@ -12,6 +12,7 @@ import mod.maxbogomol.purrfect.common.network.block.HandcraftingSillyTagCraftPac
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.SimpleContainer;
@@ -29,10 +30,10 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class SillyTagsHandcraftingTab extends HandcraftingTab {
-
+    public final ResourceLocation TAG_SLOT_TEXTURE = new ResourceLocation(Purrfect.MOD_ID, "textures/gui/silly_tag_handcrafting_slot.png");
     public static Supplier<ItemStack> ICON = () -> {
         ItemStack tag = new ItemStack(PurrfectItems.SILLY_TAG.get());
-        SillyTagItem.setTag(tag, Purrfect.MOD_ID+":colon_three");
+        SillyTagItem.setTag(tag, Purrfect.MOD_ID+":nameless");
         return tag;
     };
 
@@ -119,8 +120,12 @@ public class SillyTagsHandcraftingTab extends HandcraftingTab {
         }
 
         gui.blit(GUI, i + 7, j + 125, 176, 60, 18, 18, 256, 256);
+        if (getComponent(screen.getMenu()).inputSlot.isEmpty()) gui.blit(TAG_SLOT_TEXTURE, i + 8, j + 126, 0, 0, 16, 16, 16, 16);
+
         gui.blit(GUI, i + 32, j + 125, 230, 60, 22  , 18, 256, 256);
+
         gui.blit(GUI, i + 61, j + 125, 176, 60, 18, 18, 256, 256);
+        if (getComponent(screen.getMenu()).resultSlot.isEmpty()) gui.blit(TAG_SLOT_TEXTURE, i + 62, j + 126, 0, 0, 16, 16, 16, 16);
 
         gui.blit(GUI, i + 152, j + 17, 216, 0, 16, 18, 256, 256);
         gui.blit(GUI, i + 152, j + 35, 16, 90, 216, 18, 16, 18, 256, 256);

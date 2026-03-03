@@ -35,7 +35,6 @@ import java.util.Optional;
 import java.util.function.Supplier;
 
 public class MainHandcraftingTab extends HandcraftingTab {
-
     public static Supplier<ItemStack> ICON = () -> new ItemStack(PurrfectItems.HANDCRAFTING_TABLE.get());
 
     public static List<HandcraftingRecipe> allRecipes = new ArrayList<>();

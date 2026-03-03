@@ -5,10 +5,13 @@ import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTab;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTabComponent;
 import mod.maxbogomol.purrfect.client.gui.screen.HandcraftingTableScreen;
 import mod.maxbogomol.purrfect.common.gui.menu.HandcraftingTableMenu;
+import mod.maxbogomol.purrfect.common.hadcrafting.component.CollarsHandcraftingTabComponent;
 import mod.maxbogomol.purrfect.common.hadcrafting.component.SillyTagsHandcraftingTabComponent;
 import mod.maxbogomol.purrfect.common.item.equipment.SillyTagItem;
+import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
 import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
 import mod.maxbogomol.purrfect.common.network.block.HandcraftingSillyTagCraftPacket;
+import mod.maxbogomol.purrfect.registry.common.PurrfectCollarParts;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -29,32 +32,32 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
-public class SillyTagsHandcraftingTab extends HandcraftingTab {
+public class CollarsHandcraftingTab extends HandcraftingTab {
     public final ResourceLocation TAG_SLOT_TEXTURE = new ResourceLocation(Purrfect.MOD_ID, "textures/gui/silly_tag_handcrafting_slot.png");
     public static Supplier<ItemStack> ICON = () -> {
-        ItemStack tag = new ItemStack(PurrfectItems.SILLY_TAG.get());
-        SillyTagItem.setTag(tag, Purrfect.MOD_ID+":nameless");
-        return tag;
+        ItemStack collar = new ItemStack(PurrfectItems.COLLAR.get());
+        CollarItem.setAccessory(collar, PurrfectCollarParts.GOLDEN_BELL);
+        return collar;
     };
 
     public static List<String> tags = new ArrayList<>();
     public String selectedTag = null;
     public int scroll = 0;
 
-    public SillyTagsHandcraftingTab(String id, Supplier<ItemStack> iconItemStack) {
+    public CollarsHandcraftingTab(String id, Supplier<ItemStack> iconItemStack) {
         super(id, iconItemStack);
     }
 
     @Override
     public HandcraftingTabComponent getComponent() {
-        return new SillyTagsHandcraftingTabComponent();
+        return new CollarsHandcraftingTabComponent();
     }
 
-    public SillyTagsHandcraftingTabComponent getComponent(HandcraftingTableMenu menu) {
-        if (menu.tabComponent instanceof SillyTagsHandcraftingTabComponent sillyTagsHandcraftingTabComponent) {
-            return sillyTagsHandcraftingTabComponent;
+    public CollarsHandcraftingTabComponent getComponent(HandcraftingTableMenu menu) {
+        if (menu.tabComponent instanceof CollarsHandcraftingTabComponent collarsHandcraftingTabComponent) {
+            return collarsHandcraftingTabComponent;
         }
-        return new SillyTagsHandcraftingTabComponent();
+        return new CollarsHandcraftingTabComponent();
     }
 
     @Override

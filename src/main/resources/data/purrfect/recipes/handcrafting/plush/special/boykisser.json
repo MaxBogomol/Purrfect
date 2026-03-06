@@ -1,0 +1,27 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "fluffy_fur:boykisser_plush",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:gems/diamond"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "tag": "minecraft:fishes"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:white_wool"
+      },
+      "count": 10
+    }
+  ]
+}

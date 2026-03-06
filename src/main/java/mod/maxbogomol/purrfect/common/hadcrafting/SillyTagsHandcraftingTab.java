@@ -155,7 +155,7 @@ public class SillyTagsHandcraftingTab extends HandcraftingTab {
                 SillyTagItem.setTag(itemStack, tag);
                 gui.renderItem(itemStack, i + 7 + (sj * 18) + 1, j + 17 + (si * 18) + 1);
                 gui.renderItemDecorations(minecraft.font, itemStack, i + 7 + (sj * 18) + 1, j + 17 + (si * 18) + 1);
-                boolean hovered = (mouseX >= i + 7 + (sj * 18) && mouseY >= j + 17 + (si * 18) && mouseX < i + 7 + (sj * 18) + 18 && mouseY < j + 17 + (si * 18) + 18);
+                boolean hovered = (mouseX >= i + 7 + (sj * 18) + 1 && mouseY >= j + 17 + (si * 18) + 1 && mouseX < i + 7 + (sj * 18) + 17 && mouseY < j + 17 + (si * 18) + 17);
                 if (hovered) hoveredItem = itemStack;
                 ii++;
                 if (ii >= tags.size()) break;

@@ -1,0 +1,57 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "fluffy_fur:maxbogomol_plush",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:gems/diamond"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "tag": "minecraft:fishes"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:lead"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:white_wool"
+      },
+      "count": 4
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:light_blue_wool"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:yellow_wool"
+      },
+      "count": 2
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:lime_wool"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:brown_wool"
+      },
+      "count": 1
+    }
+  ]
+}

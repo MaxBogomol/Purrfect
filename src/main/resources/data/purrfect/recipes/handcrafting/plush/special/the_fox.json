@@ -1,0 +1,51 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "fluffy_fur:tunic_the_fox_plush",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:gems/diamond"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "tag": "minecraft:swords"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:orange_wool"
+      },
+      "count": 4
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:white_wool"
+      },
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:brown_wool"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:green_wool"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:magenta_wool"
+      },
+      "count": 1
+    }
+  ]
+}

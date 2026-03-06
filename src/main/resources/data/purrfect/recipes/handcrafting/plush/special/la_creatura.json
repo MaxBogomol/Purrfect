@@ -1,0 +1,39 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "fluffy_fur:sammysemicolon_plush",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:gems/diamond"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "tag": "forge:gems/amethyst"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:light_gray_wool"
+      },
+      "count": 4
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:gray_wool"
+      },
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:purple_wool"
+      },
+      "count": 3
+    }
+  ]
+}

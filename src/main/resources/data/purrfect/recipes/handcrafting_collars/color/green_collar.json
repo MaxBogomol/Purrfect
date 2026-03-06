@@ -1,0 +1,14 @@
+{
+  "type": "purrfect:handcrafting_collars",
+  "color_part": {
+    "collar_part": "purrfect:green_collar"
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:dyes/green"
+      },
+      "count": 1
+    }
+  ]
+}

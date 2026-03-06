@@ -1,0 +1,14 @@
+{
+  "type": "purrfect:handcrafting_collars",
+  "color_part": {
+    "collar_part": "purrfect:pink_collar"
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:dyes/pink"
+      },
+      "count": 1
+    }
+  ]
+}

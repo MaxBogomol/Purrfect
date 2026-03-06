@@ -1,0 +1,7 @@
+{
+  "type": "purrfect:handcrafting_sorting",
+  "weight": 9800,
+  "recipes": [
+    "purrfect:handcrafting_collars/decoration/spikes"
+  ]
+}

@@ -146,21 +146,23 @@ public class SillyTagsHandcraftingTab extends HandcraftingTab {
         Minecraft minecraft = Minecraft.getInstance();
         ItemStack hoveredItem = ItemStack.EMPTY;
 
-        int ii = scroll * 8;
-        for (int si = 0; si < 6; si++) {
-            for (int sj = 0; sj < 8; sj++) {
-                if (tags.size() <= ii) break;
-                String tag = tags.get(ii);
-                ItemStack itemStack = new ItemStack(PurrfectItems.SILLY_TAG.get());
-                SillyTagItem.setTag(itemStack, tag);
-                gui.renderItem(itemStack, i + 7 + (sj * 18) + 1, j + 17 + (si * 18) + 1);
-                gui.renderItemDecorations(minecraft.font, itemStack, i + 7 + (sj * 18) + 1, j + 17 + (si * 18) + 1);
-                boolean hovered = (mouseX >= i + 7 + (sj * 18) + 1 && mouseY >= j + 17 + (si * 18) + 1 && mouseX < i + 7 + (sj * 18) + 17 && mouseY < j + 17 + (si * 18) + 17);
-                if (hovered) hoveredItem = itemStack;
-                ii++;
+        if (!getComponent(screen.getMenu()).inputSlot.isEmpty()) {
+            int ii = scroll * 8;
+            for (int si = 0; si < 6; si++) {
+                for (int sj = 0; sj < 8; sj++) {
+                    if (tags.size() <= ii) break;
+                    String tag = tags.get(ii);
+                    ItemStack itemStack = new ItemStack(PurrfectItems.SILLY_TAG.get());
+                    SillyTagItem.setTag(itemStack, tag);
+                    gui.renderItem(itemStack, i + 7 + (sj * 18) + 1, j + 17 + (si * 18) + 1);
+                    gui.renderItemDecorations(minecraft.font, itemStack, i + 7 + (sj * 18) + 1, j + 17 + (si * 18) + 1);
+                    boolean hovered = (mouseX >= i + 7 + (sj * 18) + 1 && mouseY >= j + 17 + (si * 18) + 1 && mouseX < i + 7 + (sj * 18) + 17 && mouseY < j + 17 + (si * 18) + 17);
+                    if (hovered) hoveredItem = itemStack;
+                    ii++;
+                    if (ii >= tags.size()) break;
+                }
                 if (ii >= tags.size()) break;
             }
-            if (ii >= tags.size()) break;
         }
 
         if (!hoveredItem.isEmpty()) {
@@ -174,22 +176,25 @@ public class SillyTagsHandcraftingTab extends HandcraftingTab {
         int i = screen.getGuiLeft();
         int j = screen.getGuiTop();
 
-        int ii = scroll * 8;
-        for (int si = 0; si < 6; si++) {
-            for (int sj = 0; sj < 8; sj++) {
-                if (tags.size() <= ii) break;
-                String tag = tags.get(ii);
-                boolean hovered = (mouseX >= i + 7 + (sj * 18) && mouseY >= j + 17 + (si * 18) && mouseX < i + 7 + (sj * 18) + 18 && mouseY < j + 17 + (si * 18) + 18);
-                if (hovered) {
-                    selectedTag = tag;
-                    if (!getComponent(screen.getMenu()).inputSlot.isEmpty()) PurrfectPacketHandler.sendToServer(new HandcraftingSillyTagCraftPacket(selectedTag));
-                    Minecraft.getInstance().player.playNotifySound(SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.NEUTRAL, 0.5f, 1.0f);
-                    return true;
+        if (!getComponent(screen.getMenu()).inputSlot.isEmpty()) {
+            int ii = scroll * 8;
+            for (int si = 0; si < 6; si++) {
+                for (int sj = 0; sj < 8; sj++) {
+                    if (tags.size() <= ii) break;
+                    String tag = tags.get(ii);
+                    boolean hovered = (mouseX >= i + 7 + (sj * 18) && mouseY >= j + 17 + (si * 18) && mouseX < i + 7 + (sj * 18) + 18 && mouseY < j + 17 + (si * 18) + 18);
+                    if (hovered) {
+                        selectedTag = tag;
+                        if (!getComponent(screen.getMenu()).inputSlot.isEmpty())
+                            PurrfectPacketHandler.sendToServer(new HandcraftingSillyTagCraftPacket(selectedTag));
+                        Minecraft.getInstance().player.playNotifySound(SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.NEUTRAL, 0.5f, 1.0f);
+                        return true;
+                    }
+                    ii++;
+                    if (ii >= tags.size()) break;
                 }
-                ii++;
                 if (ii >= tags.size()) break;
             }
-            if (ii >= tags.size()) break;
         }
 
         return false;

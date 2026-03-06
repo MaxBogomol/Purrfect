@@ -1,6 +1,7 @@
 package mod.maxbogomol.purrfect.registry.common;
 
 import mod.maxbogomol.purrfect.Purrfect;
+import mod.maxbogomol.purrfect.common.recipe.HandcraftingCollarsRecipe;
 import mod.maxbogomol.purrfect.common.recipe.HandcraftingRecipe;
 import mod.maxbogomol.purrfect.common.recipe.HandcraftingSortingRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -16,9 +17,11 @@ public class PurrfectRecipes {
 
     public static final RegistryObject<HandcraftingSortingRecipe.Serializer> HANDCRAFTING_SORTING_SERIALIZER = RECIPE_SERIALIZERS.register("handcrafting_sorting", HandcraftingSortingRecipe.Serializer::new);
     public static final RegistryObject<HandcraftingRecipe.Serializer> HANDCRAFTING_SERIALIZER = RECIPE_SERIALIZERS.register("handcrafting", HandcraftingRecipe.Serializer::new);
+    public static final RegistryObject<HandcraftingCollarsRecipe.Serializer> HANDCRAFTING_COLLARS_SERIALIZER = RECIPE_SERIALIZERS.register("handcrafting_collars", HandcraftingCollarsRecipe.Serializer::new);
 
     public static RegistryObject<RecipeType<HandcraftingSortingRecipe>> HANDCRAFTING_SORTING = RECIPES.register("handcrafting_sorting", () -> RecipeType.simple(HandcraftingSortingRecipe.TYPE_ID));
     public static RegistryObject<RecipeType<HandcraftingRecipe>> HANDCRAFTING = RECIPES.register("handcrafting", () -> RecipeType.simple(HandcraftingRecipe.TYPE_ID));
+    public static RegistryObject<RecipeType<HandcraftingCollarsRecipe>> HANDCRAFTING_COLLARS = RECIPES.register("handcrafting_collars", () -> RecipeType.simple(HandcraftingCollarsRecipe.TYPE_ID));
 
     public static void register(IEventBus eventBus) {
         RECIPE_SERIALIZERS.register(eventBus);

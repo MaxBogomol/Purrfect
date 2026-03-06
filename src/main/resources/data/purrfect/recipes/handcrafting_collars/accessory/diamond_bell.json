@@ -1,0 +1,14 @@
+{
+  "type": "purrfect:handcrafting_collars",
+  "accessory_part": {
+    "collar_part": "purrfect:diamond_bell"
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:gems/diamond"
+      },
+      "count": 1
+    }
+  ]
+}

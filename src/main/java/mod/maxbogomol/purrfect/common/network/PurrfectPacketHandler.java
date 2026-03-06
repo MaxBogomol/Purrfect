@@ -2,10 +2,7 @@ package mod.maxbogomol.purrfect.common.network;
 
 import mod.maxbogomol.fluffy_fur.common.network.PacketHandler;
 import mod.maxbogomol.purrfect.Purrfect;
-import mod.maxbogomol.purrfect.common.network.block.BlahajHeartsPacket;
-import mod.maxbogomol.purrfect.common.network.block.HandcraftingOpenMenuPacket;
-import mod.maxbogomol.purrfect.common.network.block.HandcraftingRecipeCraftPacket;
-import mod.maxbogomol.purrfect.common.network.block.HandcraftingSillyTagCraftPacket;
+import mod.maxbogomol.purrfect.common.network.block.*;
 import mod.maxbogomol.purrfect.common.network.furry.FurryPlayerUpdatePacket;
 import mod.maxbogomol.purrfect.common.network.item.PinkPetalsFlowerWreathPacket;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
@@ -30,6 +27,8 @@ public class PurrfectPacketHandler extends PacketHandler {
 
         HandcraftingOpenMenuPacket.register(HANDLER, id++);
         HandcraftingRecipeCraftPacket.register(HANDLER, id++);
+        HandcraftingCollarCraftPacket.register(HANDLER, id++);
+        HandcraftingCollarTagPacket.register(HANDLER, id++);
         HandcraftingSillyTagCraftPacket.register(HANDLER, id++);
 
         if (PurrfectWizardsReborn.isLoaded()) {

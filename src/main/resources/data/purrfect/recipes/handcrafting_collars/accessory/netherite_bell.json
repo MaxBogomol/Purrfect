@@ -1,0 +1,20 @@
+{
+  "type": "purrfect:handcrafting_collars",
+  "accessory_part": {
+    "collar_part": "purrfect:netherite_bell"
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:gems/diamond"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "tag": "forge:ingots/netherite"
+      },
+      "count": 1
+    }
+  ]
+}

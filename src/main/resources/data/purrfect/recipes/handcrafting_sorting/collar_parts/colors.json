@@ -1,0 +1,23 @@
+{
+  "type": "purrfect:handcrafting_sorting",
+  "weight": 10000,
+  "recipes": [
+    "purrfect:handcrafting_collars/color/white_collar",
+    "purrfect:handcrafting_collars/color/light_gray_collar",
+    "purrfect:handcrafting_collars/color/gray_collar",
+    "purrfect:handcrafting_collars/color/black_collar",
+    "purrfect:handcrafting_collars/color/brown_collar",
+    "purrfect:handcrafting_collars/color/red_collar",
+    "purrfect:handcrafting_collars/color/orange_collar",
+    "purrfect:handcrafting_collars/color/yellow_collar",
+    "purrfect:handcrafting_collars/color/lime_collar",
+    "purrfect:handcrafting_collars/color/green_collar",
+    "purrfect:handcrafting_collars/color/cyan_collar",
+    "purrfect:handcrafting_collars/color/light_blue_collar",
+    "purrfect:handcrafting_collars/color/blue_collar",
+    "purrfect:handcrafting_collars/color/purple_collar",
+    "purrfect:handcrafting_collars/color/magenta_collar",
+    "purrfect:handcrafting_collars/color/pink_collar",
+    "purrfect:handcrafting_collars/color/rainbow_collar"
+  ]
+}

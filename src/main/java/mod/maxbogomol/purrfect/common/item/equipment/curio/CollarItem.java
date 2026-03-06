@@ -7,6 +7,7 @@ import mod.maxbogomol.purrfect.common.collar.AccessoryCollarPart;
 import mod.maxbogomol.purrfect.common.collar.ColorCollarPart;
 import mod.maxbogomol.purrfect.common.collar.DecorationCollarPart;
 import mod.maxbogomol.purrfect.common.item.equipment.ShipkeyItem;
+import mod.maxbogomol.purrfect.common.item.equipment.SillyTagItem;
 import mod.maxbogomol.purrfect.registry.common.PurrfectCollarParts;
 import mod.maxbogomol.purrfect.registry.common.PurrfectSounds;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectItemTags;
@@ -80,6 +81,16 @@ public class CollarItem extends BaseCurioItem {
         parts.putString("decoration", part.getId());
     }
 
+    public static void setTag(ItemStack stack, String tag) {
+        CompoundTag nbt = stack.getOrCreateTag();
+        nbt.putString("tag", tag);
+    }
+
+    public static void setCustomTag(ItemStack stack, String tag) {
+        CompoundTag nbt = stack.getOrCreateTag();
+        nbt.putString("custom_tag", tag);
+    }
+
     public static CollarPart getColor(ItemStack stack) {
         existTags(stack);
         CompoundTag nbt = stack.getOrCreateTag();
@@ -104,6 +115,22 @@ public class CollarItem extends BaseCurioItem {
         CompoundTag parts = nbt.getCompound("parts");
         String id = parts.getString("decoration");
         return CollarPartHandler.DECORATION.getCollarPart(id);
+    }
+
+    public static String getTag(ItemStack stack) {
+        CompoundTag nbt = stack.getOrCreateTag();
+        if (nbt.contains("tag")) {
+            return nbt.getString("tag");
+        }
+        return "";
+    }
+
+    public static String getCustomTag(ItemStack stack) {
+        CompoundTag nbt = stack.getOrCreateTag();
+        if (nbt.contains("custom_tag")) {
+            return nbt.getString("custom_tag");
+        }
+        return "";
     }
 
     public static boolean isBellSound(ItemStack stack) {
@@ -163,6 +190,12 @@ public class CollarItem extends BaseCurioItem {
         list.add(Component.translatable("collar_part.color.purrfect").withStyle(ChatFormatting.GOLD).append(CommonComponents.SPACE).append(Component.translatable(color).withStyle(ChatFormatting.YELLOW)));
         list.add(Component.translatable("collar_part.accessory.purrfect").withStyle(ChatFormatting.GOLD).append(CommonComponents.SPACE).append(Component.translatable(accessory).withStyle(ChatFormatting.YELLOW)));
         list.add(Component.translatable("collar_part.decoration.purrfect").withStyle(ChatFormatting.GOLD).append(CommonComponents.SPACE).append(Component.translatable(decoration).withStyle(ChatFormatting.YELLOW)));
+
+        if (!getTag(stack).isEmpty()) {
+            list.add(Component.translatable("lore.purrfect.silly_tag.tag").withStyle(ChatFormatting.GOLD).append(CommonComponents.SPACE).append(Component.translatable(SillyTagItem.getTranslatedTag(getTag(stack))).withStyle(ChatFormatting.YELLOW)));
+        } else if (!getCustomTag(stack).isEmpty()) {
+            list.add(Component.translatable("lore.purrfect.silly_tag.tag").withStyle(ChatFormatting.GOLD).append(CommonComponents.SPACE).append(Component.literal(getCustomTag(stack)).withStyle(ChatFormatting.YELLOW).withStyle(ChatFormatting.ITALIC)));
+        }
 
         if (CollarItem.hasLock(stack) && ShipkeyItem.hasUUID(stack)) {
             list.add(Component.translatable("lore.purrfect.collar.locked").withStyle(ChatFormatting.GOLD));

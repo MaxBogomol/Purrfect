@@ -1,0 +1,14 @@
+{
+  "type": "purrfect:handcrafting_collars",
+  "accessory_part": {
+    "collar_part": "purrfect:copper_bell"
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "tag": "forge:ingots/copper"
+      },
+      "count": 1
+    }
+  ]
+}

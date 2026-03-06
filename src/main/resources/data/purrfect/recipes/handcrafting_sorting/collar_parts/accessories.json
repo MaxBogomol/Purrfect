@@ -1,0 +1,16 @@
+{
+  "type": "purrfect:handcrafting_sorting",
+  "weight": 9900,
+  "recipes": [
+    "purrfect:handcrafting_collars/accessory/copper_bell",
+    "purrfect:handcrafting_collars/accessory/iron_bell",
+    "purrfect:handcrafting_collars/accessory/golden_bell",
+    "purrfect:handcrafting_collars/accessory/diamond_bell",
+    "purrfect:handcrafting_collars/accessory/netherite_bell",
+    "purrfect:handcrafting_collars/accessory/copper_lock",
+    "purrfect:handcrafting_collars/accessory/iron_lock",
+    "purrfect:handcrafting_collars/accessory/golden_lock",
+    "purrfect:handcrafting_collars/accessory/diamond_lock",
+    "purrfect:handcrafting_collars/accessory/netherite_lock"
+  ]
+}

@@ -133,6 +133,10 @@ public class CollarItem extends BaseCurioItem {
         return "";
     }
 
+    public static boolean hasTag(ItemStack stack) {
+        return !getTag(stack).isEmpty() || !getCustomTag(stack).isEmpty();
+    }
+
     public static boolean isBellSound(ItemStack stack) {
         CollarPart accessoryPart = CollarItem.getAccessory(stack);
         if (accessoryPart instanceof AccessoryCollarPart accessoryCollarPart) {

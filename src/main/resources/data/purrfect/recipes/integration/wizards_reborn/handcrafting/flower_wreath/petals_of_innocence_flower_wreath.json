@@ -1,0 +1,29 @@
+
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "wizards_reborn"
+        }
+      ],
+      "recipe": {
+        "type": "purrfect:handcrafting",
+        "output": {
+          "item": "purrfect:petals_of_innocence_flower_wreath",
+          "count": 1
+        },
+        "ingredients": [
+          {
+            "ingredient": {
+              "item": "wizards_reborn:petals_of_innocence"
+            },
+            "count": 6
+          }
+        ]
+      }
+    }
+  ]
+}

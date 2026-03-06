@@ -30,6 +30,7 @@ public class PurrfectPacketHandler extends PacketHandler {
         HandcraftingCollarCraftPacket.register(HANDLER, id++);
         HandcraftingCollarTagPacket.register(HANDLER, id++);
         HandcraftingSillyTagCraftPacket.register(HANDLER, id++);
+        HandcraftingShipkeysCopyPacket.register(HANDLER, id++);
 
         if (PurrfectWizardsReborn.isLoaded()) {
             PetalsOfInnocenceFlowerWreathPacket.register(HANDLER, id++);

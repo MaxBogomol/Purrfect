@@ -41,6 +41,12 @@ public class ShipkeyItem extends Item {
         nbtKey.putUUID("lockUUID", uuid);
     }
 
+    public static UUID setUUID(ItemStack item, UUID uuid) {
+        CompoundTag nbt = item.getOrCreateTag();
+        nbt.putUUID("lockUUID", uuid);
+        return null;
+    }
+
     public static UUID getUUID(ItemStack item) {
         CompoundTag nbt = item.getOrCreateTag();
         if (nbt.contains("lockUUID")) {

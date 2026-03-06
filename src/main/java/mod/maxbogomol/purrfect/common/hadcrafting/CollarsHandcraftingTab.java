@@ -180,7 +180,7 @@ public class CollarsHandcraftingTab extends HandcraftingTab {
         gui.blit(GUI, i + 7, j + 107, 176, 60, 18, 18, 256, 256);
         if (getComponent(screen.getMenu()).inputSlots.getItem(1).isEmpty()) gui.blit(TAG_SLOT_TEXTURE, i + 8, j + 107, 0, 0, 16, 16, 16, 16);
 
-        boolean hovered = (mouseX >= i + 25 + 1 && mouseY >= j + 107 + 1 && mouseX < i + 43 + 18 && mouseY < j + 107 + 17);
+        boolean hovered = (mouseX >= i + 25 + 1 && mouseY >= j + 107 + 1 && mouseX < i + 25 + 18 && mouseY < j + 107 + 17);
         gui.blit(GUI, i + 25, j + 107, hovered ?212 : 194, 60, 18, 18, 256, 256);
 
         gui.blit(GUI, i + 7, j + 125, 176, 60, 18, 18, 256, 256);
@@ -311,8 +311,7 @@ public class CollarsHandcraftingTab extends HandcraftingTab {
             if (mouseX >= i + 25 && mouseY >= j + 107 && mouseX < i + 25 + 18 && mouseY < j + 107 + 18) {
                 PurrfectPacketHandler.sendToServer(new HandcraftingCollarTagPacket());
                 if (selectedRecipe != null) {
-                    if (!getComponent(screen.getMenu()).inputSlots.getItem(0).isEmpty())
-                        PurrfectPacketHandler.sendToServer(new HandcraftingCollarCraftPacket(selectedRecipe));
+                    if (!getComponent(screen.getMenu()).inputSlots.getItem(0).isEmpty()) PurrfectPacketHandler.sendToServer(new HandcraftingCollarCraftPacket(selectedRecipe));
                 }
                 Minecraft.getInstance().player.playNotifySound(SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.NEUTRAL, 0.5f, 1.0f);
                 return true;

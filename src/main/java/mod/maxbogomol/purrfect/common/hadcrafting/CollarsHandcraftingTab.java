@@ -354,6 +354,7 @@ public class CollarsHandcraftingTab extends HandcraftingTab {
         return false;
     }
 
+    @OnlyIn(Dist.CLIENT)
     public static void recipesUpdate() {
         Minecraft minecraft = Minecraft.getInstance();
         Level level = minecraft.level;
@@ -383,6 +384,7 @@ public class CollarsHandcraftingTab extends HandcraftingTab {
         }
     }
 
+    @OnlyIn(Dist.CLIENT)
     public void matchedRecipesUpdate() {
         Minecraft minecraft = Minecraft.getInstance();
         Level level = minecraft.level;

@@ -8,8 +8,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.crafting.Recipe;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.network.simple.SimpleChannel;
 
@@ -41,7 +39,6 @@ public class HandcraftingRecipeCraftPacket extends ServerPacket {
     }
 
     @Override
-    @OnlyIn(Dist.CLIENT)
     public void execute(Supplier<NetworkEvent.Context> context) {
         ServerPlayer player = context.get().getSender();
         ServerLevel level = player.serverLevel();

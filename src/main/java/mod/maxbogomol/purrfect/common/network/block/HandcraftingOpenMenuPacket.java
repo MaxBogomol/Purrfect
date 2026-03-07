@@ -3,23 +3,16 @@ package mod.maxbogomol.purrfect.common.network.block;
 import mod.maxbogomol.fluffy_fur.common.network.ServerPacket;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingHandler;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTab;
-import mod.maxbogomol.purrfect.common.hadcrafting.MainHandcraftingTab;
-import mod.maxbogomol.purrfect.common.recipe.HandcraftingRecipe;
 import mod.maxbogomol.purrfect.registry.common.PurrfectHandcraftingTabs;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.network.simple.SimpleChannel;
 
-import java.util.Optional;
 import java.util.function.Supplier;
 
 public class HandcraftingOpenMenuPacket extends ServerPacket {
@@ -37,7 +30,6 @@ public class HandcraftingOpenMenuPacket extends ServerPacket {
     }
 
     @Override
-    @OnlyIn(Dist.CLIENT)
     public void execute(Supplier<NetworkEvent.Context> context) {
         ServerPlayer player = context.get().getSender();
         ServerLevel level = player.serverLevel();

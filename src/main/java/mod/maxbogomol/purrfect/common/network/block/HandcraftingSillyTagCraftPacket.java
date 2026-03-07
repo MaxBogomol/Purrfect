@@ -5,8 +5,6 @@ import mod.maxbogomol.purrfect.common.hadcrafting.SillyTagsHandcraftingTab;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.network.simple.SimpleChannel;
 
@@ -20,7 +18,6 @@ public class HandcraftingSillyTagCraftPacket extends ServerPacket {
     }
 
     @Override
-    @OnlyIn(Dist.CLIENT)
     public void execute(Supplier<NetworkEvent.Context> context) {
         ServerPlayer player = context.get().getSender();
         ServerLevel level = player.serverLevel();

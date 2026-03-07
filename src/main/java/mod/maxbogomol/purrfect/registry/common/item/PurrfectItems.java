@@ -237,10 +237,6 @@ public class PurrfectItems {
 
             CuriosRendererRegistry.register(COLLAR.get(), CollarRenderer::new);
 
-            if (PurrfectWizardsReborn.isLoaded()) {
-                PurrfectWizardsReborn.ClientLoadedOnly.registerItems(event);
-            }
-
             ItemProperties.register(LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack, level) ? 1 : 0);
             ItemProperties.register(WHITE_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack, level) ? 1 : 0);
             ItemProperties.register(LIGHT_GRAY_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack, level) ? 1 : 0);
@@ -262,6 +258,10 @@ public class PurrfectItems {
             ItemProperties.register(CHAIN_LEASH.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> LeashItem.isActive(stack, level) ? 1 : 0);
 
             ItemProperties.register(SILLY_TAG.get(), new ResourceLocation("active"), (stack, level, entity, seed) -> SillyTagItem.hasTag(stack) ? 1 : 0);
+
+            if (PurrfectWizardsReborn.isLoaded()) {
+                PurrfectWizardsReborn.ClientLoadedOnly.registerItems(event);
+            }
         }
 
         @SubscribeEvent

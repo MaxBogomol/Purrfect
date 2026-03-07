@@ -77,7 +77,7 @@ public class LeashItem extends Item {
         if (interactionTarget instanceof Player target) {
             if (t == null && FurryPlayerHandler.hasCollar(target)) {
                 if (!player.level().isClientSide()) {
-                    if (hasUUID(stack)) {
+                    if (!hasUUID(stack)) {
                         generateUUID(stack);
                         player.setItemInHand(usedHand, stack);
                     }

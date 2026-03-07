@@ -48,7 +48,7 @@ public class PurrfectClient {
         ItemStack collar = new ItemStack(PurrfectItems.COLLAR.get());
         CollarItem.setAccessory(collar, PurrfectCollarParts.GOLDEN_BELL);
         MOD_INSTANCE = new FluffyFurMod(Purrfect.MOD_ID, Purrfect.NAME, Purrfect.VERSION).setDev("MaxBogomol").setItem(collar)
-                .setEdition(Purrfect.VERSION_NUMBER).setNameColor(new Color(205, 237, 254)).setVersionColor(new Color(255, 243, 177))
+                .setEdition(Purrfect.VERSION_NUMBER).setNameColor(new Color(223, 226, 228)).setVersionColor(new Color(201, 146, 81))
                 .setDescription(Component.translatable("mod_description.purrfect"))
                 .addFluffyVillageLink("https://fluffy-village.dev/pages/eng/creations/purrfect.html")
                 .addGithubLink("https://github.com/MaxBogomol/Purrfect")

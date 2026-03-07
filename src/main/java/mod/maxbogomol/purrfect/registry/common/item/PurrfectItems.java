@@ -141,7 +141,7 @@ public class PurrfectItems {
     public static final RegistryObject<Item> IRON_SHIPKEY = ITEMS.register("iron_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> GOLDEN_SHIPKEY = ITEMS.register("golden_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> DIAMOND_SHIPKEY = ITEMS.register("diamond_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> NETHERITE_SHIPKEY = ITEMS.register("netherite_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> NETHERITE_SHIPKEY = ITEMS.register("netherite_shipkey", () -> new ShipkeyItem(new Item.Properties().stacksTo(1).fireResistant()));
 
     public static final RegistryObject<Item> SILLY_TAG = ITEMS.register("silly_tag", () -> new SillyTagItem(new Item.Properties()));
 

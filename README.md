@@ -11,3 +11,37 @@
 
 "Purrfect" - a mod about furries, for furries, from furry.  
 Adds Pharmacy and furry things.
+
+Note: Because while the mod is still in development, Pharmacy and Transfurmation are not yet available.
+
+![](https://fluffy-village.dev/assets/creations/purrfect/logo.png)
+
+# Handcrafting
+
+On the handcrafting table, you can create various items, as well as customize your own collar!
+
+![](https://fluffy-village.dev/assets/creations/purrfect/handcrafting.png)
+
+# Cosmetics
+
+Plushies  
+Flower wreaths  
+Collars  
+Leashes  
+Yarns  
+Flags  
+...and much more  
+
+![](https://fluffy-village.dev/assets/creations/purrfect/fox.png)
+
+Flags!
+
+![](https://fluffy-village.dev/assets/creations/purrfect/flags.png)
+
+You can put a leash on a player who is wearing a collar :3
+
+![](https://fluffy-village.dev/assets/creations/purrfect/foxes_on_leash.png)
+
+#
+
+You can visit our **[Discord Server](https://discord.gg/cKf55qNugw)** to suggest your ideas or receive news about development.

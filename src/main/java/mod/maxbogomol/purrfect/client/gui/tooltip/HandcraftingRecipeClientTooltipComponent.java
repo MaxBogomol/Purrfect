@@ -35,9 +35,11 @@ public class HandcraftingRecipeClientTooltipComponent implements ClientTooltipCo
         for (HandcraftingIngredient input : inputs) {
             ItemStack[] itemStacks = input.getIngredient().getItems();
             int item = ((int) ClientTickHandler.getTotal() % (20 * itemStacks.length)) / 20;
+            String s = null;
+            if (input.getCount() > 1) s = String.valueOf(input.getCount());
             ItemStack itemStack = itemStacks[item];
             guiGraphics.renderItem(itemStack, x + i * 18 + 2, y + j * 18 + 1);
-            guiGraphics.renderItemDecorations(Minecraft.getInstance().font, itemStack, x + i * 18 + 2, y + j * 18 + 1, String.valueOf(input.getCount()));
+            guiGraphics.renderItemDecorations(Minecraft.getInstance().font, itemStack, x + i * 18 + 2, y + j * 18 + 1, s);
             i++;
             if (i >= 6) {
                 j++;

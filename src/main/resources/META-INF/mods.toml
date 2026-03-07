@@ -1,12 +1,14 @@
 modLoader="javafml"
 loaderVersion="[47,)"
 license="GPL-2.0"
+issueTrackerURL="https://github.com/MaxBogomol/Purrfect/issues"
 
 [[mods]]
     modId="purrfect"
     version="${file.jarVersion}"
-    updateJSONURL = "https://raw.githubusercontent.com/MaxBogomol/Purrfect/refs/heads/master/update.json"
     displayName="Purrfect"
+    updateJSONURL = "https://raw.githubusercontent.com/MaxBogomol/Purrfect/refs/heads/master/update.json"
+    displayURL = "https://fluffy-village.dev/pages/eng/creations/purrfect.html"
     logoFile="purrfect.png"
     authors="MaxBogomol"
     description="Adds furry things"

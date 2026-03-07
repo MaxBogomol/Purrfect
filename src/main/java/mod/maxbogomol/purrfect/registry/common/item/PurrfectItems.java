@@ -7,12 +7,12 @@ import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.api.furry.CollarPart;
 import mod.maxbogomol.purrfect.api.furry.CollarPartHandler;
 import mod.maxbogomol.purrfect.client.gui.tooltip.HandcraftingRecipeClientTooltipComponent;
-import mod.maxbogomol.purrfect.common.gui.tooltip.HandcraftingRecipeTooltipComponent;
 import mod.maxbogomol.purrfect.client.render.curio.CollarRenderer;
 import mod.maxbogomol.purrfect.client.render.curio.FlowerWreathRenderer;
 import mod.maxbogomol.purrfect.common.collar.AccessoryCollarPart;
 import mod.maxbogomol.purrfect.common.collar.ColorCollarPart;
 import mod.maxbogomol.purrfect.common.collar.DecorationCollarPart;
+import mod.maxbogomol.purrfect.common.gui.tooltip.HandcraftingRecipeTooltipComponent;
 import mod.maxbogomol.purrfect.common.item.PurrfectRenderStandingAndWallBlockItem;
 import mod.maxbogomol.purrfect.common.item.YarnItem;
 import mod.maxbogomol.purrfect.common.item.equipment.LeashItem;
@@ -22,15 +22,20 @@ import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.FlowerWreathItem;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
 import mod.maxbogomol.purrfect.registry.client.PurrfectModels;
+import mod.maxbogomol.purrfect.registry.common.PurrfectCollarParts;
 import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlocks;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.core.Direction;
+import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.block.LayeredCauldronBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ModelEvent;
 import net.minecraftforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
@@ -442,5 +447,56 @@ public class PurrfectItems {
         SillyTagItem.addTag(Purrfect.MOD_ID+":puppy_brained");
 
         SillyTagItem.addSpecialTag(Purrfect.MOD_ID+":dev");
+
+        CauldronInteraction DYED_COLLAR = (blockState, level, blockPos, player, interactionHand, itemStack) -> {
+            if (itemStack.getItem() instanceof CollarItem) {
+                if (!CollarItem.getColor(itemStack).equals(PurrfectCollarParts.COLLAR)) {
+                    if (!level.isClientSide()) {
+                        CollarItem.setColor(itemStack, PurrfectCollarParts.COLLAR);
+                        LayeredCauldronBlock.lowerFillLevel(blockState, level, blockPos);
+                    }
+
+                    return InteractionResult.sidedSuccess(level.isClientSide());
+                }
+            }
+
+            return InteractionResult.PASS;
+        };
+        CauldronInteraction DYED_LEASH = (blockState, level, blockPos, player, interactionHand, itemStack) -> {
+            if (itemStack.getItem() instanceof LeashItem) {
+                if (itemStack.is(PurrfectItemTags.DYEABLE_LEASHES)) {
+                    if (!level.isClientSide()) {
+                        ItemStack newLeash = new ItemStack(LEASH.get());
+                        if (itemStack.hasTag()) {
+                            newLeash.setTag(itemStack.getTag().copy());
+                        }
+                        player.setItemInHand(interactionHand, newLeash);
+                        LayeredCauldronBlock.lowerFillLevel(blockState, level, blockPos);
+                    }
+
+                    return InteractionResult.sidedSuccess(level.isClientSide());
+                }
+            }
+
+            return InteractionResult.PASS;
+        };
+
+        CauldronInteraction.WATER.put(COLLAR.get(), DYED_COLLAR);
+        CauldronInteraction.WATER.put(WHITE_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(LIGHT_GRAY_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(BLACK_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(BROWN_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(RED_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(ORANGE_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(YELLOW_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(LIME_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(GREEN_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(CYAN_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(LIGHT_BLUE_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(BLUE_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(PURPLE_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(MAGENTA_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(PINK_LEASH.get(), DYED_LEASH);
+        CauldronInteraction.WATER.put(RAINBOW_LEASH.get(), DYED_LEASH);
     }
 }

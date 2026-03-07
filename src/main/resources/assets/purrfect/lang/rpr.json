@@ -1,9 +1,14 @@
 {
   "creative_tab.purrfect": "Purrfect",
   "creative_tab.purrfect.sub.pharmacy": "Фармацевтика",
+  "creative_tab.purrfect.sub.things": "Штучки",
   "creative_tab.purrfect.sub.plushies": "Плюшки",
+  "creative_tab.purrfect.sub.flower_wreaths": "Вѣнки",
   "creative_tab.purrfect.sub.collars": "Ошейники",
+  "creative_tab.purrfect.sub.furry_things": "Фурри штучки",
+  "creative_tab.purrfect.sub.tags": "Мѣтки",
   "creative_tab.purrfect.sub.flags": "Флаги",
+  "creative_tab.purrfect.sub.graphics": "Графика",
   "creative_tab.purrfect.silly.0": ":3",
   "creative_tab.purrfect.silly.1": ">w<",
   "creative_tab.purrfect.silly.2": "UwU",
@@ -21,6 +26,8 @@
   "item.purrfect.pharmacy_vial_crystal_ringing": "Аптекарская склянка \"Кристальный Звонъ\"",
   "item.purrfect.pharmacy_vial_rainbow_spark": "Аптекарская склянка \"Радужная Искра\"",
   "item.purrfect.pharmacy_vial_slimy_slug": "Аптекарская склянка \"Слизкій Слизень\"",
+
+  "block.purrfect.handcrafting_table": "Столъ рукодѣлія",
 
   "block.purrfect.blahaj_plush": "Плюшъ Акулки",
   "block.purrfect.pink_blahaj_plush": "Плюшъ розовой Акулки",
@@ -91,6 +98,17 @@
   "item.purrfect.magenta_yarn": "Пурпурный клубокъ нитокъ",
   "item.purrfect.pink_yarn": "Розовый клубокъ нитокъ",
   "item.purrfect.rainbow_yarn": "Радужный клубокъ нитокъ",
+
+  "block.purrfect.copper_bowl": "Мѣдная миска",
+  "block.purrfect.iron_bowl": "Желѣзная миска",
+
+  "item.purrfect.copper_shipkey": "Мѣдный ключ",
+  "item.purrfect.iron_shipkey": "Желѣзный ключ",
+  "item.purrfect.golden_shipkey": "Золотой ключ",
+  "item.purrfect.diamond_shipkey": "Діамантовый ключ",
+  "item.purrfect.netherite_shipkey": "Нѣдритовый ключ",
+
+  "item.purrfect.silly_tag": "Глупая мѣтка",
 
   "block.purrfect.flagpole": "Флагштокъ",
 
@@ -189,7 +207,13 @@
   "block.purrfect.sodium_stairs": "Содіумъ ступеньки",
   "block.purrfect.sodium_slab": "Содіумъ плита",
 
-  "_comment_2": "Части ошейника",
+  "_comment_2": "Вкладки рукодѣлія",
+  "handcrafting_tab.purrfect.handcrafting": "Рукодѣліе",
+  "handcrafting_tab.purrfect.collars": "Ошейники",
+  "handcrafting_tab.purrfect.silly_tags": "Глупые мѣтки",
+  "handcrafting_tab.purrfect.shipkeys": "Ключи",
+
+  "_comment_3": "Части ошейника",
   "collar_part.purrfect.none": "Нѣту",
   "collar_part.color.purrfect": "Цвѣтъ:",
   "collar_part.accessory.purrfect": "Аксессуаръ:",
@@ -219,15 +243,92 @@
   "collar_part.accessory.purrfect.golden_bell": "Золотой колокол",
   "collar_part.accessory.purrfect.diamond_bell": "Діамантовый колокол",
   "collar_part.accessory.purrfect.netherite_bell": "Нѣдритовый колокол",
+  "collar_part.accessory.purrfect.copper_lock": "Мѣдный замокъ",
+  "collar_part.accessory.purrfect.iron_lock": "Желѣзный замокъ",
+  "collar_part.accessory.purrfect.golden_lock": "Золотой замокъ",
+  "collar_part.accessory.purrfect.diamond_lock": "Діамантовый замокъ",
+  "collar_part.accessory.purrfect.netherite_lock": "Нѣдритовый замокъ",
 
   "collar_part.decoration.purrfect.spikes": "Шипы",
 
-  "_comment_3": "Звуки",
+  "_comment_4": "Глупые мѣтки",
+  "silly_tag.purrfect.nameless": "Безымянный",
+
+  "silly_tag.purrfect.heterosexual": "Гетеросексуалъ",
+  "silly_tag.purrfect.lesbian": "Лесбиянка",
+  "silly_tag.purrfect.gay": "Гей",
+  "silly_tag.purrfect.bi": "Лесбіянка",
+  "silly_tag.purrfect.trans": "Трансъ",
+  "silly_tag.purrfect.enby": "Небинарные",
+  "silly_tag.purrfect.genderfluid": "Гендерфлюидъ",
+  "silly_tag.purrfect.demiboy": "Демибой",
+  "silly_tag.purrfect.demigirl": "Демигёрлъ",
+  "silly_tag.purrfect.demigender": "Демигендер",
+  "silly_tag.purrfect.agender": "Агендеръ",
+  "silly_tag.purrfect.pan": "Пансексуалъ",
+  "silly_tag.purrfect.omni": "Омнисексуалъ",
+  "silly_tag.purrfect.poly": "Полисексуалъ",
+  "silly_tag.purrfect.demisexual": "Демисексуалъ",
+  "silly_tag.purrfect.ace": "Асексуалъ",
+  "silly_tag.purrfect.aro": "Аромантикъ",
+  "silly_tag.purrfect.aroace": "Аромантикъ Асексуалъ",
+
+  "silly_tag.purrfect.boy": "Boy",
+  "silly_tag.purrfect.girl": "Girl",
+  "silly_tag.purrfect.thing": "Thing",
+  "silly_tag.purrfect.good_boy": "Good Boy",
+  "silly_tag.purrfect.good_girl": "Good Girl",
+  "silly_tag.purrfect.good_thing": "Good Thing",
+  "silly_tag.purrfect.bad_boy": "Bad Boy",
+  "silly_tag.purrfect.bad_girl": "Bad Girl",
+  "silly_tag.purrfect.bad_thing": "Bad Thing",
+  "silly_tag.purrfect.top": "Top",
+  "silly_tag.purrfect.bottom": "Bottom",
+  "silly_tag.purrfect.smol": "smol",
+  "silly_tag.purrfect.big": "BIG",
+
+  "silly_tag.purrfect.creature": "Существо",
+  "silly_tag.purrfect.puppy": "Puppy",
+  "silly_tag.purrfect.kitten": "Kitten",
+  "silly_tag.purrfect.fish": "Fish",
+  "silly_tag.purrfect.fop": "Fop",
+  "silly_tag.purrfect.the": "The",
+  "silly_tag.purrfect.furry": "Фурри",
+  "silly_tag.purrfect.scalie": "Scalie",
+
+  "silly_tag.purrfect.colon_three": ":3",
+  "silly_tag.purrfect.fish_left": "<><",
+  "silly_tag.purrfect.fish_right": "><>",
+  "silly_tag.purrfect.owo": "OwO",
+  "silly_tag.purrfect.uwu": "UwU",
+
+  "silly_tag.purrfect.yapper": "Яппер",
+  "silly_tag.purrfect.goober": "Губер",
+  "silly_tag.purrfect.silly": "Глупенький",
+  "silly_tag.purrfect.fluffy": "Пушистенький",
+  "silly_tag.purrfect.gender": "Гендер",
+  "silly_tag.purrfect.zampanio": "Зампанио",
+  "silly_tag.purrfect.implosive": "Имплозивный",
+  "silly_tag.purrfect.tetramixin": "Тетрамиксин",
+  "silly_tag.purrfect.greg": "Грэг",
+  "silly_tag.purrfect.yes": "Да",
+  "silly_tag.purrfect.no": "Нет",
+  "silly_tag.purrfect.puppy_brained": "Puppy brained",
+
+  "silly_tag.purrfect.dev": "Dev",
+
+  "_comment_5": "Лор предметов",
+  "lore.purrfect.collar.locked": "Заперто",
+
+  "lore.purrfect.silly_tag.tag": "Тэг:",
+  "lore.purrfect.silly_tag.gender": "Выбери свой Гендер!",
+
+  "_comment_6": "Звуки",
   "sounds.purrfect.collar_bell": "Колокольчикъ ошейника звенитъ",
 
-  "_comment_4": "Существа",
+  "_comment_7": "Существа",
   "entity.purrfect.yarn": "Клубокъ",
 
-  "_comment_5": "Меню Пушистаго Мѣха",
+  "_comment_8": "Меню Пушистаго Мѣха",
   "mod_description.purrfect": "Purrfect - модъ про фурри, для фурри, отъ фурри. \n Добавляетъ фармацевтику и фурри штучки."
 } 

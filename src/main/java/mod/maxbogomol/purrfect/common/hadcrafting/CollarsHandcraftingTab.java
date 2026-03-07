@@ -213,7 +213,7 @@ public class CollarsHandcraftingTab extends HandcraftingTab {
         RenderSystem.enableBlend();
 
         if (!getComponent(screen.getMenu()).resultSlot.isEmpty() && selectedRecipe != null && matchedRecipes.contains(selectedRecipe)) {
-            ii = scroll * 8;
+            ii = 0;
             for (int si = 0; si < 4; si++) {
                 for (int sj = 0; sj < 9; sj++) {
                     if (si == 0 ) {

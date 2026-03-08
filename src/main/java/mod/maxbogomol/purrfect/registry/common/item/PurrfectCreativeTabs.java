@@ -288,6 +288,7 @@ public class PurrfectCreativeTabs {
             addInSub(event, FLAGS, PurrfectItems.BEERSEXUAL_FLAG);
             addInSub(event, FLAGS, PurrfectItems.WIZARDS_REBORN_FLAG);
             addInSub(event, FLAGS, PurrfectItems.FLUFFY_FUR_FLAG);
+            addInSub(event, FLAGS, PurrfectItems.PURRFECT_FLAG);
             addInSub(event, FLAGS, PurrfectItems.SILLY_ODDITIES_FLAG);
             addInSub(event, FLAGS, PurrfectItems.OPTIFINE_FLAG);
             addInSub(event, FLAGS, PurrfectItems.SODIUM_FLAG);

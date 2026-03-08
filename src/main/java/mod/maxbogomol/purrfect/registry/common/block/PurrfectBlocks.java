@@ -81,6 +81,7 @@ public class PurrfectBlocks {
     public static final RegistryObject<Block> BEERSEXUAL_FLAG = BLOCKS.register("beersexual_flag", () -> new FlagBlock(FlagBlock.BEERSEXUAL, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> WIZARDS_REBORN_FLAG = BLOCKS.register("wizards_reborn_flag", () -> new FlagBlock(FlagBlock.WIZARDS_REBORN, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> FLUFFY_FUR_FLAG = BLOCKS.register("fluffy_fur_flag", () -> new FlagBlock(FlagBlock.FLUFFY_FUR, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
+    public static final RegistryObject<Block> PURRFECT_FLAG = BLOCKS.register("purrfect_flag", () -> new FlagBlock(FlagBlock.PURRFECT, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> SILLY_ODDITIES_FLAG = BLOCKS.register("silly_oddities_flag", () -> new FlagBlock(FlagBlock.SILLY_ODDITIES, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> OPTIFINE_FLAG = BLOCKS.register("optifine_flag", () -> new FlagBlock(FlagBlock.OPTIFINE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> SODIUM_FLAG = BLOCKS.register("sodium_flag", () -> new FlagBlock(FlagBlock.SODIUM, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
@@ -125,6 +126,7 @@ public class PurrfectBlocks {
     public static final RegistryObject<Block> BEERSEXUAL_WALL_FLAG = BLOCKS.register("beersexual_wall_flag", () -> new FlagWallBlock(FlagBlock.BEERSEXUAL, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
     public static final RegistryObject<Block> WIZARDS_REBORN_WALL_FLAG = BLOCKS.register("wizards_reborn_wall_flag", () -> new FlagWallBlock(FlagBlock.WIZARDS_REBORN, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
     public static final RegistryObject<Block> FLUFFY_FUR_WALL_FLAG = BLOCKS.register("fluffy_fur_wall_flag", () -> new FlagWallBlock(FlagBlock.FLUFFY_FUR, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
+    public static final RegistryObject<Block> PURRFECT_WALL_FLAG = BLOCKS.register("purrfect_wall_flag", () -> new FlagWallBlock(FlagBlock.PURRFECT, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
     public static final RegistryObject<Block> SILLY_ODDITIES_WALL_FLAG = BLOCKS.register("silly_oddities_wall_flag", () -> new FlagWallBlock(FlagBlock.SILLY_ODDITIES, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
     public static final RegistryObject<Block> OPTIFINE_WALL_FLAG = BLOCKS.register("optifine_wall_flag", () -> new FlagWallBlock(FlagBlock.OPTIFINE, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));
     public static final RegistryObject<Block> SODIUM_WALL_FLAG = BLOCKS.register("sodium_wall_flag", () -> new FlagWallBlock(FlagBlock.SODIUM, BlockBehaviour.Properties.copy(FLAGPOLE.get()).noCollission()));

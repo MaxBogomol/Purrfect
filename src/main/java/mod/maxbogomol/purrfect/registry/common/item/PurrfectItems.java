@@ -186,6 +186,7 @@ public class PurrfectItems {
     public static final RegistryObject<Item> BEERSEXUAL_FLAG = ITEMS.register("beersexual_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.BEERSEXUAL_FLAG.get(), PurrfectBlocks.BEERSEXUAL_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> WIZARDS_REBORN_FLAG = ITEMS.register("wizards_reborn_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.WIZARDS_REBORN_FLAG.get(), PurrfectBlocks.WIZARDS_REBORN_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> FLUFFY_FUR_FLAG = ITEMS.register("fluffy_fur_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.FLUFFY_FUR_FLAG.get(), PurrfectBlocks.FLUFFY_FUR_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
+    public static final RegistryObject<Item> PURRFECT_FLAG = ITEMS.register("purrfect_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.PURRFECT_FLAG.get(), PurrfectBlocks.PURRFECT_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> SILLY_ODDITIES_FLAG = ITEMS.register("silly_oddities_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.SILLY_ODDITIES_FLAG.get(), PurrfectBlocks.SILLY_ODDITIES_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> OPTIFINE_FLAG = ITEMS.register("optifine_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.OPTIFINE_FLAG.get(), PurrfectBlocks.OPTIFINE_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
     public static final RegistryObject<Item> SODIUM_FLAG = ITEMS.register("sodium_flag", () -> new PurrfectRenderStandingAndWallBlockItem(PurrfectBlocks.SODIUM_FLAG.get(), PurrfectBlocks.SODIUM_WALL_FLAG.get(), new Item.Properties(), Direction.DOWN));
@@ -371,6 +372,7 @@ public class PurrfectItems {
             FluffyFurModels.addCustomRenderItemModel(map, BEERSEXUAL_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, WIZARDS_REBORN_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, FLUFFY_FUR_FLAG.getId());
+            FluffyFurModels.addCustomRenderItemModel(map, PURRFECT_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, SILLY_ODDITIES_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, OPTIFINE_FLAG.getId());
             FluffyFurModels.addCustomRenderItemModel(map, SODIUM_FLAG.getId());

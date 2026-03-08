@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "top=false,bottom=false": {
+      "model": "purrfect:block/flagpole"
+    },
+    "top=true,bottom=true": {
+      "model": "purrfect:block/flagpole_center"
+    },
+    "top=false,bottom=true": {
+      "model": "purrfect:block/flagpole_top"
+    },
+    "top=true,bottom=false": {
+      "model": "purrfect:block/flagpole_bottom"
+    }
+  }
+}

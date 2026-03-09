@@ -6,6 +6,7 @@ import mod.maxbogomol.fluffy_fur.common.proxy.ISidedProxy;
 import mod.maxbogomol.fluffy_fur.common.proxy.ServerProxy;
 import mod.maxbogomol.purrfect.common.event.PurrfectEvents;
 import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
+import mod.maxbogomol.purrfect.integration.common.silly_oddities.SillyOdditiesReborn;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
 import mod.maxbogomol.purrfect.registry.common.*;
 import mod.maxbogomol.purrfect.registry.common.block.PurrfectBlockEntities;
@@ -45,6 +46,7 @@ public class Purrfect {
         PurrfectRecipes.register(eventBus);
 
         PurrfectWizardsReborn.init(eventBus);
+        SillyOdditiesReborn.init(eventBus);
 
         PurrfectHandcraftingTabs.register();
         PurrfectCollarParts.register();

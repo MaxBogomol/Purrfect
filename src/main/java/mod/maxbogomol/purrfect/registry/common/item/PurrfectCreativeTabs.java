@@ -7,6 +7,7 @@ import mod.maxbogomol.fluffy_fur.util.ColorUtil;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.common.item.equipment.SillyTagItem;
 import mod.maxbogomol.purrfect.common.item.equipment.curio.CollarItem;
+import mod.maxbogomol.purrfect.integration.common.silly_oddities.SillyOdditiesReborn;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
 import mod.maxbogomol.purrfect.registry.common.PurrfectCollarParts;
 import net.minecraft.core.registries.Registries;
@@ -189,6 +190,9 @@ public class PurrfectCreativeTabs {
             if (PurrfectWizardsReborn.isLoaded()) {
                 addInSub(event, FLOWER_WREATHS, PurrfectWizardsReborn.ItemsLoadedOnly.PETALS_OF_INNOCENCE_FLOWER_WREATH);
             }
+            if (SillyOdditiesReborn.isLoaded()) {
+                addInSub(event, FLOWER_WREATHS, SillyOdditiesReborn.ItemsLoadedOnly.WILDFLOWERS_FLOWER_WREATH);
+            }
 
             //COLLARS
             addInSub(event, COLLAR, PurrfectItems.COLLAR);
@@ -286,8 +290,8 @@ public class PurrfectCreativeTabs {
             addInSub(event, FLAGS, PurrfectItems.AROACE_FLAG);
             addInSub(event, FLAGS, PurrfectItems.KVASSSEXUAL_FLAG);
             addInSub(event, FLAGS, PurrfectItems.BEERSEXUAL_FLAG);
-            addInSub(event, FLAGS, PurrfectItems.WIZARDS_REBORN_FLAG);
             addInSub(event, FLAGS, PurrfectItems.FLUFFY_FUR_FLAG);
+            addInSub(event, FLAGS, PurrfectItems.WIZARDS_REBORN_FLAG);
             addInSub(event, FLAGS, PurrfectItems.PURRFECT_FLAG);
             addInSub(event, FLAGS, PurrfectItems.SILLY_ODDITIES_FLAG);
             addInSub(event, FLAGS, PurrfectItems.OPTIFINE_FLAG);

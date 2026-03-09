@@ -1,9 +1,13 @@
 package mod.maxbogomol.purrfect.common.item.equipment;
 
+import mod.maxbogomol.fluffy_fur.FluffyFur;
+import mod.maxbogomol.purrfect.Purrfect;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -13,11 +17,16 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class SillyTagItem extends Item {
 
     public static ArrayList<String> tagList = new ArrayList<>();
     public static ArrayList<String> specialTagList = new ArrayList<>();
+
+    public static UUID FOX = UUID.fromString("a3b9ab92-41ea-4ec1-87f8-db64036c105f"); //MaxBogomol
+    public static UUID VOICES = UUID.fromString("2472235e-b8f9-47c7-aa8f-ca9fcc48d92e"); //FurryFoxes
+    public static UUID CUTIE = UUID.fromString("49746d0a-8da8-4c8c-9f57-1cdbfd62e682"); //OnixTheCat
 
     public SillyTagItem(Properties properties) {
         super(properties);
@@ -97,5 +106,24 @@ public class SillyTagItem extends Item {
         } else {
             list.add(Component.translatable("lore.purrfect.silly_tag.tag").withStyle(ChatFormatting.GOLD).append(CommonComponents.SPACE).append(Component.translatable(getTranslatedTag(tag)).withStyle(ChatFormatting.YELLOW)));
         }
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public static List<String> getSpecialTags() {
+        List<String> list = new ArrayList<>();
+        Minecraft minecraft = Minecraft.getInstance();
+        Player player = minecraft.player;
+        if (player != null) {
+            UUID uuid = player.getGameProfile().getId();
+
+            if (uuid.equals(FOX) || uuid.equals(VOICES)) {
+                return specialTagList;
+            }
+
+            if (FluffyFur.devEnvironment) {
+                list.add(Purrfect.MOD_ID+":dev");
+            }
+        }
+        return list;
     }
 }

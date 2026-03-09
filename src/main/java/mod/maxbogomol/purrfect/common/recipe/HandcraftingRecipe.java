@@ -25,11 +25,17 @@ public class HandcraftingRecipe implements Recipe<Container> {
     private final ResourceLocation id;
     private final List<HandcraftingIngredient> inputs;
     private final ItemStack output;
+    private String special;
 
     public HandcraftingRecipe(ResourceLocation id, ItemStack output, HandcraftingIngredient... inputs) {
         this.id = id;
         this.output = output;
         this.inputs = List.of(inputs);
+    }
+
+    public HandcraftingRecipe setSpecial(String special) {
+        this.special = special;
+        return this;
     }
 
     @Override
@@ -113,8 +119,9 @@ public class HandcraftingRecipe implements Recipe<Container> {
                 int count = GsonHelper.getAsInt(e.getAsJsonObject(), "count", 1);
                 inputs.add(new HandcraftingIngredient(ingredient, count));
             }
+            String special = GsonHelper.getAsString(json, "special", "");
 
-            return new HandcraftingRecipe(recipeId, output, inputs.toArray(new HandcraftingIngredient[0]));
+            return new HandcraftingRecipe(recipeId, output, inputs.toArray(new HandcraftingIngredient[0])).setSpecial(special);
         }
 
         @Nullable
@@ -127,7 +134,8 @@ public class HandcraftingRecipe implements Recipe<Container> {
                 inputs[i] = new HandcraftingIngredient(ingredient, count);
             }
             ItemStack output = buffer.readItem();
-            return new HandcraftingRecipe(recipeId, output, inputs);
+            String special = buffer.readUtf();
+            return new HandcraftingRecipe(recipeId, output, inputs).setSpecial(special);
         }
 
         @Override
@@ -138,6 +146,7 @@ public class HandcraftingRecipe implements Recipe<Container> {
                 buffer.writeInt(input.getCount());
             }
             buffer.writeItemStack(recipe.getResultItem(RegistryAccess.EMPTY), false);
+            buffer.writeUtf(recipe.getSpecial());
         }
     }
 
@@ -148,5 +157,9 @@ public class HandcraftingRecipe implements Recipe<Container> {
     @Override
     public ItemStack getResultItem(RegistryAccess registryAccess) {
         return output;
+    }
+
+    public String getSpecial() {
+        return special;
     }
 }

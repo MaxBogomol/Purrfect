@@ -104,6 +104,7 @@ public class SillyTagsHandcraftingTab extends HandcraftingTab {
     public void init(HandcraftingTableScreen screen) {
         tags = new ArrayList<>(SillyTagItem.tagList);
         tags.removeAll(SillyTagItem.specialTagList);
+        tags.addAll(SillyTagItem.getSpecialTags());
         selectedTag = null;
         scroll = 0;
     }

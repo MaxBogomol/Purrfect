@@ -58,6 +58,7 @@
   "item.purrfect.pitcher_plant_flower_wreath": "Венок из кувшинниц",
   "item.purrfect.cutie_flower_wreath": "Венок Милашки :3",
   "item.purrfect.petals_of_innocence_flower_wreath": "Венок из лепестков Невинности",
+  "item.purrfect.wildflowers_flower_wreath": "Венок из полевых цветов",
 
   "item.purrfect.collar": "Ошейник",
 
@@ -150,8 +151,8 @@
   "block.purrfect.aroace_flag": "Флаг (Аромантик Асексуал)",
   "block.purrfect.kvasssexual_flag": "Флаг (Квассексуал)",
   "block.purrfect.beersexual_flag": "Флаг (Пивосексуал)",
-  "block.purrfect.wizards_reborn_flag": "Флаг (Wizard's Reborn)",
   "block.purrfect.fluffy_fur_flag": "Флаг (Fluffy Fur)",
+  "block.purrfect.wizards_reborn_flag": "Флаг (Wizard's Reborn)",
   "block.purrfect.purrfect_flag": "Флаг (Purrfect)",
   "block.purrfect.silly_oddities_flag": "Флаг (Silly Oddities)",
   "block.purrfect.optifine_flag": "Флаг (Optifine)",
@@ -195,8 +196,8 @@
   "block.purrfect.aroace_wall_flag": "Настенный флаг (Аромантик Асексуал)",
   "block.purrfect.kvasssexual_wall_flag": "Настенный флаг (Квассексуал)",
   "block.purrfect.beersexual_wall_flag": "Настенный флаг (Пивосексуал)",
-  "block.purrfect.wizards_reborn_wall_flag": "Настенный флаг (Wizard's Reborn)",
   "block.purrfect.fluffy_fur_wall_flag": "Настенный флаг (Fluffy Fur)",
+  "block.purrfect.wizards_reborn_wall_flag": "Настенный флаг (Wizard's Reborn)",
   "block.purrfect.purrfect_wall_flag": "Настенный флаг (Purrfect)",
   "block.purrfect.silly_oddities_wall_flag": "Настенный флаг (Silly Oddities)",
   "block.purrfect.optifine_wall_flag": "Настенный флаг (Optifine)",
@@ -318,6 +319,7 @@
   "silly_tag.purrfect.puppy_brained": "Puppy brained",
 
   "silly_tag.purrfect.dev": "Dev",
+  "silly_tag.purrfect.pink_joke": "Pink Joke",
 
   "_comment_5": "Лор предметов",
   "lore.purrfect.collar.locked": "Заперто",

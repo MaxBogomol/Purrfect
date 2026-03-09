@@ -32,10 +32,15 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.function.Supplier;
 
 public class MainHandcraftingTab extends HandcraftingTab {
     public static Supplier<ItemStack> ICON = () -> new ItemStack(PurrfectItems.HANDCRAFTING_TABLE.get());
+
+    public static UUID FOX = UUID.fromString("a3b9ab92-41ea-4ec1-87f8-db64036c105f"); //MaxBogomol
+    public static UUID VOICES = UUID.fromString("2472235e-b8f9-47c7-aa8f-ca9fcc48d92e"); //FurryFoxes
+    public static UUID CUTIE = UUID.fromString("49746d0a-8da8-4c8c-9f57-1cdbfd62e682"); //OnixTheCat
 
     public static List<HandcraftingRecipe> allRecipes = new ArrayList<>();
     public static List<HandcraftingRecipe> sortedRecipes = new ArrayList<>();
@@ -308,8 +313,13 @@ public class MainHandcraftingTab extends HandcraftingTab {
                 for (String recipeId : recipeSorting.getRecipes()) {
                     Optional<? extends Recipe<?>> recipe = level.getRecipeManager().byKey(new ResourceLocation(recipeId));
                     if (recipe.isPresent() && recipe.get() instanceof HandcraftingRecipe handcraftingRecipe) {
-                        if (!sortedRecipes.contains(handcraftingRecipe)) {
-                            sortedRecipes.add(handcraftingRecipe);
+                        boolean special = canCraftSpecial(player, level, handcraftingRecipe);
+                        if (handcraftingRecipe.getSpecial().isEmpty() || special) {
+                            if (!sortedRecipes.contains(handcraftingRecipe)) {
+                                sortedRecipes.add(handcraftingRecipe);
+                                remainingRecipes.remove(handcraftingRecipe);
+                            }
+                        } else {
                             remainingRecipes.remove(handcraftingRecipe);
                         }
                     }
@@ -370,7 +380,8 @@ public class MainHandcraftingTab extends HandcraftingTab {
     public static void craftRecipe(Player player, Level level, HandcraftingRecipe recipe, int multiplier) {
         if (level != null && player != null) {
             Container container = player.getInventory();
-            if (recipe.matches(container, level)) {
+            boolean canCraft = canCraftSpecial(player, level, recipe);
+            if (recipe.matches(container, level) && canCraft) {
                 List<HandcraftingIngredient> ingredientsMissing = new ArrayList<>();
                 for (HandcraftingIngredient ingredient : recipe.getHandcraftingIngredients()) {
                     ingredientsMissing.add(new HandcraftingIngredient(ingredient.getIngredient(), ingredient.getCount() * multiplier));
@@ -394,5 +405,22 @@ public class MainHandcraftingTab extends HandcraftingTab {
                 }
             }
         }
+    }
+
+    public static boolean canCraftSpecial(Player player, Level level, HandcraftingRecipe recipe) {
+        if (!recipe.getSpecial().isEmpty()) {
+            if (level != null && player != null) {
+                boolean canCraft = false;
+                String special = recipe.getSpecial();
+                UUID uuid = player.getGameProfile().getId();
+
+                if (special.equals("cutie")) {
+                    return uuid.equals(CUTIE) || uuid.equals(FOX) || uuid.equals(VOICES);
+                }
+
+                return canCraft;
+            }
+        }
+        return true;
     }
 }

@@ -58,6 +58,7 @@
   "item.purrfect.pitcher_plant_flower_wreath": "Pitcher Plant Flower Wreath",
   "item.purrfect.cutie_flower_wreath": "Cutie's Flower Wreath :3",
   "item.purrfect.petals_of_innocence_flower_wreath": "Petals of Innocence Flower Wreath",
+  "item.purrfect.wildflowers_flower_wreath": "Wildflowers Flower Wreath",
   
   "item.purrfect.collar": "Collar",
 
@@ -150,8 +151,8 @@
   "block.purrfect.aroace_flag": "Aroace Flag",
   "block.purrfect.kvasssexual_flag": "Kvasssexual Flag",
   "block.purrfect.beersexual_flag": "Beersexual Flag",
-  "block.purrfect.wizards_reborn_flag": "Wizard's Reborn Flag",
   "block.purrfect.fluffy_fur_flag": "Fluffy Fur Flag",
+  "block.purrfect.wizards_reborn_flag": "Wizard's Reborn Flag",
   "block.purrfect.purrfect_flag": "Purrfect Flag",
   "block.purrfect.silly_oddities_flag": "Silly Oddities Flag",
   "block.purrfect.optifine_flag": "Optifine Flag",
@@ -195,8 +196,8 @@
   "block.purrfect.aroace_wall_flag": "Aroace Wall Flag",
   "block.purrfect.kvasssexual_wall_flag": "Kvasssexual Wall Flag",
   "block.purrfect.beersexual_wall_flag": "Beersexual Wall Flag",
-  "block.purrfect.wizards_reborn_wall_flag": "Wizard's Reborn Wall Flag",
   "block.purrfect.fluffy_fur_wall_flag": "Fluffy Fur Wall Flag",
+  "block.purrfect.wizards_reborn_wall_flag": "Wizard's Reborn Wall Flag",
   "block.purrfect.purrfect_wall_flag": "Purrfect Wall Flag",
   "block.purrfect.silly_oddities_wall_flag": "Silly Oddities Wall Flag",
   "block.purrfect.optifine_wall_flag": "Optifine Wall Flag",
@@ -318,6 +319,7 @@
   "silly_tag.purrfect.puppy_brained": "Puppy brained",
 
   "silly_tag.purrfect.dev": "Dev",
+  "silly_tag.purrfect.pink_joke": "Pink Joke",
 
   "_comment_5": "Items lore",
   "lore.purrfect.collar.locked": "Locked",

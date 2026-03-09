@@ -26,6 +26,10 @@
     {
       "id": "purrfect:petals_of_innocence_flower_wreath",
       "required": false
+    },
+    {
+      "id": "purrfect:wildflowers_flower_wreath",
+      "required": false
     }
   ]
 }

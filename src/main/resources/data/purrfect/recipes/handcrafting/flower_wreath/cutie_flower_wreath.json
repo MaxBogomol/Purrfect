@@ -1,0 +1,22 @@
+{
+  "type": "purrfect:handcrafting",
+  "output": {
+    "item": "purrfect:cutie_flower_wreath",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "minecraft:dandelion"
+      },
+      "count": 6
+    },
+    {
+      "ingredient": {
+        "item": "minecraft:golden_apple"
+      },
+      "count": 1
+    }
+  ],
+  "special": "cutie"
+}

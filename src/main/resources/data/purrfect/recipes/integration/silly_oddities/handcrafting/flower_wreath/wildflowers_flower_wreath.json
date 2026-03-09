@@ -5,19 +5,19 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "wizards_reborn"
+          "modid": "silly_oddities"
         }
       ],
       "recipe": {
         "type": "purrfect:handcrafting",
         "output": {
-          "item": "purrfect:petals_of_innocence_flower_wreath",
+          "item": "purrfect:wildflowers_flower_wreath",
           "count": 1
         },
         "ingredients": [
           {
             "ingredient": {
-              "item": "wizards_reborn:petals_of_innocence"
+              "item": "silly_oddities:wildflowers"
             },
             "count": 6
           }

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_yarns": {
+    "has_dyeable_yarns": {
       "conditions": {
         "items": [
           {
-            "tag": "purrfect:yarns"
+            "tag": "purrfect:dyeable_yarns"
           }
         ]
       },
@@ -14,7 +14,7 @@
   },
   "requirements": [
     [
-      "has_yarns"
+      "has_dyeable_yarns"
     ]
   ],
   "rewards": {

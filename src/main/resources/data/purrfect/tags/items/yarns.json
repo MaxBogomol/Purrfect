@@ -1,22 +1,6 @@
 {
   "replace": false,
   "values": [
-    "purrfect:white_yarn",
-    "purrfect:light_gray_yarn",
-    "purrfect:gray_yarn",
-    "purrfect:black_yarn",
-    "purrfect:brown_yarn",
-    "purrfect:red_yarn",
-    "purrfect:orange_yarn",
-    "purrfect:yellow_yarn",
-    "purrfect:lime_yarn",
-    "purrfect:green_yarn",
-    "purrfect:cyan_yarn",
-    "purrfect:light_blue_yarn",
-    "purrfect:blue_yarn",
-    "purrfect:purple_yarn",
-    "purrfect:magenta_yarn",
-    "purrfect:pink_yarn",
-    "purrfect:rainbow_yarn"
+    "#purrfect:dyeable_yarns"
   ]
 }

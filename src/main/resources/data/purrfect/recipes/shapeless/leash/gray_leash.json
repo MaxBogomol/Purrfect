@@ -4,7 +4,7 @@
   "group": "leash",
   "ingredients": [
     {
-      "tag": "purrfect:leashes"
+      "tag": "purrfect:dyeable_leashes"
     },
     {
       "tag": "forge:dyes/gray"

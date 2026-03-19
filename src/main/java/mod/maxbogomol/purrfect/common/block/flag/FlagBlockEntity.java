@@ -39,7 +39,7 @@ public class FlagBlockEntity extends BlockEntityBase implements TickableBlockEnt
         if (level.isClientSide()) {
             Minecraft minecraft = Minecraft.getInstance();
             Camera camera = minecraft.getBlockEntityRenderDispatcher().camera;
-            boolean physics = Vec3.atCenterOf(getBlockPos()).closerThan(camera.getPosition(), 64f);
+            boolean physics = camera != null ? Vec3.atCenterOf(getBlockPos()).closerThan(camera.getPosition(), 64f) : false;
 
             if (physics) {
                 Random randomOffset = new Random();

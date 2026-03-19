@@ -48,28 +48,30 @@ public class LeashRenderHandler {
             for (Player player : level.players()) {
                 Map<Integer, Player> leashedPlayers = FurryPlayerHandler.getLeashedPlayers(player);
                 Map<Integer, ItemStack> leashes = FurryPlayerHandler.getLeashes(player);
-                for (int index : leashedPlayers.keySet()) {
-                    Player target = leashedPlayers.get(index);
-                    if (target != null) {
-                        Vec3 pos = target.getPosition(partialTicks);
-                        ItemStack itemStack = leashes.get(index);
+                if (leashedPlayers != null && leashes != null) {
+                    for (int index : leashedPlayers.keySet()) {
+                        Player target = leashedPlayers.get(index);
+                        if (target != null) {
+                            Vec3 pos = target.getPosition(partialTicks);
+                            ItemStack itemStack = leashes.get(index);
 
-                        TextureAtlasSprite sprite = spriteStandard;
-                        float textureWidth = 0.0625f;
-                        float textureHeight = 0.75f;
-                        float leashWidth = 0.05f;
-                        if (itemStack != null && itemStack.getItem() instanceof LeashItem leashItem) {
-                            sprite = RenderUtil.getSprite(leashItem.getLeashTexture());
-                            textureWidth = leashItem.getLeashTextureWidth();
-                            textureHeight = leashItem.getLeashTextureHeight();
-                            leashWidth = leashItem.getLeashWidth();
+                            TextureAtlasSprite sprite = spriteStandard;
+                            float textureWidth = 0.0625f;
+                            float textureHeight = 0.75f;
+                            float leashWidth = 0.05f;
+                            if (itemStack != null && itemStack.getItem() instanceof LeashItem leashItem) {
+                                sprite = RenderUtil.getSprite(leashItem.getLeashTexture());
+                                textureWidth = leashItem.getLeashTextureWidth();
+                                textureHeight = leashItem.getLeashTextureHeight();
+                                leashWidth = leashItem.getLeashWidth();
+                            }
+
+                            poseStack.pushPose();
+                            poseStack.translate(-camera.x(), -camera.y(), -camera.z());
+                            poseStack.translate(pos.x(), pos.y(), pos.z());
+                            renderLeash(sprite, target, partialTicks, poseStack, Minecraft.getInstance().renderBuffers().bufferSource(), player, textureWidth, textureHeight, leashWidth);
+                            poseStack.popPose();
                         }
-
-                        poseStack.pushPose();
-                        poseStack.translate(-camera.x(), -camera.y(), -camera.z());
-                        poseStack.translate(pos.x(), pos.y(), pos.z());
-                        renderLeash(sprite, target, partialTicks, poseStack, Minecraft.getInstance().renderBuffers().bufferSource(), player, textureWidth, textureHeight, leashWidth);
-                        poseStack.popPose();
                     }
                 }
             }

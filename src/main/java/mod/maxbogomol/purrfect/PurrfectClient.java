@@ -52,7 +52,6 @@ public class PurrfectClient {
                 .setDescription(Component.translatable("mod_description.purrfect"))
                 .addFluffyVillageLink("https://fluffy-village.dev/pages/eng/creations/purrfect.html")
                 .addGithubLink("https://github.com/MaxBogomol/Purrfect")
-                .addCurseForgeLink("https://www.curseforge.com/minecraft/mc-mods/purrfect")
                 .addModrinthLink("https://modrinth.com/mod/purrfect")
                 .addDiscordLink("https://discord.gg/cKf55qNugw");
 

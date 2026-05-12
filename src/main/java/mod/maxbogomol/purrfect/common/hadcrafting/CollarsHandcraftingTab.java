@@ -1,7 +1,6 @@
 package mod.maxbogomol.purrfect.common.hadcrafting;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import mod.maxbogomol.fluffy_fur.common.block.entity.BlockSimpleInventory;
 import mod.maxbogomol.purrfect.Purrfect;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTab;
 import mod.maxbogomol.purrfect.api.handcrafting.HandcraftingTabComponent;
@@ -23,7 +22,6 @@ import mod.maxbogomol.purrfect.registry.common.item.PurrfectItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
@@ -461,7 +459,7 @@ public class CollarsHandcraftingTab extends HandcraftingTab {
     public static void craftRecipe(Player player, Level level, HandcraftingCollarsRecipe recipe) {
         if (level != null && player != null && recipe != null) {
             Container container = player.getInventory();
-            if (recipe.matches(container, level)) {
+            if (recipe.matches(container, level) && !player.isCreative()) {
                 List<HandcraftingIngredient> ingredientsMissing = new ArrayList<>();
                 for (HandcraftingIngredient ingredient : recipe.getHandcraftingIngredients()) {
                     ingredientsMissing.add(new HandcraftingIngredient(ingredient.getIngredient(), ingredient.getCount()));
@@ -479,8 +477,6 @@ public class CollarsHandcraftingTab extends HandcraftingTab {
                         }
                     }
                 }
-
-                BlockSimpleInventory.addPlayerItem(level, player, recipe.getResultItem(RegistryAccess.EMPTY).copy());
             }
         }
     }

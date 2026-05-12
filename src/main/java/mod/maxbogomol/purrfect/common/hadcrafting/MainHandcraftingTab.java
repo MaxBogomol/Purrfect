@@ -235,7 +235,7 @@ public class MainHandcraftingTab extends HandcraftingTab {
             }
         }
 
-        if (selectedRecipe != null && matchedRecipes.contains(selectedRecipe)) {
+        if (selectedRecipe != null && (matchedRecipes.contains(selectedRecipe) || Minecraft.getInstance().player.isCreative())) {
             if (mouseX >= i + 25 && mouseY >= j + 125 && mouseX < i + 25 + 18 && mouseY < j + 125 + 18) {
                 PurrfectPacketHandler.sendToServer(new HandcraftingRecipeCraftPacket(selectedRecipe, multiplier));
                 Minecraft.getInstance().player.playNotifySound(SoundEvents.UI_BUTTON_CLICK.get(), SoundSource.NEUTRAL, 0.5f, 1.0f);
@@ -381,21 +381,23 @@ public class MainHandcraftingTab extends HandcraftingTab {
         if (level != null && player != null) {
             Container container = player.getInventory();
             boolean canCraft = canCraftSpecial(player, level, recipe);
-            if (recipe.matches(container, level) && canCraft) {
-                List<HandcraftingIngredient> ingredientsMissing = new ArrayList<>();
-                for (HandcraftingIngredient ingredient : recipe.getHandcraftingIngredients()) {
-                    ingredientsMissing.add(new HandcraftingIngredient(ingredient.getIngredient(), ingredient.getCount() * multiplier));
-                }
+            if ((recipe.matches(container, level) || player.isCreative()) && canCraft) {
+                if (!player.isCreative()) {
+                    List<HandcraftingIngredient> ingredientsMissing = new ArrayList<>();
+                    for (HandcraftingIngredient ingredient : recipe.getHandcraftingIngredients()) {
+                        ingredientsMissing.add(new HandcraftingIngredient(ingredient.getIngredient(), ingredient.getCount() * multiplier));
+                    }
 
-                for (HandcraftingIngredient ingredient : ingredientsMissing) {
-                    for (int i = 0; i < container.getContainerSize(); i++) {
-                        ItemStack stack = container.getItem(i);
-                        if (ingredient.getIngredient().test(stack)) {
-                            int count = ingredient.getCount();
-                            if (count > stack.getCount()) count = stack.getCount();
-                            ingredient.remove(count);
-                            stack.shrink(count);
-                            if (ingredient.isEmpty()) break;
+                    for (HandcraftingIngredient ingredient : ingredientsMissing) {
+                        for (int i = 0; i < container.getContainerSize(); i++) {
+                            ItemStack stack = container.getItem(i);
+                            if (ingredient.getIngredient().test(stack)) {
+                                int count = ingredient.getCount();
+                                if (count > stack.getCount()) count = stack.getCount();
+                                ingredient.remove(count);
+                                stack.shrink(count);
+                                if (ingredient.isEmpty()) break;
+                            }
                         }
                     }
                 }

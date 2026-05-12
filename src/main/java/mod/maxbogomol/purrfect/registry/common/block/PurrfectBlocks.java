@@ -12,10 +12,7 @@ import mod.maxbogomol.purrfect.common.block.plush.CarrotBlock;
 import mod.maxbogomol.purrfect.common.block.plush.FishBlock;
 import mod.maxbogomol.purrfect.common.block.plush.ShrimpBlock;
 import mod.maxbogomol.purrfect.registry.common.PurrfectSounds;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -39,7 +36,7 @@ public class PurrfectBlocks {
     public static final RegistryObject<Block> COPPER_BOWL = BLOCKS.register("copper_bowl", () -> new BowlBlock(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)));
     public static final RegistryObject<Block> IRON_BOWL = BLOCKS.register("iron_bowl", () -> new BowlBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
-    public static final RegistryObject<Block> FLAGPOLE = BLOCKS.register("flagpole", () -> new FlagpoleBlock(BlockBehaviour.Properties.copy(Blocks.CHAIN)));
+    public static final RegistryObject<Block> FLAGPOLE = BLOCKS.register("flagpole", () -> new FlagpoleBlock(BlockBehaviour.Properties.of().forceSolidOn().strength(3.0F, 6.0F).sound(SoundType.CHAIN).noOcclusion()));
 
     public static final RegistryObject<Block> WHITE_FLAG = BLOCKS.register("white_flag", () -> new FlagBlock(FlagBlock.WHITE, BlockBehaviour.Properties.copy(FLAGPOLE.get())));
     public static final RegistryObject<Block> LIGHT_GRAY_FLAG = BLOCKS.register("light_gray_flag", () -> new FlagBlock(FlagBlock.LIGHT_GRAY, BlockBehaviour.Properties.copy(FLAGPOLE.get())));

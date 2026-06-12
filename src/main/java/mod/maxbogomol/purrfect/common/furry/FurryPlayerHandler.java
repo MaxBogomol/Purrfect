@@ -5,6 +5,7 @@ import mod.maxbogomol.purrfect.common.capability.IFurryPlayer;
 import mod.maxbogomol.purrfect.common.item.equipment.LeashItem;
 import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
 import mod.maxbogomol.purrfect.common.network.furry.FurryPlayerUpdatePacket;
+import mod.maxbogomol.purrfect.config.PurrfectServerConfig;
 import mod.maxbogomol.purrfect.registry.common.item.PurrfectItemTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -41,6 +42,9 @@ public class FurryPlayerHandler {
                         }
                         if (!level.players().contains(target)) breakLeash = true;
                         if (!hasCollar(target)) breakLeash = true;
+                        if (!breakLeash && PurrfectServerConfig.BREAKABLE_LEASH.get() && (Math.sqrt(target.distanceToSqr(player)) > PurrfectServerConfig.LEASH_MAX_DISTANCE.get())) {
+                            breakLeash = true;
+                        }
                     } else {
                         breakLeash = true;
                     }
@@ -49,7 +53,7 @@ public class FurryPlayerHandler {
                         FurryPlayerHandler.setLeash(player, index, null);
                         if (target != null) level.playSound(null, target.position().x(), target.position().y(), target.position().z(), SoundEvents.LEASH_KNOT_BREAK, SoundSource.PLAYERS, 1f, 1f);
                     } else {
-                        if (Math.sqrt(target.distanceToSqr(player)) > 10) {
+                        if (Math.sqrt(target.distanceToSqr(player)) > PurrfectServerConfig.LEASH_MIN_DISTANCE.get()) {
                             double dX = target.getX() - player.getX();
                             double dY = target.getY() - player.getY();
                             double dZ = target.getZ() - player.getZ();

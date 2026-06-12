@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_dyeable_dyeable_yarns": {
+    "has_dyeable_yarns": {
       "conditions": {
         "items": [
           {

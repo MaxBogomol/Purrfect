@@ -456,6 +456,7 @@ public class PurrfectItems {
 
         SillyTagItem.addSpecialTag(Purrfect.MOD_ID+":dev");
         SillyTagItem.addSpecialTag(Purrfect.MOD_ID+":pink_joke");
+        SillyTagItem.addSpecialTag(Purrfect.MOD_ID+":furry_foxes");
 
         CauldronInteraction DYED_COLLAR = (blockState, level, blockPos, player, interactionHand, itemStack) -> {
             if (itemStack.getItem() instanceof CollarItem) {

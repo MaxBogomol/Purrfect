@@ -6,6 +6,7 @@ import mod.maxbogomol.fluffy_fur.common.proxy.ISidedProxy;
 import mod.maxbogomol.fluffy_fur.common.proxy.ServerProxy;
 import mod.maxbogomol.purrfect.common.event.PurrfectEvents;
 import mod.maxbogomol.purrfect.common.network.PurrfectPacketHandler;
+import mod.maxbogomol.purrfect.config.PurrfectServerConfig;
 import mod.maxbogomol.purrfect.integration.common.silly_oddities.SillyOdditiesReborn;
 import mod.maxbogomol.purrfect.integration.common.wizards_reborn.PurrfectWizardsReborn;
 import mod.maxbogomol.purrfect.registry.common.*;
@@ -18,7 +19,9 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -28,8 +31,8 @@ import org.apache.logging.log4j.Logger;
 public class Purrfect {
     public static final String MOD_ID = "purrfect";
     public static final String NAME = "Purrfect";
-    public static final String VERSION = "0.1.3";
-    public static final int VERSION_NUMBER = 4;
+    public static final String VERSION = "0.1.4";
+    public static final int VERSION_NUMBER = 5;
 
     public static final ISidedProxy proxy = DistExecutor.unsafeRunForDist(() -> ClientProxy::new, () -> ServerProxy::new);
     public static final Logger LOGGER = LogManager.getLogger();
@@ -50,6 +53,8 @@ public class Purrfect {
 
         PurrfectHandcraftingTabs.register();
         PurrfectCollarParts.register();
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, PurrfectServerConfig.SPEC);
 
         DistExecutor.unsafeCallWhenOn(Dist.CLIENT, () -> () -> {
             PurrfectClient.ClientOnly.clientInit();

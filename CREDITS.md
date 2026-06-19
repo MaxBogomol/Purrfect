@@ -10,5 +10,5 @@ Plushies models and textures by [OnixTheCat](https://fluffy-village.dev/pages/en
 Russian - by [MaxBogomol](https://fluffy-village.dev/pages/eng/yappers/maxbogomol.html) (original)   
 Russian (Pre-revolutionary) - by [MaxBogomol](https://fluffy-village.dev/pages/eng/yappers/maxbogomol.html)  
 English - by [MaxBogomol](https://fluffy-village.dev/pages/eng/yappers/maxbogomol.html)  
-Belarusian & Taraškievica - by Kekqupap
+Belarusian & Taraškievica - by [Kekqupap](https://github.com/Kekqupap)
 Belarusian Latin & Taraškievica Latin, Upside down English & Upside down LOLCAT and MEOW - by Python script

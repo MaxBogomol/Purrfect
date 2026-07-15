@@ -320,6 +320,7 @@
 
   "silly_tag.purrfect.dev": "Разработчик",
   "silly_tag.purrfect.pink_joke": "Pink Joke",
+  "silly_tag.purrfect.furry_foxes": "Furry Foxes",
 
   "_comment_5": "Лор предметов",
   "lore.purrfect.collar.locked": "Заперто",
@@ -334,5 +335,14 @@
   "entity.purrfect.yarn": "Клубок",
 
   "_comment_8": "Меню Пушистого Меха",
-  "mod_description.purrfect": "Purrfect - мод про фурри, для фурри, от фурри. \n Добавляет фармацевтику и фурри штучки."
+  "mod_description.purrfect": "Purrfect - мод про фурри, для фурри, от фурри. \n Добавляет фармацевтику и фурри штучки.",
+
+  "_comment_9": "Конфиги",
+  "config.server.purrfect.leash": "Leash",
+  "config.server.purrfect.leash.breakableLeash": "Breakable Leash",
+  "config.server.purrfect.leash.breakableLeash.desc": "Enables leash breaking at maximum distance.",
+  "config.server.purrfect.leash.leashMinDistance": "Leash Min Distance",
+  "config.server.purrfect.leash.leashMinDistance.desc": "Distance after which the leash begins to attract the player.",
+  "config.server.purrfect.leash.leashMaxDistance": "Leash Max Distance",
+  "config.server.purrfect.leash.leashMaxDistance.desc": "Distance after which the leash may break."
 }

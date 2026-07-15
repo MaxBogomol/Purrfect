@@ -335,5 +335,14 @@
   "entity.purrfect.yarn": "Yarn",
 
   "_comment_8": "Fluffy Fur Menu",
-  "mod_description.purrfect": "Purrfect - a mod about furries, for furries, from furry. \n Adds Pharmacy and furry things."
+  "mod_description.purrfect": "Purrfect - a mod about furries, for furries, from furry. \n Adds Pharmacy and furry things.",
+
+  "_comment_9": "Config",
+  "config.server.purrfect.leash": "Leash",
+  "config.server.purrfect.leash.breakableLeash": "Breakable Leash",
+  "config.server.purrfect.leash.breakableLeash.desc": "Enables leash breaking at maximum distance.",
+  "config.server.purrfect.leash.leashMinDistance": "Leash Min Distance",
+  "config.server.purrfect.leash.leashMinDistance.desc": "Distance after which the leash begins to attract the player.",
+  "config.server.purrfect.leash.leashMaxDistance": "Leash Max Distance",
+  "config.server.purrfect.leash.leashMaxDistance.desc": "Distance after which the leash may break."
 }

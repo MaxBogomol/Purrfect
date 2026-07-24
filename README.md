@@ -45,5 +45,5 @@ You can put a leash on a player who is wearing a collar :3
 
 #
 
-You can visit our **[Discord Server](https://discord.gg/cKf55qNugw)** to suggest your ideas or receive news about development.
+You can visit our **[Discord Server](https://discord.fluffy-village.dev/)** to suggest your ideas or receive news about development.
 

@@ -53,7 +53,7 @@ public class PurrfectClient {
                 .addFluffyVillageLink("https://fluffy-village.dev/pages/eng/creations/purrfect.html")
                 .addGithubLink("https://github.com/MaxBogomol/Purrfect")
                 .addModrinthLink("https://modrinth.com/mod/purrfect")
-                .addDiscordLink("https://discord.gg/cKf55qNugw");
+                .addDiscordLink("https://discord.fluffy-village.dev/");
 
         FluffyFurClient.registerMod(MOD_INSTANCE);
     }

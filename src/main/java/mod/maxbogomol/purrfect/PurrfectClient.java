@@ -51,7 +51,7 @@ public class PurrfectClient {
                 .setEdition(Purrfect.VERSION_NUMBER).setNameColor(new Color(223, 226, 228)).setVersionColor(new Color(201, 146, 81))
                 .setDescription(Component.translatable("mod_description.purrfect"))
                 .addFluffyVillageLink("https://fluffy-village.dev/pages/eng/creations/purrfect.html")
-                .addGithubLink("https://github.com/MaxBogomol/Purrfect")
+                .addGitHubLink("https://github.com/MaxBogomol/Purrfect")
                 .addModrinthLink("https://modrinth.com/mod/purrfect")
                 .addDiscordLink("https://discord.fluffy-village.dev/");
 
